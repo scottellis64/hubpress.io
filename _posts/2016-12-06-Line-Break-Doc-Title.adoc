@@ -1,8 +1,0 @@
-= Line Break Doc Title
-
-NOTE: I'm radio active
-
-And now for the news
-
-WARNING: Wolpertingers are known to nest in server racks.   
-Enter at your own risk.
