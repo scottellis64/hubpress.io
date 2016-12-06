@@ -1,7 +1,14 @@
 = First Blog Post
 
-IMPORTANT: This is something that must get done first!
+[IMPORTANT]
+====
+This is something that must get done first!
+====
 
-NOTE: This is a note
+
+[NOTE] 
+====
+This is a note
+====
 
 Love, Me!
