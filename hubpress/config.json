@@ -4,7 +4,9 @@
     "repositoryName": "scottellis64.github.io",
     "branch": "master"
   },
+  "site": {},
+  "socialnetwork": {},
   "theme": {
-    "name": "Uno-zen"
+    "name": "saga"
   }
 }
