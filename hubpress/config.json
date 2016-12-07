@@ -4,9 +4,12 @@
     "repositoryName": "scottellis64.github.io",
     "branch": "master"
   },
-  "site": {},
+  "site": {
+    "title": "Career Log",
+    "description": "A log of career activities"
+  },
   "socialnetwork": {},
   "theme": {
-    "name": "ghostdance"
+    "name": "ghostium"
   }
 }
