@@ -9,4 +9,17 @@ But now here is Chris parroting those same words.
 
 In listening to the session playback later (I'm backwriting this post on December 7), I'm disappointed by the number of times I say "uh".  I need to be better prepared.  However, I am not prepared because I was busy and barely finished preparing my design diagrams and slides.  I have to be better at presenting.
 
-John Owen asks me a question in the meeting and says essentially that we should have pushed back and took away from the complexity of what was delivered by only having a single wiget per panel.  This is irritating because 
+John Owen asks me a question in the meeting and says essentially that we should have pushed back and took away from the complexity of what was delivered by only having a single wiget per panel.  This is irritating because everyone involved knew about the design and there was plenty of time to push back then.  Now I have to listen to this while presenting what I consider to be incredibly good work.  
+
+Keep in mind that this feature is now delivered.  Yes, it went right up to the buzzer but it is done and is working extremely well.  And by its very nature the feature is complex and it was an accomplishment to get this done and have it be as solid as it is.
+
+I can't help but think that my success in this is causing John and maybe even Chris some discomfort.
+
+In regards to the complexity of diagrams, here are some things that were said:
+
+``Chris: I can't read this``
+
+``John: The json is probably a much more consise view of the same information``
+
+``Kate: No, but Chris, I like jumped right in and added features to this.  This is making it seem more complicated than it is``
+
