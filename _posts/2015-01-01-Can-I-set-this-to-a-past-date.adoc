@@ -1,4 +1,5 @@
 = Can I set this to a past date?
+:published_at: 2015-01-01
 
 Try to back date this!
 
