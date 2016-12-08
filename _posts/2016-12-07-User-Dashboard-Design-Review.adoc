@@ -1,0 +1,4 @@
+= User Dashboard Design Review
+:published_at:2016-10-31
+
+I presented my design to the OpenPages UI team today--I put quite a bit of work into it.  I had prepared several UML class diagrams detailing the entity relationships, and prepared xsd schemas to describe the format of the dojo data stores.  Some of the diagrams had a lot of content, so I was nervous about showing the first of them.  When I did, Chris had a look on his face and stopped me to ask why it was so complicated, and went on to say that 
