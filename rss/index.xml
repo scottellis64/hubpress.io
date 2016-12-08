@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 08 Dec 2016 03:07:46 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[A Second Post]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 08 Dec 2016 04:27:28 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[User Dashboard Design Review]]></title><description><![CDATA[<div class="paragraph">
+<p>I presented my design to the OpenPages UI team today&#8212;&#8203;I put quite a bit of work into it.  I had prepared several UML class diagrams detailing the entity relationships, and prepared xsd schemas to describe the format of the dojo data stores.  Some of the diagrams had a lot of content, so I was nervous about showing the first of them.  When I did, Chris had a look on his face and stopped me to ask why it was so complicated, and went on to say that when he looks at diagrams like that, he doesn&#8217;t understand them at all.  He prefers code snippets.</p>
+</div>
+<div class="paragraph">
+<p>So this is interesting.  Complicated&#8212;&#8203;this has been the most enduring criticism of my code and designs since I started at IBM, tracing back to my first feature, the Actor Picker, when Mike Poole thought that the solution I came up with was way over the top.  Mike has gone out of his way to point out that he thinks that John Owen is a superstar and that he and I were just ok.  I&#8217;m not sure where he stands on that today.</p>
+</div>
+<div class="paragraph">
+<p>But now here is Chris parroting those same words.</p>
+</div>
+<div class="paragraph">
+<p>In listening to the session playback later (I&#8217;m backwriting this post on December 7), I&#8217;m disappointed by the number of times I say "uh".  I need to be better prepared.  However, I am not prepared because I was busy and barely finished preparing my design diagrams and slides.  I have to be better at presenting.</p>
+</div>
+<div class="paragraph">
+<p>John Owen asks me a question in the meeting and says essentially that we should have pushed back and took away from the complexity of what was delivered by only having a single wiget per panel.  This is irritating because everyone involved knew about the design and there was plenty of time to push back then.  Now I have to listen to this while presenting what I consider to be incredibly good work.</p>
+</div>
+<div class="paragraph">
+<p>Keep in mind that this feature is now delivered.  Yes, it went right up to the buzzer but it is done and is working extremely well.  And by its very nature the feature is complex and it was an accomplishment to get this done and have it be as solid as it is.</p>
+</div>
+<div class="paragraph">
+<p>I can&#8217;t help but think that my success in this is causing John and maybe even Chris some discomfort.</p>
+</div>
+<div class="paragraph">
+<p>In regards to the complexity of diagrams, here are some things that were said:</p>
+</div>
+<div class="paragraph">
+<p><code>Chris: I can&#8217;t read this</code></p>
+</div>
+<div class="paragraph">
+<p><code>John: The json is probably a much more consise view of the same information</code></p>
+</div>
+<div class="paragraph">
+<p><code>Kate: No, but Chris, I like jumped right in and added features to this.  This is making it seem more complicated than it is</code></p>
+</div>]]></description><link>https://scottellis64.github.io/2016/12/07/User-Dashboard-Design-Review.html</link><guid isPermaLink="true">https://scottellis64.github.io/2016/12/07/User-Dashboard-Design-Review.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 07 Dec 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[A Second Post]]></title><description><![CDATA[<div class="paragraph">
 <p>Hello, my name is Sue.  Now you gonna die!</p>
 </div>]]></description><link>https://scottellis64.github.io/2016/12/06/A-Second-Post.html</link><guid isPermaLink="true">https://scottellis64.github.io/2016/12/06/A-Second-Post.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 06 Dec 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Back Date This]]></title><description><![CDATA[<div class="paragraph">
 <p>Try to back date this!</p>
