@@ -1,4 +1,12 @@
 = User Dashboard Design Review
 :published_at:2016-10-31
 
-I presented my design to the OpenPages UI team today--I put quite a bit of work into it.  I had prepared several UML class diagrams detailing the entity relationships, and prepared xsd schemas to describe the format of the dojo data stores.  Some of the diagrams had a lot of content, so I was nervous about showing the first of them.  When I did, Chris had a look on his face and stopped me to ask why it was so complicated, and went on to say that 
+I presented my design to the OpenPages UI team today--I put quite a bit of work into it.  I had prepared several UML class diagrams detailing the entity relationships, and prepared xsd schemas to describe the format of the dojo data stores.  Some of the diagrams had a lot of content, so I was nervous about showing the first of them.  When I did, Chris had a look on his face and stopped me to ask why it was so complicated, and went on to say that when he looks at diagrams like that, he doesn't understand them at all.  He prefers code snippets.
+
+So this is interesting.  Complicated--this has been the most enduring criticism of my code and designs since I started at IBM, tracing back to my first feature, the Actor Picker, when Mike Poole thought that the solution I came up with was way over the top.  Mike has gone out of his way to point out that he thinks that John Owen is a superstar and that he and I were just ok.  I'm not sure where he stands on that today.  
+
+But now here is Chris parroting those same words.
+
+In listening to the session playback later (I'm backwriting this post on December 7), I'm disappointed by the number of times I say "uh".  I need to be better prepared.  However, I am not prepared because I was busy and barely finished preparing my design diagrams and slides.  I have to be better at presenting.
+
+John Owen asks me a question in the meeting and says essentially that we should have pushed back and took away from the complexity of what was delivered by only having a single wiget per panel.  This is irritating because 
