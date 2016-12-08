@@ -1,7 +1,9 @@
 = Back Date This 
 Author Name <j.scott.ellis64@gmail.com>
 2012-02-10
-
+:published_at: 2012-02-10
 
 Try to back date this!
+
+I really think it is going to work.
 
