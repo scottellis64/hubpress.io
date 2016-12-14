@@ -1,0 +1,69 @@
+= Notes from 12/13/2016 One-on-one meeting with Chris
+
+Updating will cause a change log—that can cause confusion
+
+Goal before kickoff
+	For testing, authentication, clarify what is success
+
+Change dates
+	RCOC is later in march for release
+	Go well into February for Development
+	Add one or two sprints
+	
+Rename UCF Connector to UCF Connector / RCoC Q1
+
+Add team members, will need to add Rajeev (not right away)
+QE - add Mark
+
+Identify one or two stories to get started on
+
+If we can get Questionnaire started, that’s nice
+Basic requirements
+
+
+Review 52328, 52308 and 52309 and see if we can finish these off using the new REST TDI connector
+Maybe need a task to convert these two from file to api calls
+
+Update scheme task or story
+
+One week when we come back to finish sprint 2
+
+
+RCOC - 
+Embed cognos reports
+Need visibility to GitHub RCoC from RTC
+
+Scrum:
+What stories to work on?
+Acceptance criteria needs to be locked down
+Schedule on a regular scrum time and frequency (suggest 2 times a week)
+
+Eventually UCF will merge with RCoC meeting
+
+****
+
+As team lead have to work with team members
+ 	— Michelle, from quality 
+
+Balance expectation and what is actually completed
+
+Need to multitask
+
+Simplest solution first, then work on the better solution
+
+Do quality work
+Communicate
+Rajeev is easy going
+they have a lot of emotion tied to their product
+provide very good input
+keep promises
+They have high expectations of me
+Gradually come in and help out
+don’t overstretch 
+
+***
+
+Might need my help with features in OP environment available
+Need to be able to jump in and fix
+
+***
