@@ -1,4 +1,4 @@
-= Architecture Advice Oppy
+= Long running processes in Node.js
 
 Wenlong needs help with long running tasks kicked off by Rest API requests.  
 The problem now is that processing these requests keeps a grib on the event loop with blocking IO (file IO using the sync versions) such that control of the event loop is not relinquished.  
@@ -7,6 +7,8 @@ I've introduced Promises, and that, along with the use of the aysnchronous versi
 
 If that is not enough, then there is an interesting [library](https://github.com/soyuka/relieve) called Relieve available on NPM that spawns the handling of a task using Promises.  
 
-Look into this tonight.  If this works and addresses the issue, then this helps me along the Architect path at IBM.  I'll need to update goals if it does work.  Meeting with Wenlong in the AM to discuss, so work on some examples tonight--ASAP.
+Look into this tonight.  Meeting with Wenlong in the AM to discuss, so work on some examples tonight--ASAP.
 
 Event Loop in Node.js article: https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/
+
+Interesting solution to try: https://stackoverflow.com/questions/29896854/how-to-execute-abort-long-running-tasks-in-node-js
