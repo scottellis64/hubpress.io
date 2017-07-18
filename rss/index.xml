@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 18 Jul 2017 21:29:18 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Meeting with Ken]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 18 Jul 2017 21:37:04 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Meeting with Ken]]></title><description><![CDATA[<div class="paragraph">
 <p>Isaac suggested in our one-on-one yesterday that I meet with Ken to communicate what I&#8217;ve been up to.  Isaac mentioned that there are grumblings that Ken has visibility into what Filipe has been doing, but nothing where I am concerned.</p>
 </div>
 <div class="paragraph">
@@ -59,7 +59,22 @@
 <p>Create some quick diagrams to show how the op-installer modules fit together to create one unit in both production and dev.  Investigate how this diagram can be displayed in the projects README.</p>
 </li>
 </ul>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/18/July-18-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/18/July-18-2017.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 18 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Architecture Advice Oppy]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://scottellis64.github.io/2017/07/18/July-18-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/18/July-18-2017.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 18 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Create stories and tasks for OP Installer]]></title><description><![CDATA[<div class="paragraph">
+<p>Creating stories for OP Installer.  Started the story but got sidetracked with the question of long-running processes in NodeJS.</p>
+</div>
+<div class="paragraph">
+<p>Title: [Installer Auth Server] - Implement Rest API for authorizing user requests and issuing authentication tokens
+Description: Implement a REST api based on typescript-rest that authenticates a user and issues an authentication token.  Provide a sample end point that enforces the existence of this authentication token, and a Postman client collection that can be used to demonstrate and test this API.</p>
+</div>
+<div class="paragraph">
+<p>Talk to Ken and Sandy tomorrow on the process here&#8212;&#8203;is this what needs to be done?  Creating new stories for the work I&#8217;ve done?  I&#8217;ll have to get all the approvals and put the stories in the appropriate states.</p>
+</div>
+<div class="paragraph">
+<p>Created a Google Sheet for all the installation tasks I&#8217;ve worked on with links to Github for each commit:</p>
+</div>
+<div class="paragraph">
+<p><a href="https://docs.google.com/spreadsheets/d/16GnPaRR3CDY2JiBld1Ba5ALmAA4uDwz2t-bwDzdUuVw/edit#gid=0" class="bare">https://docs.google.com/spreadsheets/d/16GnPaRR3CDY2JiBld1Ba5ALmAA4uDwz2t-bwDzdUuVw/edit#gid=0</a></p>
+</div>]]></description><link>https://scottellis64.github.io/2017/07/18/Create-stories-and-tasks-for-OP-Installer.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/18/Create-stories-and-tasks-for-OP-Installer.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 18 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Architecture Advice Oppy]]></title><description><![CDATA[<div class="paragraph">
 <p>Wenlong needs help with long running tasks kicked off by Rest API requests.
 The problem now is that processing these requests keeps a grib on the event loop with blocking IO (file IO using the sync versions) such that control of the event loop is not relinquished.</p>
 </div>
