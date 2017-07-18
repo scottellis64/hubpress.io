@@ -1,0 +1,13 @@
+= Create stories and tasks for OP Installer
+
+Creating stories for OP Installer.  Started the story but got sidetracked with the question of long-running processes in NodeJS.
+
+Title: [Installer Auth Server] - Implement Rest API for authorizing user requests and issuing authentication tokens
+Description: Implement a REST api based on typescript-rest that authenticates a user and issues an authentication token.  Provide a sample end point that enforces the existence of this authentication token, and a Postman client collection that can be used to demonstrate and test this API.
+
+Talk to Ken and Sandy tomorrow on the process here--is this what needs to be done?  Creating new stories for the work I've done?  I'll have to get all the approvals and put the stories in the appropriate states.
+
+Created a Google Sheet for all the installation tasks I've worked on with links to Github for each commit:
+
+https://docs.google.com/spreadsheets/d/16GnPaRR3CDY2JiBld1Ba5ALmAA4uDwz2t-bwDzdUuVw/edit#gid=0
+
