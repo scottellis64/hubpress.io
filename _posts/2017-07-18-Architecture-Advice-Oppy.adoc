@@ -8,3 +8,5 @@ I've introduced Promises, and that, along with the use of the aysnchronous versi
 If that is not enough, then there is an interesting [library](https://github.com/soyuka/relieve) called Relieve available on NPM that spawns the handling of a task using Promises.  
 
 Look into this tonight.  If this works and addresses the issue, then this helps me along the Architect path at IBM.  I'll need to update goals if it does work.  Meeting with Wenlong in the AM to discuss, so work on some examples tonight--ASAP.
+
+Event Loop in Node.js article: https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/
