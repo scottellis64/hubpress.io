@@ -1,0 +1,5 @@
+= Meeting with Ken
+
+Isaac suggested in our one-on-one yesterday that I meet with Ken to communicate what I've been up to.  Isaac mentioned that there are grumblings that Ken has visibility into what Filipe has been doing, but nothing where I am concerned.  
+
+It was a positive meeting and he just wants to know what I will be doing with my time so he can plan for his project.  After I meet with Rajeev today I will come up with an estimate of the time I'll need to perform all the remaining work and with that determine how I will split my time between Algo and the Installer.  I'll connect with Ken tomorrow post-scrum and come up with a plan that splits my time so I can communicate that with both he and Rajeev.
