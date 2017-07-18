@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 18 Jul 2017 21:37:04 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Meeting with Ken]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 18 Jul 2017 21:39:22 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Meeting with Ken]]></title><description><![CDATA[<div class="paragraph">
 <p>Isaac suggested in our one-on-one yesterday that I meet with Ken to communicate what I&#8217;ve been up to.  Isaac mentioned that there are grumblings that Ken has visibility into what Filipe has been doing, but nothing where I am concerned.</p>
 </div>
 <div class="paragraph">
@@ -86,6 +86,9 @@ The problem now is that processing these requests keeps a grib on the event loop
 </div>
 <div class="paragraph">
 <p>Look into this tonight.  If this works and addresses the issue, then this helps me along the Architect path at IBM.  I&#8217;ll need to update goals if it does work.  Meeting with Wenlong in the AM to discuss, so work on some examples tonight&#8212;&#8203;ASAP.</p>
+</div>
+<div class="paragraph">
+<p>Event Loop in Node.js article: <a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/" class="bare">https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/</a></p>
 </div>]]></description><link>https://scottellis64.github.io/2017/07/18/Architecture-Advice-Oppy.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/18/Architecture-Advice-Oppy.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 18 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Tuesday, December 14th 2016]]></title><description><![CDATA[<div class="literalblock">
 <div class="title">Dev Ops Workshop</div>
 <div class="content">
