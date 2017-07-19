@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 19 Jul 2017 13:11:05 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Wednesday, July 19 2017]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 19 Jul 2017 13:17:11 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Wednesday, July 19 2017]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>Yesterday</strong></p>
 </div>
 <div class="ulist">
@@ -11,6 +11,9 @@
 </li>
 <li>
 <p>Investigated how to handle long running tasks when started from a Node.js request</p>
+</li>
+<li>
+<p>Took ownership of the <em>Choose Deployment</em> OP Installer page, <a href="https://ccm-risk.ottawa.ibm.com:9453/ccm/web/projects/OpenPages%20(Change%20Management)#action=com.ibm.team.workitem.viewWorkItem&amp;id=65919">Story 65919</a></p>
 </li>
 </ul>
 </div>
@@ -30,6 +33,9 @@
 </li>
 <li>
 <p>Talk with Sandy and Ken about how best to create installer stories and tasks for the work I&#8217;ve done so far</p>
+</li>
+<li>
+<p>Create the tasks for <a href="https://ccm-risk.ottawa.ibm.com:9453/ccm/web/projects/OpenPages%20(Change%20Management)#action=com.ibm.team.workitem.viewWorkItem&amp;id=65919">Story 65919</a></p>
 </li>
 </ul>
 </div>]]></description><link>https://scottellis64.github.io/2017/07/19/Wednesday-July-19-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/19/Wednesday-July-19-2017.html</guid><category><![CDATA[status]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 19 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Meeting with Ken]]></title><description><![CDATA[<div class="paragraph">
