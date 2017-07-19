@@ -6,6 +6,7 @@
 - Meetings with Ken and daily standup with Algo group.
 - Compiled list of my tasks for the installer into a spreadsheet in preparation for RTC insertion
 - Investigated how to handle long running tasks when started from a Node.js request
+- Took ownership of the _Choose Deployment_ OP Installer page, https://ccm-risk.ottawa.ibm.com:9453/ccm/web/projects/OpenPages%20(Change%20Management)#action=com.ibm.team.workitem.viewWorkItem&id=65919[Story 65919]
 
 *Today*
 
@@ -14,6 +15,7 @@
   -- Ken suggested alternating weeks, which may be the way to go
 - Meet with Wenlong today to discuss strategy for handling long running tasks
 - Talk with Sandy and Ken about how best to create installer stories and tasks for the work I've done so far
+- Create the tasks for https://ccm-risk.ottawa.ibm.com:9453/ccm/web/projects/OpenPages%20(Change%20Management)#action=com.ibm.team.workitem.viewWorkItem&id=65919[Story 65919]
 
 
 
