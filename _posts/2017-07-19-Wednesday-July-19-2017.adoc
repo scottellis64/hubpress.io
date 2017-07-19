@@ -1,0 +1,19 @@
+= Wednesday, July 19 2017
+:hp-tags: status
+
+*Yesterday*
+
+- Meetings with Ken and daily standup with Algo group.
+- Compiled list of my tasks for the installer into a spreadsheet in preparation for RTC insertion
+- Investigated how to handle long running tasks when started from a Node.js request
+
+*Today*
+
+- Meet with Rajeev to discuss my work Algo workload to get a sense of my time commitment
+- Sync up with Ken at some point afterward to strategize an equitable distribution of my time
+  -- Ken suggested alternating weeks, which may be the way to go
+- Meet with Wenlong today to discuss strategy for handling long running tasks
+- Talk with Sandy and Ken about how best to create installer stories and tasks for the work I've done so far
+
+
+
