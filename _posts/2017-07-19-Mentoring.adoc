@@ -1,0 +1,111 @@
+= Mentoring
+:hp-tags: mentor
+
+Offered advice to Wenlong about how to handle long running requests:
+
+*out for part of the afternoon*
+12:23 PM
+me to Wenlong Jiang
+Show more
+Wenlong,
+ 
+I'll be working at home in the afternoon, so I think we will miss one another.  We can meet online and have a discussion on Zoom when you have the time, any time between 1 and 2:30.  
+ 
+Basically what is happening is that all your file io operations are being done synchronously, and that causes the node server to hold onto the processor, which blocks other requests from being given control.  Node works on what they call an event loop, and whenever you perform an asynchronous operation you are giving up your hold on the event loop, which would then give the green light to other processes.  
+ 
+I will run out of time to provide this for you today, but I wanted to try using a library called fs-extra-promise.  Its kind of like fs-extra in that it adds methods to fs, but it creates a set of methods that return promises instead of using the callback mechanism, appending the suffix "Async" to all the non-synch methods.  For example, this code in pre-vali-action.js in runPreValidation:
+ 
+if(fs.existsSync(serverInfoJsonFile)){
+    fs.removeSync(serverInfoJsonFile);
+}
+becomes something like this:
+ 
+fs.existsAsync(serverInfoJsonFile)
+    .then((exists) => {
+        if (! exists) {
+            fs.removeAsync(serverInfoJsonFile)
+                .then(() => {
+                    // continue
+                })
+        } else {
+            // continue
+        }
+    });
+}
+But this creates challenges from a coding standpoint.  You have two places above that lead to the same logical branch, where it is commented to continue.  So, you will have to restructure the code in places.  Here, you would be best served to create a function that returns a Promise as such:
+ 
+function removeFileIfExists(fileName) {
+    return new Promise((resolve, reject) => {
+        fs.existsAsync(serverInfoJsonFile)
+            .then((exists) => {
+                if (! exists) {
+                    fs.removeAsync(serverInfoJsonFile)
+                        .then(() => {
+                            resolve();
+                        })
+                } else {
+                    resolve();
+                }
+            });
+    });
+}
+and calling this function looks like this:
+ 
+removeFileIfExists(serverInfoJsonFile).then(() => {
+    var args;
+
+    // Database server
+    // TODO: Remove the next line when DB2 validation is ready
+    if (db.db_type == constants.dbtype_oracle){
+ 
+So there will be some refactoring involved with this strategy, but I don't think you can avoid it since synchronous IO is done so often.  Here is a link to an article describing the problem you will encounter with blocking calls like most of the file io calls that are being employed: https://nodejs.org/en/docs/guides/blocking-vs-non-blocking/
+ 
+A combination of promises and asynchronous file io will fix the issue you are having, but it will take some doing.  Nothing to get worried about, but it will be a hot topic and should be brought up in todays meeting.
+ 
+An alternative strategy would be to spawn child processes to do the work, but that would involve similar refactoring activities.  My vote would be to unblock the event loop with asynchronous file io calls.
+ 
+Scott
+
+*Promises in the op-installer server*
+Yesterday, 12:30 PM
+me to Wenlong Jiang
+Show more
+Wenlong,
+ 
+Let's meet later this afternoon--I have a 3PM meeting that will be about a half hour.  I can see where the promise method can be implemented for testing/poc in your code.  The basic pattern will work like this, but I haven't tried it yet in this specific instance:
+ 
+In install-config-routes.js, you would return a new promise from the /installConfig route.  It looks like this:
+ 
+return new Promise((resolve, reject) => {
+ 
+   ... all your existing code
+ 
+});
+ 
+This returns right away but does not send anything back to the browser since nothing has been piped to the response.  So the browser at this point is just waiting.
+ 
+You've essentially released the other endpoints to respond to other requests by return the promise, and simultaneously the code within the promise is being executed in a virtual thread.  There are no real threads in javascript, but it's treated like one by the interpreter so for all intents and purposes this is now a thread.  Your code can still handle responses the way it does now, as with this:
+ 
+return response.status(500).send(util.format(messages.deployment_folder_not_exist, deploymentName));
+ 
+but instead of returning right away, you would call the resolve method defined in the promise callback: resolve() -- which releases the promise from being processed.  If any error occurs, you can reject the promise in the same fashion: reject();
+ 
+In the auth-server, resolving and rejecting cause something to be propagated to the response by the typescript-rest library, but here we are only releasing the promise and handling the response ourselves.
+ 
+At the bottom of your method, you are calling configManager.runConfigActions, followed by configManager.waitCompConfigToFinish.  You can instead have configManager.runConfigActions return a promise just as this route has done.  The call will look something like this:
+ 
+configManager.runConfigActions(...)
+   .then((data) => {
+      // set the data into the response you need then resolve the promise
+      resolve();
+   })
+   .catch((err) => {
+      // emit error and reject
+      reject();
+   });
+ 
+No need to call waitCompConfigToFinish.  Change runConfigActions to return a promise and keep working until the actions are complete, then resolve, which triggers your routes then handler, etc.  
+ 
+I can help you with this later, but take a look to see if you can make sense of it.  You can see an example of all this in action in auth-server -> AuthorizationService.ts.  The login request returns a promise--it's typescript so there are some syntactical differences, such as returning a promise with a type defined (Promise<AuthToken>), but the concept is the same; it's just a Promise instance.  The method returns a new promise right away, then calls an asynchronous method UserModel.findUser().  You can see how not finding a user triggers a Promise rejection, and also you'll see how I'm calling multiple asynchronous methods and resolving the original request only when I've completely processed multiple asynchronous operations.  This end point is a typescript-rest endpoint, so I'm able to reject with errors and those errors put into the http response for me, so that part is different, but I think you can see how this works from this example.
+ 
+Scott
