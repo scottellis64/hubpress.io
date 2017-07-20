@@ -103,3 +103,67 @@ export default class UserModel {
     }
 }
 ```
+
+The TokenModel manages the AuthToken entity:
+
+```javascript
+import JsonDB from "./json.db";
+import {AuthToken} from "../entities/index";
+
+export default class TokenModel {
+    static addUserToken(id, token) {
+        return JsonDB.insert<AuthToken>("token", {id : id, value : token, expires : TokenModel.getNewExpiration()});
+    }
+
+    static findUserToken(userId) : Promise<AuthToken> {
+        return JsonDB.find<AuthToken>("token", {id : userId}, true);
+    }
+
+    static getNowAsSeconds() {
+        return Math.floor(Date.now() / 1000.0);
+    }
+
+    static getNewExpiration() {
+        const now = TokenModel.getNowAsSeconds();
+        return now + config.jwtExpirationSeconds;
+    }
+
+    static isExpired(ts) {
+        const now = TokenModel.getNowAsSeconds();
+        return now >= ts;
+    }
+}
+```
+
+*Conversion of existing server code*
+
+The bulk of the work to convert server javascript to auth-server typescript follows along these guidelines:
+
+- Create index.ts at the root of packages and export all module classes.  For example, in server/actions/index.ts:
+```javascript
+export { app_vali_action } from './app-vali-action';
+export { bpm_vali_action } from './bpm-vali-action';
+export { ConfigManager } from './config-manager';
+export { db_vali_action } from './db-vali-action';
+export { preValiAction } from './pre-vali-action';
+export { rep_vali_action } from './rep-vali-action';
+export { search_vali_action } from './search-vali-action';
+```
+This enables the ability to import all classes or select classes from module in one statement.  For example:
+
+```javascript
+import {
+    Constants as constants,
+    cryptoHelper,
+    dbHelper,
+    javaHelper,
+    logger,
+    osHelper,
+    propertiesHelper as propHelper,
+    VersionHelper,
+    wasHelper
+} from '../helpers/index';
+```
+- Convert require statements to imports.  Importing from another typescript file is as simple as ``import classname from './classname'``, but when importing non-typescript libraries, it is necessary to have this form: ``import * as path from 'path'``, which in this example is importing the Node.js library _path_.  
+
+- 
