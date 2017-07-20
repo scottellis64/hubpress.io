@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1500576299502"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1500576299502"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1500576299502"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1500576974827"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1500576974827"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1500576974827"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1500576299502"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1500576974827"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2017/07/20/Typescript-Conversion.html" />
     <meta name="referrer" content="origin" />
@@ -314,6 +314,58 @@ export default class TokenModel {
 </div>
 </div>
 <div class="paragraph">
+<p><strong>Configuration is generated according to environment settings specified at runtime</strong></p>
+</div>
+<div class="paragraph">
+<p>config.ejs is an EJS template that is invoked at build time to generate config.ts that the rest of the application invokes for its settings.  These settings are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sslEnabled : true or false</p>
+</li>
+<li>
+<p>sslCert : a method that returns the contents of the ssl certificate when ssl is enabled</p>
+</li>
+<li>
+<p>sslKey : a method that returns the contents of the ssl key when ssl is enabled</p>
+</li>
+<li>
+<p>sslPassphrase : the passphrase needed to decrypt the ssl certificate and key when ssl is enabled&#8212;&#8203;this is not required</p>
+</li>
+<li>
+<p>production : true or false</p>
+</li>
+<li>
+<p>test : true or false</p>
+</li>
+<li>
+<p>port : the server port</p>
+</li>
+<li>
+<p>jwtSecret : the secret needed to use the JWT authorization token</p>
+</li>
+<li>
+<p>jwtExpirationSeconds : the number of seconds after which a stale/unused token will expire</p>
+</li>
+<li>
+<p>getJsonDB : a function that provides the JSON database that manages all auth-server entities</p>
+</li>
+<li>
+<p>getLicenseText : a function that yields the license text, which comes from a flat file in the auth-server module</p>
+</li>
+<li>
+<p>debugMode : true or false; true will cause more output to the application log</p>
+</li>
+<li>
+<p>dbAdminUser : the default admin user that can be authenticated via login</p>
+</li>
+<li>
+<p>dbAdminPassword : the default admin password&#8212;&#8203;this needs to be removed</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <p><strong>Conversion of existing server code</strong></p>
 </div>
 <div class="paragraph">
@@ -429,7 +481,7 @@ export { search_vali_action } from './search-vali-action';</code></pre>
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1500576299502"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1500576974827"></script>
 
 
   </body>
