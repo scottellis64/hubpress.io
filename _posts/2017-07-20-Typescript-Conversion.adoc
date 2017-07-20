@@ -166,4 +166,6 @@ import {
 ```
 - Convert require statements to imports.  Importing from another typescript file is as simple as ``import classname from './classname'``, but when importing non-typescript libraries, it is necessary to have this form: ``import * as path from 'path'``, which in this example is importing the Node.js library _path_.  
 
-- 
+- Existing server REST endpoints are converted to typescript-rest and all return Promises.  
+- All types into these REST endpoints have been defined as objects.  Some examples:
+
