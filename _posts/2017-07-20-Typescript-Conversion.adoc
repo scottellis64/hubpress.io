@@ -135,6 +135,25 @@ export default class TokenModel {
 }
 ```
 
+*Configuration is generated according to environment settings specified at runtime*
+
+config.ejs is an EJS template that is invoked at build time to generate config.ts that the rest of the application invokes for its settings.  These settings are:
+
+- sslEnabled : true or false
+- sslCert : a method that returns the contents of the ssl certificate when ssl is enabled
+- sslKey : a method that returns the contents of the ssl key when ssl is enabled
+- sslPassphrase : the passphrase needed to decrypt the ssl certificate and key when ssl is enabled--this is not required
+- production : true or false
+- test : true or false
+- port : the server port
+- jwtSecret : the secret needed to use the JWT authorization token
+- jwtExpirationSeconds : the number of seconds after which a stale/unused token will expire
+- getJsonDB : a function that provides the JSON database that manages all auth-server entities 
+- getLicenseText : a function that yields the license text, which comes from a flat file in the auth-server module
+- debugMode : true or false; true will cause more output to the application log
+- dbAdminUser : the default admin user that can be authenticated via login
+- dbAdminPassword : the default admin password--this needs to be removed 
+
 *Conversion of existing server code*
 
 The bulk of the work to convert server javascript to auth-server typescript follows along these guidelines:
