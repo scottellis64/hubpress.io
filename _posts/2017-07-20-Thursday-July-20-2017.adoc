@@ -13,8 +13,11 @@ Missed my connection with Wenlong because I had to leave early and he came into 
 
 Did not create tasks for the _Choose Deployment_ story yet
 
+Status meeting yesterday at 3.  The teams wants me to present/describe how the gulp targets work in the project, and how the three modules fit together at run time.
+
 *Today*
 
+- Prepare for the 3PM meeting to show how the gulp targets work and the three modules (auth-server, server and client) fit together
 - Create the task for the Algo P1 and get time estimates and convey the findings to Ken.
 - Follow up with Wenlong on long running processes
 - Make meeting with Sandy if she has an available time today--then commit installer stories, tasks and defects to RTC
