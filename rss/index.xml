@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 20 Jul 2017 18:44:59 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Typescript Conversion]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 20 Jul 2017 18:56:14 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Typescript Conversion]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>typescript-rest</strong></p>
 </div>
 <div class="paragraph">
@@ -147,6 +147,58 @@ export default class TokenModel {
     }
 }</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p><strong>Configuration is generated according to environment settings specified at runtime</strong></p>
+</div>
+<div class="paragraph">
+<p>config.ejs is an EJS template that is invoked at build time to generate config.ts that the rest of the application invokes for its settings.  These settings are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>sslEnabled : true or false</p>
+</li>
+<li>
+<p>sslCert : a method that returns the contents of the ssl certificate when ssl is enabled</p>
+</li>
+<li>
+<p>sslKey : a method that returns the contents of the ssl key when ssl is enabled</p>
+</li>
+<li>
+<p>sslPassphrase : the passphrase needed to decrypt the ssl certificate and key when ssl is enabled&#8212;&#8203;this is not required</p>
+</li>
+<li>
+<p>production : true or false</p>
+</li>
+<li>
+<p>test : true or false</p>
+</li>
+<li>
+<p>port : the server port</p>
+</li>
+<li>
+<p>jwtSecret : the secret needed to use the JWT authorization token</p>
+</li>
+<li>
+<p>jwtExpirationSeconds : the number of seconds after which a stale/unused token will expire</p>
+</li>
+<li>
+<p>getJsonDB : a function that provides the JSON database that manages all auth-server entities</p>
+</li>
+<li>
+<p>getLicenseText : a function that yields the license text, which comes from a flat file in the auth-server module</p>
+</li>
+<li>
+<p>debugMode : true or false; true will cause more output to the application log</p>
+</li>
+<li>
+<p>dbAdminUser : the default admin user that can be authenticated via login</p>
+</li>
+<li>
+<p>dbAdminPassword : the default admin password&#8212;&#8203;this needs to be removed</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p><strong>Conversion of existing server code</strong></p>
