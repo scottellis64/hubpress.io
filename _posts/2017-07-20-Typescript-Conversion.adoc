@@ -1,0 +1,105 @@
+= Typescript Conversion
+
+*typescript-rest*
+
+Using the typescript-rest library endpoints are activated using Spring-like annotations:
+
+```javascript
+@Path("/tapi/auth")
+@Accept("application/json")
+export default class AuthorizationService {
+    @Path("/login")
+    @POST
+    login(requestUser: IUser): Promise<AuthToken> {
+		...
+    }
+}
+```
+
+*type safety*
+
+Typescript provides type safety at compile-time.  From the previous example, the login method receives a posted request with an IUser in the request body.  IUser is defined as such:
+
+```javascript
+export interface IUser {
+  id : string;
+  name : string;
+  password : string;
+}
+```
+
+The return type of the login method is clearly defined as well.  I know from looking at the definition that I will get back an AuthToken:
+
+```javascript
+export class AuthToken {
+    id: string;
+    value: string;
+    expires : number;
+
+    constructor(token : AuthToken) {
+        this.id = token.id;
+        this.value = token.value;
+        this.expires = token.expires;
+    }
+}
+```
+
+*json file as database repository*
+
+The auth-server uses the NPM module _node_flat_db_ to handle json file manipulation as a database.  The class _JsonDB_ is a generic class that can be used for any entity type that you would like to manage.  Currently the auth-server does so for authorization tokens and users.  _JsonDB_ defines CRUD operations (create, remove, update and delete), taking the entity name as a parameter:
+
+```javascript
+export default class JsonDB {
+    static insert<T>(entityName, values) : Promise<T> {
+        return new Promise<T>((resolve, reject) => {
+        	...
+        });
+    }
+
+    static update<T>(entityName, key, values) : Promise<T> {
+        return new Promise<T>((resolve, reject) => {
+        	...
+        });
+    }
+
+    static remove(entityName, where) {
+        return new Promise((resolve, reject) => {
+        	...
+        });
+    }
+
+    static find<T>(entityName, criteria, suppressThrowIfNotFound): Promise<T> {
+        return new Promise<T>((resolve, reject) => {
+        	...
+        });
+    }
+}
+```
+
+The UserModel makes use of JsonDB to manage IUser entities:
+
+```Javascript
+import {IUser} from "../entities/IUser";
+import JsonDB from "./json.db";
+
+export default class UserModel {
+    static addUser(name, password) {
+        return JsonDB.insert("user", {
+            name : name,
+            password : password
+        });
+    }
+
+    static findUser(name, password) : Promise<IUser> {
+        return JsonDB.find<IUser>("user", {name : name, password : password}, true);
+    }
+
+    static findUserByName(name) : Promise<IUser> {
+        return JsonDB.find<IUser>("user", {name : name}, true);
+    }
+
+    static findUserById(id) : Promise<IUser> {
+        return JsonDB.find<IUser>("user", {id : id}, false);
+    }
+}
+```
