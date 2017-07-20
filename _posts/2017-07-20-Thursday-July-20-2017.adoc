@@ -1,0 +1,20 @@
+= Thursday, July 20, 2017
+
+*Yesterday*
+
+Met with Rajeev to discuss my work Algo workload.  Three priorities emerged:
+- *P1* Create a task for downloading a report for unsupported browsers, leaving the view link active for only IE users
+- *P2* Report admin screen (MDC) - enable/disable/delete reports and limit RO to show only active reports
+- *P3* License activation for Reporting.  Follow similar functionality for SDI activation.
+
+Missed my connection with Wenlong because I had to leave early and he came into work in the afternoon.  Wrote him an email expressing my thoughts, which I created a blog entry about with the text of the email yesterday.
+
+Did not create tasks for the _Choose Deployment_ story yet
+
+*Today*
+
+Create the task for the Algo P1 and get time estimates and convey the findings to Ken.
+Follow up with Wenlong on long running processes
+Make meeting with Sandy if she has an available time today--then commit installer stories, tasks and defects to RTC
+Create the tasks for Story 65919
+
