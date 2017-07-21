@@ -1,0 +1,8 @@
+= Todo's
+:hp-tags: todo
+
+- Look into how to commit images to Github and how to show those images in READMEs.
+- Try the relative link method described https://help.github.com/articles/about-readmes/[here]
+- https://stackoverflow.com/questions/14494747/add-images-to-readme-md-on-github[another link]
+- https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet[Markdown Cheatsheet]
+- https://www.youtube.com/watch?v=nvPOUdz5PL4[Images in Github] on YouTube
