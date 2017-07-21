@@ -1,1 +1,16 @@
-= Friday, 
+= Friday, July 21, 2017
+
+*Yesterday*
+
+- Spend most of my day preparing for a technical presentation of the work I've done for the op-installer
+
+*Today*
+
+- Create the task for the Algo P1 and get time estimates and convey the findings to Ken.
+
+- Follow up with Wenlong on long running processes
+
+- Make meeting with Sandy if she has an available time today—then commit installer stories, tasks and defects to RTC
+
+- Create the tasks for Story 65919
+
