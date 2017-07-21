@@ -1,4 +1,5 @@
 = Friday, July 21, 2017
+:hp-tags: status
 
 *Yesterday*
 
