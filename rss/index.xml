@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 21 Jul 2017 13:24:22 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Todo's]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 26 Jul 2017 14:18:22 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Wednesday, July 26, 2017]]></title><description><![CDATA[<div class="paragraph">
+<p><strong>Today</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Fixing a 7.3.0.2 bug in the Homepage Dashboard</p>
+</li>
+<li>
+<p>setting up development env and had issues but resolved with Ken on the phone</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Had overlapping changes in RTC.  Solution was that I needed to delete my 7.3.0.2 workspace in Team Artifacts&#8594;My Repository Workspaces, delete the local folder with 7.3.0.2, then recreate the workspace by searching for the 7.3.0.2 stream, right clicking <em>My Repository Workspaces</em>, select <em>Search for Repository Workspaces&#8230;&#8203;</em>, narrow to find Streams, then enter 7.3.0.2 in the search terms.  It found <em>7.3.0.2 (OpenPages 7.x Maintenance), right clicked it and selected _New &#8594; Repository Workspace</em>.  A dialog pops up and I just clicked the <em>Finish</em> button at the bottom and the workspace loads after a long delay (I think I had to choose the projects, and I chose them all.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Tomorrow, possibly today</strong>
+- Taking until next Wednesday once resolved to contribute to the ALGO project</p>
+</div>
+<div class="paragraph">
+<p><strong>Upcoming</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>move auth-server fcn to server and remove second node instance</p>
+</li>
+<li>
+<p>implement choose deployment</p>
+</li>
+<li>
+<p>create RTC tasks for past and future op-installer work</p>
+</li>
+</ul>
+</div>]]></description><link>https://scottellis64.github.io/2017/07/26/Wednesday-July-26-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/Wednesday-July-26-2017.html</guid><category><![CDATA[status rtc_solution]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Todo's]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>Look into how to commit images to Github and how to show those images in READMEs.</p>
