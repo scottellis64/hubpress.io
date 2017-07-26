@@ -58,5 +58,59 @@ docker-compose up -d
 
 This will take a while if doing this from scratch.
 
+When complete, OpenPages should be accessible on your favorite browser at https://localhost:10111
+
+== Extending OpenPages for development ==
+
+This https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wa37f5439c5fa_480b_92fb_66b4f71bcc50/page/Extending%20OpenPages%20VirtualBox%20Installation%20for%20Development[wiki] post describes the process to convert your environment to one for development.
+
+This set of commands converts all the javascript libraries in SOSA to their development (source) versions:
+
+```bash
+cd ~/projects/ibm/eclipse-mars/com.ibm.openpages.sosa/sosa
+mkdir devbak
+mv ./dojo_1.10.4 ./devbak/dojo_1.10.4_prod
+mv ./dojo_1.8.4 ./devbak/dojo_1.8.4_prod
+mv ./gridx1.2 ./devbak/gridx1.2_prod
+mv ./ibmjs ./devbak/ibmjs_prod
+mv ./idx_1.5.1.8 ./devbak/idx_1.5.1.8_prod 
+ln -s ../../com.ibm.openpages.libraries.idx/dojo_1.10.4 dojo_1.10.4
+ln -s ../../com.ibm.openpages.libraries.idx/dojo_1.8.4 dojo_1.8.4
+ln -s ../../com.ibm.openpages.libraries.idx/idt_1.9/gridx_1.2 gridx1.2
+ln -s ../../com.ibm.openpages.libraries.idx/idx_1.5.1.8 idx_1.5.1.8
+ln -s ../../com.ibm.openpages.libraries.idx/ibmjs ibmjs
+```
+
+*Ignore all production javascript libraries*
+
+If you choose to back up the javascript libraries as in the previously outlined step, then you will need to ignore them in Eclipse or your resource searches will have two of everything, which is incredibly annoying.  
+
+- Open the project properties for com.ibm.openpages.sosa (cmd-I with project selected).
+- Navigate to Resource->Resource Filters
+- _Add Filter_
+	* Filter type -> Exclude all
+    * Applies to -> Folders, all children (recursive)
+    * File and Folder Attributes -> Project Relative Path | matches | sosa/devbak
+- _Add Filter_ in project com.ibm.openpages.libraries.idx
+	* Filter type -> Exclude all
+    * Applies to -> Folders, all children (recursive)
+    * File and Folder Attributes -> Project Relative Path | matches | *
+
+*Create oneui_ie.css*
+
+In idx_1.5.1.8, there needs to be oneui_ie.css in idx/themes/oneui
+
+These files don't exist by default, so you either get them from another environment or create them your self:
+
+oneui_ie.css:
+```css
+@import url("ie_0oneui.css");
+@import url("ie_1oneui.css");
+```
+
+ie_0oneui.css and ie_1oneui.css need to be obtained from somewhere else, so a todo is to put these somewhere to be retreived later.
+
+
+
 
 
