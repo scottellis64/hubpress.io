@@ -1,0 +1,62 @@
+= Openpages Docker Setup
+:hp-tags: docker, openpages, dev, setup
+
+https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W1662f310fa3e_4801_b067_6cd1a876162b/page/Run%20OpenPages%20on%20docker[Run OpenPages on docker]
+
+== Get OP version number for .env ==
+
+- telnet op-dkreg-kvm01.swg.usma.ibm.com
+- See http://op-dkreg-kvm01.swg.usma.ibm.com:5000/v2/op/opapp_db2/tags/list[here] in browser
+
+Example output in browser:
+```json
+{
+"name": "op/opapp_db2",
+"tags": [
+  "7.2",
+  "7.2.0.1-112",
+  "7.2.0.3-23",
+  "7.4-161",
+  "7.2.0.2-65",
+  "7.3-273",
+  "7.3.0.2-78"
+]}
+```
+
+== Get current 7.devenv from Github ==
+
+https://github.ibm.com/OpenPages/devops/tree/master/docker/7.devenv[Follow this link]
+
+Create .env file from the sample.env you see in 7.devenv and make appropriate changes to the environment settings.  Here is mine:
+
+```
+# Set this tag number to your desired build number
+OPVER=7.3.0.2-78
+
+HOSTNAME=${HOSTNAME}
+COMPOSE_HTTP_TIMEOUT=600
+WAS_DEBUG=true
+OPAPP_MANUAL_START=false
+
+# This should be your Eclipse workspace directory
+OP_WORKSPACE=/Users/sellis/projects/ibm/7.3.0.2
+
+# Change this to the root directory of your local devops project
+DEVOPS_WORKSPACE=/Users/sellis/projects/ibm/7.3.0.2/devops
+
+# This should be the directory to which you will export EAR files from Eclipse
+HOST_SHARED=/Users/sellis/virtualbox/shared
+```
+
+The 7.devenv folder has two docker-compose files, one for db2 and the other for oracle.  I only take the db2 version and rename it from docker-compose-app-db.yml to docker-compose.yml, which is the default name of a docker-compose file so that docker-compose command line commands do not need to specify the name parameter.
+
+So to build and run the OpenPages docker image, on the command line and in the 7.devenv folder, type:
+
+```
+docker-compose up -d
+```
+
+This will take a while if doing this from scratch.
+
+
+
