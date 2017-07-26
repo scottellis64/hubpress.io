@@ -151,7 +151,7 @@ cp ~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh .
 ```
 
 - Execute the redeploy command: ``./redeploy.sh``
-- Cross your fingers that this works
+- Cross your fingers that this works -- for me it did, first time!!
 
 
 
