@@ -1,5 +1,5 @@
 = Wednesday, July 26, 2017
-:hp-tags: status rtc_solution
+:hp-tags: status, rtc solution
 
 *Today*
 
