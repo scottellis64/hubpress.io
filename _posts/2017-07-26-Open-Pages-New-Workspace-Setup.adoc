@@ -1,0 +1,43 @@
+= OpenPages New Workspace Setup
+:hp-tags: setup, openpages, dev
+
+== Flowing with an RTC stream ==
+
+- Navigate to Team Artifacts
+- Create a new workspace by searching for the desired stream--in this example, 7.3.0.2
+	* Right click _My Repository Workspaces_
+    * Select _Search for Repository Workspaces..._
+    * Narrow the search to find streams only
+    * Enter 7.3.0.2 in the search terms. 
+    * In this example, the search results find 7.3.0.2 (OpenPages 7.x Maintenance) 
+    * Right click and selected _New → Repository Workspace_. 
+    * On the ensuing dialog, clicked the _Finish_ button at the bottom and the workspace loads after a long delay (I think I had to choose the projects, and I chose them all.
+
+== Fixing compilation errors after the workspace is loaded ==
+
+Error 1 - Target runtime Apache Tomcat v8.0 is not defined.	com.ibm.openpages.apps
+----
+cmd ,
+Server -> Runtime Environments
+Add
+Apache -> Apache Tomcat v8.0
+Browse
+Find local installation of Tomcat v8 on file system; download one if needed
+Finish
+OK
+----
+
+== Change Java to version 7 ==
+
+----
+cmd ,
+Java -> Compiler
+Compiler Compliance Level = 1.7
+At bottom of dialog, prompts with link to change JRE to same version.  Click and change to JRE 7.
+Click OK
+Click Yes to allow for a full rebuild
+----
+
+
+
+
