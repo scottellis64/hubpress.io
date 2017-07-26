@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 26 Jul 2017 14:52:12 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Wednesday, July 26, 2017]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 26 Jul 2017 18:35:04 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Wednesday, July 26, 2017]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>Today</strong></p>
 </div>
 <div class="ulist">
@@ -37,7 +37,271 @@
 <p>create RTC tasks for past and future op-installer work</p>
 </li>
 </ul>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/26/Wednesday-July-26-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/Wednesday-July-26-2017.html</guid><category><![CDATA[status]]></category><category><![CDATA[ rtc solution]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[OpenPages New Workspace Setup]]></title><description><![CDATA[<div class="sect1">
+</div>]]></description><link>https://scottellis64.github.io/2017/07/26/Wednesday-July-26-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/Wednesday-July-26-2017.html</guid><category><![CDATA[status]]></category><category><![CDATA[ rtc solution]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Openpages Docker Setup]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W1662f310fa3e_4801_b067_6cd1a876162b/page/Run%20OpenPages%20on%20docker">Run OpenPages on docker</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_get_op_version_number_for_env">Get OP version number for .env</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>telnet op-dkreg-kvm01.swg.usma.ibm.com</p>
+</li>
+<li>
+<p>See <a href="http://op-dkreg-kvm01.swg.usma.ibm.com:5000/v2/op/opapp_db2/tags/list">here</a> in browser</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Example output in browser:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-json" data-lang="json">{
+"name": "op/opapp_db2",
+"tags": [
+  "7.2",
+  "7.2.0.1-112",
+  "7.2.0.3-23",
+  "7.4-161",
+  "7.2.0.2-65",
+  "7.3-273",
+  "7.3.0.2-78"
+]}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_get_current_7_devenv_from_github">Get current 7.devenv from Github</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://github.ibm.com/OpenPages/devops/tree/master/docker/7.devenv">Follow this link</a></p>
+</div>
+<div class="paragraph">
+<p>Create .env file from the sample.env you see in 7.devenv and make appropriate changes to the environment settings.  Here is mine:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code># Set this tag number to your desired build number
+OPVER=7.3.0.2-78
+
+HOSTNAME=${HOSTNAME}
+COMPOSE_HTTP_TIMEOUT=600
+WAS_DEBUG=true
+OPAPP_MANUAL_START=false
+
+# This should be your Eclipse workspace directory
+OP_WORKSPACE=/Users/sellis/projects/ibm/7.3.0.2
+
+# Change this to the root directory of your local devops project
+DEVOPS_WORKSPACE=/Users/sellis/projects/ibm/7.3.0.2/devops
+
+# This should be the directory to which you will export EAR files from Eclipse
+HOST_SHARED=/Users/sellis/virtualbox/shared</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The 7.devenv folder has two docker-compose files, one for db2 and the other for oracle.  I only take the db2 version and rename it from docker-compose-app-db.yml to docker-compose.yml, which is the default name of a docker-compose file so that docker-compose command line commands do not need to specify the name parameter.</p>
+</div>
+<div class="paragraph">
+<p>So to build and run the OpenPages docker image, on the command line and in the 7.devenv folder, type:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>docker-compose up -d</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will take a while if doing this from scratch.</p>
+</div>
+<div class="paragraph">
+<p>When complete, OpenPages should be accessible on your favorite browser at <a href="https://localhost:10111" class="bare">https://localhost:10111</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_extending_openpages_for_development">Extending OpenPages for development</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This <a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wa37f5439c5fa_480b_92fb_66b4f71bcc50/page/Extending%20OpenPages%20VirtualBox%20Installation%20for%20Development">wiki</a> post describes the process to convert your environment to one for development.</p>
+</div>
+<div class="paragraph">
+<p>This set of commands converts all the javascript libraries in SOSA to their development (source) versions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd ~/projects/ibm/eclipse-mars/com.ibm.openpages.sosa/sosa
+mkdir devbak
+mv ./dojo_1.10.4 ./devbak/dojo_1.10.4_prod
+mv ./dojo_1.8.4 ./devbak/dojo_1.8.4_prod
+mv ./gridx1.2 ./devbak/gridx1.2_prod
+mv ./ibmjs ./devbak/ibmjs_prod
+mv ./idx_1.5.1.8 ./devbak/idx_1.5.1.8_prod
+ln -s ../../com.ibm.openpages.libraries.idx/dojo_1.10.4 dojo_1.10.4
+ln -s ../../com.ibm.openpages.libraries.idx/dojo_1.8.4 dojo_1.8.4
+ln -s ../../com.ibm.openpages.libraries.idx/idt_1.9/gridx_1.2 gridx1.2
+ln -s ../../com.ibm.openpages.libraries.idx/idx_1.5.1.8 idx_1.5.1.8
+ln -s ../../com.ibm.openpages.libraries.idx/ibmjs ibmjs</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Ignore all production javascript libraries</strong></p>
+</div>
+<div class="paragraph">
+<p>If you choose to back up the javascript libraries as in the previously outlined step, then you will need to ignore them in Eclipse or your resource searches will have two of everything, which is incredibly annoying.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open the project properties for com.ibm.openpages.sosa (cmd-I with project selected).</p>
+</li>
+<li>
+<p>Navigate to Resource&#8594;Resource Filters</p>
+</li>
+<li>
+<p><em>Add Filter</em></p>
+<div class="ulist">
+<ul>
+<li>
+<p>Filter type &#8594; Exclude all</p>
+</li>
+<li>
+<p>Applies to &#8594; Folders, all children (recursive)</p>
+</li>
+<li>
+<p>File and Folder Attributes &#8594; Project Relative Path | matches | sosa/devbak</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><em>Add Filter</em> in project com.ibm.openpages.libraries.idx</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Filter type &#8594; Exclude all</p>
+</li>
+<li>
+<p>Applies to &#8594; Folders, all children (recursive)</p>
+</li>
+<li>
+<p>File and Folder Attributes &#8594; Project Relative Path | matches | *</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Create oneui_ie.css</strong></p>
+</div>
+<div class="paragraph">
+<p>In idx_1.5.1.8, there needs to be oneui_ie.css in idx/themes/oneui</p>
+</div>
+<div class="paragraph">
+<p>These files don&#8217;t exist by default, so you either get them from another environment or create them your self:</p>
+</div>
+<div class="paragraph">
+<p>oneui_ie.css:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-css" data-lang="css">@import url("ie_0oneui.css");
+@import url("ie_1oneui.css");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ie_0oneui.css and ie_1oneui.css need to be obtained from somewhere else, so a todo is to put these somewhere to be retreived later.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_generate_op_apps_ear_and_redeploy_openpages_on_docker_container">Generate op-apps.ear and redeploy OpenPages on Docker container</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Generate op-apps.ear</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>right click on grc_webapps &#8594; op-apps</p>
+</li>
+<li>
+<p>choose Export &#8594; EAR file</p>
+</li>
+<li>
+<p>take the ear projedt op-apps, and set the destination as the shared folder that is the location you chose for the <em>HOST_SHARED</em> setting in your docker .env file from above.</p>
+</li>
+<li>
+<p>I check the boxes for <em>Export source files</em> (not sure what benefit this has) and <em>Overwrite existing file</em>, which will overwrite the last ear you generated without prompting you.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>SSH into docker container</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Unless you&#8217;ve changed the port numbers from the 7.devenv Dockerfile, your ssh port into the OP docker container is 24022.  Execute the command <code>ssh -l opuser -p 24022 localhost</code> (the default password is <code>passw0rd</code>)</p>
+</li>
+<li>
+<p>You may encounter this:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">Js-MacBook-Pro:sosa sellis$ ssh -l opuser -p 24022 localhost
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+SHA256:3zXdLVc6cmYqnKxN8rHkxzH/tW8Gm+phXr/nC0Yl5Uc.
+Please contact your system administrator.
+Add correct host key in /Users/sellis/.ssh/known_hosts to get rid of this message.
+Offending RSA key in /Users/sellis/.ssh/known_hosts:57
+RSA host key for [localhost]:24022 has changed and you have requested strict checking.
+Host key verification failed.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Simply edit the known_hosts file and remove the line number specified and try again.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Make sure you have copied the redeployEAR.sh file from the 7.devenv folder on your host OS.  Here is what I did:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd ~/OP/OpenPages/temp/perlinstall/
+cp ~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh .</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Execute the redeploy command: <code>./redeploy.sh</code></p>
+</li>
+<li>
+<p>Cross your fingers that this works&#8201;&#8212;&#8201;for me it did, first time!!</p>
+</li>
+</ul>
+</div>
+</div>
+</div>]]></description><link>https://scottellis64.github.io/2017/07/26/Openpages-Docker-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/Openpages-Docker-Setup.html</guid><category><![CDATA[docker]]></category><category><![CDATA[ openpages]]></category><category><![CDATA[ dev]]></category><category><![CDATA[ setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[OpenPages New Workspace Setup]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_flowing_with_an_rtc_stream">Flowing with an RTC stream</h2>
 <div class="sectionbody">
 <div class="ulist">
