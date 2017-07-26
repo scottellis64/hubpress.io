@@ -1,5 +1,5 @@
 = OpenPages New Workspace Setup
-:hp-tags: setup, openpages, dev
+:hp-tags: setup, openpages, dev, eclipse
 
 == Flowing with an RTC stream ==
 
@@ -39,5 +39,29 @@ Click Yes to allow for a full rebuild
 ----
 
 
+== Plugin Problems ==
+
+*Issues with IBPM Studio and codegenerator*
+
+- Close projects
+	* /com.openpages.integration.ibpm.studio
+    * /com.ibm.rave.openpages.codegenerator
+    
+== Compilation Errors ==
+
+With so many projects in Eclipse that we don't use for OpenPages web development, it is OK to close some of the projects that we don't actively use.  Which are safe to close is not easy to determine, so I close a bunch and hope for the best.
+
+I am closing:
+
+- opsearchtool
+- /com.ibm.openpages.reporting.commandcenterinstallercustomcode
+- /com.ibm.openpages.env.comparison.tests
+
+== Change to Hierarchy View of Working Sets ==
+
+- In upper right hand corner of Project Explorer, click on down arrow glyph
+- Change _Projects Presentation_ to _Hierarchical_
+_ Change _Top Level Elements_ to _Working Sets_
+_ Click on _Select Working Set_, then _Select All_, then _OK_
 
 
