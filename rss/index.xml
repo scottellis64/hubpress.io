@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 26 Jul 2017 14:39:42 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Wednesday, July 26, 2017]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 26 Jul 2017 14:52:12 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Wednesday, July 26, 2017]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>Today</strong></p>
 </div>
 <div class="ulist">
@@ -111,7 +111,73 @@ Click Yes to allow for a full rebuild</pre>
 </div>
 </div>
 </div>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/26/Open-Pages-New-Workspace-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/Open-Pages-New-Workspace-Setup.html</guid><category><![CDATA[setup]]></category><category><![CDATA[ openpages]]></category><category><![CDATA[ dev]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Todo's]]></title><description><![CDATA[<div class="ulist">
+</div>
+<div class="sect1">
+<h2 id="_plugin_problems">Plugin Problems</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Issues with IBPM Studio and codegenerator</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Close projects</p>
+<div class="ulist">
+<ul>
+<li>
+<p>/com.openpages.integration.ibpm.studio</p>
+</li>
+<li>
+<p>/com.ibm.rave.openpages.codegenerator</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_compilation_errors">Compilation Errors</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>With so many projects in Eclipse that we don&#8217;t use for OpenPages web development, it is OK to close some of the projects that we don&#8217;t actively use.  Which are safe to close is not easy to determine, so I close a bunch and hope for the best.</p>
+</div>
+<div class="paragraph">
+<p>I am closing:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>opsearchtool</p>
+</li>
+<li>
+<p>/com.ibm.openpages.reporting.commandcenterinstallercustomcode</p>
+</li>
+<li>
+<p>/com.ibm.openpages.env.comparison.tests</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_change_to_hierarchy_view_of_working_sets">Change to Hierarchy View of Working Sets</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>In upper right hand corner of Project Explorer, click on down arrow glyph</p>
+</li>
+<li>
+<p>Change <em>Projects Presentation</em> to <em>Hierarchical</em>
+_ Change <em>Top Level Elements</em> to <em>Working Sets</em>
+_ Click on <em>Select Working Set</em>, then <em>Select All</em>, then <em>OK</em></p>
+</li>
+</ul>
+</div>
+</div>
+</div>]]></description><link>https://scottellis64.github.io/2017/07/26/Open-Pages-New-Workspace-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/Open-Pages-New-Workspace-Setup.html</guid><category><![CDATA[setup]]></category><category><![CDATA[ openpages]]></category><category><![CDATA[ dev]]></category><category><![CDATA[ eclipse]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Todo's]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>Look into how to commit images to Github and how to show those images in READMEs.</p>
