@@ -1,0 +1,18 @@
+= Wednesday, July 26, 2017
+:hp-tags: status rtc_solution
+
+*Today*
+
+- Fixing a 7.3.0.2 bug in the Homepage Dashboard
+- setting up development env and had issues but resolved with Ken on the phone
+	* Had overlapping changes in RTC.  Solution was that I needed to delete my 7.3.0.2 workspace in Team Artifacts->My Repository Workspaces, delete the local folder with 7.3.0.2, then recreate the workspace by searching for the 7.3.0.2 stream, right clicking _My Repository Workspaces_, select _Search for Repository Workspaces..._, narrow to find Streams, then enter 7.3.0.2 in the search terms.  It found _7.3.0.2 (OpenPages 7.x Maintenance), right clicked it and selected _New -> Repository Workspace_.  A dialog pops up and I just clicked the _Finish_ button at the bottom and the workspace loads after a long delay (I think I had to choose the projects, and I chose them all.
+    
+
+*Tomorrow, possibly today* 
+- Taking until next Wednesday once resolved to contribute to the ALGO project
+
+*Upcoming*
+
+- move auth-server fcn to server and remove second node instance
+- implement choose deployment
+- create RTC tasks for past and future op-installer work
