@@ -110,6 +110,48 @@ oneui_ie.css:
 
 ie_0oneui.css and ie_1oneui.css need to be obtained from somewhere else, so a todo is to put these somewhere to be retreived later.
 
+== Generate op-apps.ear and redeploy OpenPages on Docker container ==
+
+*Generate op-apps.ear*
+
+- right click on grc_webapps -> op-apps
+- choose Export -> EAR file
+- take the ear projedt op-apps, and set the destination as the shared folder that is the location you chose for the _HOST_SHARED_ setting in your docker .env file from above.
+- I check the boxes for _Export source files_ (not sure what benefit this has) and _Overwrite existing file_, which will overwrite the last ear you generated without prompting you.
+
+*SSH into docker container*
+
+- Unless you've changed the port numbers from the 7.devenv Dockerfile, your ssh port into the OP docker container is 24022.  Execute the command ``ssh -l opuser -p 24022 localhost`` (the default password is ``passw0rd``)
+- You may encounter this:
+
+```bash
+Js-MacBook-Pro:sosa sellis$ ssh -l opuser -p 24022 localhost
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
+Someone could be eavesdropping on you right now (man-in-the-middle attack)!
+It is also possible that a host key has just been changed.
+The fingerprint for the RSA key sent by the remote host is
+SHA256:3zXdLVc6cmYqnKxN8rHkxzH/tW8Gm+phXr/nC0Yl5Uc.
+Please contact your system administrator.
+Add correct host key in /Users/sellis/.ssh/known_hosts to get rid of this message.
+Offending RSA key in /Users/sellis/.ssh/known_hosts:57
+RSA host key for [localhost]:24022 has changed and you have requested strict checking.
+Host key verification failed.
+```
+
+Simply edit the known_hosts file and remove the line number specified and try again.
+
+- Make sure you have copied the redeployEAR.sh file from the 7.devenv folder on your host OS.  Here is what I did:
+
+```bash
+cd ~/OP/OpenPages/temp/perlinstall/
+cp ~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh .
+```
+
+- Execute the redeploy command: ``./redeploy.sh``
+- Cross your fingers that this works
 
 
 
