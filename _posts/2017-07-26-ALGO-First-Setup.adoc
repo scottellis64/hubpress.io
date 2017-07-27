@@ -1,0 +1,56 @@
+= ALGO First Setup
+:hp-tags: setup, algo, dev
+
+*Web App URLs*
+
+- RO -> https://localhost:8443/AlgoFIRST
+- MDC -> https://localhost:8444/First
+
+*Docker Setup*
+
+- project https://github.ibm.com/OpenPages/rcoc-devops[rcoc-devops]
+- The README has all the directions needed
+- Navigate to rcoc-devops/docker
+- copy sample.env to .env
+- Here is my .env as it is today:
+
+```
+COMPOSE_PROJECT_NAME=rcoc
+RCOC_REGISTRY=op-dkreg-kvm01.swg.usma.ibm.com:5000/rcoc
+
+COMPOSE_HTTP_TIMEOUT=600
+
+# Collateral related variables
+COLLATERAL_VERSION=6.2.1.2-01
+
+# DB related variables
+DB_VERSION=6.2.2.0-01
+
+# RO related variables
+RO_VERSION=6.2.1.2-03
+RO_WORKSPACE=/Users/sellis/projects/rcoc/rcoc-readonly/src/main/webapp/
+RO_DB_USER="first_ro"
+RO_DB_PASSWORD="e659dc3fde"
+RO_DB_URL="jdbc:db2://algofirstdb2.swg.usma.ibm.com:50000/firstdb:currentSchema=FIRST_RO;enableExtendedDescribe=2;streamBufferSize=2097152;"
+
+# MDC related variables
+MDC_VERSION=6.2.1.2-03
+MDC_WORKSPACE=/Users/sellis/projects/rcoc/rcoc-mdc/src/main/webapp/
+MDC_DB_USER="first_mdc"
+MDC_DB_PASSWORD="e659dc3fde"
+MDC_DB_URL="jdbc:db2://algofirstdb2.swg.usma.ibm.com:50000/firstdb:currentSchema=FIRST_MDC;enableExtendedDescribe=2;streamBufferSize=2097152;"
+
+# Used by both RO and MDC
+MAIL_URL="na.relay.ibm.com"
+
+#First Media location
+FIRST_MEDIA_LOCATION=/Users/sellis/projects/rcoc/FirstMedia
+```
+
+- To know which versions to specify for RO_VERSION, MDC_VERSION and COLLATERAL_VERSION, you can look for each in the http://masa-rhel11.swg.usma.ibm.com/repositories[OP Docker Registry].  The rub is that you'll need to click on _next_ links until you find the section labeled *rcoc*
+- Once this is all set, type ``docker-compose up -d`` and wait for the docker images to build and deploy.  The Web URL's listed above should get you in.
+- You'll need a password to get into both applications, the same works for both.  It will need to be assigned by Marc or Rajeev, and so far I haven't been given the authorization or the process to do this myself.
+- My current userid and password are sellis / cd55d90cfac78342d0
+
+
+
