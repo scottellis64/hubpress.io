@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 26 Jul 2017 19:03:02 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Wednesday, July 26, 2017]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 27 Jul 2017 16:08:10 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Wednesday, July 26, 2017]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>Today</strong></p>
 </div>
 <div class="ulist">
@@ -441,7 +441,91 @@ _ Click on <em>Select Working Set</em>, then <em>Select All</em>, then <em>OK</e
 </ul>
 </div>
 </div>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/26/Open-Pages-New-Workspace-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/Open-Pages-New-Workspace-Setup.html</guid><category><![CDATA[setup]]></category><category><![CDATA[ openpages]]></category><category><![CDATA[ dev]]></category><category><![CDATA[ eclipse]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Todo's]]></title><description><![CDATA[<div class="ulist">
+</div>]]></description><link>https://scottellis64.github.io/2017/07/26/Open-Pages-New-Workspace-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/Open-Pages-New-Workspace-Setup.html</guid><category><![CDATA[setup]]></category><category><![CDATA[ openpages]]></category><category><![CDATA[ dev]]></category><category><![CDATA[ eclipse]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[ALGO First Setup]]></title><description><![CDATA[<div class="paragraph">
+<p><strong>Web App URLs</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>RO &#8594; <a href="https://localhost:8443/AlgoFIRST" class="bare">https://localhost:8443/AlgoFIRST</a></p>
+</li>
+<li>
+<p>MDC &#8594; <a href="https://localhost:8444/First" class="bare">https://localhost:8444/First</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Docker Setup</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>project <a href="https://github.ibm.com/OpenPages/rcoc-devops">rcoc-devops</a></p>
+</li>
+<li>
+<p>The README has all the directions needed</p>
+</li>
+<li>
+<p>Navigate to rcoc-devops/docker</p>
+</li>
+<li>
+<p>copy sample.env to .env</p>
+</li>
+<li>
+<p>Here is my .env as it is today:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>COMPOSE_PROJECT_NAME=rcoc
+RCOC_REGISTRY=op-dkreg-kvm01.swg.usma.ibm.com:5000/rcoc
+
+COMPOSE_HTTP_TIMEOUT=600
+
+# Collateral related variables
+COLLATERAL_VERSION=6.2.1.2-01
+
+# DB related variables
+DB_VERSION=6.2.2.0-01
+
+# RO related variables
+RO_VERSION=6.2.1.2-03
+RO_WORKSPACE=/Users/sellis/projects/rcoc/rcoc-readonly/src/main/webapp/
+RO_DB_USER="first_ro"
+RO_DB_PASSWORD="e659dc3fde"
+RO_DB_URL="jdbc:db2://algofirstdb2.swg.usma.ibm.com:50000/firstdb:currentSchema=FIRST_RO;enableExtendedDescribe=2;streamBufferSize=2097152;"
+
+# MDC related variables
+MDC_VERSION=6.2.1.2-03
+MDC_WORKSPACE=/Users/sellis/projects/rcoc/rcoc-mdc/src/main/webapp/
+MDC_DB_USER="first_mdc"
+MDC_DB_PASSWORD="e659dc3fde"
+MDC_DB_URL="jdbc:db2://algofirstdb2.swg.usma.ibm.com:50000/firstdb:currentSchema=FIRST_MDC;enableExtendedDescribe=2;streamBufferSize=2097152;"
+
+# Used by both RO and MDC
+MAIL_URL="na.relay.ibm.com"
+
+#First Media location
+FIRST_MEDIA_LOCATION=/Users/sellis/projects/rcoc/FirstMedia</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>To know which versions to specify for RO_VERSION, MDC_VERSION and COLLATERAL_VERSION, you can look for each in the <a href="http://masa-rhel11.swg.usma.ibm.com/repositories">OP Docker Registry</a>.  The rub is that you&#8217;ll need to click on <em>next</em> links until you find the section labeled <strong>rcoc</strong></p>
+</li>
+<li>
+<p>Once this is all set, type <code>docker-compose up -d</code> and wait for the docker images to build and deploy.  The Web URL&#8217;s listed above should get you in.</p>
+</li>
+<li>
+<p>You&#8217;ll need a password to get into both applications, the same works for both.  It will need to be assigned by Marc or Rajeev, and so far I haven&#8217;t been given the authorization or the process to do this myself.</p>
+</li>
+<li>
+<p>My current userid and password are sellis / cd55d90cfac78342d0</p>
+</li>
+</ul>
+</div>]]></description><link>https://scottellis64.github.io/2017/07/26/ALGO-First-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/ALGO-First-Setup.html</guid><category><![CDATA[setup]]></category><category><![CDATA[ algo]]></category><category><![CDATA[ dev]]></category><category><![CDATA[ docker]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Todo's]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>Look into how to commit images to Github and how to show those images in READMEs.</p>
