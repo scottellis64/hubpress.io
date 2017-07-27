@@ -1,5 +1,5 @@
 = ALGO First Setup
-:hp-tags: setup, algo, dev
+:hp-tags: setup, algo, dev, docker
 
 *Web App URLs*
 
