@@ -1,0 +1,3 @@
+= Javascript Save Dialog
+
+Look https://eligrey.com/blog/saving-generated-files-on-the-client-side/[here]
