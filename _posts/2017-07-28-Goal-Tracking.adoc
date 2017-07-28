@@ -1,0 +1,4 @@
+= Goal Tracking
+:hp-tags: ibm, process, career, goals
+
+Go here for https://w3-01.ibm.com/hr/careersmart/html/goals.html#tabId=GOOV[PBC goal entry]
