@@ -1,0 +1,29 @@
+= Friday, July 28th, 2017
+:hp-tags: status
+
+- I've managed to split my time with Algo finally, and have put a good days effort into the Reports page and have reports downloading on all browsers now.  It's in review right now.
+- Started a Docker image for OP Installer testing, but found out it needs more than just Node.js installed on it
+	* Go https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W1662f310fa3e_4801_b067_6cd1a876162b/page/Docker%20image%20dependency[here] for a view of the docker image dependencies to be installed on this system
+- Been battling perception again, which appears to mostly be coming from Sandy
+	* Ask Isaac about this in one-on-one today
+    * Managed to get the UCF task resolved that was of most concern (https://ccm-risk.ottawa.ibm.com:9453/ccm/web/projects/OpenPages%20(Change%20Management)#action=com.ibm.team.workitem.viewWorkItem&id=67440[67440])
+    * Knocked out https://ccm-risk.ottawa.ibm.com:9453/ccm/web/projects/OpenPages%20(Change%20Management)#action=com.ibm.team.workitem.viewWorkItem&id=64190[64190], the dashboard issue where the panel follows the mouse after clicking the Add New button.  Code was commented out that resolved the issue and I must have commented it out for testing and forgot to uncomment before checking in
+    * Still working on https://ccm-risk.ottawa.ibm.com:9453/ccm/web/projects/OpenPages%20(Change%20Management)#action=com.ibm.team.workitem.viewWorkItem&id=60516[60516], the timesheet helper issue where it doesn't work if _openpages_ is taken out of the URL.  Code I changed isn't showing up and right now I think it's a build process issue.
+    
+*Going Forward*
+
+- Working on Algo tasks until next Thursday
+- RTC tasks for OP Installer tracking
+
+*Typescript Conversion*
+
+Should have understood existing process
+They pick apart their source and deploy some of it remote
+Wenlong told me that the receiveAssets endpoint was not important
+I trusted Josh and Wenlong but I should have been deeper inside their thought processes
+Wenlong doesn't work long hours and the effort wasn't there.
+I should have been more aggresive but I trusted too much.
+Didn't realize until too late that nothing had really been done on their end.
+
+
+
