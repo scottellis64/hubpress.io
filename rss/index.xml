@@ -1,6 +1,66 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 28 Jul 2017 17:37:01 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Goal Tracking]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 28 Jul 2017 17:52:38 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Goal Tracking]]></title><description><![CDATA[<div class="paragraph">
 <p>Go here for <a href="https://w3-01.ibm.com/hr/careersmart/html/goals.html#tabId=GOOV">PBC goal entry</a></p>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/28/Goal-Tracking.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/28/Goal-Tracking.html</guid><category><![CDATA[ibm]]></category><category><![CDATA[ process]]></category><category><![CDATA[ career]]></category><category><![CDATA[ goals]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 28 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Javascript Save Dialog]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://scottellis64.github.io/2017/07/28/Goal-Tracking.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/28/Goal-Tracking.html</guid><category><![CDATA[ibm]]></category><category><![CDATA[ process]]></category><category><![CDATA[ career]]></category><category><![CDATA[ goals]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 28 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Friday, July 28th, 2017]]></title><description><![CDATA[<div class="ulist">
+<ul>
+<li>
+<p>I&#8217;ve managed to split my time with Algo finally, and have put a good days effort into the Reports page and have reports downloading on all browsers now.  It&#8217;s in review right now.</p>
+</li>
+<li>
+<p>Started a Docker image for OP Installer testing, but found out it needs more than just Node.js installed on it</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Go <a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W1662f310fa3e_4801_b067_6cd1a876162b/page/Docker%20image%20dependency">here</a> for a view of the docker image dependencies to be installed on this system</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Been battling perception again, which appears to mostly be coming from Sandy</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Ask Isaac about this in one-on-one today</p>
+</li>
+<li>
+<p>Managed to get the UCF task resolved that was of most concern (<a href="https://ccm-risk.ottawa.ibm.com:9453/ccm/web/projects/OpenPages%20(Change%20Management)#action=com.ibm.team.workitem.viewWorkItem&amp;id=67440">67440</a>)</p>
+</li>
+<li>
+<p>Knocked out <a href="https://ccm-risk.ottawa.ibm.com:9453/ccm/web/projects/OpenPages%20(Change%20Management)#action=com.ibm.team.workitem.viewWorkItem&amp;id=64190">64190</a>, the dashboard issue where the panel follows the mouse after clicking the Add New button.  Code was commented out that resolved the issue and I must have commented it out for testing and forgot to uncomment before checking in</p>
+</li>
+<li>
+<p>Still working on <a href="https://ccm-risk.ottawa.ibm.com:9453/ccm/web/projects/OpenPages%20(Change%20Management)#action=com.ibm.team.workitem.viewWorkItem&amp;id=60516">60516</a>, the timesheet helper issue where it doesn&#8217;t work if <em>openpages</em> is taken out of the URL.  Code I changed isn&#8217;t showing up and right now I think it&#8217;s a build process issue.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Going Forward</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Working on Algo tasks until next Thursday</p>
+</li>
+<li>
+<p>RTC tasks for OP Installer tracking</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Typescript Conversion</strong></p>
+</div>
+<div class="paragraph">
+<p>Should have understood existing process
+They pick apart their source and deploy some of it remote
+Wenlong told me that the receiveAssets endpoint was not important
+I trusted Josh and Wenlong but I should have been deeper inside their thought processes
+Wenlong doesn&#8217;t work long hours and the effort wasn&#8217;t there.
+I should have been more aggresive but I trusted too much.
+Didn&#8217;t realize until too late that nothing had really been done on their end.</p>
+</div>]]></description><link>https://scottellis64.github.io/2017/07/28/Friday-July-28th-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/28/Friday-July-28th-2017.html</guid><category><![CDATA[status]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 28 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Javascript Save Dialog]]></title><description><![CDATA[<div class="paragraph">
 <p>Look <a href="https://eligrey.com/blog/saving-generated-files-on-the-client-side/">here</a></p>
 </div>]]></description><link>https://scottellis64.github.io/2017/07/27/Javascript-Save-Dialog.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/27/Javascript-Save-Dialog.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 27 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Wednesday, July 26, 2017]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>Today</strong></p>
