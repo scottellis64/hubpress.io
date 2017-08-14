@@ -1,4 +1,35 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 28 Jul 2017 17:52:38 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Goal Tracking]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 14 Aug 2017 13:41:08 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[August 14, 2017]]></title><description><![CDATA[<div class="paragraph">
+<p><strong>Friday</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Checked in work for choose-deployment; needs work to call create new deployment, upload may be an available endpoint?</p>
+</li>
+<li>
+<p>Added encryption for login story and will resolve that this morning</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Today</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Onboarding</p>
+</li>
+<li>
+<p>Choose deployment and wrap up that story if possible</p>
+</li>
+<li>
+<p>Long running processes&#8212;&#8203;maybe Brian?</p>
+</li>
+<li>
+<p>Build for Github</p>
+</li>
+</ul>
+</div>]]></description><link>https://scottellis64.github.io/2017/08/14/August-14-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/08/14/August-14-2017.html</guid><category><![CDATA[status]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Mon, 14 Aug 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Goal Tracking]]></title><description><![CDATA[<div class="paragraph">
 <p>Go here for <a href="https://w3-01.ibm.com/hr/careersmart/html/goals.html#tabId=GOOV">PBC goal entry</a></p>
 </div>]]></description><link>https://scottellis64.github.io/2017/07/28/Goal-Tracking.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/28/Goal-Tracking.html</guid><category><![CDATA[ibm]]></category><category><![CDATA[ process]]></category><category><![CDATA[ career]]></category><category><![CDATA[ goals]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 28 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Friday, July 28th, 2017]]></title><description><![CDATA[<div class="ulist">
 <ul>
