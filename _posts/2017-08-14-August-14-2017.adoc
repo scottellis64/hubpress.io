@@ -1,0 +1,17 @@
+= August 14, 2017
+:hp-tags: status
+
+*Friday*
+
+- Checked in work for choose-deployment; needs work to call create new deployment, upload may be an available endpoint?
+- Added encryption for login story and will resolve that this morning
+
+*Today*
+
+- Onboarding
+- Choose deployment and wrap up that story if possible
+- Long running processes--maybe Brian?
+
+- Build for Github
+
+
