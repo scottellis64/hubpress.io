@@ -1,4 +1,32 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 14 Aug 2017 13:41:08 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[August 14, 2017]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 06 Sep 2017 12:08:16 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Passwordless SSH]]></title><description><![CDATA[<div class="paragraph">
+<p>todo: instructions here for setting up passwordless ssh to remote systems</p>
+</div>
+<div class="paragraph">
+<p><strong>Problem: After setting up ssh, being prompted to enter passphrase</strong></p>
+</div>
+<div class="paragraph">
+<p>See if ~/.ssh/id_rsa is encrypted:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>cat ~/.ssh/id_rsa | head -2
+
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output above shows that the file is encrypted.  The solution is to first back the original file up then create a decrypted version of it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>chmod 400 ~/.ssh/id_rsa
+cp ~/.ssh/id_rsa ~/.ssh/id_rsa.bak
+openssl rsa -in ~/.ssh/id_rsa -out ~/.ssh/id_rsa.decrypted
+mv ~/.ssh/id_rsa.decrypted ~/.ssh/id_rsa
+chmod 400 ~/.ssh/id_rsa</code></pre>
+</div>
+</div>]]></description><link>https://scottellis64.github.io/2017/09/06/Passwordless-SSH.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/09/06/Passwordless-SSH.html</guid><category><![CDATA[bash_tips]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 06 Sep 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[August 14, 2017]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>Friday</strong></p>
 </div>
 <div class="ulist">
