@@ -1,0 +1,56 @@
+= OP-Installer Merging
+
+*Branch 350 Files*
+
+- README.md
+- client/
+	- mocha_test/
+		- interval/interval.ts
+	    - mocha.opts
+    	- sample/test.ts
+	    - tsconfig.test.json
+	- package.json
+	- src
+    	- app
+        	- api
+            	- model
+                	- deployment.model.ts
+                - service
+                    - deployment.service.ts
+                    - file.service.ts 
+            - mainPage
+            	- main-page.store.ts
+            - task-area
+            	- task-area.component.html
+                - task-area.component.ts
+            - utils
+            	- IntervalExecutor.ts
+- gulpfile.babel.js
+- server
+	- package.json
+    
+
+*Branch 283 Files*
+
+- README.md
+- client/
+	- mocha_test/
+		- interval/interval.ts
+	    - mocha.opts
+    	- sample/test.ts
+	    - tsconfig.test.json
+	- package.json
+	- src
+    	- app
+        	- api
+                - service
+                    - deployment.service.ts
+            - mainPage
+            	- main-page.store.ts
+            - utils
+            	- deleted IntervalExecutor.js
+            	- IntervalExecutor.ts
+		- routes
+        	validation-routes.js
+            
+            
