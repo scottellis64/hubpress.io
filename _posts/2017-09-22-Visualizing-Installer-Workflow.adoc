@@ -1,0 +1,4 @@
+= Visualizing Installer Workflow
+:hp-tags: research
+
+I'm trying to find a way to show the progress of the installer as it cycles through all its tasks.  I think [GoJS](https://gojs.net/latest/samples/index.html) might be the one, but I need to look at it some more.
