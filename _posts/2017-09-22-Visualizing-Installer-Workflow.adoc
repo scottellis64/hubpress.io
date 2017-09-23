@@ -8,3 +8,5 @@ https://gojs.net/latest/learn/index.html
 Article on other libraries:  https://modeling-languages.com/javascript-drawing-libraries-diagrams/
 
 Javascript Diagram Library: https://mindfusion.eu/javascript-diagram-demo.html
+
+BPMN : https://github.com/bpmn-io/bpmn-js-examples/tree/master/simple-commonjs
