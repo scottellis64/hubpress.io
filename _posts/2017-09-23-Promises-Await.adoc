@@ -1,0 +1,4 @@
+= Promises Await
+:hp-tags: research
+
+https://www.twilio.com/blog/2015/10/asyncawait-the-hero-javascript-deserved.html
