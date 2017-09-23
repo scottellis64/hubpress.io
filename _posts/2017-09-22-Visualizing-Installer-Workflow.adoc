@@ -6,3 +6,5 @@ I'm trying to find a way to show the progress of the installer as it cycles thro
 https://gojs.net/latest/learn/index.html
 
 Article on other libraries:  https://modeling-languages.com/javascript-drawing-libraries-diagrams/
+
+Javascript Diagram Library: https://mindfusion.eu/javascript-diagram-demo.html
