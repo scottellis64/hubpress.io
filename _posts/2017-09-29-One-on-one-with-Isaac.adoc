@@ -8,6 +8,10 @@ AWS Lambda Functions
 Serverless Development
 
 Tutorial: https://nodered.org/docs/platforms/aws
+https://console.aws.amazon.com/iam/home?nc2=h_m_sc#/security_credential
+https://aws.amazon.com/lambda/
+https://console.aws.amazon.com/console/home?region=us-east-1
+
 
 NPM Private to IBM
 How to leverage our private NPM registry
