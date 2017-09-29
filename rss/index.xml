@@ -1,28 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 29 Sep 2017 20:04:16 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[One on one with Isaac]]></title><description><![CDATA[<div class="paragraph">
-<p>No raise this year&#8212;&#8203;I&#8217;m in the 98% of my band</p>
-</div>
-<div class="paragraph">
-<p>Research topics:</p>
-</div>
-<div class="paragraph">
-<p>AWS Lambda Functions
-Serverless Development</p>
-</div>
-<div class="paragraph">
-<p>NPM Private to IBM
-How to leverage our private NPM registry</p>
-</div>
-<div class="paragraph">
-<p>Tracking process in GitHub</p>
-</div>
-<div class="paragraph">
-<p>Bluemix Functions
-Wisk/Functions</p>
-</div>
-<div class="paragraph">
-<p>App ID in Bluemix
-Authentication Scheme&#8201;&#8212;&#8201;might replace our user provisioning</p>
-</div>]]></description><link>https://scottellis64.github.io/2017/09/29/One-on-one-with-Isaac.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/09/29/One-on-one-with-Isaac.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 29 Sep 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Promises Await]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 29 Sep 2017 20:10:21 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Promises Await]]></title><description><![CDATA[<div class="paragraph">
 <p><a href="https://www.twilio.com/blog/2015/10/asyncawait-the-hero-javascript-deserved.html" class="bare">https://www.twilio.com/blog/2015/10/asyncawait-the-hero-javascript-deserved.html</a></p>
 </div>]]></description><link>https://scottellis64.github.io/2017/09/23/Promises-Await.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/09/23/Promises-Await.html</guid><category><![CDATA[research]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Sat, 23 Sep 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Visualizing Installer Workflow]]></title><description><![CDATA[<div class="paragraph">
 <p>I&#8217;m trying to find a way to show the progress of the installer as it cycles through all its tasks.  I think [GoJS](<a href="https://gojs.net/latest/samples/index.html" class="bare">https://gojs.net/latest/samples/index.html</a>) might be the one, but I need to look at it some more.</p>
