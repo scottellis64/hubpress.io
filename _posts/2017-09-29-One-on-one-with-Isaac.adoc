@@ -1,0 +1,19 @@
+= One on one with Isaac
+
+No raise this year--I'm in the 98% of my band
+
+Research topics:
+
+AWS Lambda Functions
+Serverless Development
+
+NPM Private to IBM
+How to leverage our private NPM registry
+
+Tracking process in GitHub
+
+Bluemix Functions
+Wisk/Functions
+
+App ID in Bluemix
+Authentication Scheme -- might replace our user provisioning 
