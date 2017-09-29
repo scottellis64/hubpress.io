@@ -7,6 +7,8 @@ Research topics:
 AWS Lambda Functions
 Serverless Development
 
+Tutorial: https://nodered.org/docs/platforms/aws
+
 NPM Private to IBM
 How to leverage our private NPM registry
 
