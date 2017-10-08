@@ -1,0 +1,27 @@
+= Installing NPM on Mac
+:hp-tags: setup
+
+The inspiration?  I just tried to upgrade NPM using the commandline *npm i -g npm*.  On my Mac, I have to be sudo to do anything of this nature, but I forgot to do this, and as my regular user the installation managed to remove the old NPM, but didn't succeed in creating the new, so now there is no NPM on my page.  Ooops!  
+
+The question is, how did I install NPM in the first place?  I didn't write it down, so I will this time.  He can be taught!
+
+I'm going to assume that I installed node in the first place using Homebrew.  So here is my first attempt to set the ship aright:
+
+```bash
+brew update
+brew install node
+```
+
+Ok, that was easy.  After I did this, **npm --version** kindly informs me that my npm version is 5.3.0.  So this gets me back to where I was when I started.  The reason I tried to update NPM in the first place was this warning here:
+
+```
+   ╭──────────────────────╮
+   │                                     │
+   │   Update available 5.3.0 → 5.4.2    │
+   │     Run npm i -g npm to update      │
+   │                                     │
+   ╰──────────────────────╯
+
+```
+
+I'll deal with the warning for now
