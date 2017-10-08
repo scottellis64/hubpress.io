@@ -1,34 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 08 Oct 2017 15:36:23 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Installing NPM on Mac]]></title><description><![CDATA[<div class="paragraph">
-<p>The inspiration?  I just tried to upgrade NPM using the commandline <strong>npm i -g npm</strong>.  On my Mac, I have to be sudo to do anything of this nature, but I forgot to do this, and as my regular user the installation managed to remove the old NPM, but didn&#8217;t succeed in creating the new, so now there is no NPM on my page.  Ooops!</p>
-</div>
-<div class="paragraph">
-<p>The question is, how did I install NPM in the first place?  I didn&#8217;t write it down, so I will this time.  He can be taught!</p>
-</div>
-<div class="paragraph">
-<p>I&#8217;m going to assume that I installed node in the first place using Homebrew.  So here is my first attempt to set the ship aright:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">brew update
-brew install node</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Ok, that was easy.  After I did this, <strong>npm --version</strong> kindly informs me that my npm version is 5.3.0.  So this gets me back to where I was when I started.  The reason I tried to update NPM in the first place was this warning here:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code>   ╭──────────────────────╮
-   │                                     │
-   │   Update available 5.3.0 → 5.4.2    │
-   │     Run npm i -g npm to update      │
-   │                                     │
-   ╰──────────────────────╯</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>I&#8217;ll deal with the warning for now</p>
-</div>]]></description><link>https://scottellis64.github.io/2017/10/08/Installing-NPM-on-Mac.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/10/08/Installing-NPM-on-Mac.html</guid><category><![CDATA[setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Sun, 08 Oct 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[One on one with Isaac]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 08 Oct 2017 15:36:44 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[One on one with Isaac]]></title><description><![CDATA[<div class="paragraph">
 <p>No raise this year&#8212;&#8203;I&#8217;m in the 98% of my band</p>
 </div>
 <div class="paragraph">
