@@ -1,0 +1,27 @@
+= Enable ES6 Node using Babel
+:hp-tags: setup
+
+Enabling ES6 syntax in node applications is necessary only until it is supported natively by Node itself.  For now, es6-enabled javascript code needs to be transpiled into es5 syntax.  The most popular transpiler for this purpose is Babel.  There are others, and I haven't tried them.  There has been no need.
+
+At the root of your project, install some dependencies that will be saved to your project's project.json:
+
+```
+npm install babel-preset-env --save-dev
+```
+
+There are many options for Babel that can be configured.  In a server-side project, the only transpilations we need are for NodeJS code, nothing for the multititude of browsers that exist in the world.  So in package.json, this config block will restrict itself to transpilations for the currently targeted node version:
+
+```
+  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ]
+```
+
+"presets" is its own block that is a direct child of the root package.json object definition.
