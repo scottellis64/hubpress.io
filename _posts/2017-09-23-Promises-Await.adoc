@@ -2,3 +2,5 @@
 :hp-tags: research
 
 https://www.twilio.com/blog/2015/10/asyncawait-the-hero-javascript-deserved.html
+
+Good explanation of async/await: http://stackabuse.com/node-js-async-await-in-es7/
