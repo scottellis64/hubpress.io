@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 08 Oct 2017 15:50:32 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[One on one with Isaac]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 08 Oct 2017 16:10:54 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Enable ES6 Node using Babel]]></title><description><![CDATA[<div class="paragraph">
+<p>Enabling ES6 syntax in node applications is necessary only until it is supported natively by Node itself.  For now, es6-enabled javascript code needs to be transpiled into es5 syntax.  The most popular transpiler for this purpose is Babel.  There are others, and I haven&#8217;t tried them.  There has been no need.</p>
+</div>
+<div class="paragraph">
+<p>At the root of your project, install some dependencies that will be saved to your project&#8217;s project.json:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>npm install babel-preset-env --save-dev</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are many options for Babel that can be configured.  In a server-side project, the only transpilations we need are for NodeJS code, nothing for the multititude of browsers that exist in the world.  So in package.json, this config block will restrict itself to transpilations for the currently targeted node version:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>  "presets": [
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>"presets" is its own block that is a direct child of the root package.json object definition.</p>
+</div>]]></description><link>https://scottellis64.github.io/2017/10/08/Enable-E-S-Node-using-Babel.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/10/08/Enable-E-S-Node-using-Babel.html</guid><category><![CDATA[setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Sun, 08 Oct 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[One on one with Isaac]]></title><description><![CDATA[<div class="paragraph">
 <p>No raise this year&#8212;&#8203;I&#8217;m in the 98% of my band</p>
 </div>
 <div class="paragraph">
