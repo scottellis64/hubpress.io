@@ -14,6 +14,8 @@ https://console.aws.amazon.com/console/home?region=us-east-1
 
 *IAM Console*
 
+IAM = Identity and Access Management
+
 https://console.aws.amazon.com/iam/home#/home
 
 *Command line setup*
@@ -38,4 +40,9 @@ Now try it out to see if you are properly set up to access the configured accoun
 ```
 aws ec2 describe-tags --output table
 ```
+
+*Lambda Management*
+
+https://console.aws.amazon.com/lambda/home?region=us-east-1#/
+
 
