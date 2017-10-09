@@ -6,11 +6,10 @@
 - Easy: 
 ``brew install awscli``
 
-*Register for an account*
-
-Needs details here
-
-https://console.aws.amazon.com/console/home?region=us-east-1
+*Register for an account on the AWS Management Console*
+	
+	Needs details here
+	https://console.aws.amazon.com/console/home?region=us-east-1
 
 *IAM Console*
 
