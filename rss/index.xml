@@ -1,4 +1,80 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sun, 08 Oct 2017 20:15:25 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Enable ES6 Node using Babel]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Oct 2017 02:09:37 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Getting started with AWS]]></title><description><![CDATA[<div class="paragraph">
+<p><strong>Installing</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Easy:
+<code>brew install awscli</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Register for an account on the AWS Management Console</strong></p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Needs details here
+https://console.aws.amazon.com/console/home?region=us-east-1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>IAM Console</strong></p>
+</div>
+<div class="paragraph">
+<p>IAM = Identity and Access Management</p>
+</div>
+<div class="paragraph">
+<p><a href="https://console.aws.amazon.com/iam/home#/home" class="bare">https://console.aws.amazon.com/iam/home#/home</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Command line setup</strong></p>
+</div>
+<div class="paragraph">
+<p>Set up AWS credentials</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a file ~/.aws/credentials:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>[default]
+aws_access_key_id=AKIAIOSFODNN7EXAMPLE
+aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a config file at ~/.aws/config</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>[default]
+region=us-east-1
+output=json</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now try it out to see if you are properly set up to access the configured account:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>aws ec2 describe-tags --output table</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><strong>Lambda Management</strong></p>
+</div>
+<div class="paragraph">
+<p><a href="https://console.aws.amazon.com/lambda/home?region=us-east-1#/" class="bare">https://console.aws.amazon.com/lambda/home?region=us-east-1#/</a></p>
+</div>]]></description><link>https://scottellis64.github.io/2017/10/08/Getting-started-with-AWS.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/10/08/Getting-started-with-AWS.html</guid><category><![CDATA[setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Sun, 08 Oct 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Enable ES6 Node using Babel]]></title><description><![CDATA[<div class="paragraph">
 <p>Enabling ES6 syntax in node applications is necessary only until it is supported natively by Node itself.  For now, es6-enabled javascript code needs to be transpiled into es5 syntax.  The most popular transpiler for this purpose is Babel.  There are others, and I haven&#8217;t tried them.  There has been no need.</p>
 </div>
 <div class="paragraph">
