@@ -1,0 +1,41 @@
+= Getting started with AWS
+:hp-tags: setup
+
+*Installing*
+
+- Easy: 
+``brew install awscli``
+
+*Register for an account*
+
+Needs details here
+
+https://console.aws.amazon.com/console/home?region=us-east-1
+
+*IAM Console*
+
+https://console.aws.amazon.com/iam/home#/home
+
+*Command line setup*
+
+Set up AWS credentials
+
+	- Create a file ~/.aws/credentials:
+```
+[default]
+aws_access_key_id=AKIAIOSFODNN7EXAMPLE
+aws_secret_access_key=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+```
+    - Create a config file at ~/.aws/config
+```
+[default]
+region=us-east-1
+output=json
+```
+
+Now try it out to see if you are properly set up to access the configured account:
+
+```
+aws ec2 describe-tags --output table
+```
+
