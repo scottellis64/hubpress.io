@@ -76,7 +76,9 @@ lo        Link encap:Local Loopback
 
 But the original ip address specified when starting the OP Agent installation might be proliferated through some of the applications that are installed in the upcoming steps.  Here is what to do before continuing:
 
-- todo: fill this in 
+- Find the environment in UCD->Applications->IBM OpenPages by ip address
+- In the environment settings, find any server field and set it to *opagent* and save
+- On the VM, as root (root/sellis) edit /opt/ibm-ucd/agent/conf/installed.properties and change the ip address there to opagent--save and restart the agent.
 
 *Installing OpenPages without OpenPages*
 
@@ -96,11 +98,11 @@ With that all set, let's start the installation process:
     * Versions: click on _Choose Versions_
     * Choose _Select For All..._ _Latest Available_
     * Deselect all components related to OpenPages and the DB2 Server.  My final list of components are these: 
-    	** IBM HTTP Server 8.5.5.11
         ** IBM Websphere Application Server 8.5.5.12
-        ** IBM Cognos BI Server 11.0.7.0.1001
+    	** IBM HTTP Server 8.5.5.11
         ** Oracle DB Server and Client 12.1.0.2
         ** IBM Java SDK 8.0.4.2
+        ** IBM Cognos BI Server 11.0.7.0.1001
         ** IBM BPM Server 8.5.7
         
     
