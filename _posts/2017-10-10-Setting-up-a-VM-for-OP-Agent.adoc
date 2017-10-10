@@ -99,13 +99,18 @@ With that all set, let's start the installation process:
     * Versions: click on _Choose Versions_
     * Choose _Select For All..._ _Latest Available_
     * Deselect all components related to OpenPages and the DB2 Server.  My final list of components are these: 
-        ** IBM Websphere Application Server 8.5.5.12
+        ** IBM Websphere Application Server 9.0.0.2 -- this doesn't come up when selecting latest versions, so look for it in the drop down
         ** Oracle DB Server and Client 12.1.0.2
     	** IBM HTTP Server 8.5.5.5 (used to be 8.5.5.11 but install failed and Masa told me to use this version instead)
         ** IBM Java SDK 8.0.4.2
         ** IBM Cognos BI Server 11.0.7.0.1001
         ** IBM BPM Server 8.5.7
         
+*Restoring VM and reinstalling*
+
+Before running another installation, the UCD environment needs to be reset to get it in sync with the VM, which is now reset to having nothing on it at all, but the UCD environment has the VM in a state of partial install.  Run Applications->Uninstall OpenPages and 3rd party tools.
+
+
     
         
         
