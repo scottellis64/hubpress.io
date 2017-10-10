@@ -168,4 +168,28 @@ GATEWAY=192.168.1.1
 
 Hardware addresses need to match those shown in network adapter settings.
 
-Reboot, maybe twice, until you can ping the statically defined ip as defined in ifcfg_eth1
+Reboot, maybe twice, until you can ping the statically defined ip as defined in ifcfg_eth1.
+
+Check on the VM by logging into opuser/passw0rd, bring up a terminal and type ``ifconfig``
+
+```bash
+[opuser@opagent ~]$ ifconfig
+eth0      Link encap:Ethernet  HWaddr 08:00:27:C4:31:7C  
+          inet addr:10.0.3.4  Bcast:10.0.3.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fec4:317c/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:66 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:90 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:12104 (11.8 KiB)  TX bytes:16743 (16.3 KiB)
+
+eth1      Link encap:Ethernet  HWaddr 08:00:27:56:EE:46  
+          inet addr:192.168.58.152  Bcast:192.168.58.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fe56:ee46/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:14 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+```
+
+If you see eth1 having the targeted ip address, and you can ping it from the host system, you should be all set.
