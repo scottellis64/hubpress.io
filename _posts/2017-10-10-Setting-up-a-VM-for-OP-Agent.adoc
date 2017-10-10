@@ -58,6 +58,15 @@ lo        Link encap:Local Loopback
     	** Try it now
         ** Then this: ``rhnreg_ks --force --username=scottell@us.ibm.com --password=Rock@Roll2``
 
+*Optional: enable ssh without passwords*
+
+On the host:
+
+```bash
+ssh-keygen -t rsa
+ssh-copy-id -i ~/.ssh/id_rsa.pub opuser@<vm ip address>
+```
+
 *Install OP Agent*
 
 - Navigate to UCD Applications->Getting Started
