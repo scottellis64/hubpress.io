@@ -2,5 +2,88 @@
 :hp-tags: setup
 
 - Create a new VM by importing the OP73DevStarter 
-- For dev, create at least one shared folder that points to the op-installer/server folder
-- 
+- For dev, create at least one shared folder that points to the op-installer/server folder called *src*
+- Start the VM and login as _opuser/passw0rd_
+- Once in, you may be prompted to install most recent guest additions.  Do so if you'd like and reboot.
+	* When prompted for the root password, it is _sellis_
+	* The first try it failed to stop the previous guest additions, and when I rebooted my shared folders were gone from the desktop
+    * I re-ran the guest additions by double clicking the DVD icon on the desktop and chose _autorun.sh_ and chose to run that in a terminal, and that went through just fine
+    * Chose to reboot the machine via menu System->Shutdown... and then chose Restart from the pop-up dialog
+    * After reboot the shared folders were back
+    * Ejected the DVD from the desktop to avoid future confusion
+- Open a terminal session and type *ifconfig*:
+
+```bash
+[opuser@op73dev ~]$ ifconfig
+eth1      Link encap:Ethernet  HWaddr 08:00:27:C4:31:7C  
+          inet addr:9.32.70.232  Bcast:9.32.70.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fec4:317c/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:331 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:70 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000 
+          RX bytes:32684 (31.9 KiB)  TX bytes:8275 (8.0 KiB)
+
+lo        Link encap:Local Loopback  
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:12 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:12 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0 
+          RX bytes:720 (720.0 b)  TX bytes:720 (720.0 b)
+
+[opuser@op73dev ~]$ 
+```
+
+- The ip address of this machine is 9.32.70.232.  This number will be important to remember when installing from UCD.
+- Change the host name from opuser to opagent
+	* ``su root`` (password _sellis_)
+	* edit network settings: ``vi /etc/sysconfig/network``
+	* add a line in network settings for the new hostname: ``HOSTNAME="opagent"``
+    * reboot before proceeding
+- *Important* - After each reboot, your ip address can potentially change.  Be sure to check it before starting an installation from UCD.  Later the ip address will be made static, but we need a dynamically assigned ip address that is reachable from other systems on the IBM network.
+- On the host machine, ping the ipaddress provided by ifconfig above.  If you get a response, you are ready to move on to the next step.
+- Register the VM with IBM
+	* ssh into the VM or open a terminal from the VM desktop
+    * su to root/sellis
+    * type _history_ and see the previous registration which succeeded but will have to be redone
+    * Open the firefox browser on the VM and paste and go to this URL: ``https://op-ucd-kvm01.swg.usma.ibm.com/``
+    * You should see a screen that gives you opportunity to register the system.  Follow the prompts.
+    * Try navigating to ucd from the link above but appending the port 8443 and see what happens.  It's really strange and I cannot reproduce what actually makes it work.  I did not need to reregister the system and was finally able to reach the url ``https://op-ucd-kvm01.swg.usma.ibm.com:8443/``
+    * I take it all back--I managed the ucd login screen probably from history.  Instead, open a terminal and type: ``telnet op-ucd-kvm01.swg.usma.ibm.com`` and login with your IBM domain credentials.  If you see *Thank you for Authenticating* then you are all set.  You'll know you are all set if you can log into UCD.
+    * If you need to register again, from a terminal as root/sellis:
+    	** You should see a page that takes a while to load that says _Granting temporary network access_
+    	** In history you will see this command: ``wget -qO- --no-check-certificate https://rhn.linux.ibm.com/pub/bootstrap/bootstrap.sh | /bin/bash``
+    	** Try it now
+        ** Then this: ``rhnreg_ks --force --username=scottell@us.ibm.com --password=Rock@Roll2``
+
+*Install OP Agent*
+
+- Navigate to UCD Applications->Getting Started
+- Choose the following settings:
+	* Process: Install&Configure UCD agent in Linux	
+    * IP: <your ifconfig ipaddress>
+    * User: root
+    * Password: sellis
+    * DB type: oracle
+    * Target is laptop: check this to true
+- Click ok
+- Installation will start and at some point the VM will be rebooted by UCD.  At this point in the game you will likely have another ip address assigned.  If you started the UCD install on the VM and you'd like to watchthe installation progress, take the link you see in the browser and paste it into a browser on your host os and (optionally) kill the browser on the VM.
+- Had an issue after the automatic reboot that there was no ip address assigned and the setup failed to continue.  Rebooted manually and the ip address came back, and luckily the same one as before.  Had to rerun the install and now am waiting for reboot to see if the same thing happens.  If it does I will try to reboot it myself before the UCD process resumes and encounters the same error again.  Before it failed because of the ip problem, but I'm figuring that I can reboot while it is waiting three minutes to resume.  But this time after reboot the ip address is still assigned, so I'm thinking it will proceed this time to the finish.
+
+*Fixing the agent ip address references*
+
+But the original ip address specified when starting the OP Agent installation might be proliferated through some of the applications that are installed in the upcoming steps.  Here is what to do before continuing:
+
+- todo: fill this in 
+
+*Installing OpenPages without OpenPages*
+
+To install everything needed for an OP Installer Agent (which is a system ready to receive an OpenPages installation), do the following:
+
+- In UCD navigate to Applications->IBM OpenPages
+- Search for your environment.  If you can't remember the ip address you used to install the OP Agent, then look in the history tab of the Getting Started application and look in the properties tab towards the bottom of the page.
+- Click on the environment once found and click the Configuration tab, then Environment Properties on the left sidebar
+        
+    
