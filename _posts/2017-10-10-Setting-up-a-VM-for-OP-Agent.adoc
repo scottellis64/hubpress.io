@@ -101,7 +101,7 @@ With that all set, let's start the installation process:
     * Deselect all components related to OpenPages and the DB2 Server.  My final list of components are these: 
         ** IBM Websphere Application Server 8.5.5.12
         ** Oracle DB Server and Client 12.1.0.2
-    	** IBM HTTP Server 8.5.5.11
+    	** IBM HTTP Server 8.5.5.5 (used to be 8.5.5.11 but install failed and Masa told me to use this version instead)
         ** IBM Java SDK 8.0.4.2
         ** IBM Cognos BI Server 11.0.7.0.1001
         ** IBM BPM Server 8.5.7
