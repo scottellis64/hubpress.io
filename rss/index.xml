@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 10 Oct 2017 16:17:32 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up a VM for OP Agent]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 10 Oct 2017 16:36:42 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up a VM for OP Agent]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>Create a new VM by importing the OP73DevStarter</p>
@@ -265,7 +265,7 @@ lo        Link encap:Local Loopback
 <p>Oracle DB Server and Client 12.1.0.2</p>
 </li>
 <li>
-<p>IBM HTTP Server 8.5.5.11</p>
+<p>IBM HTTP Server 8.5.5.5 (used to be 8.5.5.11 but install failed and Masa told me to use this version instead)</p>
 </li>
 <li>
 <p>IBM Java SDK 8.0.4.2</p>
