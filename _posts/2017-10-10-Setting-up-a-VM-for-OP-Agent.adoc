@@ -122,7 +122,15 @@ With that all set, let's start the installation process:
 Before running another installation, the UCD environment needs to be reset to get it in sync with the VM, which is now reset to having nothing on it at all, but the UCD environment has the VM in a state of partial install.  Run Applications->Uninstall OpenPages and 3rd party tools.
 
 
-    
+*Installing Node*    
         
-        
+```bash
+su root (pwd sellis)
+yum install -y gcc-c++ make
+curl -sL https://rpm.nodesource.com/setup_8.x | sudo -E bash -
+yum install -y nodejs
+exit (now as opuser)
+node --version
+v8.6.0
+```
     
