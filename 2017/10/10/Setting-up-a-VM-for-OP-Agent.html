@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1507662085893"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1507662085893"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1507662085893"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1507665600030"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1507665600030"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1507665600030"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1507662085893"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1507665600030"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2017/10/10/Setting-up-a-VM-for-OP-Agent.html" />
     <meta name="referrer" content="origin" />
@@ -141,7 +141,7 @@ null
             <ul class="post-meta-list">
               <li class="post-meta-item">
                 <time datetime="2017-10-10" itemprop="datePublished">
-                  15 hours ago
+                  16 hours ago
                 </time>
               </li>
                 <li class="post-meta-item">
@@ -481,6 +481,20 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub opuser@&lt;vm ip address&gt;</code></pre>
 <div class="paragraph">
 <p>Before running another installation, the UCD environment needs to be reset to get it in sync with the VM, which is now reset to having nothing on it at all, but the UCD environment has the VM in a state of partial install.  Run Applications&#8594;Uninstall OpenPages and 3rd party tools.</p>
 </div>
+<div class="paragraph">
+<p><strong>Installing Node</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">su root (pwd sellis)
+yum install -y gcc-c++ make
+curl -sL https://rpm.nodesource.com/setup_8.x | sudo -E bash -
+yum install -y nodejs
+exit (now as opuser)
+node --version
+v8.6.0</code></pre>
+</div>
+</div>
           </div>
           <footer class="post-footer">
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
@@ -539,7 +553,7 @@ ssh-copy-id -i ~/.ssh/id_rsa.pub opuser@&lt;vm ip address&gt;</code></pre>
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1507662085893"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1507665600030"></script>
 
 
   </body>
