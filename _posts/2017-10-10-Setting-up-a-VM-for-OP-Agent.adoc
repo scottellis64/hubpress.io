@@ -134,3 +134,36 @@ node --version
 v8.6.0
 ```
     
+*Network Settings*
+
+The best place for this is to look at this wiki post: https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wa37f5439c5fa_480b_92fb_66b4f71bcc50/page/VirtualBox%20Network%20Settings%20for%20OpenPages%20Development
+
+Essentially the steps are this:
+
+- Create a NAT Network and Host Only network adapters
+- Assign these to the VM as the first two network adapters
+- On Red Hat as root/sellis, edit /etc/sysconfig/network-scripts/ifcfg-eth0 and ifcfg-eth1
+
+_ifcfg-eth0_
+
+DEVICE=eth0
+HWADDR=08:00:27:22:98:9B
+TYPE=Ethernet
+UUID=af5a3e31-0f65-46f3-b0af-056d248953e5
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=dhcp
+
+_ifcfg-eth1_
+
+DEVICE=eth1
+HWADDR=08:00:27:97:A7:E8
+TYPE=Ethernet
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=static
+IPADDR=192.168.58.152
+NETMASK=255.255.255.0
+GATEWAY=192.168.1.1
+
+Hardware addresses need to match those shown in network adapter settings.
