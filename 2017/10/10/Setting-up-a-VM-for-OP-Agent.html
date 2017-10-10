@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1507665600030"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1507665600030"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1507665600030"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1507667346568"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1507667346568"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1507667346568"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1507665600030"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1507667346568"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2017/10/10/Setting-up-a-VM-for-OP-Agent.html" />
     <meta name="referrer" content="origin" />
@@ -495,6 +495,57 @@ node --version
 v8.6.0</code></pre>
 </div>
 </div>
+<div class="paragraph">
+<p><strong>Network Settings</strong></p>
+</div>
+<div class="paragraph">
+<p>The best place for this is to look at this wiki post: <a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wa37f5439c5fa_480b_92fb_66b4f71bcc50/page/VirtualBox%20Network%20Settings%20for%20OpenPages%20Development" class="bare">https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wa37f5439c5fa_480b_92fb_66b4f71bcc50/page/VirtualBox%20Network%20Settings%20for%20OpenPages%20Development</a></p>
+</div>
+<div class="paragraph">
+<p>Essentially the steps are this:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a NAT Network and Host Only network adapters</p>
+</li>
+<li>
+<p>Assign these to the VM as the first two network adapters</p>
+</li>
+<li>
+<p>On Red Hat as root/sellis, edit /etc/sysconfig/network-scripts/ifcfg-eth0 and ifcfg-eth1</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>ifcfg-eth0</em></p>
+</div>
+<div class="paragraph">
+<p>DEVICE=eth0
+HWADDR=08:00:27:22:98:9B
+TYPE=Ethernet
+UUID=af5a3e31-0f65-46f3-b0af-056d248953e5
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=dhcp</p>
+</div>
+<div class="paragraph">
+<p><em>ifcfg-eth1</em></p>
+</div>
+<div class="paragraph">
+<p>DEVICE=eth1
+HWADDR=08:00:27:97:A7:E8
+TYPE=Ethernet
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=static
+IPADDR=192.168.58.152
+NETMASK=255.255.255.0
+GATEWAY=192.168.1.1</p>
+</div>
+<div class="paragraph">
+<p>Hardware addresses need to match those shown in network adapter settings.</p>
+</div>
           </div>
           <footer class="post-footer">
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
@@ -553,7 +604,7 @@ v8.6.0</code></pre>
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1507665600030"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1507667346568"></script>
 
 
   </body>
