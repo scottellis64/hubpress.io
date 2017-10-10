@@ -193,3 +193,12 @@ eth1      Link encap:Ethernet  HWaddr 08:00:27:56:EE:46
 ```
 
 If you see eth1 having the targeted ip address, and you can ping it from the host system, you should be all set.
+
+*Startup Issues*
+
+- Oracle listener is not running
+	** From opuser, type ``su - oracle``, then ``lsnrctl start``
+    
+- Cognos not running
+	** From opuser, type ``IBM/cognos/analytics/bin64/cogconfig.sh -s -utf8 -log``
+    ** Any problems, see IBM/cognos/analytics/logs/cogresponse.csv
