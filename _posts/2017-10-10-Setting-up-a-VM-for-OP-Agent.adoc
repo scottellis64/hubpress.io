@@ -1,0 +1,6 @@
+= Setting up a VM for OP Agent
+:hp-tags: setup
+
+- Create a new VM by importing the OP73DevStarter 
+- For dev, create at least one shared folder that points to the op-installer/server folder
+- 
