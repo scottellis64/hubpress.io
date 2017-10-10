@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1507667600574"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1507667600574"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1507667600574"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1507669362047"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1507669362047"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1507669362047"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1507667600574"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1507669362047"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2017/10/10/Setting-up-a-VM-for-OP-Agent.html" />
     <meta name="referrer" content="origin" />
@@ -576,6 +576,36 @@ eth1      Link encap:Ethernet  HWaddr 08:00:27:56:EE:46
 <div class="paragraph">
 <p>If you see eth1 having the targeted ip address, and you can ping it from the host system, you should be all set.</p>
 </div>
+<div class="paragraph">
+<p><strong>Startup Issues</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Oracle listener is not running</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From opuser, type <code>su - oracle</code>, then <code>lsnrctl start</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Cognos not running</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From opuser, type <code>IBM/cognos/analytics/bin64/cogconfig.sh -s -utf8 -log</code></p>
+</li>
+<li>
+<p>Any problems, see IBM/cognos/analytics/logs/cogresponse.csv</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
           </div>
           <footer class="post-footer">
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
@@ -634,7 +664,7 @@ eth1      Link encap:Ethernet  HWaddr 08:00:27:56:EE:46
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1507667600574"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1507669362047"></script>
 
 
   </body>
