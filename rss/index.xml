@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 10 Oct 2017 16:36:42 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up a VM for OP Agent]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 10 Oct 2017 17:24:55 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up a VM for OP Agent]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>Create a new VM by importing the OP73DevStarter</p>
@@ -259,7 +259,7 @@ lo        Link encap:Local Loopback
 <div class="ulist">
 <ul>
 <li>
-<p>IBM Websphere Application Server 8.5.5.12</p>
+<p>IBM Websphere Application Server 9.0.0.2&#8201;&#8212;&#8201;this doesn&#8217;t come up when selecting latest versions, so look for it in the drop down</p>
 </li>
 <li>
 <p>Oracle DB Server and Client 12.1.0.2</p>
@@ -283,6 +283,12 @@ lo        Link encap:Local Loopback
 </div>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><strong>Restoring VM and reinstalling</strong></p>
+</div>
+<div class="paragraph">
+<p>Before running another installation, the UCD environment needs to be reset to get it in sync with the VM, which is now reset to having nothing on it at all, but the UCD environment has the VM in a state of partial install.  Run Applications&#8594;Uninstall OpenPages and 3rd party tools.</p>
 </div>]]></description><link>https://scottellis64.github.io/2017/10/10/Setting-up-a-VM-for-OP-Agent.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/10/10/Setting-up-a-VM-for-OP-Agent.html</guid><category><![CDATA[setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 10 Oct 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Getting started with AWS]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>Installing</strong></p>
 </div>
