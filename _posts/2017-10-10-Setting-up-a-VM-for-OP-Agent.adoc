@@ -84,6 +84,26 @@ To install everything needed for an OP Installer Agent (which is a system ready 
 
 - In UCD navigate to Applications->IBM OpenPages
 - Search for your environment.  If you can't remember the ip address you used to install the OP Agent, then look in the history tab of the Getting Started application and look in the properties tab towards the bottom of the page.
-- Click on the environment once found and click the Configuration tab, then Environment Properties on the left sidebar
+- Click on the environment once found and click the Configuration tab, then Environment Properties on the left sidebar.  Look for any references to the ipaddress of your environment.  If there are none, then you are all set.  This is my case now--search for _opagent_ and you should see it in a couple of the property value fields.
+
+With that all set, let's start the installation process:
+
+- Navigate to Applications->IBM OpenPages
+- Find your environment again
+- Click the start arrow to the left in the row
+- In the dialog, choose these options:
+	* Process: Install OpenPages
+    * Versions: click on _Choose Versions_
+    * Choose _Select For All..._ _Latest Available_
+    * Deselect all components related to OpenPages and the DB2 Server.  My final list of components are these: 
+    	** IBM HTTP Server 8.5.5.11
+        ** IBM Websphere Application Server 8.5.5.12
+        ** IBM Cognos BI Server 11.0.7.0.1001
+        ** Oracle DB Server and Client 12.1.0.2
+        ** IBM Java SDK 8.0.4.2
+        ** IBM BPM Server 8.5.7
+        
+    
+        
         
     
