@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 10 Oct 2017 20:00:00 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up a VM for OP Agent]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 10 Oct 2017 20:29:06 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up a VM for OP Agent]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>Create a new VM by importing the OP73DevStarter</p>
@@ -321,6 +321,57 @@ exit (now as opuser)
 node --version
 v8.6.0</code></pre>
 </div>
+</div>
+<div class="paragraph">
+<p><strong>Network Settings</strong></p>
+</div>
+<div class="paragraph">
+<p>The best place for this is to look at this wiki post: <a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wa37f5439c5fa_480b_92fb_66b4f71bcc50/page/VirtualBox%20Network%20Settings%20for%20OpenPages%20Development" class="bare">https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wa37f5439c5fa_480b_92fb_66b4f71bcc50/page/VirtualBox%20Network%20Settings%20for%20OpenPages%20Development</a></p>
+</div>
+<div class="paragraph">
+<p>Essentially the steps are this:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a NAT Network and Host Only network adapters</p>
+</li>
+<li>
+<p>Assign these to the VM as the first two network adapters</p>
+</li>
+<li>
+<p>On Red Hat as root/sellis, edit /etc/sysconfig/network-scripts/ifcfg-eth0 and ifcfg-eth1</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><em>ifcfg-eth0</em></p>
+</div>
+<div class="paragraph">
+<p>DEVICE=eth0
+HWADDR=08:00:27:22:98:9B
+TYPE=Ethernet
+UUID=af5a3e31-0f65-46f3-b0af-056d248953e5
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=dhcp</p>
+</div>
+<div class="paragraph">
+<p><em>ifcfg-eth1</em></p>
+</div>
+<div class="paragraph">
+<p>DEVICE=eth1
+HWADDR=08:00:27:97:A7:E8
+TYPE=Ethernet
+ONBOOT=yes
+NM_CONTROLLED=no
+BOOTPROTO=static
+IPADDR=192.168.58.152
+NETMASK=255.255.255.0
+GATEWAY=192.168.1.1</p>
+</div>
+<div class="paragraph">
+<p>Hardware addresses need to match those shown in network adapter settings.</p>
 </div>]]></description><link>https://scottellis64.github.io/2017/10/10/Setting-up-a-VM-for-OP-Agent.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/10/10/Setting-up-a-VM-for-OP-Agent.html</guid><category><![CDATA[setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 10 Oct 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Getting started with AWS]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>Installing</strong></p>
 </div>
