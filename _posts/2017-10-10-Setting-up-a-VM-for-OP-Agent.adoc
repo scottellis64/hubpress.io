@@ -103,14 +103,16 @@ With that all set, let's start the installation process:
 - Navigate to Applications->IBM OpenPages
 - Find your environment again
 - Click the start arrow to the left in the row
+- Choose _Select Stream_ and select 7.4 for both drop downs for OP and Cognos
+- Run this, and after succeeding, go back to Applications->IBM OpenPages and click the arrow to select process
 - In the dialog, choose these options:
 	* Process: Install OpenPages
     * Versions: click on _Choose Versions_
     * Choose _Select For All..._ _Latest Available_
     * Deselect all components related to OpenPages and the DB2 Server.  My final list of components are these: 
-        ** IBM Websphere Application Server 9.0.0.4 -- this doesn't come up when selecting latest versions, so look for it in the drop down
+        ** IBM Websphere Application Server 9.0.0.4
         ** Oracle DB Server and Client 12.1.0.2
-    	** IBM HTTP Server 8.5.5.5 (used to be 8.5.5.11 but install failed and Masa told me to use this version instead)
+    	** IBM HTTP Server 8.5.5.5 
         ** IBM Java SDK 8.0.4.2
         ** IBM Cognos BI Server 11.0.7.0.1001
         ** IBM BPM Server 8.5.7
