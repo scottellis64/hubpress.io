@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 10 Oct 2017 17:24:55 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up a VM for OP Agent]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 10 Oct 2017 17:42:50 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up a VM for OP Agent]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>Create a new VM by importing the OP73DevStarter</p>
@@ -141,6 +141,18 @@ lo        Link encap:Local Loopback
 </div>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><strong>Optional: enable ssh without passwords</strong></p>
+</div>
+<div class="paragraph">
+<p>On the host:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">ssh-keygen -t rsa
+ssh-copy-id -i ~/.ssh/id_rsa.pub opuser@&lt;vm ip address&gt;</code></pre>
+</div>
 </div>
 <div class="paragraph">
 <p><strong>Install OP Agent</strong></p>
