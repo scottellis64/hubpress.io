@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 10 Oct 2017 20:33:20 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up a VM for OP Agent]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 10 Oct 2017 21:02:42 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up a VM for OP Agent]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>Create a new VM by importing the OP73DevStarter</p>
@@ -402,6 +402,36 @@ eth1      Link encap:Ethernet  HWaddr 08:00:27:56:EE:46
 </div>
 <div class="paragraph">
 <p>If you see eth1 having the targeted ip address, and you can ping it from the host system, you should be all set.</p>
+</div>
+<div class="paragraph">
+<p><strong>Startup Issues</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Oracle listener is not running</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From opuser, type <code>su - oracle</code>, then <code>lsnrctl start</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Cognos not running</p>
+<div class="ulist">
+<ul>
+<li>
+<p>From opuser, type <code>IBM/cognos/analytics/bin64/cogconfig.sh -s -utf8 -log</code></p>
+</li>
+<li>
+<p>Any problems, see IBM/cognos/analytics/logs/cogresponse.csv</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
 </div>]]></description><link>https://scottellis64.github.io/2017/10/10/Setting-up-a-VM-for-OP-Agent.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/10/10/Setting-up-a-VM-for-OP-Agent.html</guid><category><![CDATA[setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 10 Oct 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Getting started with AWS]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>Installing</strong></p>
 </div>
