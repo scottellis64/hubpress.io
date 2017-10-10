@@ -1,4 +1,289 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 09 Oct 2017 02:09:37 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Getting started with AWS]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 10 Oct 2017 16:17:32 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Setting up a VM for OP Agent]]></title><description><![CDATA[<div class="ulist">
+<ul>
+<li>
+<p>Create a new VM by importing the OP73DevStarter</p>
+</li>
+<li>
+<p>For dev, create at least one shared folder that points to the op-installer/server folder called <strong>src</strong></p>
+</li>
+<li>
+<p>Start the VM and login as <em>opuser/passw0rd</em></p>
+</li>
+<li>
+<p>Once in, you may be prompted to install most recent guest additions.  Do so if you&#8217;d like and reboot.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>When prompted for the root password, it is <em>sellis</em></p>
+</li>
+<li>
+<p>The first try it failed to stop the previous guest additions, and when I rebooted my shared folders were gone from the desktop</p>
+</li>
+<li>
+<p>I re-ran the guest additions by double clicking the DVD icon on the desktop and chose <em>autorun.sh</em> and chose to run that in a terminal, and that went through just fine</p>
+</li>
+<li>
+<p>Chose to reboot the machine via menu System&#8594;Shutdown&#8230;&#8203; and then chose Restart from the pop-up dialog</p>
+</li>
+<li>
+<p>After reboot the shared folders were back</p>
+</li>
+<li>
+<p>Ejected the DVD from the desktop to avoid future confusion</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Open a terminal session and type <strong>ifconfig</strong>:</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">[opuser@op73dev ~]$ ifconfig
+eth1      Link encap:Ethernet  HWaddr 08:00:27:C4:31:7C
+          inet addr:9.32.70.232  Bcast:9.32.70.255  Mask:255.255.255.0
+          inet6 addr: fe80::a00:27ff:fec4:317c/64 Scope:Link
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1
+          RX packets:331 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:70 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:32684 (31.9 KiB)  TX bytes:8275 (8.0 KiB)
+
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0
+          inet6 addr: ::1/128 Scope:Host
+          UP LOOPBACK RUNNING  MTU:65536  Metric:1
+          RX packets:12 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:12 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:0
+          RX bytes:720 (720.0 b)  TX bytes:720 (720.0 b)
+
+[opuser@op73dev ~]$</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The ip address of this machine is 9.32.70.232.  This number will be important to remember when installing from UCD.</p>
+</li>
+<li>
+<p>Change the host name from opuser to opagent</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>su root</code> (password <em>sellis</em>)</p>
+</li>
+<li>
+<p>edit network settings: <code>vi /etc/sysconfig/network</code></p>
+</li>
+<li>
+<p>add a line in network settings for the new hostname: <code>HOSTNAME="opagent"</code></p>
+</li>
+<li>
+<p>reboot before proceeding</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><strong>Important</strong> - After each reboot, your ip address can potentially change.  Be sure to check it before starting an installation from UCD.  Later the ip address will be made static, but we need a dynamically assigned ip address that is reachable from other systems on the IBM network.</p>
+</li>
+<li>
+<p>On the host machine, ping the ipaddress provided by ifconfig above.  If you get a response, you are ready to move on to the next step.</p>
+</li>
+<li>
+<p>Register the VM with IBM</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ssh into the VM or open a terminal from the VM desktop</p>
+</li>
+<li>
+<p>su to root/sellis</p>
+</li>
+<li>
+<p>type <em>history</em> and see the previous registration which succeeded but will have to be redone</p>
+</li>
+<li>
+<p>Open the firefox browser on the VM and paste and go to this URL: <code><a href="https://op-ucd-kvm01.swg.usma.ibm.com/" class="bare">https://op-ucd-kvm01.swg.usma.ibm.com/</a></code></p>
+</li>
+<li>
+<p>You should see a screen that gives you opportunity to register the system.  Follow the prompts.</p>
+</li>
+<li>
+<p>Try navigating to ucd from the link above but appending the port 8443 and see what happens.  It&#8217;s really strange and I cannot reproduce what actually makes it work.  I did not need to reregister the system and was finally able to reach the url <code><a href="https://op-ucd-kvm01.swg.usma.ibm.com:8443/" class="bare">https://op-ucd-kvm01.swg.usma.ibm.com:8443/</a></code></p>
+</li>
+<li>
+<p>I take it all back&#8212;&#8203;I managed the ucd login screen probably from history.  Instead, open a terminal and type: <code>telnet op-ucd-kvm01.swg.usma.ibm.com</code> and login with your IBM domain credentials.  If you see <strong>Thank you for Authenticating</strong> then you are all set.  You&#8217;ll know you are all set if you can log into UCD.</p>
+</li>
+<li>
+<p>If you need to register again, from a terminal as root/sellis:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>You should see a page that takes a while to load that says <em>Granting temporary network access</em></p>
+</li>
+<li>
+<p>In history you will see this command: <code>wget -qO- --no-check-certificate <a href="https://rhn.linux.ibm.com/pub/bootstrap/bootstrap.sh" class="bare">https://rhn.linux.ibm.com/pub/bootstrap/bootstrap.sh</a> | /bin/bash</code></p>
+</li>
+<li>
+<p>Try it now</p>
+</li>
+<li>
+<p>Then this: <code>rhnreg_ks --force --username=<a href="mailto:scottell@us.ibm.com">scottell@us.ibm.com</a> --password=Rock@Roll2</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Install OP Agent</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Navigate to UCD Applications&#8594;Getting Started</p>
+</li>
+<li>
+<p>Choose the following settings:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Process: Install&amp;Configure UCD agent in Linux</p>
+</li>
+<li>
+<p>IP: &lt;your ifconfig ipaddress&gt;</p>
+</li>
+<li>
+<p>User: root</p>
+</li>
+<li>
+<p>Password: sellis</p>
+</li>
+<li>
+<p>DB type: oracle</p>
+</li>
+<li>
+<p>Target is laptop: check this to true</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Click ok</p>
+</li>
+<li>
+<p>Installation will start and at some point the VM will be rebooted by UCD.  At this point in the game you will likely have another ip address assigned.  If you started the UCD install on the VM and you&#8217;d like to watchthe installation progress, take the link you see in the browser and paste it into a browser on your host os and (optionally) kill the browser on the VM.</p>
+</li>
+<li>
+<p>Had an issue after the automatic reboot that there was no ip address assigned and the setup failed to continue.  Rebooted manually and the ip address came back, and luckily the same one as before.  Had to rerun the install and now am waiting for reboot to see if the same thing happens.  If it does I will try to reboot it myself before the UCD process resumes and encounters the same error again.  Before it failed because of the ip problem, but I&#8217;m figuring that I can reboot while it is waiting three minutes to resume.  But this time after reboot the ip address is still assigned, so I&#8217;m thinking it will proceed this time to the finish.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Fixing the agent ip address references</strong></p>
+</div>
+<div class="paragraph">
+<p>But the original ip address specified when starting the OP Agent installation might be proliferated through some of the applications that are installed in the upcoming steps.  Here is what to do before continuing:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Find the environment in UCD&#8594;Applications&#8594;IBM OpenPages by ip address</p>
+</li>
+<li>
+<p>In the environment settings, find any server field and set it to <strong>opagent</strong> and save</p>
+</li>
+<li>
+<p>Also in environment settings, change the name of the environment to match the server name <strong>opagent</strong></p>
+</li>
+<li>
+<p>On the VM, as root (root/sellis) edit /opt/ibm-ucd/agent/conf/installed.properties and change the ip address there to opagent&#8212;&#8203;save and restart the agent (/opt/ibm-ucd/agent/bin/agent stop|start).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Installing OpenPages without OpenPages</strong></p>
+</div>
+<div class="paragraph">
+<p>To install everything needed for an OP Installer Agent (which is a system ready to receive an OpenPages installation), do the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In UCD navigate to Applications&#8594;IBM OpenPages</p>
+</li>
+<li>
+<p>Search for your environment.  If you can&#8217;t remember the ip address you used to install the OP Agent, then look in the history tab of the Getting Started application and look in the properties tab towards the bottom of the page.</p>
+</li>
+<li>
+<p>Click on the environment once found and click the Configuration tab, then Environment Properties on the left sidebar.  Look for any references to the ipaddress of your environment.  If there are none, then you are all set.  This is my case now&#8212;&#8203;search for <em>opagent</em> and you should see it in a couple of the property value fields.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>With that all set, let&#8217;s start the installation process:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Navigate to Applications&#8594;IBM OpenPages</p>
+</li>
+<li>
+<p>Find your environment again</p>
+</li>
+<li>
+<p>Click the start arrow to the left in the row</p>
+</li>
+<li>
+<p>In the dialog, choose these options:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Process: Install OpenPages</p>
+</li>
+<li>
+<p>Versions: click on <em>Choose Versions</em></p>
+</li>
+<li>
+<p>Choose <em>Select For All&#8230;&#8203;</em> <em>Latest Available</em></p>
+</li>
+<li>
+<p>Deselect all components related to OpenPages and the DB2 Server.  My final list of components are these:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>IBM Websphere Application Server 8.5.5.12</p>
+</li>
+<li>
+<p>Oracle DB Server and Client 12.1.0.2</p>
+</li>
+<li>
+<p>IBM HTTP Server 8.5.5.11</p>
+</li>
+<li>
+<p>IBM Java SDK 8.0.4.2</p>
+</li>
+<li>
+<p>IBM Cognos BI Server 11.0.7.0.1001</p>
+</li>
+<li>
+<p>IBM BPM Server 8.5.7</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>]]></description><link>https://scottellis64.github.io/2017/10/10/Setting-up-a-VM-for-OP-Agent.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/10/10/Setting-up-a-VM-for-OP-Agent.html</guid><category><![CDATA[setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 10 Oct 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Getting started with AWS]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>Installing</strong></p>
 </div>
 <div class="ulist">
