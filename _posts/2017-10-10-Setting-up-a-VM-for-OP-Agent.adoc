@@ -108,7 +108,7 @@ With that all set, let's start the installation process:
     * Versions: click on _Choose Versions_
     * Choose _Select For All..._ _Latest Available_
     * Deselect all components related to OpenPages and the DB2 Server.  My final list of components are these: 
-        ** IBM Websphere Application Server 9.0.0.2 -- this doesn't come up when selecting latest versions, so look for it in the drop down
+        ** IBM Websphere Application Server 9.0.0.4 -- this doesn't come up when selecting latest versions, so look for it in the drop down
         ** Oracle DB Server and Client 12.1.0.2
     	** IBM HTTP Server 8.5.5.5 (used to be 8.5.5.11 but install failed and Masa told me to use this version instead)
         ** IBM Java SDK 8.0.4.2
