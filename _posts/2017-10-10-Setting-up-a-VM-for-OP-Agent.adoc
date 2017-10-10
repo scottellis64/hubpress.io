@@ -167,3 +167,5 @@ NETMASK=255.255.255.0
 GATEWAY=192.168.1.1
 
 Hardware addresses need to match those shown in network adapter settings.
+
+Reboot, maybe twice, until you can ping the statically defined ip as defined in ifcfg_eth1
