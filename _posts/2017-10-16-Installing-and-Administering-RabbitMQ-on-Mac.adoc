@@ -1,0 +1,45 @@
+= Installing and Administering RabbitMQ on Mac
+:hp-tags: setup
+
+*Installation*
+```bash
+brew update
+brew install rabbitmq
+```
+
+*Starting*
+```bash
+rabbitmq-server
+
+Js-MacBook-Pro:~ sellis$ rabbitmq
+rabbitmq-defaults  rabbitmq-env       rabbitmq-plugins   rabbitmq-server    rabbitmqadmin      rabbitmqctl        
+Js-MacBook-Pro:~ sellis$ rabbitmq
+rabbitmq-defaults  rabbitmq-env       rabbitmq-plugins   rabbitmq-server    rabbitmqadmin      rabbitmqctl        
+Js-MacBook-Pro:~ sellis$ rabbitmq-server 
+
+              RabbitMQ 3.6.12. Copyright (C) 2007-2017 Pivotal Software, Inc.
+  ##  ##      Licensed under the MPL.  See http://www.rabbitmq.com/
+  ##  ##
+  ##########  Logs: /usr/local/var/log/rabbitmq/rabbit@localhost.log
+  ######  ##        /usr/local/var/log/rabbitmq/rabbit@localhost-sasl.log
+  ##########
+              Starting broker...
+ completed with 9 plugins.
+```
+
+*Administration Panel*
+
+- default userid and password: guest/guest
+- url of admin page: http://localhost:15672
+
+*Sending a message in Node*
+
+Use the amqp library: ``npm install amqplib --save``
+
+```javascript
+const amqp = require('amqplib');
+const open = await amqp.connect('amqp://localhost');
+const connection = await open();
+const channel = await connection.createChannel();
+channel.sendToQueue('HelloQueue', new Buffer('Hello, World!'));
+```
