@@ -1,4 +1,191 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 16 Oct 2017 21:02:09 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Installing and Administering RabbitMQ on Mac]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 18 Oct 2017 15:45:22 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Docker Commands]]></title><description><![CDATA[<div class="sect1">
+<h2 id="_getting_help">Getting Help</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><code>docker</code>
+Lists all docker commands</p>
+</li>
+<li>
+<p><code>docker &lt;command&gt; --help</code>
+Displays help for the command specified</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_container_management">Container management</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Start container</p>
+<div class="ulist">
+<ul>
+<li>
+<p>without specifying the yml
+<code>docker-compose start</code></p>
+</li>
+<li>
+<p>specify
+<code>docker-compose -f &lt;file_name&gt;.yml start</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Stop container</p>
+<div class="ulist">
+<ul>
+<li>
+<p>without specifying the yml
+<code>docker-compose stop</code></p>
+</li>
+<li>
+<p>specify
+<code>docker-compose -f &lt;file_name&gt;.yml stop</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Update container to latest version</p>
+<div class="ulist">
+<ul>
+<li>
+<p>without specifying the yml
+<code>docker-compose up</code></p>
+</li>
+<li>
+<p>specify
+<code>docker-compose -f &lt;file_name&gt;.yml up</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>ssh into container as root
+<code>docker exec -it &lt;container_id&gt;</code> bash</p>
+</li>
+<li>
+<p>ssh into container as opuser
+<code>ssh -l opuser -p 24022 localhost</code></p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cleaning_up_the_mess">Cleaning up the mess</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Remove all containers and images and start over</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>docker system prune</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Stop and remove all containers (with docker-compose.yml present)</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>docker-compose stop &amp;&amp; docker-compose rm -v</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>List all volumes</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>docker volume ls</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>List all volume names</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>docker volume ls -q</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Remove volume</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>docker volume rm &lt;volume_name&gt;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Remove all volumes</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>docker volume rm $(docker volume ls -q)</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>List all images</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>docker images</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>List all image ids</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>docker images -q</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Remove image</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>docker rmi &lt;image_id&gt;</code></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Remove all images</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>docker rmi $(docker images -q)</code></p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>]]></description><link>https://scottellis64.github.io/2017/10/18/Docker-Commands.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/10/18/Docker-Commands.html</guid><category><![CDATA[docker]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 18 Oct 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Installing and Administering RabbitMQ on Mac]]></title><description><![CDATA[<div class="paragraph">
 <p><strong>Installation</strong></p>
 </div>
 <div class="listingblock">
