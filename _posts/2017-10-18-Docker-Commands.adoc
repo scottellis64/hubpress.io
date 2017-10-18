@@ -1,0 +1,57 @@
+= Docker Commands
+:hp-tags: docker
+
+Getting Help
+------------
+
+1. `docker`
+   Lists all docker commands
+2. `docker <command> --help`
+   Displays help for the command specified
+
+Container management
+--------------------
+
+1. Start container
+    - without specifying the yml
+    `docker-compose start`
+    - specify
+    `docker-compose -f <file_name>.yml start`
+2. Stop container
+    - without specifying the yml
+    `docker-compose stop`
+    - specify
+    `docker-compose -f <file_name>.yml stop`
+3. Update container to latest version
+    - without specifying the yml
+    `docker-compose up`
+    - specify
+    `docker-compose -f <file_name>.yml up`
+4. ssh into container as root
+    `docker exec -it <container_id>` bash
+5. ssh into container as opuser
+    `ssh -l opuser -p 24022 localhost`
+
+Cleaning up the mess
+--------------------
+
+1. Remove all containers and images and start over
+    - `docker system prune`
+2. Stop and remove all containers (with docker-compose.yml present)
+    - `docker-compose stop && docker-compose rm -v`
+3. List all volumes
+    - `docker volume ls`
+4. List all volume names
+    - `docker volume ls -q`
+5. Remove volume
+    - `docker volume rm <volume_name>`
+6. Remove all volumes
+    - `docker volume rm $(docker volume ls -q)`
+7. List all images
+    - `docker images`
+8. List all image ids
+    - `docker images -q`
+9. Remove image
+    - `docker rmi <image_id>`
+10. Remove all images
+    - `docker rmi $(docker images -q)`
