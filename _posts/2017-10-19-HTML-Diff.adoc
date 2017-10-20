@@ -1,0 +1,6 @@
+= HTML Diff
+:hp-tags: research
+
+- html-differ https://www.npmjs.com/package/html-differ
+- diff2html https://diff2html.xyz
+- Pretty Dif http://prettydiff.com/documentation.xhtml
