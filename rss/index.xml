@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 08 Nov 2017 20:24:12 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[HTML Diff]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 08 Nov 2017 20:29:46 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Github Research]]></title><description><![CDATA[<div class="ulist">
+<ul>
+<li>
+<p>How to create images and show them in a README</p>
+</li>
+<li>
+<p>Add a Wiki to a project and show graphs and images there</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Here is a list of graph-making products/websites:</p>
+</div>
+<div class="paragraph">
+<p>Overview: <a href="https://gist.github.com/rodneyrehm/40e7946c0cff68a31cea" class="bare">https://gist.github.com/rodneyrehm/40e7946c0cff68a31cea</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.zenuml.com" class="bare">https://www.zenuml.com</a></p>
+</li>
+<li>
+<p><a href="https://github.com/kbilsted/AsciiUml" class="bare">https://github.com/kbilsted/AsciiUml</a></p>
+</li>
+<li>
+<p><a href="http://www.umlet.com/" class="bare">http://www.umlet.com/</a></p>
+</li>
+<li>
+<p><a href="http://www.yworks.com/products/yed" class="bare">http://www.yworks.com/products/yed</a></p>
+</li>
+<li>
+<p><a href="http://www.graphviz.org/" class="bare">http://www.graphviz.org/</a></p>
+</li>
+<li>
+<p><a href="http://pandoc.org/" class="bare">http://pandoc.org/</a></p>
+</li>
+<li>
+<p><a href="https://www.draw.io/?mode=github" class="bare">https://www.draw.io/?mode=github</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jgraph/drawio/wiki/Embed-Diagrams" class="bare">https://github.com/jgraph/drawio/wiki/Embed-Diagrams</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jgraph/drawio-github" class="bare">https://github.com/jgraph/drawio-github</a></p>
+</li>
+</ul>
+</div>]]></description><link>https://scottellis64.github.io/2017/11/08/Github-Research.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/11/08/Github-Research.html</guid><category><![CDATA[research]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 08 Nov 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[HTML Diff]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>html-differ <a href="https://www.npmjs.com/package/html-differ" class="bare">https://www.npmjs.com/package/html-differ</a></p>
