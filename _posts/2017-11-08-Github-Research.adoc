@@ -1,0 +1,19 @@
+= Github Research
+:hp-tags: research
+
+- How to create images and show them in a README
+- Add a Wiki to a project and show graphs and images there
+
+Here is a list of graph-making products/websites:
+
+Overview: https://gist.github.com/rodneyrehm/40e7946c0cff68a31cea
+
+- https://www.zenuml.com
+- https://github.com/kbilsted/AsciiUml
+- http://www.umlet.com/
+- http://www.yworks.com/products/yed
+- http://www.graphviz.org/
+- http://pandoc.org/
+- https://www.draw.io/?mode=github
+- https://github.com/jgraph/drawio/wiki/Embed-Diagrams
+- https://github.com/jgraph/drawio-github
