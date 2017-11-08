@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 20 Oct 2017 03:51:56 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[HTML Diff]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 08 Nov 2017 20:24:12 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[HTML Diff]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>html-differ <a href="https://www.npmjs.com/package/html-differ" class="bare">https://www.npmjs.com/package/html-differ</a></p>
@@ -10,6 +10,9 @@
 <p>Pretty Dif <a href="http://prettydiff.com/documentation.xhtml" class="bare">http://prettydiff.com/documentation.xhtml</a></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Added a new repository with all my diff research at <a href="https://github.ibm.com/scottell/opdiff" class="bare">https://github.ibm.com/scottell/opdiff</a></p>
 </div>]]></description><link>https://scottellis64.github.io/2017/10/19/HTML-Diff.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/10/19/HTML-Diff.html</guid><category><![CDATA[research]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 19 Oct 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Docker Commands]]></title><description><![CDATA[<div class="sect1">
 <h2 id="_getting_help">Getting Help</h2>
 <div class="sectionbody">
