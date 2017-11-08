@@ -17,3 +17,6 @@ Overview: https://gist.github.com/rodneyrehm/40e7946c0cff68a31cea
 - https://www.draw.io/?mode=github
 - https://github.com/jgraph/drawio/wiki/Embed-Diagrams
 - https://github.com/jgraph/drawio-github
+
+
+Github Tricks: http://solutionoptimist.com/2013/12/28/awesome-github-tricks/
