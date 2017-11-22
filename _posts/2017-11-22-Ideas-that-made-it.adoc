@@ -1,3 +1,7 @@
 = Ideas that made it
 
 I had an idea a long time ago about wanting a SQL-like syntax for filtering object queries that Brian liked and opened an RTC ticket for that I contributed to.  I submitted a proposed syntax--need to find this item and record it here.
+
+**Edit**
+
+My idea pertained to efficient queries for acquiring filter counts.  Not as big as I imagined.
