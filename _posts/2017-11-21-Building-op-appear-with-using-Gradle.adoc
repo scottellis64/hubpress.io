@@ -1,0 +1,27 @@
+= Building op-app.ear with using Gradle
+
+My newest assignment is to figure out how to build OpenPages using Gradle for the purpose of integrating added applications to it.
+
+todo: make a graph of the applications we have today and show how the gradle build is going to work
+
+*Inception*
+
+When this suggested to me, I wasn't thrilled about it.  But as I considered it closely, this is an opportunity to remove OpenPages from Eclipse once and for all.  The problem here is that Eclipse is the tool we use to create the build artifacts, and as such is tightly intertwined with our build and release processes.  Making any change to the project structure has implications that would create too much risk.  
+
+Being in Eclipse, there is no tooling that creates a visualization of the workspace's dependency structure, and so you are forced to investigate manually.  Using Gradle or Maven, such visualizations are available, and these are much easier to follow and understand.  And, best of all, these can be easily extended for purposes such as my current task.
+
+I started doing some of this manually.  Here to the best of my recollection are the steps I've followed so far:
+
+- Created an IntelliJ Gradle project in ~/projects/ibm/op-7.4-idea
+- Opened Eclipse to the current OpenPages 7.4 project that was already on my system
+- Now I found the rootmost project in the Eclipse workspace, which appears to be called *modelobjects*.  
+- tbd
+
+The idea is, look into an api that gives insight on an Eclipse workspace that can be read and translated into something else, in my case Gradle.  The process of doing it manually is cumbersome, and the process will need to be repeated for every build, as projects are updated constantly.  So the workflow will look like this:
+
+1) Gradle script uses RTC command line to pull the latest code
+2) Gradle script builds the application, perhaps with addons specified
+3) Out pops op-apps.ear
+
+- So, investigating an API to provide Eclipse introspection, and failing that or maybe instead of that, read the eclipse project files in code I've written based upon what I'm seeing in the OpenPages project in Eclipse.
+- Investigating RTC command line
