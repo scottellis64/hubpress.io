@@ -25,3 +25,26 @@ The idea is, look into an api that gives insight on an Eclipse workspace that ca
 
 - So, investigating an API to provide Eclipse introspection, and failing that or maybe instead of that, read the eclipse project files in code I've written based upon what I'm seeing in the OpenPages project in Eclipse.
 - Investigating RTC command line
+
+**Man, this might be easy**
+
+So as I look at the .classpath of each project, its a simple XML structure.  Here's an example for the project *aurora*:
+
+```<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="com.ibm.openpages.aurora.service"/>
+	<classpathentry kind="src" path="com.ibm.openpages.webapp"/>
+	<classpathentry kind="src" path="com.openpages.aurora"/>
+	<classpathentry kind="src" path="com.ibm.openpages.sdk"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.ibm.openpages.libraries"/>
+	<classpathentry exported="true" kind="lib" path="/com.ibm.openpages.libraries/op-apps.ear/lib/java-sdk-3.8.0-jar-with-dependencies.jar"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.ibm.openpages.modelobjects"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.ibm.openpages.aurora.tools"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.ibm.openpages.aurora.parsers"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/com.ibm.openpages.reporting.webservice"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
+```
+
