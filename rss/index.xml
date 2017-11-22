@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 22 Nov 2017 03:32:50 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Info]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 22 Nov 2017 03:42:06 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Info]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>Met yesterday with Isaac to discuss my PBC Goals, which I have updated.  I spent my lunch doing the updates and feel that I&#8217;ve done a decent job of it, but of course there are always going to be things I leave out.  I need to get better about writing down my accomplishments and activities.</p>
@@ -94,6 +94,31 @@
 <p>Investigating RTC command line</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><strong>Man, this might be easy</strong></p>
+</div>
+<div class="paragraph">
+<p>So as I look at the .classpath of each project, its a simple XML structure.  Here&#8217;s an example for the project <strong>aurora</strong>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-<?xmlversion="1.0"encoding="UTF-8"?>" data-lang="<?xmlversion="1.0"encoding="UTF-8"?>">&lt;classpath&gt;
+	&lt;classpathentry kind="src" path="com.ibm.openpages.aurora.service"/&gt;
+	&lt;classpathentry kind="src" path="com.ibm.openpages.webapp"/&gt;
+	&lt;classpathentry kind="src" path="com.openpages.aurora"/&gt;
+	&lt;classpathentry kind="src" path="com.ibm.openpages.sdk"/&gt;
+	&lt;classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.ibm.openpages.libraries"/&gt;
+	&lt;classpathentry exported="true" kind="lib" path="/com.ibm.openpages.libraries/op-apps.ear/lib/java-sdk-3.8.0-jar-with-dependencies.jar"/&gt;
+	&lt;classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.ibm.openpages.modelobjects"/&gt;
+	&lt;classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/&gt;
+	&lt;classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.ibm.openpages.aurora.tools"/&gt;
+	&lt;classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/&gt;
+	&lt;classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.ibm.openpages.aurora.parsers"/&gt;
+	&lt;classpathentry combineaccessrules="false" kind="src" path="/com.ibm.openpages.reporting.webservice"/&gt;
+	&lt;classpathentry kind="output" path="bin"/&gt;
+&lt;/classpath&gt;</code></pre>
+</div>
 </div>]]></description><link>https://scottellis64.github.io/2017/11/21/Building-op-appear-with-using-Gradle.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/11/21/Building-op-appear-with-using-Gradle.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 21 Nov 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Github Research]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
