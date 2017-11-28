@@ -1,0 +1,9 @@
+= Cisco Phone Setup
+:hp-tags: setup
+
+https://w3.ibm.com/help/#/article/26849[Help Article]
+
+https://pokl-vo-cl2pu01.pok.ibm.com:8443[Change phone settings online]
+
+See https://w3.ibm.com/bluepages/profile.html?uid=4G4113897[Bluepages] for ITN number
+
