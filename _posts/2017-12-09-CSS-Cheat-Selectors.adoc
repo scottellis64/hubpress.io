@@ -1,0 +1,76 @@
+= CSS Cheat Selectors
+:hp-tags: css
+
+== Combinators
+
+Child combinator: selects children of #nav but not grandchildren: 
+```
+#nav > li
+```
+
+Adjacent sibling combinator: selects the paragraph child of #nav
+```
+#nav + p
+```
+
+General sibling combinator: selects elements that precede an element.  
+This example targets all p elements preceded by an h2 element:
+```
+h2 ∼ p 
+```
+
+== Attribute Selectors
+
+Select elements that have the specified attribute.  
+This example selects all abbr elements with a title attribute:
+```
+abbr[title]
+```
+
+Select all input elements with the type *submit*:
+```
+input[type="submit"] 
+```
+
+Match the beginning of an attribute value.
+This example matches anchor tags with an href attribute value starting with 'http:':
+```
+a[href^="http:"]
+```
+
+Match the end of an attribute value.
+This example matches image tags with an src attribute value ending with '.jpg':
+```
+img[src$=".jpg"]
+```
+
+Match anywhere within an attribute value.  
+This example matches any anchor tag with an href containing '/about/':
+```
+a[href*="/about/"]
+```
+
+Match any value in an attribute in a space-separated list of values.
+This example matches on any anchor tag with a rel attibute containing the value 'next' in a list of values:
+```
+a[rel∼=next]
+```
+
+For a better example of the previous selector, here is the styling followed by the html markup it targets.  The selector finds the anchor tag with a data attribute that has the 'yours' value set in a list:
+
+```
+<style> a[data~="yours"] { color : aquamarine; } </style>
+<body><a href="http://www.google.com" data="mine yours">Target this</a></body>
+```
+
+This selector matches on an attribute that starts with a specified value that can also be followed by a dash.  This is for matching on language codes that can have several variations but all start with the same sequence followed by a dash, specifically in language specifiers like 'en' and 'en-us', etc:
+
+```
+a[hreflang|=en]
+```
+
+
+
+
+
+
