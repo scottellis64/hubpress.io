@@ -5,7 +5,7 @@ FileSaver.js, I have discovered, has a file size restriction of around 500m, whi
 
 Looking into replacements, it seems that the Fetch API could be the answer, but it is not supported by IE11.  But, with a polyfill it might just work.  
 
-- Fetch API [https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API]
-- Fetch API Polyfill [https://github.com/github/fetch]
-- Tutorial on using Fetch API https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data
-- Article about web streams: https://jakearchibald.com/2016/streams-ftw/
+- https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API[Fetch API]
+- https://github.com/github/fetch[Fetch API Polyfill]
+- https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data[Tutorial on using Fetch API]
+- https://jakearchibald.com/2016/streams-ftw/[Article about web streams]
