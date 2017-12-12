@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 11 Dec 2017 23:59:54 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Large Files with the Fetch API]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 12 Dec 2017 00:02:09 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Large Files with the Fetch API]]></title><description><![CDATA[<div class="paragraph">
 <p>FileSaver.js, I have discovered, has a file size restriction of around 500m, which is on the edge for our product.  The limitation is due to the Blob construct, which is browser-specific.</p>
 </div>
 <div class="paragraph">
@@ -7,16 +7,16 @@
 <div class="ulist">
 <ul>
 <li>
-<p>Fetch API [<a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" class="bare">https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API</a>]</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">Fetch API</a></p>
 </li>
 <li>
-<p>Fetch API Polyfill [<a href="https://github.com/github/fetch" class="bare">https://github.com/github/fetch</a>]</p>
+<p><a href="https://github.com/github/fetch">Fetch API Polyfill</a></p>
 </li>
 <li>
-<p>Tutorial on using Fetch API <a href="https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data" class="bare">https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data</a></p>
+<p><a href="https://scotch.io/tutorials/how-to-use-the-javascript-fetch-api-to-get-data">Tutorial on using Fetch API</a></p>
 </li>
 <li>
-<p>Article about web streams: <a href="https://jakearchibald.com/2016/streams-ftw/" class="bare">https://jakearchibald.com/2016/streams-ftw/</a></p>
+<p><a href="https://jakearchibald.com/2016/streams-ftw/">Article about web streams</a></p>
 </li>
 </ul>
 </div>]]></description><link>https://scottellis64.github.io/2017/12/11/Large-Files-with-the-Fetch-API.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/12/11/Large-Files-with-the-Fetch-API.html</guid><category><![CDATA[research]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Mon, 11 Dec 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[CSS Cheat Selectors]]></title><description><![CDATA[<div class="sect1">
