@@ -1,0 +1,9 @@
+= GraphQL 
+:hp-tags: learning
+
+- http://graphql.org/code/[GraphQL]
+- https://codepen.io/jackett_dad/pen/rpbvpX[Sandbox for testing GraphQL and React]
+- https://gramps.js.org/[GrAMPS]
+- https://github.com/gramps-graphql/gramps-express[GrAMPS Express on Github]
+
+This was learned from a FED event that I called into https://mail.notes.na.collabserv.com/livemail/($Calendar)/0C5B627A96825A0685258219006A8E4B/?OpenDocument&ui=portal&PresetFields=s_ParentContentId;($Calendar)2,s_ViewName;(%24Calendar),s_InheritAttachment;false,ThisStartDate;20180123T153000Z,s_CalViewWindowName;VerseCalendarView,&sq=1&cb=16007-1275&ci=1&em=1&ciex=1[here]
