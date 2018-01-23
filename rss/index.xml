@@ -1,4 +1,22 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 16 Jan 2018 18:48:31 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Watson Financial Playbook]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 23 Jan 2018 19:47:38 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[GraphQL]]></title><description><![CDATA[<div class="ulist">
+<ul>
+<li>
+<p><a href="http://graphql.org/code/">GraphQL</a></p>
+</li>
+<li>
+<p><a href="https://codepen.io/jackett_dad/pen/rpbvpX">Sandbox for testing GraphQL and React</a></p>
+</li>
+<li>
+<p><a href="https://gramps.js.org/">GrAMPS</a></p>
+</li>
+<li>
+<p><a href="https://github.com/gramps-graphql/gramps-express">GrAMPS Express on Github</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This was learned from a FED event that I called into <a href="https://mail.notes.na.collabserv.com/livemail/($Calendar)/0C5B627A96825A0685258219006A8E4B/?OpenDocument&amp;ui=portal&amp;PresetFields=s_ParentContentId;($Calendar)2,s_ViewName;(%24Calendar),s_InheritAttachment;false,ThisStartDate;20180123T153000Z,s_CalViewWindowName;VerseCalendarView,&amp;sq=1&amp;cb=16007-1275&amp;ci=1&amp;em=1&amp;ciex=1">here</a></p>
+</div>]]></description><link>https://scottellis64.github.io/2018/01/23/GraphQL.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/01/23/GraphQL.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 23 Jan 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Watson Financial Playbook]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p><a href="https://pages.github.ibm.com/watson-finance/devops-playbook">Main Page</a></p>
