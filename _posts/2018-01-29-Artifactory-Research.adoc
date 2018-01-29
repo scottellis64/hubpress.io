@@ -1,0 +1,9 @@
+= Artifactory Research
+
+- https://taas-tools.w3ibm.mybluemix.net/#/[IBM TaaS Onboarding]
+- https://taas-home.w3ibm.mybluemix.net/artifactory[IBM TaaS Artifactory]
+- https://pages.github.ibm.com/TAAS/tools_guide/artifactory/getting-started.html[IBM TaaS Artifactory - Getting Started]
+- https://na.artifactory.swg-devops.com/artifactory/webapp/#/home[IBM Artifactory NA HOME]
+- https://pages.github.ibm.com/watson-finance/devops-playbook/pages/artifactory[WFS Artifactory Playbook Home]
+
+https://martinfowler.com/articles/zaninotto.pdf[Greatest talk ever given on complexity?]
