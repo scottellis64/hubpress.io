@@ -1,4 +1,25 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 23 Jan 2018 19:47:38 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[GraphQL]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 29 Jan 2018 14:17:18 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Artifactory Research]]></title><description><![CDATA[<div class="ulist">
+<ul>
+<li>
+<p><a href="https://taas-tools.w3ibm.mybluemix.net/#/">IBM TaaS Onboarding</a></p>
+</li>
+<li>
+<p><a href="https://taas-home.w3ibm.mybluemix.net/artifactory">IBM TaaS Artifactory</a></p>
+</li>
+<li>
+<p><a href="https://pages.github.ibm.com/TAAS/tools_guide/artifactory/getting-started.html">IBM TaaS Artifactory - Getting Started</a></p>
+</li>
+<li>
+<p><a href="https://na.artifactory.swg-devops.com/artifactory/webapp/#/home">IBM Artifactory NA HOME</a></p>
+</li>
+<li>
+<p><a href="https://pages.github.ibm.com/watson-finance/devops-playbook/pages/artifactory">WFS Artifactory Playbook Home</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://martinfowler.com/articles/zaninotto.pdf">Greatest talk ever given on complexity?</a></p>
+</div>]]></description><link>https://scottellis64.github.io/2018/01/29/Artifactory-Research.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/01/29/Artifactory-Research.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Mon, 29 Jan 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[GraphQL]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p><a href="http://graphql.org/code/">GraphQL</a></p>
