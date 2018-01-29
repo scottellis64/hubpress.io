@@ -1,0 +1,8 @@
+= Node Patterns
+
+Reading https://www.safaribooksonline.com/library/view/nodejs-design-patterns/9781785885587[Node.js Essential Patterns]
+
+There are several linked articles that I will enumerate here as I encounter them.
+
+- https://blog.ometer.com/2011/07/24/callbacks-synchronous-and-asynchronous/[Callbacks, synchronous and asynchronous]
+- http://blog.izs.me/post/59142742143/designing-apis-for-asynchrony[Designing APIs for Asynchrony]
