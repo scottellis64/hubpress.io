@@ -7,3 +7,8 @@
 - https://pages.github.ibm.com/watson-finance/devops-playbook/pages/artifactory[WFS Artifactory Playbook Home]
 
 https://martinfowler.com/articles/zaninotto.pdf[Greatest talk ever given on complexity?]
+
+*Steps Taken*
+
+- Created a request to create a new local Artifactory repository for a Docker registry.  This created a https://github.ibm.com/Cloud-DevOps-Transformation-Services/artifactory-repositories/pull/1459[pull request].
+
