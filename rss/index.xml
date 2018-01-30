@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 30 Jan 2018 15:02:09 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Artifactory Research]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 30 Jan 2018 15:12:19 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Artifactory Research]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p><a href="https://taas-tools.w3ibm.mybluemix.net/#/">IBM TaaS Onboarding</a></p>
@@ -35,7 +35,16 @@
 <p>I am instructed to create an API Key and use that as a password for all access to administrative access.  The internal artifactory page page is <a href="https://na-blue.artifactory.swg-devops.com">here</a>.</p>
 </li>
 <li>
-<p>The explanation of how to acquire an API is described <a href="https://pages.github.ibm.com/TAAS/tools_guide/artifactory/authentication-and-authorization.html">here</a>.  Going through the instructions now.</p>
+<p>The explanation of how to acquire an API is described <a href="https://pages.github.ibm.com/TAAS/tools_guide/artifactory/authentication-and-authorization.html">here</a>.</p>
+</li>
+<li>
+<p>From the home page, click on my email address and I am navigated to the User Profile page, where I enter my intranet password and click the Unlock button.</p>
+</li>
+<li>
+<p>From here I can now generate an API key, which I have done.  I can then click on an icon to view the API key, and there is an icon to copy the API key.</p>
+</li>
+<li>
+<p>After creating the API key, on the command line I am able to perform a docker login using the api key as my password using the same user name, which is my internal email address.</p>
 </li>
 </ul>
 </div>]]></description><link>https://scottellis64.github.io/2018/01/29/Artifactory-Research.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/01/29/Artifactory-Research.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Mon, 29 Jan 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[GraphQL]]></title><description><![CDATA[<div class="ulist">
