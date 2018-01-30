@@ -13,5 +13,9 @@ https://martinfowler.com/articles/zaninotto.pdf[Greatest talk ever given on comp
 - Created a request to create a new local Artifactory repository for a Docker registry.  This created a https://github.ibm.com/Cloud-DevOps-Transformation-Services/artifactory-repositories/pull/1459[pull request].
 - Once authenticated, cloned that entire Github repo locally.  This repo contains all registrations, and will take some time to understand.  The OpenPages registration for Docker is there.
 - I am instructed to create an API Key and use that as a password for all access to administrative access.  The internal artifactory page page is https://na-blue.artifactory.swg-devops.com[here].
-- The explanation of how to acquire an API is described https://pages.github.ibm.com/TAAS/tools_guide/artifactory/authentication-and-authorization.html[here].  Going through the instructions now.
+- The explanation of how to acquire an API is described https://pages.github.ibm.com/TAAS/tools_guide/artifactory/authentication-and-authorization.html[here].  
+	- From the home page, click on my email address and I am navigated to the User Profile page, where I enter my intranet password and click the Unlock button.  
+    - From here I can now generate an API key, which I have done.  I can then click on an icon to view the API key, and there is an icon to copy the API key.  
+    - After creating the API key, on the command line I am able to perform a docker login using the api key as my password using the same user name, which is my internal email address.
+    
 
