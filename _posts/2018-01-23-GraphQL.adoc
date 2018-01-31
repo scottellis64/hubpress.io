@@ -7,3 +7,6 @@
 - https://github.com/gramps-graphql/gramps-express[GrAMPS Express on Github]
 
 This was learned from a FED event that I called into https://mail.notes.na.collabserv.com/livemail/($Calendar)/0C5B627A96825A0685258219006A8E4B/?OpenDocument&ui=portal&PresetFields=s_ParentContentId;($Calendar)2,s_ViewName;(%24Calendar),s_InheritAttachment;false,ThisStartDate;20180123T153000Z,s_CalViewWindowName;VerseCalendarView,&sq=1&cb=16007-1275&ci=1&em=1&ciex=1[here]
+
+
+- https://dev-blog.apollodata.com/tutorial-building-a-graphql-server-cddaa023c035?_ga=2.195483500.1110204313.1517429637-616723183.1517429637[Tutorial: How to build a GraphQL server]
