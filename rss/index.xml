@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 31 Jan 2018 22:07:50 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Artifactory Research]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 01 Feb 2018 20:03:13 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Artifactory Research]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p><a href="https://taas-tools.w3ibm.mybluemix.net/#/">IBM TaaS Onboarding</a></p>
@@ -84,6 +84,15 @@
 </div>
 <div class="paragraph">
 <p>I set up an account at Apollo.  Generated an API key that I use in the apollo-tutorial-kit project that followed along with the <a href="https://dev-blog.apollodata.com/tutorial-building-a-graphql-server-cddaa023c035?_ga=2.155113208.1110204313.1517429637-616723183.1517429637">tutorial</a> linked above.  <a href="https://engine.apollographql.com/service/scottellis64-1360">There</a> I can view the performance of the queries the application makes.</p>
+</div>
+<div class="paragraph">
+<p><strong>February 1, 2018</strong></p>
+</div>
+<div class="paragraph">
+<p>Did part one of the <a href="https://dev-blog.apollodata.com/full-stack-react-graphql-tutorial-582ac8d24e3b">Full Stack Tutorial</a> and had to really juggle it around to get it to work.  This was only part 1 of the series.  Apollo has been updated since this was written.  Got it working by calling to the original tutorial and running the GraphQL server in the apollo-tutorial-kit IntelliJ project.  But for mocking, I finally got it to work with the help of the <a href="https://github.com/dacz/apollo-bridge-link-example/blob/master/src/apolloClient-fullymocked.js">apollo-bridge-link</a> sample project.  Apollo test utils seems to be out of date.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.apollographql.com/docs/graphql-tools/mocking.html">Mocking tutorial</a>.</p>
 </div>]]></description><link>https://scottellis64.github.io/2018/01/23/GraphQL.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/01/23/GraphQL.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 23 Jan 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Watson Financial Playbook]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
