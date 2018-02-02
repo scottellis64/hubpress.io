@@ -17,6 +17,7 @@ This was learned from a FED event that I called into https://mail.notes.na.colla
 
 I set up an account at Apollo.  Generated an API key that I use in the apollo-tutorial-kit project that followed along with the https://dev-blog.apollodata.com/tutorial-building-a-graphql-server-cddaa023c035?_ga=2.155113208.1110204313.1517429637-616723183.1517429637[tutorial] linked above.  https://engine.apollographql.com/service/scottellis64-1360[There] I can view the performance of the queries the application makes.
 
+https://www.youtube.com/watch?v=XOM8J4LaYFg[YouTube video on GraphQL].  Notice there are other suggested videos--take a look.
 
 *February 1, 2018*
 
