@@ -22,7 +22,7 @@ Connection timeout: 480
     * Enter 7.3.0.2 in the search terms. 
     * In this example, the search results find 7.3.0.2 (OpenPages 7.x Maintenance) 
     * Right click and selected _New → Repository Workspace_. 
-    * On the ensuing dialog, clicked the _Finish_ button at the bottom and the workspace loads after a long delay (I think I had to choose the projects, and I chose them all.
+    * On the ensuing dialog, clicked the _Finish_ button at the bottom and the workspace loads after a long delay (I think I had to choose the projects, and I chose them all).
 
 == Fixing compilation errors after the workspace is loaded ==
 
