@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 02 Feb 2018 15:39:05 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Artifactory Research]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 02 Feb 2018 15:41:36 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Artifactory Research]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p><a href="https://taas-tools.w3ibm.mybluemix.net/#/">IBM TaaS Onboarding</a></p>
@@ -84,6 +84,9 @@
 </div>
 <div class="paragraph">
 <p>I set up an account at Apollo.  Generated an API key that I use in the apollo-tutorial-kit project that followed along with the <a href="https://dev-blog.apollodata.com/tutorial-building-a-graphql-server-cddaa023c035?_ga=2.155113208.1110204313.1517429637-616723183.1517429637">tutorial</a> linked above.  <a href="https://engine.apollographql.com/service/scottellis64-1360">There</a> I can view the performance of the queries the application makes.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://www.youtube.com/watch?v=XOM8J4LaYFg">YouTube video on GraphQL</a>.  Notice there are other suggested videos&#8212;&#8203;take a look.</p>
 </div>
 <div class="paragraph">
 <p><strong>February 1, 2018</strong></p>
