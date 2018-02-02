@@ -1,0 +1,13 @@
+= Patching OP Version
+:hp-tags: process development
+
+When a customer has an issue with a previous release of the product, the strategy is this:
+
+- Identify the code changes that need to be made.  These code changes probably occurred at some later time in a later release.  Once identified, these changes will need to be patched into a previous release version of the code and redeployed.  The code changes will be attached to the defect or task in which the coding effort was attached.
+- Find the earliest version of the code where the error occurs and take note of that stream number.
+- If you don't already flow with an RTC stream of that number, then create a new Eclipse workspace into an empty folder.  Follow the directions found in https://scottellis64.github.io/2017/07/26/Open-Pages-New-Workspace-Setup.html[this] post to set this up.
+- With the workspace working and error free, make the merge the code changes identified earlier.
+- Export the op-apps.ear.
+- Find a reference system that matches the stream version you've just flowed with and made changes to.  A list of the current ones can be found https://ccm-risk.ottawa.ibm.com:9453/ccm/web/projects/OpenPages%20(Change%20Management)#action=com.ibm.team.dashboard.viewDashboard&tab=_61[here]
+
+
