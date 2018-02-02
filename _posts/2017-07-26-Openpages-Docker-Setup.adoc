@@ -1,6 +1,8 @@
 = Openpages Docker Setup
 :hp-tags: docker, openpages, dev, setup
 
+http://masa-rhel11.swg.usma.ibm.com/repositories/op[OP Docker Registry]
+
 https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W1662f310fa3e_4801_b067_6cd1a876162b/page/Run%20OpenPages%20on%20docker[Run OpenPages on docker]
 
 == Get OP version number for .env ==
