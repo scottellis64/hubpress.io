@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 01 Feb 2018 20:05:00 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Artifactory Research]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 02 Feb 2018 14:51:24 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Artifactory Research]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p><a href="https://taas-tools.w3ibm.mybluemix.net/#/">IBM TaaS Onboarding</a></p>
@@ -1606,6 +1606,9 @@ Didn&#8217;t realize until too late that nothing had really been done on their e
 </ul>
 </div>]]></description><link>https://scottellis64.github.io/2017/07/26/Wednesday-July-26-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/Wednesday-July-26-2017.html</guid><category><![CDATA[status]]></category><category><![CDATA[ rtc solution]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Openpages Docker Setup]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
+<div class="paragraph">
+<p><a href="http://masa-rhel11.swg.usma.ibm.com/repositories/op">OP Docker Registry</a></p>
+</div>
 <div class="paragraph">
 <p><a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/W1662f310fa3e_4801_b067_6cd1a876162b/page/Run%20OpenPages%20on%20docker">Run OpenPages on docker</a></p>
 </div>
