@@ -24,4 +24,8 @@ Did part one of the https://dev-blog.apollodata.com/full-stack-react-graphql-tut
 
 https://www.apollographql.com/docs/graphql-tools/mocking.html[Mocking tutorial].  
 
-Look into api stitching -- I believe that's the term.  It's a cool way to combine several different apis into a single GraphQL end point.  Each individual stitch is considered a microservice, something that is being touted by FED here at IBM.  Look into it.
+Look into api stitching.  It's a cool way to combine several different apis into a single GraphQL end point.  Each individual stitch is considered a microservice, something that is being touted by FED here at IBM.  Look into it.  https://www.apollographql.com/docs/graphql-tools/schema-stitching.html[Here] is an overview from the Apollo site.
+
+*Febrary 2, 2018*
+
+IBM is putting together an https://github.ibm.com/Bluemix/graphql[architecture] that combines microservices into a single GraphQL endpoint on Bluemix.  See if this isn't something that can be used for our broader team.  Start with exposing the OP REST API as a microservice.  Ditto for access to UCF.  
