@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 02 Feb 2018 21:11:36 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Artifactory Research]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 02 Feb 2018 21:21:25 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Patching OP Version]]></title><description><![CDATA[<div class="paragraph">
+<p>When a customer has an issue with a previous release of the product, the strategy is this:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Identify the code changes that need to be made.  These code changes probably occurred at some later time in a later release.  Once identified, these changes will need to be patched into a previous release version of the code and redeployed.  The code changes will be attached to the defect or task in which the coding effort was attached.</p>
+</li>
+<li>
+<p>Find the earliest version of the code where the error occurs and take note of that stream number.</p>
+</li>
+<li>
+<p>If you don&#8217;t already flow with an RTC stream of that number, then create a new Eclipse workspace into an empty folder.  Follow the directions found in <a href="https://scottellis64.github.io/2017/07/26/Open-Pages-New-Workspace-Setup.html">this</a> post to set this up.</p>
+</li>
+<li>
+<p>With the workspace working and error free, make the merge the code changes identified earlier.</p>
+</li>
+<li>
+<p>Export the op-apps.ear.</p>
+</li>
+<li>
+<p>Find a reference system that matches the stream version you&#8217;ve just flowed with and made changes to.  A list of the current ones can be found <a href="https://ccm-risk.ottawa.ibm.com:9453/ccm/web/projects/OpenPages%20(Change%20Management)#action=com.ibm.team.dashboard.viewDashboard&amp;tab=_61">here</a></p>
+</li>
+</ul>
+</div>]]></description><link>https://scottellis64.github.io/2018/02/02/Patching-OP-Version.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/02/02/Patching-OP-Version.html</guid><category><![CDATA[process development]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 02 Feb 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Artifactory Research]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p><a href="https://taas-tools.w3ibm.mybluemix.net/#/">IBM TaaS Onboarding</a></p>
