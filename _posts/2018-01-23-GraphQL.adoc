@@ -24,6 +24,7 @@ Did part one of the https://dev-blog.apollodata.com/full-stack-react-graphql-tut
 
 https://www.apollographql.com/docs/graphql-tools/mocking.html[Mocking tutorial from Apollo Graph].  
 http://graphql.org/blog/mocking-with-graphql/[Mocking tutorial from GraphQL]
+https://github.com/stubailo/graphql-tools-hello-world/blob/master/graphql-tools.js[Quick and dirty mocking sample app using graphql-tools]
 
 Look into api stitching.  It's a cool way to combine several different apis into a single GraphQL end point.  Each individual stitch is considered a microservice, something that is being touted by FED here at IBM.  Look into it.  https://www.apollographql.com/docs/graphql-tools/schema-stitching.html[Here] is an overview from the Apollo site.
 
