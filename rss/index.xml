@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 02 Feb 2018 21:22:45 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Patching OP Version]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 02 Feb 2018 21:31:45 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Patching OP Version]]></title><description><![CDATA[<div class="paragraph">
 <p>When a customer has an issue with a previous release of the product, the strategy is this:</p>
 </div>
 <div class="ulist">
@@ -299,45 +299,45 @@ This example matches on any anchor tag with a rel attibute containing the value 
 </div>]]></description><link>https://scottellis64.github.io/2017/11/22/Ideas-that-made-it.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/11/22/Ideas-that-made-it.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 22 Nov 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Info]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
-<p>Met yesterday with Isaac to discuss my PBC Goals, which I have updated.  I spent my lunch doing the updates and feel that I&#8217;ve done a decent job of it, but of course there are always going to be things I leave out.  I need to get better about writing down my accomplishments and activities.</p>
+<p>Met yesterday with IP to discuss my Goals, which I have updated.  I spent my lunch doing the updates and feel that I&#8217;ve done a decent job of it, but of course there are always going to be things I leave out.  I need to get better about writing down my accomplishments and activities.</p>
 </li>
 <li>
-<p>We talked about Band 9 promotion again, but I felt like we have already been down this road before and there appears to still be a residual problem with unnamed members of my OpenPages community, to the point that it is probably time for me to seek out other opportunities within IBM.</p>
+<p>We talked about B9 promotion again, but I felt like we have already been down this road before and there appears to still be a residual problem with unnamed members of my OP community, to the point that it is probably time for me to seek out other opportunities within the company.</p>
 </li>
 <li>
-<p>Isaac told me that he achieved Band 9 by doing something outside of his normal workday by helping the services organization with some helper applications that made their lives easier. He advises me to do something similar, going outside of my assigned job to make a difference to the company.</p>
+<p>IP told me that he achieved B9 by doing something outside of his normal workday by helping the services organization with some helper applications that made their lives easier. He advises me to do something similar, going outside of my assigned job to make a difference to the company.</p>
 </li>
 <li>
 <p>I reminded him that I did the VM and made it so anyone that needed to could get a fresh development environment in a matter of hours instead of days or weeks. He acknowleged this and really considered it, but my concern is that I need to keep reminding him and anyone else that will listen that I did this.  He agrees that my push in this area propelled the installation team to pursue UCD and Docker, and now today an environment is a few clicks away.  But in general, it feels to me that my contribution here is forgotten.</p>
 </li>
 <li>
-<p>Isaac implied that I might not like it if I were to achieve Band 9, and talked about the Peter Principle.  I told him that I was already working at the Band 9 level where I came from, and that I was told that I would get there in few years once I came on board.  It turns out that John started at Band 9, and I&#8217;m kicking myself because I should have made it a condition of my coming into IBM, but I didn&#8217;t know how it works.  I told Isaac that I am ready and have all the confidence in the world in my ability to succeed.</p>
+<p>IP implied that I might not like it if I were to achieve B9, and talked about the Peter Principle.  I told him that I was already working at the B9 level where I came from, and that I was told that I would get there in few years once I came on board.  It turns out that John started at B9, and I&#8217;m kicking myself because I should have made it a condition of my coming into the company, but I didn&#8217;t know how it works.  I told IP that I am ready and have all the confidence in the world in my ability to succeed.</p>
 </li>
 <li>
-<p>He described the process of how the team meets to discuss who should be in line for promotions.  He told me that Bob no longer rolls his eyes when Isaac tells him what I am working on, so Bob is an impediment to my succession.  He is one but I don&#8217;t know who else.  I need to ask who specifically is blocking me.  He told me that John is someone who would have an influence.</p>
+<p>He described the process of how the team meets to discuss who should be in line for promotions.  He told me that BS no longer rolls his eyes when IP tells him what I am working on, so BS is an impediment to my succession.  He is one but I don&#8217;t know who else.  I need to ask who specifically is blocking me.  He told me that John is someone who would have an influence.</p>
 </li>
 <li>
-<p>Isaac told me that there are limited Band 9 spots, and IBM will give the ok to grant them on a limited basis.  Siva was just promoted to Band 9, so another opportunity has come and gone.</p>
+<p>IP told me that there are limited B9 spots, and the company will give the ok to grant them on a limited basis.  SV was just promoted to B9, so another opportunity has come and gone.</p>
 </li>
 <li>
-<p>I expressed my dissatisfaction with working on OpenPages defects, that I really enjoyed the creative liberties working on the Installer.</p>
+<p>I expressed my dissatisfaction with working on OP defects, that I really enjoyed the creative liberties working on the Installer.</p>
 </li>
 <li>
-<p>What do I imagine will be the benefit of Band 9, he asked.  He was thinking it was a money thing.  My answer, job satisfaction.  The work I&#8217;m doing now can be done by anyone&#8212;&#8203;my talents are being wasted.</p>
+<p>What do I imagine will be the benefit of B9, he asked.  He was thinking it was a money thing.  My answer, job satisfaction.  The work I&#8217;m doing now can be done by anyone&#8212;&#8203;my talents are being wasted.</p>
 </li>
 <li>
 <p>I said that I won&#8217;t be here in a year if this continues.</p>
 </li>
 <li>
-<p>He said I should do some presentations.  This has been said before when we discussed this when Isaac first took over as manager.  He had also talked about inviting me to some architect meetings with Masa and John.  Never happened.  Seems like all the things we talked about pertaining to Band 9 promotion has been completely forgotten.  The last one-on-one when I mentioned it, he told me that all the action items are mine, but the prior one-on-one he told me that he will look into it.</p>
+<p>He said I should do some presentations.  This has been said before when we discussed this when IP first took over as manager.  He had also talked about inviting me to some architect meetings with M and JO.  Never happened.  Seems like all the things we talked about pertaining to B9 promotion has been completely forgotten.  The last one-on-one when I mentioned it, he told me that all the action items are mine, but the prior one-on-one he told me that he will look into it.</p>
 </li>
 <li>
-<p>I wrapped up by saying that I need to be given opportunity to work with the larger organization in order to achieve outside influence.  I did well with the Installer team, but Isaac sort of implied that nobody respects the installation team in any organization, so any contributions there would not be respected.  I asserted that I needed opportunities to shine, but working on OpenPages defects is not it.</p>
+<p>I wrapped up by saying that I need to be given opportunity to work with the larger organization in order to achieve outside influence.  I did well with the Installer team, but IP sort of implied that nobody respects the installation team in any organization, so any contributions there would not be respected.  I asserted that I needed opportunities to shine, but working on OP defects is not it.</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>I noticed that the work on the next version of OpenPages UI is being done by everyone around me.  On Friday last week, the group of Mike, Kate, John and Isaac talked about it outside of my cubicle and they were excited working together and strategizing.  Isaac stopped by afterward, I think because he obviously knew I had heard them talking, and told me that they are pulling Jianbo into the group, and that I would keep working on defects for a while.</p>
+<p>I noticed that the work on the next version of OP UI is being done by everyone around me.  On Friday last week, the group of MP, KG, JO and IP talked about it outside of my cubicle and they were excited working together and strategizing.  IP stopped by afterward, I think because he obviously knew I had heard them talking, and told me that they are pulling JH into the group, and that I would keep working on defects for a while.</p>
 </div>
 <div class="paragraph">
 <p>I&#8217;m clearly not part of anything and am being relegated onto side avenues while the core group creates and plans.</p>
