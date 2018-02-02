@@ -1,5 +1,5 @@
 = Patching OP Version
-:hp-tags: process development
+:hp-tags: process, development
 
 When a customer has an issue with a previous release of the product, the strategy is this:
 
