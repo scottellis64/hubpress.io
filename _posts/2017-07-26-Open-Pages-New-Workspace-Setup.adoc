@@ -3,14 +3,14 @@
 
 == Jazz Repository Connection ==
 
-URI: https://ccm-risk.ottawa.ibm.com:9453/ccm/
-Name: ccm-risk.ottawa.ibm.com
+- URI: https://ccm-risk.ottawa.ibm.com:9453/ccm/
+- Name: ccm-risk.ottawa.ibm.com
 
-Authentication Type: Username and Password
-User ID: ibm intranet email address
-Password: ibm intranet password
+- Authentication Type: Username and Password
+- User ID: ibm intranet email address
+- Password: ibm intranet password
 
-Connection timeout: 480
+- Connection timeout: 480
 
 == Flowing with an RTC stream ==
 
