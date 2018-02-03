@@ -2,15 +2,20 @@
 :hp-tags: work log
 
 Background:
+
 - A customer has an issue in their version of OpenPages that has since been fixed, but where the issue was fixed was not known.
 - I was assigned to identify exactly in what changeset the fix occurred, and, once identified, to find a version of OP that predates the fix, apply the code changes and show that the customer issue has been addressed.
 - The issue is that for a Process object that has an assessment status field enabled in the user profile, that status is not being reset whenever a new Risk Assessment is started for the Process's parent Business Entity.
 
 Stategy:
+
 - My initial strategy was to get OpenPages up and running in my local development environment.  Once loaded, find the code pieces involved in the execution of the RCSA Launch Utility, then view the RTC history of the sources involved.  Here I would be able to see the who and when, and the associated defects and/or tasks.
 - I brought up a 7.4 docker container, but it was missing the reporting server, and therefor I wasn't able to launch the RCSA Launch Utility at all.  I obtained a docker-compose.yml that included the reports server, and that posed problems too.  OP went into an endless loop and I completely wiped my system of all docker images, containers and volumes and tried again, all to no avail.
 - I tried searching RTC for the term 'RCSA Launch Utility' but didn't find any tickets that looked promising, except for one ticket that turned out to be unrelated.
 - I talked to Sandy about it and she did another search and found the right defect in 60153.  
+
+Resolution:
+
 - Now I turned to finding a reference system that demonstrated the issue before it was fixed, given that defect 60153 was observed in OP_7.3-223, I needed to go back to 7.2, since no 7.3 reference system predates that build number.
 - I tried reference systems 7.2.0.5 and 7.2.0.4, but both had report server issues and I couldn't get too far into the reproduction steps.  I hit paydirt with 7.2.0.3.  
 - Next, I opened up an Eclipse workspace that flowed with version 7.2.0.3 and massaged the workspace until it compiled cleanly.  There were errors that were finally resolved by setting the Java JRE version back to 1.7.
