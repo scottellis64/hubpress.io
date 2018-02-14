@@ -17,5 +17,38 @@ https://martinfowler.com/articles/zaninotto.pdf[Greatest talk ever given on comp
 	- From the home page, click on my email address and I am navigated to the User Profile page, where I enter my intranet password and click the Unlock button.  
     - From here I can now generate an API key, which I have done.  I can then click on an icon to view the API key, and there is an icon to copy the API key.  
     - After creating the API key, on the command line I am able to perform a docker login using the api key as my password using the same user name, which is my internal email address.
-    
+
+*Gradle integration*
+
+- https://www.jfrog.com/confluence/display/RTF/Working+with+Gradle[Gradle Setup]
+- https://na.artifactory.swg-devops.com/artifactory/webapp/#/home[Artifactory Main Page]
+
+
+
+
+*Artifactory Server*
+- https://github.ibm.com/Cloud-DevOps-Transformation-Services/artifactory-repositories/pull/1459[Onboarding Github Pull Request]
+- https://na.artifactory.swg-devops.com/artifactory[Primary Server]
+- https://eu.artifactory.swg-devops.com/artifactory[Secondary/replication Server]
+
+
+
+*Docker registry*
+From SK:
+```
+The address should be `[your repo name].artifactory.swg-devops.com/[your docker image name]`
+For us, its `ip-rca-docker-local.artifactory.swg-devops.com/ibm/rca-service:latest`
+```
+
+From the confirmation email:
+```
+ip-q7-risk-rcoc-op-docker-local  [docker repo @ ip-q7-risk-rcoc-op-docker-local.artifactory.swg-devops.com]
+```
+
+Manage team member access:
+- https://w3.ibm.com/tools/groups/protect/groupsgui.wss?task=ViewGroup&gName=afaas-ip-q7-risk-rcoc-write&showlist=true[afaas-ip-q7-risk-rcoc-write]
+- https://w3.ibm.com/tools/groups/protect/groupsgui.wss?task=ViewGroup&gName=afaas-ip-q7-risk-rcoc-read&showlist=true[afaas-ip-q7-risk-rcoc-read]
+
+- https://pages.github.ibm.com/TAAS/tools_guide/support.html[Getting Help]
+
 
