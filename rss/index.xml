@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Sat, 03 Feb 2018 00:48:33 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Work done for 72394]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 14 Feb 2018 21:18:39 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Work done for 72394]]></title><description><![CDATA[<div class="paragraph">
 <p>Background:</p>
 </div>
 <div class="ulist">
@@ -137,6 +137,55 @@
 </li>
 <li>
 <p>After creating the API key, on the command line I am able to perform a docker login using the api key as my password using the same user name, which is my internal email address.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Gradle integration</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.jfrog.com/confluence/display/RTF/Working+with+Gradle">Gradle Setup</a></p>
+</li>
+<li>
+<p><a href="https://na.artifactory.swg-devops.com/artifactory/webapp/#/home">Artifactory Main Page</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Artifactory Server</strong>
+- <a href="https://github.ibm.com/Cloud-DevOps-Transformation-Services/artifactory-repositories/pull/1459">Onboarding Github Pull Request</a>
+- <a href="https://na.artifactory.swg-devops.com/artifactory">Primary Server</a>
+- <a href="https://eu.artifactory.swg-devops.com/artifactory">Secondary/replication Server</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Docker registry</strong>
+From SK:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>The address should be `[your repo name].artifactory.swg-devops.com/[your docker image name]`
+For us, its `ip-rca-docker-local.artifactory.swg-devops.com/ibm/rca-service:latest`</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the confirmation email:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>ip-q7-risk-rcoc-op-docker-local  [docker repo @ ip-q7-risk-rcoc-op-docker-local.artifactory.swg-devops.com]</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Manage team member access:
+- <a href="https://w3.ibm.com/tools/groups/protect/groupsgui.wss?task=ViewGroup&amp;gName=afaas-ip-q7-risk-rcoc-write&amp;showlist=true">afaas-ip-q7-risk-rcoc-write</a>
+- <a href="https://w3.ibm.com/tools/groups/protect/groupsgui.wss?task=ViewGroup&amp;gName=afaas-ip-q7-risk-rcoc-read&amp;showlist=true">afaas-ip-q7-risk-rcoc-read</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://pages.github.ibm.com/TAAS/tools_guide/support.html">Getting Help</a></p>
 </li>
 </ul>
 </div>]]></description><link>https://scottellis64.github.io/2018/01/29/Artifactory-Research.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/01/29/Artifactory-Research.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Mon, 29 Jan 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[GraphQL]]></title><description><![CDATA[<div class="ulist">
