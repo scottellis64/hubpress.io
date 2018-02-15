@@ -52,3 +52,15 @@ Manage team member access:
 - https://pages.github.ibm.com/TAAS/tools_guide/support.html[Getting Help]
 
 
+*02/15/2018*
+
+Started another group and requested a docker registry.  The team name is ip-op-grc.  Asked Yuhong for a suggested name.  Here are the two most recent requests:
+
+1. https://github.ibm.com/Cloud-DevOps-Transformation-Services/artifactory-repositories/pull/1562[Create new team ip-op-grc]
+2. https://github.ibm.com/Cloud-DevOps-Transformation-Services/artifactory-repositories/pull/1563[Create a local maven repo ip-q7-risk-rcoc-maven-local]
+
+The latter I will probably throw away at some point.  I'll play around with the maven repo with local testing.  Later when the new team is approved I'll create a maven repo and switch it live.
+
+
+
+
