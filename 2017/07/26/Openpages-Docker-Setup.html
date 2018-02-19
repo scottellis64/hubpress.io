@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1517583084737"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1517583084737"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1517583084737"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1519067738792"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1519067738792"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1519067738792"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1517583084737"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1519067738792"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2017/07/26/Openpages-Docker-Setup.html" />
     <meta name="referrer" content="origin" />
@@ -144,7 +144,7 @@ null
             <ul class="post-meta-list">
               <li class="post-meta-item">
                 <time datetime="2017-07-26" itemprop="datePublished">
-                  6 months ago
+                  7 months ago
                 </time>
               </li>
                 <li class="post-meta-item">
@@ -440,6 +440,19 @@ cp ~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh .</code></pre>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>&#8201;&#8212;&#8201;Modify the OP URL</p>
+</div>
+<div class="paragraph">
+<p>On the file system, navigate to:
+	- $OP_HOME/profiles/OpenPagesDmgr/config/cells/OpenPagesCell/applications/op-apps.ear/deployments/op-apps/META-INF/application.xml</p>
+</div>
+<div class="paragraph">
+<p>In the <a href="https://localhost:9043/ibmconsole">Websphere Console</a>, you can make the same change in Applications&#8594;Application Types&#8594;Websphere enterprise applications&#8594;op-apps&#8594;Web Module Properties&#8594;Context Root For Web Modules.</p>
+</div>
+<div class="paragraph">
+<p>When exporting op-apps.ear from Eclipse, be sure to modify the deployment descriptor to remove op from the sosa.war context-root, or the login page will display but login will always result in session expired exception.</p>
+</div>
 </div>
 </div>
           </div>
@@ -500,7 +513,7 @@ cp ~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh .</code></pre>
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1517583084737"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1519067738792"></script>
 
 
   </body>
