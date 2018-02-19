@@ -156,5 +156,11 @@ cp ~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh .
 - Cross your fingers that this works -- for me it did, first time!!
 
 
+-- Modify the OP URL 
 
+On the file system, navigate to:
+	- $OP_HOME/profiles/OpenPagesDmgr/config/cells/OpenPagesCell/applications/op-apps.ear/deployments/op-apps/META-INF/application.xml
+    
+In the https://localhost:9043/ibmconsole[Websphere Console], you can make the same change in Applications->Application Types->Websphere enterprise applications->op-apps->Web Module Properties->Context Root For Web Modules.
 
+When exporting op-apps.ear from Eclipse, be sure to modify the deployment descriptor to remove op from the sosa.war context-root, or the login page will display but login will always result in session expired exception.  
