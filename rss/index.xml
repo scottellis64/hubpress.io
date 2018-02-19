@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 15 Feb 2018 19:31:48 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Work done for 72394]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 19 Feb 2018 19:15:38 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Work done for 72394]]></title><description><![CDATA[<div class="paragraph">
 <p>Background:</p>
 </div>
 <div class="ulist">
@@ -2040,6 +2040,19 @@ cp ~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh .</code></pre>
 <p>Cross your fingers that this works&#8201;&#8212;&#8201;for me it did, first time!!</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>&#8201;&#8212;&#8201;Modify the OP URL</p>
+</div>
+<div class="paragraph">
+<p>On the file system, navigate to:
+	- $OP_HOME/profiles/OpenPagesDmgr/config/cells/OpenPagesCell/applications/op-apps.ear/deployments/op-apps/META-INF/application.xml</p>
+</div>
+<div class="paragraph">
+<p>In the <a href="https://localhost:9043/ibmconsole">Websphere Console</a>, you can make the same change in Applications&#8594;Application Types&#8594;Websphere enterprise applications&#8594;op-apps&#8594;Web Module Properties&#8594;Context Root For Web Modules.</p>
+</div>
+<div class="paragraph">
+<p>When exporting op-apps.ear from Eclipse, be sure to modify the deployment descriptor to remove op from the sosa.war context-root, or the login page will display but login will always result in session expired exception.</p>
 </div>
 </div>
 </div>]]></description><link>https://scottellis64.github.io/2017/07/26/Openpages-Docker-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/Openpages-Docker-Setup.html</guid><category><![CDATA[docker]]></category><category><![CDATA[ openpages]]></category><category><![CDATA[ dev]]></category><category><![CDATA[ setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[OpenPages New Workspace Setup]]></title><description><![CDATA[<div class="sect1">
