@@ -8,6 +8,10 @@ Watson augments the human being.
 
 If you have a problem the requires an understanding of *human language*, *communication* or *expression*, then Watson can help.
 
+== Definition of Ontology
+
+A set of concepts and categories in a subject area or domain that shows their properties and the relations between them.
+
 == Watson patterns
 
 *Engagement* - having a conversation, has the ability to contextualize a conversation (remember the context of the question, for example: How many people live in China?  1.379 billion.  How about in India?  In this example, the second question is in context of the first (answer btw is 1.324 billion)
@@ -29,9 +33,70 @@ How are the challenges the user faces?  What cognitive reasoning does the user n
 
 Now, do I have the data to support the cognitive challenges?  We need to get to the data, and be able to access it in some electronic form.
 
-== Watson Platform Services
+== Lesson 2: Watson Primer
+
+Watson can help solve problems that require an understanding of the human language, communication, or expression.
+
+Key Points:
+
+- Watson is not an analytics engine for predicting events but uses Cognitive reasoning to analyze information, recognize patterns, and suggest solutions.
+- Watson is not monolithic—it has various services that you weave together to solve the user’s problem.
+- There are five key Watson patterns: Engagement, Discovery, Decision, Policy, and Exploration.
+
+== Resources needed for implementation of Watson Patterns
+
+*Engagement* Business Analysts
+*Discovery and Exploration* Data scientists
+*Policy* Both roles involved
+
+== Complexity of Watson Patterns
+
+- Exploration and Engagement: simplest patterns
+- Discovery: training the system on concepts and ontologies
+- Policy: hardest, involves predictive modeling and interpretation -- currently only used in Clinical Trial Matching
+
+== Data curation
+
+- Think of data curation in terms of redundancy and quality
+- Must be in machine-readable format
+- Must consider the voice of the data 
+
+== Watson Must Be Trained
+
+- Watson does not know anything and must be trained by SMEs (Subject Matter Experts)
+- There are some pre-trained Watson services, and some services are pre-trained for industry content
+
+== Definitions
+
+- Artificial Intelligence: Artificial Intelligence, sometimes also referred to as Machine Intelligence, refers to a broad set of methods, algorithms, and technologies that enable systems, either in software or embodied forms, to display aspects of intelligent behavior in a way that may seem human-like to an outside observer.
+
+- Augmented Intelligence: At IBM, we are guided by the term Augmented Intelligence rather than Artificial Intelligence. It is the critical difference between systems that enhance and scale human expertise rather than those that attempt to replicate all of human intelligence. We focus on building practical Augmented Intelligence applications that assist people with well-defined tasks, and in the process, expose a range of generalized Augmented Intelligence services on a platform to support a wide range of new applications.
+
+- Machine Learning (ML): As a part of Augmented Intelligence and Artificial Intelligence, machine learning refers to a wide variety of algorithms and methodologies that enable systems to improve their performance over time as it obtains more data and learns from it. Essentially, machine learning is about recognizing trends from data or recognizing the categories that the data fits in so that when the machine-learned system is presented with new data, it can make proper predictions. Machine learning systems train under supervision, learning from examples and feedback, or in unsupervised mode. Machine learning techniques span a wide array of architectures, models, and techniques including neural networks, deep learning, support vector machines, decision trees, self-organizing maps, case-based reasoning, instance-based learning, hidden Markov models, and regression techniques.
+
+- Deep Learning: Deep learning is a type of machine learning that employs a multi-layer hierarchical neural network architecture and an end-to-end approach to training where the system is trained by a set of input data and desired output with learning happening in the intermediate layers. The system learns to adjust weights of the interconnections in the training process. Deep learning architectures are not new, but the advances in high-performance computing and the availability of large labeled data sets have driven the recent success of these architectures in speech and visual recognition applications.
+
+- Natural Language Processing (NLP): is a branch of Augmented Intelligence or Artificial Intelligence concerned with analyzing, understanding, and generating natural human languages in order to interface with machines, both in written and spoken forms.
+
+- Internet of Things (IoT): Instrumented, interconnected, and intelligent solutions that collect, distribute, manage, and/or analyze large amounts of data in near real-time captured through a network of physical objects that contain embedded technology (for example: sensors, kiosks, meters, PDAs, and appliances) to drive actions or to create insights.
+
+- Cognitive IoT  (CIoT): CIoT drives the next generation of data analytics and technical capabilities. CIoT infuses intelligence and decision making into the physical world to continually transform businesses and enhance the human experience in real-time using IoT technologies.
+
+== IBM's Competition
+
+- Services: Accenture, Deloitte and Tata
+- Technology: Google, Amazon and Microsoft
+
+== Cognitive Business Decision Support Differentiators
+
+https://w3-03.ibm.com/services/lighthouse/documents/105790
+
+== Collaboration across Global Business Services, Cloud and Watson
+
+https://w3-connections.ibm.com/blogs/a23d4ada-0520-4517-a0e9-6b11d4935a92/entry/Draft_20?lang=en_us
 
 
 
 
 
+  
