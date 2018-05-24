@@ -27,3 +27,10 @@ Principles:
   - Use stakeholder and user interviews to extract domain and technical knowledge from stakeholders, subject matter experts, and users to inform the direction of research moving forward.
   
 
+== Problem Statement
+
+*Our Users* struggle to *achieve some task today* because *blockers, limitations, etc*.
+
+- Problem statements should always include a user and their current problem, not yours.
+- Problem statements should be flexible and iterative as you learn more about your users and their current state.
+- Problem statements should be written collaboratively, with all members of a team who have relevant expertise.
