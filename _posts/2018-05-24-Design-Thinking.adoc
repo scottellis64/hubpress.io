@@ -1,0 +1,29 @@
+= Design Thinking
+:hp-tags: learning
+
+Principles:
+
+- Users first
+- Treat everything as a prototype
+- Restless reinvention
+- collaborating with inclusion
+- the loop - observe, reflecting, make changes
+- design research up front https://www.ibm.com/design/research/[click here for more details]
+  - challenge assumptions
+
+
+== Team roles
+
+- https://www.ibm.com/design/research/team/explorer[Explorer]
+
+
+== Basic Design Research
+
+- Secondary Research: This type of research can help you gain domain expertise and a technical foundation in areas that are new to you.
+  - Dig into any existing research on your topic. This could include internal or external research such as news articles, analyst reports like Forrester, forums, or papers. Secondary research will provide direction to the rest of your research.
+- Competitive Evaluation: Understand the products and services offerings of your competitors as they relate to your own users’ needs.
+  - Competitive evaluation helps us understand the strengths and weaknesses of competitors’ solutions to the problems you aim to solve.
+- Stakeholder and User Interviews: Interviews can help us explore our assumptions while building rapport with those your interviewees.
+  - Use stakeholder and user interviews to extract domain and technical knowledge from stakeholders, subject matter experts, and users to inform the direction of research moving forward.
+  
+
