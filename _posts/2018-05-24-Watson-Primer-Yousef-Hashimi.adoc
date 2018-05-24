@@ -1,0 +1,37 @@
+= Watson Primer: Yousef Hashimi
+:hp-tags: learning
+
+Source video http://gbslearn.atlanta.ibm.com/iSPO/cognitive101/index.html#[here].
+
+Recommends reading the book, https://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048/ref=asap_bc?ie=UTF8[How to Create a Mind] by Ray Kurzweil
+Watson augments the human being.
+
+If you have a problem the requires an understanding of *human language*, *communication* or *expression*, then Watson can help.
+
+== Watson patterns
+
+*Engagement* - having a conversation, has the ability to contextualize a conversation (remember the context of the question, for example: How many people live in China?  1.379 billion.  How about in India?  In this example, the second question is in context of the first (answer btw is 1.324 billion)
+
+*Discovery* - Insights gleaned by synthesizing data.  For example, reading through all medical knowledge on similar conditions and determine all the possible side effects.
+
+*Decision* - Amalgamation of all the other patterns to make determinations
+
+*Policy* - Helps users evaluate compliance to policies
+
+*Exploration* - Visually depict data, but the source of the data is unstructured
+
+
+== Designing a cognitive solution
+
+Before starting a cognitive solution, you need to know who is the user?
+
+How are the challenges the user faces?  What cognitive reasoning does the user need to engage in to face their challenges?  List them out.
+
+Now, do I have the data to support the cognitive challenges?  We need to get to the data, and be able to access it in some electronic form.
+
+== Watson Platform Services
+
+
+
+
+
