@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 19 Feb 2018 21:58:42 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Work done for 72394]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 24 May 2018 15:51:55 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Watson Primer: Yousef Hashimi]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Source video <a href="http://gbslearn.atlanta.ibm.com/iSPO/cognitive101/index.html#">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>Recommends reading the book, <a href="https://www.amazon.com/How-Create-Mind-Thought-Revealed/dp/0143124048/ref=asap_bc?ie=UTF8">How to Create a Mind</a> by Ray Kurzweil
+Watson augments the human being.</p>
+</div>
+<div class="paragraph">
+<p>If you have a problem the requires an understanding of <strong>human language</strong>, <strong>communication</strong> or <strong>expression</strong>, then Watson can help.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_watson_patterns">Watson patterns</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Engagement</strong> - having a conversation, has the ability to contextualize a conversation (remember the context of the question, for example: How many people live in China?  1.379 billion.  How about in India?  In this example, the second question is in context of the first (answer btw is 1.324 billion)</p>
+</div>
+<div class="paragraph">
+<p><strong>Discovery</strong> - Insights gleaned by synthesizing data.  For example, reading through all medical knowledge on similar conditions and determine all the possible side effects.</p>
+</div>
+<div class="paragraph">
+<p><strong>Decision</strong> - Amalgamation of all the other patterns to make determinations</p>
+</div>
+<div class="paragraph">
+<p><strong>Policy</strong> - Helps users evaluate compliance to policies</p>
+</div>
+<div class="paragraph">
+<p><strong>Exploration</strong> - Visually depict data, but the source of the data is unstructured</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_designing_a_cognitive_solution">Designing a cognitive solution</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before starting a cognitive solution, you need to know who is the user?</p>
+</div>
+<div class="paragraph">
+<p>How are the challenges the user faces?  What cognitive reasoning does the user need to engage in to face their challenges?  List them out.</p>
+</div>
+<div class="paragraph">
+<p>Now, do I have the data to support the cognitive challenges?  We need to get to the data, and be able to access it in some electronic form.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_watson_platform_services">Watson Platform Services</h2>
+<div class="sectionbody">
+
+</div>
+</div>]]></description><link>https://scottellis64.github.io/2018/05/24/Watson-Primer-Yousef-Hashimi.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/05/24/Watson-Primer-Yousef-Hashimi.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 24 May 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Work done for 72394]]></title><description><![CDATA[<div class="paragraph">
 <p>Background:</p>
 </div>
 <div class="ulist">
@@ -207,6 +260,31 @@ For us, its `ip-rca-docker-local.artifactory.swg-devops.com/ibm/rca-service:late
 </div>
 <div class="paragraph">
 <p>The latter I will probably throw away at some point.  I&#8217;ll play around with the maven repo with local testing.  Later when the new team is approved I&#8217;ll create a maven repo and switch it live.</p>
+</div>
+<div class="paragraph">
+<p><strong>03/16/2018</strong></p>
+</div>
+<div class="paragraph">
+<p>Created gradle repo and npm registry in Artifactory.</p>
+</div>
+<div class="paragraph">
+<p>Seem to be locked out of my account now and cannot log into Artifactory.  I&#8217;m trying to see if I can use my API key for all passwords.</p>
+</div>
+<div class="paragraph">
+<p><strong>NPM Registry</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.jfrog.com/confluence/display/RTF/NPM+Registry">NPM Registry Management</a></p>
+</li>
+<li>
+<p><a href="https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738">How to publish a Node module to NPM</a></p>
+</li>
+<li>
+<p><a href="https://pages.github.ibm.com/TAAS/tools_guide/artifactory/authentication/npm.html">Authenticating NPM with Artifactory</a></p>
+</li>
+</ul>
 </div>]]></description><link>https://scottellis64.github.io/2018/01/29/Artifactory-Research.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/01/29/Artifactory-Research.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Mon, 29 Jan 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[GraphQL]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
