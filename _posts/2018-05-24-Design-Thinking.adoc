@@ -34,3 +34,5 @@ Principles:
 - Problem statements should always include a user and their current problem, not yours.
 - Problem statements should be flexible and iterative as you learn more about your users and their current state.
 - Problem statements should be written collaboratively, with all members of a team who have relevant expertise.
+
+Should reframe the issue with the user in mind
