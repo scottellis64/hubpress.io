@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 24 May 2018 15:52:32 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Watson Primer: Yousef Hashimi]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 24 May 2018 16:45:26 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Watson Primer: Yousef Hashimi]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Source video <a href="http://gbslearn.atlanta.ibm.com/iSPO/cognitive101/index.html#">here</a>.</p>
@@ -9,6 +9,14 @@ Watson augments the human being.</p>
 </div>
 <div class="paragraph">
 <p>If you have a problem the requires an understanding of <strong>human language</strong>, <strong>communication</strong> or <strong>expression</strong>, then Watson can help.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_definition_of_ontology">Definition of Ontology</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A set of concepts and categories in a subject area or domain that shows their properties and the relations between them.</p>
 </div>
 </div>
 </div>
@@ -47,9 +55,149 @@ Watson augments the human being.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_watson_platform_services">Watson Platform Services</h2>
+<h2 id="_lesson_2_watson_primer">Lesson 2: Watson Primer</h2>
 <div class="sectionbody">
-
+<div class="paragraph">
+<p>Watson can help solve problems that require an understanding of the human language, communication, or expression.</p>
+</div>
+<div class="paragraph">
+<p>Key Points:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Watson is not an analytics engine for predicting events but uses Cognitive reasoning to analyze information, recognize patterns, and suggest solutions.</p>
+</li>
+<li>
+<p>Watson is not monolithic—it has various services that you weave together to solve the user’s problem.</p>
+</li>
+<li>
+<p>There are five key Watson patterns: Engagement, Discovery, Decision, Policy, and Exploration.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_resources_needed_for_implementation_of_watson_patterns">Resources needed for implementation of Watson Patterns</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Engagement</strong> Business Analysts
+<strong>Discovery and Exploration</strong> Data scientists
+<strong>Policy</strong> Both roles involved</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_complexity_of_watson_patterns">Complexity of Watson Patterns</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Exploration and Engagement: simplest patterns</p>
+</li>
+<li>
+<p>Discovery: training the system on concepts and ontologies</p>
+</li>
+<li>
+<p>Policy: hardest, involves predictive modeling and interpretation&#8201;&#8212;&#8201;currently only used in Clinical Trial Matching</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_data_curation">Data curation</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Think of data curation in terms of redundancy and quality</p>
+</li>
+<li>
+<p>Must be in machine-readable format</p>
+</li>
+<li>
+<p>Must consider the voice of the data</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_watson_must_be_trained">Watson Must Be Trained</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Watson does not know anything and must be trained by SMEs (Subject Matter Experts)</p>
+</li>
+<li>
+<p>There are some pre-trained Watson services, and some services are pre-trained for industry content</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_definitions">Definitions</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Artificial Intelligence: Artificial Intelligence, sometimes also referred to as Machine Intelligence, refers to a broad set of methods, algorithms, and technologies that enable systems, either in software or embodied forms, to display aspects of intelligent behavior in a way that may seem human-like to an outside observer.</p>
+</li>
+<li>
+<p>Augmented Intelligence: At IBM, we are guided by the term Augmented Intelligence rather than Artificial Intelligence. It is the critical difference between systems that enhance and scale human expertise rather than those that attempt to replicate all of human intelligence. We focus on building practical Augmented Intelligence applications that assist people with well-defined tasks, and in the process, expose a range of generalized Augmented Intelligence services on a platform to support a wide range of new applications.</p>
+</li>
+<li>
+<p>Machine Learning (ML): As a part of Augmented Intelligence and Artificial Intelligence, machine learning refers to a wide variety of algorithms and methodologies that enable systems to improve their performance over time as it obtains more data and learns from it. Essentially, machine learning is about recognizing trends from data or recognizing the categories that the data fits in so that when the machine-learned system is presented with new data, it can make proper predictions. Machine learning systems train under supervision, learning from examples and feedback, or in unsupervised mode. Machine learning techniques span a wide array of architectures, models, and techniques including neural networks, deep learning, support vector machines, decision trees, self-organizing maps, case-based reasoning, instance-based learning, hidden Markov models, and regression techniques.</p>
+</li>
+<li>
+<p>Deep Learning: Deep learning is a type of machine learning that employs a multi-layer hierarchical neural network architecture and an end-to-end approach to training where the system is trained by a set of input data and desired output with learning happening in the intermediate layers. The system learns to adjust weights of the interconnections in the training process. Deep learning architectures are not new, but the advances in high-performance computing and the availability of large labeled data sets have driven the recent success of these architectures in speech and visual recognition applications.</p>
+</li>
+<li>
+<p>Natural Language Processing (NLP): is a branch of Augmented Intelligence or Artificial Intelligence concerned with analyzing, understanding, and generating natural human languages in order to interface with machines, both in written and spoken forms.</p>
+</li>
+<li>
+<p>Internet of Things (IoT): Instrumented, interconnected, and intelligent solutions that collect, distribute, manage, and/or analyze large amounts of data in near real-time captured through a network of physical objects that contain embedded technology (for example: sensors, kiosks, meters, PDAs, and appliances) to drive actions or to create insights.</p>
+</li>
+<li>
+<p>Cognitive IoT  (CIoT): CIoT drives the next generation of data analytics and technical capabilities. CIoT infuses intelligence and decision making into the physical world to continually transform businesses and enhance the human experience in real-time using IoT technologies.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_ibm_s_competition">IBM&#8217;s Competition</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Services: Accenture, Deloitte and Tata</p>
+</li>
+<li>
+<p>Technology: Google, Amazon and Microsoft</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_cognitive_business_decision_support_differentiators">Cognitive Business Decision Support Differentiators</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://w3-03.ibm.com/services/lighthouse/documents/105790" class="bare">https://w3-03.ibm.com/services/lighthouse/documents/105790</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_collaboration_across_global_business_services_cloud_and_watson">Collaboration across Global Business Services, Cloud and Watson</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://w3-connections.ibm.com/blogs/a23d4ada-0520-4517-a0e9-6b11d4935a92/entry/Draft_20?lang=en_us" class="bare">https://w3-connections.ibm.com/blogs/a23d4ada-0520-4517-a0e9-6b11d4935a92/entry/Draft_20?lang=en_us</a></p>
+</div>
 </div>
 </div>]]></description><link>https://scottellis64.github.io/2018/05/24/Watson-Primer-Yousef-Hashimi.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/05/24/Watson-Primer-Yousef-Hashimi.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 24 May 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Work done for 72394]]></title><description><![CDATA[<div class="paragraph">
 <p>Background:</p>
