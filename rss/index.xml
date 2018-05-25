@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 24 May 2018 16:45:26 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Watson Primer: Yousef Hashimi]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 25 May 2018 18:19:31 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Watson Primer: Yousef Hashimi]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Source video <a href="http://gbslearn.atlanta.ibm.com/iSPO/cognitive101/index.html#">here</a>.</p>
@@ -199,7 +199,128 @@ Watson augments the human being.</p>
 <p><a href="https://w3-connections.ibm.com/blogs/a23d4ada-0520-4517-a0e9-6b11d4935a92/entry/Draft_20?lang=en_us" class="bare">https://w3-connections.ibm.com/blogs/a23d4ada-0520-4517-a0e9-6b11d4935a92/entry/Draft_20?lang=en_us</a></p>
 </div>
 </div>
-</div>]]></description><link>https://scottellis64.github.io/2018/05/24/Watson-Primer-Yousef-Hashimi.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/05/24/Watson-Primer-Yousef-Hashimi.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 24 May 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Work done for 72394]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://scottellis64.github.io/2018/05/24/Watson-Primer-Yousef-Hashimi.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/05/24/Watson-Primer-Yousef-Hashimi.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 24 May 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Design Thinking]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Principles:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Users first</p>
+</li>
+<li>
+<p>Treat everything as a prototype</p>
+</li>
+<li>
+<p>Restless reinvention</p>
+</li>
+<li>
+<p>collaborating with inclusion</p>
+</li>
+<li>
+<p>the loop - observe, reflecting, make changes</p>
+</li>
+<li>
+<p>design research up front <a href="https://www.ibm.com/design/research/">click here for more details</a></p>
+</li>
+<li>
+<p>challenge assumptions</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_team_roles">Team roles</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://www.ibm.com/design/research/team/explorer">Explorer</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_basic_design_research">Basic Design Research</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Secondary Research: This type of research can help you gain domain expertise and a technical foundation in areas that are new to you.</p>
+</li>
+<li>
+<p>Dig into any existing research on your topic. This could include internal or external research such as news articles, analyst reports like Forrester, forums, or papers. Secondary research will provide direction to the rest of your research.</p>
+</li>
+<li>
+<p>Competitive Evaluation: Understand the products and services offerings of your competitors as they relate to your own users’ needs.</p>
+</li>
+<li>
+<p>Competitive evaluation helps us understand the strengths and weaknesses of competitors’ solutions to the problems you aim to solve.</p>
+</li>
+<li>
+<p>Stakeholder and User Interviews: Interviews can help us explore our assumptions while building rapport with those your interviewees.</p>
+</li>
+<li>
+<p>Use stakeholder and user interviews to extract domain and technical knowledge from stakeholders, subject matter experts, and users to inform the direction of research moving forward.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_problem_statement">Problem Statement</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><strong>Our Users</strong> struggle to <strong>achieve some task today</strong> because <strong>blockers, limitations, etc</strong>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Problem statements should always include a user and their current problem, not yours.</p>
+</li>
+<li>
+<p>Problem statements should be flexible and iterative as you learn more about your users and their current state.</p>
+</li>
+<li>
+<p>Problem statements should be written collaboratively, with all members of a team who have relevant expertise.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Should reframe the issue with the user in mind</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_the_keys">The Keys</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Hills: Hills are statements of intent written as meaningful user outcomes. They tell you where to go——not how to get there.</p>
+</li>
+<li>
+<p>Who: Who is your user? Refer to them by name.</p>
+</li>
+<li>
+<p>What: What will your user be able to do that they couldn’t before? Start with a verb and avoid solutions.</p>
+</li>
+<li>
+<p>Wow: What differentiates you from the competition? This is measurable.</p>
+</li>
+<li>
+<p>Playbacks</p>
+</li>
+<li>
+<p>Work with sponsor users</p>
+</li>
+</ul>
+</div>
+</div>
+</div>]]></description><link>https://scottellis64.github.io/2018/05/24/Design-Thinking.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/05/24/Design-Thinking.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 24 May 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Work done for 72394]]></title><description><![CDATA[<div class="paragraph">
 <p>Background:</p>
 </div>
 <div class="ulist">
