@@ -36,3 +36,13 @@ Principles:
 - Problem statements should be written collaboratively, with all members of a team who have relevant expertise.
 
 Should reframe the issue with the user in mind
+
+== The Keys
+
+- Hills: Hills are statements of intent written as meaningful user outcomes. They tell you where to go——not how to get there.
+  - Who: Who is your user? Refer to them by name.
+  - What: What will your user be able to do that they couldn’t before? Start with a verb and avoid solutions.
+  - Wow: What differentiates you from the competition? This is measurable.
+- Playbacks
+- Work with sponsor users
+
