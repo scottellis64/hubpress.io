@@ -1,9 +1,25 @@
 = Architect Certification
 :hp-tags: learning
 
-https://lpb.w3bmix.ibm.com/?id=852581EF0043A636
+=== Links
+- https://apps.na.collabserv.com/communities/service/html/communitystart?communityUuid=b0aee14f-98b9-41cc-81bc-eba42f0df5ae[Technical Career Overview]
+- https://apps.na.collabserv.com/wikis/home?lang=en-us#!/wiki/W9249b233310e_46b6_940b_d8ef762886cd/page/Certification%20Roadmap[Certification Roadmap]
+- https://w3-connections.ibm.com/communities/community/OpenBadges[Badges Overview]
+- https://lpb.w3bmix.ibm.com/?id=852581EF0043A636[Architect Level 1 Badge Overview]
 
-IBM Design Thinking Practioner Badge - Done
+== Resources
 
-https://lpb.w3bmix.ibm.com/?id=852581EF0043A636
+- Find downloaded power point YS_Architect_Career Model.pptx and presentation Open Badges for Architect - replay.mp4 describing the technical architect badge path
+
+
+
+=== Progress
+
+- IBM Design Thinking Practioner Badge - Done
+- https://mooc.w3bmix.ibm.com/financial-markets-jumpstart-2018-06/week-1/review-financial-markets-industry-primer-1[Industry Jumpstarts - Financial Markets] - in progress
+
+
+
+
+
 
