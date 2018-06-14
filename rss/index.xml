@@ -1,4 +1,43 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 29 May 2018 15:02:25 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Architect Certification]]></title><description><![CDATA[<div class="sect2">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 14 Jun 2018 18:47:03 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[AI Learning]]></title><description><![CDATA[<div class="paragraph">
+<p>Some prerequisites for taking the AI course offered through IBM:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Mathematics</p>
+</li>
+<li>
+<p>Linear Equations</p>
+</li>
+<li>
+<p>Vectors</p>
+</li>
+<li>
+<p>Matrices</p>
+</li>
+<li>
+<p>Statistics</p>
+</li>
+<li>
+<p>Statistical Inference</p>
+</li>
+<li>
+<p>Linear Regression Analysis</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>I started taking linear equations on <a href="https://www.khanacademy.org/math/linear-algebra">Khan Academy</a>. And I also have a book from David.  It&#8217;s getting a bit daunting and I don&#8217;t know how much time this will take.</p>
+</div>
+<div class="paragraph">
+<p>The AI course I realized just today has a whole prep channel called <em>AI Academy Preparation</em>, and part of this there is a class called <a href="https://courses.edx.org/courses/course-v1:Microsoft+DAT256x+1T2018a/courseware/0a19bbc7c27e47f88ca55373a92f1a4e/ad8ff006678541b492bfa78eaf815332/">Essential Mathematics for Artificial Intelligence</a>.  I&#8217;m a little late, but this seems more targeted than trying learn the whole of Linear Algebra and Statistics on Khan Academy.</p>
+</div>
+<div class="paragraph">
+<p>I started a lighter course on the same site called <a href="https://courses.edx.org/courses/course-v1:HarvardX+PH525.2x+3T-2015/courseware/dcf8031210054672a6bd2a63d6f9d9ac/599b44cd22814a4795fda31f02c3719f/?child=first">Data Analysis for Life Sciences 2: Introduction to Linear Models and Matrix Algebra</a>.  As part of that I installed <em>R</em> and <em>RStudio</em>, and then I was directed to a <a href="http://swirlstats.com/">tutorial on R programming</a>, where I downloaded a text book and found a link to a bunch of source code for R programming <a href="https://github.com/genomicsclass/labs">samples</a>.</p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s a big rabbit hole I&#8217;m going down, so I&#8217;m starting today with the essential mathematics course since it seems to cover all the math I need in one course, but it is listed as being 43 hours of learning time.  Beats my rough estimate of my previous track.</p>
+</div>]]></description><link>https://scottellis64.github.io/2018/06/14/AI-Learning.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/06/14/AI-Learning.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 14 Jun 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Architect Certification]]></title><description><![CDATA[<div class="sect2">
 <h3 id="_links">Links</h3>
 <div class="ulist">
 <ul>
