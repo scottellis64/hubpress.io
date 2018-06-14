@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 14 Jun 2018 18:47:03 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[AI Learning]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Thu, 14 Jun 2018 21:24:15 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[AI Learning]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
 <p>Some prerequisites for taking the AI course offered through IBM:</p>
 </div>
 <div class="ulist">
@@ -37,6 +39,23 @@
 </div>
 <div class="paragraph">
 <p>It&#8217;s a big rabbit hole I&#8217;m going down, so I&#8217;m starting today with the essential mathematics course since it seems to cover all the math I need in one course, but it is listed as being 43 hours of learning time.  Beats my rough estimate of my previous track.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_course_in_progress">Course in Progress</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Created an account at <a href="https://notebooks.azure.com">Microsoft Azure Notebooks</a> where the course material lives.</p>
+</li>
+<li>
+<p>Go <a href="https://courses.edx.org/courses/course-v1:Microsoft+DAT256x+1T2018a/course/">here</a> to resume the course</p>
+</li>
+</ul>
+</div>
+</div>
 </div>]]></description><link>https://scottellis64.github.io/2018/06/14/AI-Learning.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/06/14/AI-Learning.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 14 Jun 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Architect Certification]]></title><description><![CDATA[<div class="sect2">
 <h3 id="_links">Links</h3>
 <div class="ulist">
