@@ -1,0 +1,21 @@
+= AI Learning =
+:hp-tags: learning
+
+Some prerequisites for taking the AI course offered through IBM:
+
+- Mathematics
+  - Linear Equations
+  - Vectors
+  - Matrices
+  - Statistics
+    - Statistical Inference
+    - Linear Regression Analysis
+    
+I started taking linear equations on https://www.khanacademy.org/math/linear-algebra[Khan Academy]. And I also have a book from David.  It's getting a bit daunting and I don't know how much time this will take.
+
+The AI course I realized just today has a whole prep channel called _AI Academy Preparation_, and part of this there is a class called https://courses.edx.org/courses/course-v1:Microsoft+DAT256x+1T2018a/courseware/0a19bbc7c27e47f88ca55373a92f1a4e/ad8ff006678541b492bfa78eaf815332/[Essential Mathematics for Artificial Intelligence].  I'm a little late, but this seems more targeted than trying learn the whole of Linear Algebra and Statistics on Khan Academy.
+
+I started a lighter course on the same site called https://courses.edx.org/courses/course-v1:HarvardX+PH525.2x+3T-2015/courseware/dcf8031210054672a6bd2a63d6f9d9ac/599b44cd22814a4795fda31f02c3719f/?child=first[Data Analysis for Life Sciences 2: Introduction to Linear Models and Matrix Algebra].  As part of that I installed _R_ and _RStudio_, and then I was directed to a http://swirlstats.com/[tutorial on R programming], where I downloaded a text book and found a link to a bunch of source code for R programming https://github.com/genomicsclass/labs[samples].
+
+It's a big rabbit hole I'm going down, so I'm starting today with the essential mathematics course since it seems to cover all the math I need in one course, but it is listed as being 43 hours of learning time.  Beats my rough estimate of my previous track.
+
