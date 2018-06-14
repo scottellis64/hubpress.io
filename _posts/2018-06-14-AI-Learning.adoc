@@ -19,3 +19,8 @@ I started a lighter course on the same site called https://courses.edx.org/cours
 
 It's a big rabbit hole I'm going down, so I'm starting today with the essential mathematics course since it seems to cover all the math I need in one course, but it is listed as being 43 hours of learning time.  Beats my rough estimate of my previous track.
 
+== Course in Progress ==
+
+- Created an account at https://notebooks.azure.com[Microsoft Azure Notebooks] where the course material lives.
+- Go https://courses.edx.org/courses/course-v1:Microsoft+DAT256x+1T2018a/course/[here] to resume the course
+
