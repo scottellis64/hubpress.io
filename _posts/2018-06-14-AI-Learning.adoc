@@ -1,6 +1,10 @@
 = AI Learning =
 :hp-tags: learning
 
+- https://ai-academy.w3ibm.mybluemix.net/technical_role/entry_level[IBM AI Academy Entry Level Roadmap]
+- https://yourlearning.ibm.com/#channel/CNL_LCB_1523902858242[IBM AI Academy Entry Pod]
+- Current course on Coursera, https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome[Neural Networks and Deep Learning]
+
 Some prerequisites for taking the AI course offered through IBM:
 
 - Mathematics
