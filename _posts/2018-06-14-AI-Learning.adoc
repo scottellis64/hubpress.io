@@ -23,8 +23,19 @@ I started a lighter course on the same site called https://courses.edx.org/cours
 
 It's a big rabbit hole I'm going down, so I'm starting today with the essential mathematics course since it seems to cover all the math I need in one course, but it is listed as being 43 hours of learning time.  Beats my rough estimate of my previous track.
 
-== Course in Progress ==
+== Completed EDX Math AI Prerequisite Course ==
 
 - Created an account at https://notebooks.azure.com[Microsoft Azure Notebooks] where the course material lives.
 - Go https://courses.edx.org/courses/course-v1:Microsoft+DAT256x+1T2018a/course/[here] to resume the course
+
+== Learning R ==
+
+- https://swirlstats.com/students.html[Swirl]
+- https://github.com/swirldev/swirl_courses[Swirl Courses]
+- https://github.com/genomicsclass/labs[Rmd source files for the HarvardX series PH525x]
+- https://www.coursera.org/learn/neural-networks-deep-learning/lecture/yWaRd/logistic-regression-cost-function[Coursera Logistic Regression Cost Function]
+- https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome[Coursera Deep Learning]
+- http://archive.ics.uci.edu/ml/datasets.html[UCI Machine Learning Repository]
+- http://ml-cheatsheet.readthedocs.io/en/latest/linear_regression.html[Linear Regression Cheat Sheet]
+
 
