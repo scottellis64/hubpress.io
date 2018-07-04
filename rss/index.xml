@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 18 Jun 2018 15:42:01 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[AI Learning]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 04 Jul 2018 11:33:32 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[AI Learning]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -56,7 +56,7 @@
 </div>
 </div>
 <div class="sect1">
-<h2 id="_course_in_progress">Course in Progress</h2>
+<h2 id="_completed_edx_math_ai_prerequisite_course">Completed EDX Math AI Prerequisite Course</h2>
 <div class="sectionbody">
 <div class="ulist">
 <ul>
@@ -65,6 +65,36 @@
 </li>
 <li>
 <p>Go <a href="https://courses.edx.org/courses/course-v1:Microsoft+DAT256x+1T2018a/course/">here</a> to resume the course</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_learning_r">Learning R</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://swirlstats.com/students.html">Swirl</a></p>
+</li>
+<li>
+<p><a href="https://github.com/swirldev/swirl_courses">Swirl Courses</a></p>
+</li>
+<li>
+<p><a href="https://github.com/genomicsclass/labs">Rmd source files for the HarvardX series PH525x</a></p>
+</li>
+<li>
+<p><a href="https://www.coursera.org/learn/neural-networks-deep-learning/lecture/yWaRd/logistic-regression-cost-function">Coursera Logistic Regression Cost Function</a></p>
+</li>
+<li>
+<p><a href="https://www.coursera.org/learn/neural-networks-deep-learning/home/welcome">Coursera Deep Learning</a></p>
+</li>
+<li>
+<p><a href="http://archive.ics.uci.edu/ml/datasets.html">UCI Machine Learning Repository</a></p>
+</li>
+<li>
+<p><a href="http://ml-cheatsheet.readthedocs.io/en/latest/linear_regression.html">Linear Regression Cheat Sheet</a></p>
 </li>
 </ul>
 </div>
