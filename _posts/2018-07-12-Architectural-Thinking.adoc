@@ -1,0 +1,20 @@
+= Architectural Thinking = 
+
+Registered for the August 20-23 session
+
+- https://learn.w3bmix.ibm.com/#/login[Review class enrollment]
+- https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Architectural%20Thinking%20Student%20Pre-read[Pre-reading]
+	* SIMT2G Virtual Learner Guide_v7.11 (in ~/Documents/ibm/learning/architectural thinking)
+	* 02_ATF_CS00_Case Study Background_v7.11 (in ~/Documents/ibm/learning/architectural thinking)
+	* Optional preparation:
+		** An introduction to the IBM Views and Viewpoints Framework for IT systems (saved as Views and Viewpoints in ~/Documents/ibm/learning/architectural thinking)
+		** https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/ATStudent/page/Supplementary%20Materials%20and%20Links[Supplementary Materials and Links]
+		- https://yourlearning.ibm.com/#activity/LDE-LTU59365[Using Team Solution Design / Quickstart Course]
+- Video conferencing software 
+	* Students should familiarize themselves with the video conferencing software being used in the class.
+	* Be sure the video conferencing software is installed and up-to-date 
+	* You must have your webcam video enabled and actively participate in this live virtual course. 
+	* During the course, you will join virtual meeting rooms to learn and talk about the content. 
+	* Every 1-2 hours, there is a break and/or other activities completed outside of the virtual
+    
+
