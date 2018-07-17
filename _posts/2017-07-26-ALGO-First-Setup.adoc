@@ -53,4 +53,11 @@ FIRST_MEDIA_LOCATION=/Users/sellis/projects/rcoc/FirstMedia
 - My current userid and password are sellis / cd55d90cfac78342d0
 
 
+*Creating a new release*
+
+```
+git tag -a <version #> -m "Tag Comment"
+git push origin --tags
+```
+
 
