@@ -55,6 +55,9 @@ FIRST_MEDIA_LOCATION=/Users/sellis/projects/rcoc/FirstMedia
 
 *Creating a new release*
 
+- Look at the list of current releases in the github repository https://github.ibm.com/OpenPages/rcoc-readonly/releases[here for rcoc-readonly], and here for https://github.ibm.com/OpenPages/rcoc-mdc/releases[rcoc-mdc]
+- In the root of the project, these commands will create and push a new release
+
 ```
 git tag -a <version #> -m "Tag Comment"
 git push origin --tags
