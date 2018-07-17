@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 17 Jul 2018 15:46:30 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Architectural Thinking]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 17 Jul 2018 15:55:04 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Architectural Thinking]]></title><description><![CDATA[<div class="paragraph">
 <p>Registered for the August 20-23 session</p>
 </div>
 <div class="ulist">
@@ -2873,6 +2873,16 @@ FIRST_MEDIA_LOCATION=/Users/sellis/projects/rcoc/FirstMedia</code></pre>
 </div>
 <div class="paragraph">
 <p><strong>Creating a new release</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Look at the list of current releases in the github repository <a href="https://github.ibm.com/OpenPages/rcoc-readonly/releases">here for rcoc-readonly</a>, and here for <a href="https://github.ibm.com/OpenPages/rcoc-mdc/releases">rcoc-mdc</a></p>
+</li>
+<li>
+<p>In the root of the project, these commands will create and push a new release</p>
+</li>
+</ul>
 </div>
 <div class="listingblock">
 <div class="content">
