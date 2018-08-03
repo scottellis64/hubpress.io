@@ -3,7 +3,7 @@
 Started work https://github.ibm.com/OpenPages/backlog/issues/512#issuecomment-7160506[here]
 
 ```
-docker login --username _user email_ http://ip-op-grc-docker-local.artifactory.swg-devops.c
+docker login --username _user email_ https://ip-op-grc-docker-local.artifactory.swg-devops.com
 ```
 
 Password is the Artifactory API key generated https://na.artifactory.swg-devops.com/artifactory/webapp/#/profile[here]
