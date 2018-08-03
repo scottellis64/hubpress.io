@@ -7,7 +7,7 @@ docker login --username _user email_ http://ip-op-grc-docker-local.artifactory.s
 ```
 
 Password is the Artifactory API key generated https://na.artifactory.swg-devops.com/artifactory/webapp/#/profile[here]
-For user email, you can use your own email address provided that you are a member of the admin https://w3-03.ibm.com/tools/groups/protect/groupsgui.wss[bluegroup].
+For user email, you can use your own email address provided that you are a member of the admin https://w3-03.ibm.com/tools/groups/protect/groupsgui.wss[bluegroup].  When doing this for the automated build, its probably best to use the api key for opdevops@us.ibm.com.  
 
 Created a bash script called push.sh in folder ~projects/ibm/op-mainline/devops/docker that tags and pushes a local docker image to the new remote Artifactory docker registry.  The script has this content:
 
@@ -25,5 +25,8 @@ CONTAINER ID        IMAGE                                           COMMAND     
 ```
 
 $2 is the image/repository name, such as opapp_db2 or opapp_oracle.  A complete listing can be found http://masa-rhel11.swg.usma.ibm.com/repositories[here].
+
+The manual method of migrating from our existing docker repository is to pull all the images locally, then tag and push to the Artifactory repository.  There doesn't appear to be an automatic way of doing this other than to write a script for it.  The push.sh script I wrote is for convenience and assumes the tag name, which of course could be parameterized as well.
+
 
 
