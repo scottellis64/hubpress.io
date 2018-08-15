@@ -1,0 +1,95 @@
+= Loss Event Entry
+
+The source code for Loss Event Entry can be found in Isaac's https://github.ibm.com/ipaquet/op-lossevent[private repository]
+
+The instructions for loading LEE configuration manually can be found https://www.ibm.com/support/knowledgecenter/SSFUEU_7.4.0/op_grc_installation/t_ig_loss_event_entry_perform_manual_load.html[here]
+
+== Verifying Installation
+
+To load the Loss Event Entry profile successfully, you need to make sure you have all of the required object types and field groups loaded in your system.
+
+1. Click Administration > Object Types and check that all of the following object types are listed.
+	- LossEvent
+	- LossImpact
+	- LossRecovery
+	- SoxBusEntity
+	- SoxDocument
+	- Preference
+2. These object types use the following field groups:
+	- OPSS-LossEv (LossEvent)
+	- OPSS-Shared-Basel (LossEvent)
+	- OPSS-LossIm (LossImpact)
+	- OPSS-LossRe (LossRecovery)
+	- OPSS-Pref (Preference)
+
+== Instructions
+
+Find the script file Load_LossEvent_Entry_App_Schema.sh and execute it.
+This does the following:
+
+- Adds a new user group, called _Loss Event Entry_
+- Adds users, and adds the new users to the Loss Event Entry user group.  The user accounts connect OpenPages Loss Event Entry to IBM OpenPages GRC Platform. Each user account is associated with a specific locale. When a user starts OpenPages Loss Event Entry, the user is logged in to OpenPages automatically with the user account for their locale.
+  * LEE_EN_US
+  * LEE_EN_GB
+  * LEE_IT_IT
+  * LEE_PT_BR
+  * LEE_FR_FR
+  * LEE_ES_ES
+  * LEE_DE_DE
+  * LEE_ZH_TW
+  * LEE_ZH_CN
+  * LEE_JA_JP
+  
+- Adds a new role template, called Loss Event Entry
+  * The role template controls access to IBM OpenPages GRC Platform by users of OpenPages Loss Event Entry.
+  * The role template includes six object types: LossEvent, LossImpact, LossRecovery, SoxBusEntity, SoxDocument, and Preference.
+  * The role template configures the following security permissions:
+    ** *Read* access to all six object types
+    ** *Write* access for LossEvent, LossImpact, LossRecovery and SoxDocument only
+	** *Associate* access to SoxBusEntity, LossEvent, LossImpact, LossRecovery and SoxDocument only
+	** *Delete* access to none of the object types
+	** No application permissions
+  * Adds two new field groups and associates them with the LossEvent object.
+	** _OPSS-LE-BE_ includes fields to identify the entities involved in the loss event being created
+	** _OPSS-LE-Contact_ includes fields for the submitter of the loss event to provide their identifying information
+  * Adds a new profile, Loss Event Entry.  The profile includes creation views for LossEvent, LossImpact, and LossRecovery. This profile drives the views in OpenPages Loss Event Entry.
+  * Assigns the Loss Event Entry profile to each of the nine new users
+  * Assigns the Loss Event Entry role template to each of the nine new users, at the root business entity security context point.
+
+The XML files are located in the directory <OP_HOME>/LossEventEntry/. The following list describes the files:
+
+- lossevent-entry-users-op-config.xml (Users and groups)
+- lossevent-entry-role-template-op-config.xml (Role templates)
+- lossevent-entry-schema-op-config.xml (Schema)
+- LEE_object-profile-op-config.xml (Loss Event Entry profile)
+- lossevent-entry-config-opx-op-config.xml (JSON configuration file)
+- OpenPages-registry-entries-LEE-op-config.xml (Registry setting)
+- lossevent-entry-app-string-keys-op-config.xml (Application text)
+- lossevent-entry-object-strings-op-config.xml (Object strings)
+- locales/<locale>/lossevent-entry-app-strings-<locale>-op-config.xml (Application text translations for each locale)
+
+
+== Procedure
+
+1. Load the OpenPages Loss Event Entry data (users, groups, fields, field groups, and so on).  To load the data on a Microsoft Windows computer, perform the following steps:
+	a. Go to <OP_HOME>\LossEventEntry\.
+	b. Open the Environment_Variables.bat file and update the openpages_domain_folder, login_username, and login_password properties.
+	c. Run Load_LossEvent_Entry_App_Schema.bat.
+	d. For security purposes, remove the password from the Environment_Variables.bat file.
+2. To load the data on a UNIX computer, perform the following steps:
+	a. Go to <OP_HOME>/LossEventEntry/.
+	b. Open the Environment_Variables.sh file and update the openpages_domain_folder, login_username, and login_password properties.
+	c. Run Load_LossEvent_Entry_App_Schema.sh.
+	d. For security purposes, remove the password from the Environment_Variables.sh file.
+3. Optional: Add LossEvent to the list of object types that are disabled for the Add New wizard.
+OpenPages Loss Event Entry is more full-featured than the Add New wizard for loss events. You might want all users, including those that have access to IBM OpenPages GRC Platform, to use OpenPages Loss Event Entry to report loss events.
+	a. Go to Administrator > Settings > GRCM > Add New Wizard.
+	b. Expand GRCM > Add New Wizard.
+	c. Click Object Types Disabled
+	d. In the Value field, add the LossEvent object to the list.
+	e. Click Save.
+4. Optional: Configure auto-naming for the LossEvent, LossRecovery, and LossImpact object types.
+OpenPages Loss Event Entry users are unlikely to know the naming convention for new loss events, loss impacts, and loss recoveries. To avoid failures caused by duplicate names, enable auto-naming for these object types.
+	a. Go to Administrator > Settings.
+	b. Expand Applications > GRCM > Auto Naming.
+	c. Expand the object type, and then expand Auto-named. Set New Object to true and Can be Edited to false.
