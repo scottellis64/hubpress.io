@@ -1,4 +1,303 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 17 Jul 2018 15:55:04 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Architectural Thinking]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 15 Aug 2018 14:11:12 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Loss Event Entry]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The source code for Loss Event Entry can be found in Isaac&#8217;s <a href="https://github.ibm.com/ipaquet/op-lossevent">private repository</a></p>
+</div>
+<div class="paragraph">
+<p>The instructions for loading LEE configuration manually can be found <a href="https://www.ibm.com/support/knowledgecenter/SSFUEU_7.4.0/op_grc_installation/t_ig_loss_event_entry_perform_manual_load.html">here</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_verifying_installation">Verifying Installation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To load the Loss Event Entry profile successfully, you need to make sure you have all of the required object types and field groups loaded in your system.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Click Administration &gt; Object Types and check that all of the following object types are listed.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>LossEvent</p>
+</li>
+<li>
+<p>LossImpact</p>
+</li>
+<li>
+<p>LossRecovery</p>
+</li>
+<li>
+<p>SoxBusEntity</p>
+</li>
+<li>
+<p>SoxDocument</p>
+</li>
+<li>
+<p>Preference</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>These object types use the following field groups:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>OPSS-LossEv (LossEvent)</p>
+</li>
+<li>
+<p>OPSS-Shared-Basel (LossEvent)</p>
+</li>
+<li>
+<p>OPSS-LossIm (LossImpact)</p>
+</li>
+<li>
+<p>OPSS-LossRe (LossRecovery)</p>
+</li>
+<li>
+<p>OPSS-Pref (Preference)</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_instructions">Instructions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Find the script file Load_LossEvent_Entry_App_Schema.sh and execute it.
+This does the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Adds a new user group, called <em>Loss Event Entry</em></p>
+</li>
+<li>
+<p>Adds users, and adds the new users to the Loss Event Entry user group.  The user accounts connect OpenPages Loss Event Entry to IBM OpenPages GRC Platform. Each user account is associated with a specific locale. When a user starts OpenPages Loss Event Entry, the user is logged in to OpenPages automatically with the user account for their locale.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>LEE_EN_US</p>
+</li>
+<li>
+<p>LEE_EN_GB</p>
+</li>
+<li>
+<p>LEE_IT_IT</p>
+</li>
+<li>
+<p>LEE_PT_BR</p>
+</li>
+<li>
+<p>LEE_FR_FR</p>
+</li>
+<li>
+<p>LEE_ES_ES</p>
+</li>
+<li>
+<p>LEE_DE_DE</p>
+</li>
+<li>
+<p>LEE_ZH_TW</p>
+</li>
+<li>
+<p>LEE_ZH_CN</p>
+</li>
+<li>
+<p>LEE_JA_JP</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Adds a new role template, called Loss Event Entry</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The role template controls access to IBM OpenPages GRC Platform by users of OpenPages Loss Event Entry.</p>
+</li>
+<li>
+<p>The role template includes six object types: LossEvent, LossImpact, LossRecovery, SoxBusEntity, SoxDocument, and Preference.</p>
+</li>
+<li>
+<p>The role template configures the following security permissions:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Read</strong> access to all six object types</p>
+</li>
+<li>
+<p><strong>Write</strong> access for LossEvent, LossImpact, LossRecovery and SoxDocument only</p>
+</li>
+<li>
+<p><strong>Associate</strong> access to SoxBusEntity, LossEvent, LossImpact, LossRecovery and SoxDocument only</p>
+</li>
+<li>
+<p><strong>Delete</strong> access to none of the object types</p>
+</li>
+<li>
+<p>No application permissions</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Adds two new field groups and associates them with the LossEvent object.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><em>OPSS-LE-BE</em> includes fields to identify the entities involved in the loss event being created</p>
+</li>
+<li>
+<p><em>OPSS-LE-Contact</em> includes fields for the submitter of the loss event to provide their identifying information</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Adds a new profile, Loss Event Entry.  The profile includes creation views for LossEvent, LossImpact, and LossRecovery. This profile drives the views in OpenPages Loss Event Entry.</p>
+</li>
+<li>
+<p>Assigns the Loss Event Entry profile to each of the nine new users</p>
+</li>
+<li>
+<p>Assigns the Loss Event Entry role template to each of the nine new users, at the root business entity security context point.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The XML files are located in the directory &lt;OP_HOME&gt;/LossEventEntry/. The following list describes the files:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>lossevent-entry-users-op-config.xml (Users and groups)</p>
+</li>
+<li>
+<p>lossevent-entry-role-template-op-config.xml (Role templates)</p>
+</li>
+<li>
+<p>lossevent-entry-schema-op-config.xml (Schema)</p>
+</li>
+<li>
+<p>LEE_object-profile-op-config.xml (Loss Event Entry profile)</p>
+</li>
+<li>
+<p>lossevent-entry-config-opx-op-config.xml (JSON configuration file)</p>
+</li>
+<li>
+<p>OpenPages-registry-entries-LEE-op-config.xml (Registry setting)</p>
+</li>
+<li>
+<p>lossevent-entry-app-string-keys-op-config.xml (Application text)</p>
+</li>
+<li>
+<p>lossevent-entry-object-strings-op-config.xml (Object strings)</p>
+</li>
+<li>
+<p>locales/&lt;locale&gt;/lossevent-entry-app-strings-&lt;locale&gt;-op-config.xml (Application text translations for each locale)</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_procedure">Procedure</h2>
+<div class="sectionbody">
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Load the OpenPages Loss Event Entry data (users, groups, fields, field groups, and so on).  To load the data on a Microsoft Windows computer, perform the following steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Go to &lt;OP_HOME&gt;\LossEventEntry\.</p>
+</li>
+<li>
+<p>Open the Environment_Variables.bat file and update the openpages_domain_folder, login_username, and login_password properties.</p>
+</li>
+<li>
+<p>Run Load_LossEvent_Entry_App_Schema.bat.</p>
+</li>
+<li>
+<p>For security purposes, remove the password from the Environment_Variables.bat file.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>To load the data on a UNIX computer, perform the following steps:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Go to &lt;OP_HOME&gt;/LossEventEntry/.</p>
+</li>
+<li>
+<p>Open the Environment_Variables.sh file and update the openpages_domain_folder, login_username, and login_password properties.</p>
+</li>
+<li>
+<p>Run Load_LossEvent_Entry_App_Schema.sh.</p>
+</li>
+<li>
+<p>For security purposes, remove the password from the Environment_Variables.sh file.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Optional: Add LossEvent to the list of object types that are disabled for the Add New wizard.
+OpenPages Loss Event Entry is more full-featured than the Add New wizard for loss events. You might want all users, including those that have access to IBM OpenPages GRC Platform, to use OpenPages Loss Event Entry to report loss events.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Go to Administrator &gt; Settings &gt; GRCM &gt; Add New Wizard.</p>
+</li>
+<li>
+<p>Expand GRCM &gt; Add New Wizard.</p>
+</li>
+<li>
+<p>Click Object Types Disabled</p>
+</li>
+<li>
+<p>In the Value field, add the LossEvent object to the list.</p>
+</li>
+<li>
+<p>Click Save.</p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Optional: Configure auto-naming for the LossEvent, LossRecovery, and LossImpact object types.
+OpenPages Loss Event Entry users are unlikely to know the naming convention for new loss events, loss impacts, and loss recoveries. To avoid failures caused by duplicate names, enable auto-naming for these object types.</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Go to Administrator &gt; Settings.</p>
+</li>
+<li>
+<p>Expand Applications &gt; GRCM &gt; Auto Naming.</p>
+</li>
+<li>
+<p>Expand the object type, and then expand Auto-named. Set New Object to true and Can be Edited to false.</p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>]]></description><link>https://scottellis64.github.io/2018/08/15/Loss-Event-Entry.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/08/15/Loss-Event-Entry.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 15 Aug 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Architectural Thinking]]></title><description><![CDATA[<div class="paragraph">
 <p>Registered for the August 20-23 session</p>
 </div>
 <div class="ulist">
