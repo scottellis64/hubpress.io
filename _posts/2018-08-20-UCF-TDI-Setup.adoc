@@ -1,0 +1,7 @@
+= UCF TDI Setup =
+
+https://www.ibm.com/support/knowledgecenter/SSFUEU_7.4.0/op_grc_installation/c_op_ucf_cnfg_op.html[Official Docs]
+
+- Fastmap import _UCF Entities.xlsx_ from grc_sdi_integrations/ucf_integration/support
+- Might have to run ObjectManager on req-op-config.xml
+
