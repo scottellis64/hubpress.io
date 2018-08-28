@@ -1,4 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 15 Aug 2018 14:11:12 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Loss Event Entry]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 28 Aug 2018 21:19:11 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Promises Presentation]]></title><description><![CDATA[<div class="paragraph">
+<p>Working on a project that demonstrates some of the following concepts:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Promises</p>
+</li>
+<li>
+<p>The NodeJS Event Loop</p>
+</li>
+<li>
+<p>Async/Await</p>
+</li>
+<li>
+<p>Demonstrating how the event loop can be blocked</p>
+</li>
+<li>
+<p>Different strategies for spawning processes/tasks to offload the work from the event loop</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The promises presentation code is <a href="https://github.ibm.com/scottell/promises-presentation">here</a>
+There are diagrams in the docs folder therein that can be opened with Draw.io&#8212;&#8203;installed a local app for Draw.io.</p>
+</div>]]></description><link>https://scottellis64.github.io/2018/08/28/Promises-Presentation.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/08/28/Promises-Presentation.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 28 Aug 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Loss Event Entry]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>The source code for Loss Event Entry can be found in Isaac&#8217;s <a href="https://github.ibm.com/ipaquet/op-lossevent">private repository</a></p>
@@ -1035,31 +1060,6 @@ For us, its `ip-rca-docker-local.artifactory.swg-devops.com/ibm/rca-service:late
 </div>
 <div class="paragraph">
 <p>The latter I will probably throw away at some point.  I&#8217;ll play around with the maven repo with local testing.  Later when the new team is approved I&#8217;ll create a maven repo and switch it live.</p>
-</div>
-<div class="paragraph">
-<p><strong>03/16/2018</strong></p>
-</div>
-<div class="paragraph">
-<p>Created gradle repo and npm registry in Artifactory.</p>
-</div>
-<div class="paragraph">
-<p>Seem to be locked out of my account now and cannot log into Artifactory.  I&#8217;m trying to see if I can use my API key for all passwords.</p>
-</div>
-<div class="paragraph">
-<p><strong>NPM Registry</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://www.jfrog.com/confluence/display/RTF/NPM+Registry">NPM Registry Management</a></p>
-</li>
-<li>
-<p><a href="https://codeburst.io/how-to-create-and-publish-your-first-node-js-module-444e7585b738">How to publish a Node module to NPM</a></p>
-</li>
-<li>
-<p><a href="https://pages.github.ibm.com/TAAS/tools_guide/artifactory/authentication/npm.html">Authenticating NPM with Artifactory</a></p>
-</li>
-</ul>
 </div>]]></description><link>https://scottellis64.github.io/2018/01/29/Artifactory-Research.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/01/29/Artifactory-Research.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Mon, 29 Jan 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[GraphQL]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
