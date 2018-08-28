@@ -1,0 +1,13 @@
+= Promises Presentation = 
+
+Working on a project that demonstrates some of the following concepts:
+
+- Promises
+- The NodeJS Event Loop
+- Async/Await
+- Demonstrating how the event loop can be blocked
+- Different strategies for spawning processes/tasks to offload the work from the event loop
+
+The promises presentation code is https://github.ibm.com/scottell/promises-presentation[here]
+There are diagrams in the docs folder therein that can be opened with Draw.io--installed a local app for Draw.io.
+
