@@ -1,4 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Tue, 28 Aug 2018 21:19:11 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Promises Presentation]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 29 Aug 2018 14:26:54 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[ECU]]></title><description><![CDATA[<div class="ulist">
+<ul>
+<li>
+<p><a href="https://ecurep.mainz.de.ibm.com:444/ae5/">Archive explorer</a></p>
+</li>
+<li>
+<p>To view word docs, start <a href="https://windebug.mainz.de.ibm.com/">here</a></p>
+</li>
+</ul>
+</div>]]></description><link>https://scottellis64.github.io/2018/08/29/ECU.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/08/29/ECU.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 29 Aug 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Promises Presentation]]></title><description><![CDATA[<div class="paragraph">
 <p>Working on a project that demonstrates some of the following concepts:</p>
 </div>
 <div class="ulist">
