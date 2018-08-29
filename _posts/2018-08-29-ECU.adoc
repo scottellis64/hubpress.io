@@ -1,4 +1,4 @@
 = ECU =
 
-- https://ecurep.mainz.de.ibm.com:444/ae5/[Archive explorer]
+- https://ecurep.mainz.de.ibm.com:444/ae5/[Archive explorer].  Use intranet credentials.
 - To view word docs, start https://windebug.mainz.de.ibm.com/[here]
