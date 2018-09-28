@@ -11,13 +11,34 @@
 *Start server*
 
 - cd server
+- ```nvm use v8.9.4```
 - ```gulp dev:watch --ssl_enabled```
+- If there is an error starting up, there might be an issue with jsonDB.json
+	* Edit server/src/db/jsonDB.json
+    * Look for a blank password and if there is one, then enter one in plain text.  After restarting you should see in the dev/installer/src/db/jsonDB.json something that looks like this:
+   
+```
+  "user": [
+    {
+      "name": "sellis",
+      "password": "{AES}5NXSezEcxA-OVSYoa_cwtQ==",
+      "id": "101",
+      "encrypted": true
+    }
+  ]
+```
+
+- The _encrypted_ property will be true, which means that the plain text password you entered into the file has now been encrypted.  If you ever want to reset the password, then enter a plain text password in the password property, remove the _encrypted_ property, then restart.
 
 *Start Client*
 
 - cd client
+- ```nvm use v8.9.4```
 - ```gulp ng:serve --ssl_enabled```
 
+*Browser*
+
+- Go to https://localhost:4200
 
 
     
