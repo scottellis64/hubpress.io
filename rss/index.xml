@@ -1,4 +1,99 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 29 Aug 2018 14:27:35 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[ECU]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 28 Sep 2018 18:08:33 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Installer Setup]]></title><description><![CDATA[<div class="ulist">
+<ul>
+<li>
+<p>Important to switch to node version 8.9: <code><code>nvm use v8.9.4</code></code></p>
+</li>
+<li>
+<p>Start the opagent virtual machine instance</p>
+</li>
+<li>
+<p>log in as opuser</p>
+</li>
+<li>
+<p>there is a deploy folder there in the root of opuser; deleted the code there in preparation for a new push of agent jar</p>
+</li>
+<li>
+<p>Get the latest op-installer-agent.jar from smb://op-file.swg.usma.ibm.com/autobuild/Public/Builds/OpenPages-7.4/OP_7_4-381A_RELEASE/OP_7.4_Non_Embedded/OP_7.4_Installer/op-installer-agent.zip</p>
+</li>
+<li>
+<p>Copy it to either the server/dev/installer or server/dist folder before attempting to validate an install</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Start server</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>cd server</p>
+</li>
+<li>
+<p><code><code>nvm use v8.9.4</code></code></p>
+</li>
+<li>
+<p><code><code>gulp dev:watch --ssl_enabled</code></code></p>
+</li>
+<li>
+<p>If there is an error starting up, there might be an issue with jsonDB.json</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Edit server/src/db/jsonDB.json</p>
+</li>
+<li>
+<p>Look for a blank password and if there is one, then enter one in plain text.  After restarting you should see in the dev/installer/src/db/jsonDB.json something that looks like this:</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>  "user": [
+    {
+      "name": "sellis",
+      "password": "{AES}5NXSezEcxA-OVSYoa_cwtQ==",
+      "id": "101",
+      "encrypted": true
+    }
+  ]</code></pre>
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <em>encrypted</em> property will be true, which means that the plain text password you entered into the file has now been encrypted.  If you ever want to reset the password, then enter a plain text password in the password property, remove the <em>encrypted</em> property, then restart.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Start Client</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>cd client</p>
+</li>
+<li>
+<p><code><code>nvm use v8.9.4</code></code></p>
+</li>
+<li>
+<p><code><code>gulp ng:serve --ssl_enabled</code></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Browser</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Go to <a href="https://localhost:4200" class="bare">https://localhost:4200</a></p>
+</li>
+</ul>
+</div>]]></description><link>https://scottellis64.github.io/2018/09/25/Installer-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/09/25/Installer-Setup.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 25 Sep 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[ECU]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p><a href="https://ecurep.mainz.de.ibm.com:444/ae5/">Archive explorer</a>.  Use intranet credentials.</p>
