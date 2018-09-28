@@ -7,3 +7,17 @@
     - Get the latest op-installer-agent.jar from smb://op-file.swg.usma.ibm.com/autobuild/Public/Builds/OpenPages-7.4/OP_7_4-381A_RELEASE/OP_7.4_Non_Embedded/OP_7.4_Installer/op-installer-agent.zip
     - Copy it to either the server/dev/installer or server/dist folder before attempting to validate an install
     
+    
+*Start server*
+
+- cd server
+- ```gulp dev:watch --ssl_enabled```
+
+*Start Client*
+
+- cd client
+- ```gulp ng:serve --ssl_enabled```
+
+
+
+    
