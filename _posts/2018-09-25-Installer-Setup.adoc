@@ -42,3 +42,116 @@
 
 
     
+*Agent*
+
+In order to install the agent on a fresh centos virtual machine, _op-installer-agent.zip_ is needed from the latest build of OP 7.4 (even though we are at 8.0.0.2 now--this will change probably in the near future, so this will need to be updated).  The location is at autobuild/Public/builds/OpenPages-7.4/OP_7_4-318A_RELEASE/OP_7.4_Non_Embedded/OP_7.4_Installer.
+
+Start up the CentOS VM and ssh into the virtual machine.  A shared folder must point to the server folder of the installer project and must be called 'src' so that when logged into the VM there will be a folder _/media/sf_src_.  If you've named the share something else, then the _sync-agent.sh_ script will need to be updated to reflect.  Speaking of which...  
+
+There is a script file that is checked into the installer project under the test root called _sync-agent.sh_.  This little beauty sychronizes the development environment to the remote agent VirtualBox VM through the share located at _/media/sf_src_.  Here it is in its entirety so that I never lose it--thankfully I kept local backups of different installer branches when I was working on the project:
+
+```bash
+#!/bin/sh
+
+RUN_OPTS=''
+options='drsgfch'
+
+#todo: add a startup.sh to the agent root and MAKE IT EXECUTABLE (chmod +x startup.sh)
+#startup.sh calls npm run start
+
+usage()
+{
+    echo -e "usage: <command> options:<d|r|s|f|c|u>\n" \
+        "\t d - start in debug mode\n" \
+        "\t r - delete the test deployment state\n" \
+        "\t s - synchronize source code from development\n" \
+        "\t g - generate agent zip and nodejs folder to prevent the installer from deleting dev sources\n" \
+        "\t f - gets fresh source code\n" \
+        "\t c - perform an 'npm install' before starting\n" \
+        "\t h - show usage"
+    exit
+}
+
+AGENT_ROOT='./deploy/agent/op-installer-agent/agent'
+DEPLOYMENT='fresh-install'
+
+mkdir -p $AGENT_ROOT
+
+while getopts $options option
+do
+    case $option in
+        d  )    RUN_OPTS="--inspect"
+                echo "debug on";;
+        r  )    rm -rf ~/OP/OpenPages/*
+                rm -rf $AGENT_ROOT/src/deployment/$DEPLOYMENT
+                echo "$DEPLOYMENT reset";;
+        s  )    rsync -av --exclude 'config.*' --exclude 'db' --exclude 'deployment' /media/sf_src/src $AGENT_ROOT/
+                rsync -v /media/sf_src/package.json $AGENT_ROOT/package.json
+                echo "agent source code synchronized";;
+        g  )    touch $AGENT_ROOT/src/op-installer-agent.zip
+                mkdir $AGENT_ROOT/nodejs;;
+        f  )    rm -rf $AGENT_ROOT/*
+                touch $AGENT_ROOT/src/op-installer-agent.zip
+                mkdir $AGENT_ROOT/nodejs
+                rsync -av /media/sf_src/src --exclude 'db' --exclude deployment $AGENT_ROOT/
+                rsync -v /media/sf_src/package.json $AGENT_ROOT/package.json
+                chown -R opuser:opuser $AGENT_ROOT
+                mkdir -p $AGENT_ROOT/src/deployment
+                echo ". ~/.bash_profile && AGENT_MODE=true npm run start" > $AGENT_ROOT/startup.sh
+                chmod +x $AGENT_ROOT/startup.sh
+                echo "New source has been retrieved--edit $AGENT_ROOT/src/config.js before running";;
+        c  )    pushd $(pwd) >/dev/null
+                cd $AGENT_ROOT
+                npm install
+                gulp install:all
+                popd >/dev/null
+                echo "application compiled";;
+        h  )    usage;;
+    esac
+done
+
+shift $(($OPTIND - 1))
+
+pushd $(pwd) >/dev/null
+cd $AGENT_ROOT
+SKIP_AGENT_PRESENT_CHECKS=true AGENT_MODE=true node $RUN_OPTS src/bin/www.js
+popd >/dev/null
+```
+
+On a fresh agent VM, you will need to add _opuser_ to the _vboxsf_ group:
+
+```bash
+su root
+usermod -aG vboxsf opuser
+```
+
+This grants access to the shared folders, namely _/media/sf_src_.
+
+*Installing Node on Agent*
+
+The agent needs to have NodeJS installed, and this is done automatically for you by the installer application.  However, since there are issues with my agent setup, I've done this step manually.  The extracted _op-installer-agent.zip_ has a gzip file that has the node installation that just needs to be extracted to the agent root, which is at ~/deploy/agent (opuser).  I copied _op-installer-agent.zip_ to my installer server source code in the test folder.  Here are the commands I performed on the agent to install node:
+
+```bash
+cd ~/deploy/agent/
+mdir tmp
+cd tmp
+cp /media/sf_src/test/op-installer-agent.zip .
+unzip op-installer-agent.zip
+cd ~/deploy/agent/
+tar -xf tmp/install/Linux/ibm-8.1.4.0-node-v8.1.4-linux-x64.tar.gz -C .
+mv node-v8.1.4-linux-x64 nodejs
+```
+
+At this point you have a folder _nodejs_ in _~/deploy/agent_.  I checked _~/.bash_profile_ and this line was already there for me: 
+
+```bash
+export PATH=/home/opuser/deploy/agent/nodejs/bin:$PATH
+```
+
+After this I still didn't have gulp installed, so I installed it via npm:
+
+```bash
+npm install gulp --global
+```
+
+Then 
