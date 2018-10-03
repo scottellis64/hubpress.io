@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1538578776725"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1538578776725"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1538578776725"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1538584980335"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1538584980335"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1538584980335"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1538578776725"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1538584980335"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2018/09/25/Installer-Setup.html" />
     <meta name="referrer" content="origin" />
@@ -139,7 +139,7 @@ null
             <ul class="post-meta-list">
               <li class="post-meta-item">
                 <time datetime="2018-09-25" itemprop="datePublished">
-                  8 days ago
+                  9 days ago
                 </time>
               </li>
               <li class="post-meta-item">
@@ -184,6 +184,21 @@ null
 <p>Copy it to either the server/dev/installer or server/dist folder before attempting to validate an install</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p><strong>Server Assets</strong></p>
+</div>
+<div class="paragraph">
+<p>When starting the installer server, you may see this warning:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>[12:30:11] Starting 'copy:dev:assets'...
+No installer assets are available in development mode.  Create a set of assets in /Users/sellis/projects/ibm/op/op-installer-branches/grc-op-installer/server/test/assets if these are needed.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Assets are a set of zip files that contain third party installations that will be applied to the system where OpenPages is being installed.  When running the server with <code>gulp dev:watch --ssl_enabled</code>, the assets folder is checked and if not found, then assets will be copied from <em>server/tests/assets</em>, but if that folder is not present, you see the warning above.  The current set of assets can be found at <em>Public/Builds/OpenPages-7.4/OP_7_4-381A_RELEASE/OP_7.4_Non_Embedded/OP_7.4_Installer/src/assets/assets</em>.  Copy that to the test folder in the installer test folder and run <code>gulp dev:watch --ssl_enabled</code> again.  You should see a noticable pause as those assets are transferred to the build target folder.  You are all set with assets and can continue on.</p>
 </div>
 <div class="paragraph">
 <p><strong>Start server</strong></p>
@@ -356,6 +371,20 @@ usermod -aG vboxsf opuser</code></pre>
 <p><strong>Installing Node on Agent</strong></p>
 </div>
 <div class="paragraph">
+<p><strong>Very important!!</strong></p>
+</div>
+<div class="paragraph">
+<p>Turn off iptables, dammit!</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">service iptables off</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Several Bothans died to bring you this information.</p>
+</div>
+<div class="paragraph">
 <p>The agent needs to have NodeJS installed, and this is done automatically for you by the installer application.  However, since there are issues with my agent setup, I&#8217;ve done this step manually.  The extracted <em>op-installer-agent.zip</em> has a gzip file that has the node installation that just needs to be extracted to the agent root, which is at ~/deploy/agent (opuser).  I copied <em>op-installer-agent.zip</em> to my installer server source code in the test folder.  Here are the commands I performed on the agent to install node:</p>
 </div>
 <div class="listingblock">
@@ -447,7 +476,7 @@ mv node-v8.1.4-linux-x64 nodejs</code></pre>
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1538578776725"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1538584980335"></script>
 
 
   </body>
