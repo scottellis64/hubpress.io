@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1538168499229"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1538168499229"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1538168499229"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1538578776725"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1538578776725"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1538578776725"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1538168499229"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1538578776725"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2018/09/25/Installer-Setup.html" />
     <meta name="referrer" content="origin" />
@@ -139,7 +139,7 @@ null
             <ul class="post-meta-list">
               <li class="post-meta-item">
                 <time datetime="2018-09-25" itemprop="datePublished">
-                  4 days ago
+                  8 days ago
                 </time>
               </li>
               <li class="post-meta-item">
@@ -259,6 +259,136 @@ null
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><strong>Agent</strong></p>
+</div>
+<div class="paragraph">
+<p>In order to install the agent on a fresh centos virtual machine, <em>op-installer-agent.zip</em> is needed from the latest build of OP 7.4 (even though we are at 8.0.0.2 now&#8212;&#8203;this will change probably in the near future, so this will need to be updated).  The location is at autobuild/Public/builds/OpenPages-7.4/OP_7_4-318A_RELEASE/OP_7.4_Non_Embedded/OP_7.4_Installer.</p>
+</div>
+<div class="paragraph">
+<p>Start up the CentOS VM and ssh into the virtual machine.  A shared folder must point to the server folder of the installer project and must be called 'src' so that when logged into the VM there will be a folder <em>/media/sf_src</em>.  If you&#8217;ve named the share something else, then the <em>sync-agent.sh</em> script will need to be updated to reflect.  Speaking of which&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>There is a script file that is checked into the installer project under the test root called <em>sync-agent.sh</em>.  This little beauty sychronizes the development environment to the remote agent VirtualBox VM through the share located at <em>/media/sf_src</em>.  Here it is in its entirety so that I never lose it&#8212;&#8203;thankfully I kept local backups of different installer branches when I was working on the project:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">#!/bin/sh
+
+RUN_OPTS=''
+options='drsgfch'
+
+#todo: add a startup.sh to the agent root and MAKE IT EXECUTABLE (chmod +x startup.sh)
+#startup.sh calls npm run start
+
+usage()
+{
+    echo -e "usage: &lt;command&gt; options:&lt;d|r|s|f|c|u&gt;\n" \
+        "\t d - start in debug mode\n" \
+        "\t r - delete the test deployment state\n" \
+        "\t s - synchronize source code from development\n" \
+        "\t g - generate agent zip and nodejs folder to prevent the installer from deleting dev sources\n" \
+        "\t f - gets fresh source code\n" \
+        "\t c - perform an 'npm install' before starting\n" \
+        "\t h - show usage"
+    exit
+}
+
+AGENT_ROOT='./deploy/agent/op-installer-agent/agent'
+DEPLOYMENT='fresh-install'
+
+mkdir -p $AGENT_ROOT
+
+while getopts $options option
+do
+    case $option in
+        d  )    RUN_OPTS="--inspect"
+                echo "debug on";;
+        r  )    rm -rf ~/OP/OpenPages/*
+                rm -rf $AGENT_ROOT/src/deployment/$DEPLOYMENT
+                echo "$DEPLOYMENT reset";;
+        s  )    rsync -av --exclude 'config.*' --exclude 'db' --exclude 'deployment' /media/sf_src/src $AGENT_ROOT/
+                rsync -v /media/sf_src/package.json $AGENT_ROOT/package.json
+                echo "agent source code synchronized";;
+        g  )    touch $AGENT_ROOT/src/op-installer-agent.zip
+                mkdir $AGENT_ROOT/nodejs;;
+        f  )    rm -rf $AGENT_ROOT/*
+                touch $AGENT_ROOT/src/op-installer-agent.zip
+                mkdir $AGENT_ROOT/nodejs
+                rsync -av /media/sf_src/src --exclude 'db' --exclude deployment $AGENT_ROOT/
+                rsync -v /media/sf_src/package.json $AGENT_ROOT/package.json
+                chown -R opuser:opuser $AGENT_ROOT
+                mkdir -p $AGENT_ROOT/src/deployment
+                echo ". ~/.bash_profile &amp;&amp; AGENT_MODE=true npm run start" &gt; $AGENT_ROOT/startup.sh
+                chmod +x $AGENT_ROOT/startup.sh
+                echo "New source has been retrieved--edit $AGENT_ROOT/src/config.js before running";;
+        c  )    pushd $(pwd) &gt;/dev/null
+                cd $AGENT_ROOT
+                npm install
+                gulp install:all
+                popd &gt;/dev/null
+                echo "application compiled";;
+        h  )    usage;;
+    esac
+done
+
+shift $(($OPTIND - 1))
+
+pushd $(pwd) &gt;/dev/null
+cd $AGENT_ROOT
+SKIP_AGENT_PRESENT_CHECKS=true AGENT_MODE=true node $RUN_OPTS src/bin/www.js
+popd &gt;/dev/null</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>On a fresh agent VM, you will need to add <em>opuser</em> to the <em>vboxsf</em> group:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">su root
+usermod -aG vboxsf opuser</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This grants access to the shared folders, namely <em>/media/sf_src</em>.</p>
+</div>
+<div class="paragraph">
+<p><strong>Installing Node on Agent</strong></p>
+</div>
+<div class="paragraph">
+<p>The agent needs to have NodeJS installed, and this is done automatically for you by the installer application.  However, since there are issues with my agent setup, I&#8217;ve done this step manually.  The extracted <em>op-installer-agent.zip</em> has a gzip file that has the node installation that just needs to be extracted to the agent root, which is at ~/deploy/agent (opuser).  I copied <em>op-installer-agent.zip</em> to my installer server source code in the test folder.  Here are the commands I performed on the agent to install node:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd ~/deploy/agent/
+mdir tmp
+cd tmp
+cp /media/sf_src/test/op-installer-agent.zip .
+unzip op-installer-agent.zip
+cd ~/deploy/agent/
+tar -xf tmp/install/Linux/ibm-8.1.4.0-node-v8.1.4-linux-x64.tar.gz -C .
+mv node-v8.1.4-linux-x64 nodejs</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>At this point you have a folder <em>nodejs</em> in <em>~/deploy/agent</em>.  I checked <em>~/.bash_profile</em> and this line was already there for me:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">export PATH=/home/opuser/deploy/agent/nodejs/bin:$PATH</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>After this I still didn&#8217;t have gulp installed, so I installed it via npm:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">npm install gulp --global</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then</p>
+</div>
           </div>
           <footer class="post-footer">
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
@@ -317,7 +447,7 @@ null
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1538168499229"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1538578776725"></script>
 
 
   </body>
