@@ -7,6 +7,16 @@
     - Get the latest op-installer-agent.jar from smb://op-file.swg.usma.ibm.com/autobuild/Public/Builds/OpenPages-7.4/OP_7_4-381A_RELEASE/OP_7.4_Non_Embedded/OP_7.4_Installer/op-installer-agent.zip
     - Copy it to either the server/dev/installer or server/dist folder before attempting to validate an install
     
+*Server Assets*
+
+When starting the installer server, you may see this warning:
+
+```
+[12:30:11] Starting 'copy:dev:assets'...
+No installer assets are available in development mode.  Create a set of assets in /Users/sellis/projects/ibm/op/op-installer-branches/grc-op-installer/server/test/assets if these are needed.
+```
+
+Assets are a set of zip files that contain third party installations that will be applied to the system where OpenPages is being installed.  When running the server with ``gulp dev:watch --ssl_enabled``, the assets folder is checked and if not found, then assets will be copied from _server/tests/assets_, but if that folder is not present, you see the warning above.  The current set of assets can be found at _Public/Builds/OpenPages-7.4/OP_7_4-381A_RELEASE/OP_7.4_Non_Embedded/OP_7.4_Installer/src/assets/assets_.  Copy that to the test folder in the installer test folder and run ``gulp dev:watch --ssl_enabled`` again.  You should see a noticable pause as those assets are transferred to the build target folder.  You are all set with assets and can continue on.
     
 *Start server*
 
@@ -29,6 +39,8 @@
 ```
 
 - The _encrypted_ property will be true, which means that the plain text password you entered into the file has now been encrypted.  If you ever want to reset the password, then enter a plain text password in the password property, remove the _encrypted_ property, then restart.
+
+
 
 *Start Client*
 
@@ -128,6 +140,17 @@ usermod -aG vboxsf opuser
 This grants access to the shared folders, namely _/media/sf_src_.
 
 *Installing Node on Agent*
+
+*Very important!!*
+
+Turn off iptables, dammit!
+
+```bash
+service iptables off
+```
+
+Several Bothans died to bring you this information.
+
 
 The agent needs to have NodeJS installed, and this is done automatically for you by the installer application.  However, since there are issues with my agent setup, I've done this step manually.  The extracted _op-installer-agent.zip_ has a gzip file that has the node installation that just needs to be extracted to the agent root, which is at ~/deploy/agent (opuser).  I copied _op-installer-agent.zip_ to my installer server source code in the test folder.  Here are the commands I performed on the agent to install node:
 
