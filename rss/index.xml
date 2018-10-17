@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:01:13 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:01:41 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -2868,38 +2868,7 @@ openssl rsa -in ~/.ssh/id_rsa -out ~/.ssh/id_rsa.decrypted
 mv ~/.ssh/id_rsa.decrypted ~/.ssh/id_rsa
 chmod 400 ~/.ssh/id_rsa</code></pre>
 </div>
-</div>]]></description><link>https://scottellis64.github.io/2017/09/06/Passwordless-SSH.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/09/06/Passwordless-SSH.html</guid><category><![CDATA[bash_tips]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 06 Sep 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[August 14, 2017]]></title><description><![CDATA[<div class="paragraph">
-<p><strong>Friday</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Checked in work for choose-deployment; needs work to call create new deployment, upload may be an available endpoint?</p>
-</li>
-<li>
-<p>Added encryption for login story and will resolve that this morning</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Today</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Onboarding</p>
-</li>
-<li>
-<p>Choose deployment and wrap up that story if possible</p>
-</li>
-<li>
-<p>Long running processes&#8212;&#8203;maybe Brian?</p>
-</li>
-<li>
-<p>Build for Github</p>
-</li>
-</ul>
-</div>]]></description><link>https://scottellis64.github.io/2017/08/14/August-14-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/08/14/August-14-2017.html</guid><category><![CDATA[status]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Mon, 14 Aug 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Openpages Docker Setup]]></title><description><![CDATA[<div id="preamble">
+</div>]]></description><link>https://scottellis64.github.io/2017/09/06/Passwordless-SSH.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/09/06/Passwordless-SSH.html</guid><category><![CDATA[bash_tips]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 06 Sep 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Openpages Docker Setup]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="http://masa-rhel11.swg.usma.ibm.com/repositories/op">OP Docker Registry</a></p>
