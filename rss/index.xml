@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:08:24 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:09:22 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -1233,75 +1233,7 @@ Watson augments the human being.</p>
 </ul>
 </div>
 </div>
-</div>]]></description><link>https://scottellis64.github.io/2018/05/24/Design-Thinking.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/05/24/Design-Thinking.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 24 May 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Work done for 72394]]></title><description><![CDATA[<div class="paragraph">
-<p>Background:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>A customer has an issue in their version of OpenPages that has since been fixed, but where the issue was fixed was not known.</p>
-</li>
-<li>
-<p>I was assigned to identify exactly in what changeset the fix occurred, and, once identified, to find a version of OP that predates the fix, apply the code changes and show that the customer issue has been addressed.</p>
-</li>
-<li>
-<p>The issue is that for a Process object that has an assessment status field enabled in the user profile, that status is not being reset whenever a new Risk Assessment is started for the Process&#8217;s parent Business Entity.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Stategy:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>My initial strategy was to get OpenPages up and running in my local development environment.  Once loaded, find the code pieces involved in the execution of the RCSA Launch Utility, then view the RTC history of the sources involved.  Here I would be able to see the who and when, and the associated defects and/or tasks.</p>
-</li>
-<li>
-<p>I brought up a 7.4 docker container, but it was missing the reporting server, and therefor I wasn&#8217;t able to launch the RCSA Launch Utility at all.  I obtained a docker-compose.yml that included the reports server, and that posed problems too.  OP went into an endless loop and I completely wiped my system of all docker images, containers and volumes and tried again, all to no avail.</p>
-</li>
-<li>
-<p>I tried searching RTC for the term 'RCSA Launch Utility' but didn&#8217;t find any tickets that looked promising, except for one ticket that turned out to be unrelated.</p>
-</li>
-<li>
-<p>I talked to Sandy about it and she did another search and found the right defect in 60153.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Resolution:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Now I turned to finding a reference system that demonstrated the issue before it was fixed, given that defect 60153 was observed in OP_7.3-223, I needed to go back to 7.2, since no 7.3 reference system predates that build number.</p>
-</li>
-<li>
-<p>I tried reference systems 7.2.0.5 and 7.2.0.4, but both had report server issues and I couldn&#8217;t get too far into the reproduction steps.  I hit paydirt with 7.2.0.3.</p>
-</li>
-<li>
-<p>Next, I opened up an Eclipse workspace that flowed with version 7.2.0.3 and massaged the workspace until it compiled cleanly.  There were errors that were finally resolved by setting the Java JRE version back to 1.7.</p>
-</li>
-<li>
-<p>I applied the code changes that resolved defect 60153 and exported a new ear file.  On the file system, I extracted the jar file that housed the new change from the ear file.</p>
-</li>
-<li>
-<p>I remotely logged into the 7.2.0.3 reference system, but when I tried to transfer the jar file, there was a problem.  I needed to install openssh-clients on the remote system, then tried the file transfer again.  It worked.</p>
-</li>
-<li>
-<p>Next I overwrote the same jar file in the existing deployment and stopped the OP application.  Exceptions were thrown, so I ended up forcibly killing the processes that refused to shut down.</p>
-</li>
-<li>
-<p>Then I started the server again</p>
-</li>
-<li>
-<p>After this, I verified that the Process object was still in the Approved state, which is the wrong state as per the reproduction steps.</p>
-</li>
-<li>
-<p>I started another Risk Assessment, then went back to the Process object and saw that it was properly in the Awaiting Assessment state.</p>
-</li>
-</ul>
-</div>]]></description><link>https://scottellis64.github.io/2018/02/02/Work-done-for-72394.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/02/02/Work-done-for-72394.html</guid><category><![CDATA[work log]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 02 Feb 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Patching OP Version]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://scottellis64.github.io/2018/05/24/Design-Thinking.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/05/24/Design-Thinking.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 24 May 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Patching OP Version]]></title><description><![CDATA[<div class="paragraph">
 <p>When a customer has an issue with a previous release of the product, the strategy is this:</p>
 </div>
 <div class="ulist">
