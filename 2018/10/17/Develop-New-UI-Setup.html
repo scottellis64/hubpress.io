@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1539788891624"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1539788891624"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1539788891624"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1539796258403"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1539796258403"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1539796258403"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1539788891624"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1539796258403"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2018/10/17/Develop-New-UI-Setup.html" />
     <meta name="referrer" content="origin" />
@@ -78,11 +78,11 @@
     <meta property="og:site_name" content="Career Log" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="Develop New UI Setup" />
-    <meta property="og:description" content="From root of grc_app_ui: git checkout develop git pull npm install npm run install In grc_app_ui/com.ibm.openpages.app: ./gradlew build The code in com.ibm.openpages.app can be loaded into Eclipse so that whenever opapps.ear is exported and installed over a current" />
+    <meta property="og:description" content="When updating the Docker environment to the latest snapshot build, be sure to bring down the current version with: docker-compose down -v Then to bring up the new version and to view the logs until everything is ready to go: docker-compose up -d docker logs --follow 7devenv_opapp_1 From" />
     <meta property="og:url" content="https://scottellis64.github.io/2018/10/17/Develop-New-UI-Setup.html" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content="Develop New UI Setup" />
-    <meta name="twitter:description" content="From root of grc_app_ui: git checkout develop git pull npm install npm run install In grc_app_ui/com.ibm.openpages.app: ./gradlew build The code in com.ibm.openpages.app can be loaded into Eclipse so that whenever opapps.ear is exported and installed over a current" />
+    <meta name="twitter:description" content="When updating the Docker environment to the latest snapshot build, be sure to bring down the current version with: docker-compose down -v Then to bring up the new version and to view the logs until everything is ready to go: docker-compose up -d docker logs --follow 7devenv_opapp_1 From" />
     <meta name="twitter:url" content="https://scottellis64.github.io/2018/10/17/Develop-New-UI-Setup.html" />
     
     <script type="application/ld+json">
@@ -139,7 +139,7 @@ null
             <ul class="post-meta-list">
               <li class="post-meta-item">
                 <time datetime="2018-10-17" itemprop="datePublished">
-                  11 hours ago
+                  13 hours ago
                 </time>
               </li>
               <li class="post-meta-item">
@@ -164,6 +164,29 @@ null
           </aside>
           <div itemprop="articleBody" class="post-body">
             <div class="paragraph">
+<p>When updating the Docker environment to the latest snapshot build, be sure to bring down the current version with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><code>docker-compose down -v</code></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Then to bring up the new version and to view the logs until everything is ready to go:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><code>docker-compose up -d</code></code></p>
+</li>
+<li>
+<p><code><code>docker logs --follow 7devenv_opapp_1</code></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -329,7 +352,7 @@ null
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1539788891624"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1539796258403"></script>
 
 
   </body>
