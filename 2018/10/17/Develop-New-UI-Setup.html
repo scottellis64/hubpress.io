@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1539796258403"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1539796258403"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1539796258403"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1539802120805"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1539802120805"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1539802120805"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1539796258403"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1539802120805"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2018/10/17/Develop-New-UI-Setup.html" />
     <meta name="referrer" content="origin" />
@@ -139,7 +139,7 @@ null
             <ul class="post-meta-list">
               <li class="post-meta-item">
                 <time datetime="2018-10-17" itemprop="datePublished">
-                  13 hours ago
+                  15 hours ago
                 </time>
               </li>
               <li class="post-meta-item">
@@ -259,18 +259,18 @@ null
 <div class="ulist">
 <ul>
 <li>
-<p><code><code>npm run deploy</code></code></p>
+<p><code><code>npm run jars:deploy</code></code></p>
 </li>
 <li>
-<p><code><code>npm run gulp deployJarOnly</code></code></p>
+<p><code><code>npm run react:deploy</code></code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>This looks to be building and deploying the Angular 2 application as well, and something in here is needed by the React UI in the area of i18n strings.  Not sure what exactly, but a runtime error occurs when invoking the front page of the ReactUI if this step isn&#8217;t done.</p>
+<p>The first target pulls all of the jars generated in the Eclipse project, the built versions after all source has been pulled from RTC, and deploys them to your OpenPages instance as configured in <em>workspace</em> setting in <em>&lt;grc-app-ui root&gt;/config.js</em>.</p>
 </div>
 <div class="paragraph">
-<p>This target starts and stops the <em>opapp</em> remote node at <em>/home/opuser/OP/OpenPages/profiles/opapp-OPNode1</em> on the Docker container.</p>
+<p>The second target builds the react client application, then generates all of the i18n string definitions and deploys them to the OpenPages instance.</p>
 </div>
 <div class="paragraph">
 <p>To start the ReactUI in development mode, type the following in the root of <em>grc_app_ui</em>:</p>
@@ -284,15 +284,6 @@ null
 </div>
 <div class="paragraph">
 <p>See the ReactUI at <code><code><a href="https://localhost:3334/grc" class="bare">https://localhost:3334/grc</a></code></code></p>
-</div>
-<div class="paragraph">
-<p>Redeploy the exported <em>opapps.ear</em> by typing:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">ssh -l opuser -p 24022 localhost
-~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh</code></pre>
-</div>
 </div>
           </div>
           <footer class="post-footer">
@@ -352,7 +343,7 @@ null
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1539796258403"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1539802120805"></script>
 
 
   </body>
