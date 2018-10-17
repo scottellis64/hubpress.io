@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:00:01 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:01:13 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -2899,9 +2899,7 @@ chmod 400 ~/.ssh/id_rsa</code></pre>
 <p>Build for Github</p>
 </li>
 </ul>
-</div>]]></description><link>https://scottellis64.github.io/2017/08/14/August-14-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/08/14/August-14-2017.html</guid><category><![CDATA[status]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Mon, 14 Aug 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Goal Tracking]]></title><description><![CDATA[<div class="paragraph">
-<p>Go here for <a href="https://w3-01.ibm.com/hr/careersmart/html/goals.html#tabId=GOOV">PBC goal entry</a></p>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/28/Goal-Tracking.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/28/Goal-Tracking.html</guid><category><![CDATA[ibm]]></category><category><![CDATA[ process]]></category><category><![CDATA[ career]]></category><category><![CDATA[ goals]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 28 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Openpages Docker Setup]]></title><description><![CDATA[<div id="preamble">
+</div>]]></description><link>https://scottellis64.github.io/2017/08/14/August-14-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/08/14/August-14-2017.html</guid><category><![CDATA[status]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Mon, 14 Aug 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Openpages Docker Setup]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="http://masa-rhel11.swg.usma.ibm.com/repositories/op">OP Docker Registry</a></p>
