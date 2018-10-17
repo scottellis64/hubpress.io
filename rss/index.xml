@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 14:59:01 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 14:59:56 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -664,7 +664,44 @@ OpenPages Loss Event Entry users are unlikely to know the naming convention for 
 </ol>
 </div>
 </div>
-</div>]]></description><link>https://scottellis64.github.io/2018/08/15/Loss-Event-Entry.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/08/15/Loss-Event-Entry.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 15 Aug 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Architectural Thinking]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://scottellis64.github.io/2018/08/15/Loss-Event-Entry.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/08/15/Loss-Event-Entry.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 15 Aug 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Docker Artifactory Migration]]></title><description><![CDATA[<div class="paragraph">
+<p>Started work <a href="https://github.ibm.com/OpenPages/backlog/issues/512#issuecomment-7160506">here</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>docker login --username _user email_ https://ip-op-grc-docker-local.artifactory.swg-devops.com</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Password is the Artifactory API key generated <a href="https://na.artifactory.swg-devops.com/artifactory/webapp/#/profile">here</a>
+For user email, you can use your own email address provided that you are a member of the admin <a href="https://w3-03.ibm.com/tools/groups/protect/groupsgui.wss">bluegroup</a>.  When doing this for the automated build, its probably best to use the api key for <a href="mailto:opdevops@us.ibm.com">opdevops@us.ibm.com</a>.</p>
+</div>
+<div class="paragraph">
+<p>Created a bash script called push.sh in folder ~/projects/ibm/devops/grc-devops/docker that tags and pushes a local docker image to the new remote Artifactory docker registry.  The script has this content:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">docker tag $1 ip-op-grc-docker-local.artifactory.swg-devops.com/op/$2:8.0.0.1-249
+docker push ip-op-grc-docker-local.artifactory.swg-devops.com/op/$2:8.0.0.1-249</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>$1 is the container id of the docker image, which can be identified by typing:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>docker ps -a
+
+CONTAINER ID        IMAGE                                           COMMAND                  CREATED             STATUS              PORTS                  NAMES
+2c7d4485ee94        docker.bintray.io/jfrog/artifactory-oss:6.1.0   "/entrypoint-artifac…"   44 hours ago        Up 44 hours         0.0.0.0:80-&gt;8081/tcp   artifactory</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>$2 is the image/repository name, such as opapp_db2 or opapp_oracle.  A complete listing can be found <a href="http://masa-rhel11.swg.usma.ibm.com/repositories">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>The manual method of migrating from our existing docker repository is to pull all the images locally, then tag and push to the Artifactory repository.  There doesn&#8217;t appear to be an automatic way of doing this other than to write a script for it.  The push.sh script I wrote is for convenience and assumes the tag name, which of course could be parameterized as well.</p>
+</div>]]></description><link>https://scottellis64.github.io/2018/08/03/Docker-Artifactory-Migration.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/08/03/Docker-Artifactory-Migration.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 03 Aug 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Architectural Thinking]]></title><description><![CDATA[<div class="paragraph">
 <p>Registered for the August 20-23 session</p>
 </div>
 <div class="ulist">
