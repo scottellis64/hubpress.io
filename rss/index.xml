@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:56:53 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:57:23 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -3580,32 +3580,4 @@ git push origin --tags</code></pre>
 <p><a href="https://www.youtube.com/watch?v=nvPOUdz5PL4">Images in Github</a> on YouTube</p>
 </li>
 </ul>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/21/Todos.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/21/Todos.html</guid><category><![CDATA[todo]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 21 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Friday, July 21, 2017]]></title><description><![CDATA[<div class="paragraph">
-<p><strong>Yesterday</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Spend most of my day preparing for a technical presentation of the work I&#8217;ve done for the op-installer</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Today</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Create the task for the Algo P1 and get time estimates and convey the findings to Ken.</p>
-</li>
-<li>
-<p>Follow up with Wenlong on long running processes</p>
-</li>
-<li>
-<p>Make meeting with Sandy if she has an available time today—then commit installer stories, tasks and defects to RTC</p>
-</li>
-<li>
-<p>Create the tasks for Story 65919</p>
-</li>
-</ul>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/21/Friday-July-21-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/21/Friday-July-21-2017.html</guid><category><![CDATA[status]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 21 Jul 2017 00:00:00 GMT</pubDate></item></channel></rss>
+</div>]]></description><link>https://scottellis64.github.io/2017/07/21/Todos.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/21/Todos.html</guid><category><![CDATA[todo]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 21 Jul 2017 00:00:00 GMT</pubDate></item></channel></rss>
