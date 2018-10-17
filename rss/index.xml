@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:07:48 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:08:24 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -1502,13 +1502,7 @@ For us, its `ip-rca-docker-local.artifactory.swg-devops.com/ibm/rca-service:late
 </div>
 <div class="paragraph">
 <p>IBM is putting together an <a href="https://github.ibm.com/Bluemix/graphql">architecture</a> that combines microservices into a single GraphQL endpoint on Bluemix.  See if this isn&#8217;t something that can be used for our broader team.  Start with exposing the OP REST API as a microservice.  Ditto for access to UCF.</p>
-</div>]]></description><link>https://scottellis64.github.io/2018/01/23/GraphQL.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/01/23/GraphQL.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 23 Jan 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[WFP]]></title><description><![CDATA[<div class="ulist">
-<ul>
-<li>
-<p><a href="https://pages.github.ibm.com/watson-finance/devops-playbook">Main Page</a></p>
-</li>
-</ul>
-</div>]]></description><link>https://scottellis64.github.io/2018/01/16/WFP.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/01/16/WFP.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 16 Jan 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Large Files with the Fetch API]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://scottellis64.github.io/2018/01/23/GraphQL.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/01/23/GraphQL.html</guid><category><![CDATA[learning]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 23 Jan 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Large Files with the Fetch API]]></title><description><![CDATA[<div class="paragraph">
 <p>FileSaver.js, I have discovered, has a file size restriction of around 500m, which is on the edge for our product.  The limitation is due to the Blob construct, which is browser-specific.</p>
 </div>
 <div class="paragraph">
