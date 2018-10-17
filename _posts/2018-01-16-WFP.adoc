@@ -1,3 +1,0 @@
-= WFP
-
-- https://pages.github.ibm.com/watson-finance/devops-playbook[Main Page]
