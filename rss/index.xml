@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:57:23 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:58:05 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -3562,22 +3562,4 @@ FIRST_MEDIA_LOCATION=/Users/sellis/projects/rcoc/FirstMedia</code></pre>
 <pre class="highlight"><code>git tag -a &lt;version #&gt; -m "Tag Comment"
 git push origin --tags</code></pre>
 </div>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/26/ALGO-First-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/ALGO-First-Setup.html</guid><category><![CDATA[setup]]></category><category><![CDATA[ algo]]></category><category><![CDATA[ dev]]></category><category><![CDATA[ docker]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Todo's]]></title><description><![CDATA[<div class="ulist">
-<ul>
-<li>
-<p>Look into how to commit images to Github and how to show those images in READMEs.</p>
-</li>
-<li>
-<p>Try the relative link method described <a href="https://help.github.com/articles/about-readmes/">here</a></p>
-</li>
-<li>
-<p><a href="https://stackoverflow.com/questions/14494747/add-images-to-readme-md-on-github">another link</a></p>
-</li>
-<li>
-<p><a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">Markdown Cheatsheet</a></p>
-</li>
-<li>
-<p><a href="https://www.youtube.com/watch?v=nvPOUdz5PL4">Images in Github</a> on YouTube</p>
-</li>
-</ul>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/21/Todos.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/21/Todos.html</guid><category><![CDATA[todo]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 21 Jul 2017 00:00:00 GMT</pubDate></item></channel></rss>
+</div>]]></description><link>https://scottellis64.github.io/2017/07/26/ALGO-First-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/26/ALGO-First-Setup.html</guid><category><![CDATA[setup]]></category><category><![CDATA[ algo]]></category><category><![CDATA[ dev]]></category><category><![CDATA[ docker]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 26 Jul 2017 00:00:00 GMT</pubDate></item></channel></rss>
