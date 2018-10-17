@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:51:58 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:52:33 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -4105,22 +4105,4 @@ Wenlong,</p>
 </div>
 <div class="paragraph">
 <p>It was a positive meeting and he just wants to know what I will be doing with my time so he can plan for his project.  After I meet with Rajeev today I will come up with an estimate of the time I&#8217;ll need to perform all the remaining work and with that determine how I will split my time between Algo and the Installer.  I&#8217;ll connect with Ken tomorrow post-scrum and come up with a plan that splits my time so I can communicate that with both he and Rajeev.</p>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/18/Meeting-with-Ken.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/18/Meeting-with-Ken.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 18 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Long running processes in Node.js]]></title><description><![CDATA[<div class="paragraph">
-<p>Wenlong needs help with long running tasks kicked off by Rest API requests.
-The problem now is that processing these requests keeps a grib on the event loop with blocking IO (file IO using the sync versions) such that control of the event loop is not relinquished.</p>
-</div>
-<div class="paragraph">
-<p>I&#8217;ve introduced Promises, and that, along with the use of the aysnchronous versions of the file IO calls may do the trick, since using the asynchronous calls may give up the event loop and allow processing of a simultaneous request.</p>
-</div>
-<div class="paragraph">
-<p>If that is not enough, then there is an interesting [library](<a href="https://github.com/soyuka/relieve" class="bare">https://github.com/soyuka/relieve</a>) called Relieve available on NPM that spawns the handling of a task using Promises.</p>
-</div>
-<div class="paragraph">
-<p>Look into this tonight.  Meeting with Wenlong in the AM to discuss, so work on some examples tonight&#8212;&#8203;ASAP.</p>
-</div>
-<div class="paragraph">
-<p>Event Loop in Node.js article: <a href="https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/" class="bare">https://nodejs.org/en/docs/guides/event-loop-timers-and-nexttick/</a></p>
-</div>
-<div class="paragraph">
-<p>Interesting solution to try: <a href="https://stackoverflow.com/questions/29896854/how-to-execute-abort-long-running-tasks-in-node-js" class="bare">https://stackoverflow.com/questions/29896854/how-to-execute-abort-long-running-tasks-in-node-js</a></p>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/18/Long-running-processes-in-Nodejs.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/18/Long-running-processes-in-Nodejs.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 18 Jul 2017 00:00:00 GMT</pubDate></item></channel></rss>
+</div>]]></description><link>https://scottellis64.github.io/2017/07/18/Meeting-with-Ken.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/18/Meeting-with-Ken.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 18 Jul 2017 00:00:00 GMT</pubDate></item></channel></rss>
