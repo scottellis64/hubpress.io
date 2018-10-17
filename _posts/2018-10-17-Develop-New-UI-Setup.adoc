@@ -28,6 +28,7 @@ To import _com.ibm.openpages.app_ into Eclipse as a module under the grc_opapps 
 If this is a fresh version of OpenPages, then deployment targets need to be executed to run _ObjectManager_, which in turn ensures the existence of strings and other OP artifacts needed by the new ui at runtime.  So from the root of  _grc_app_ui_:
 
 - ```npm run deploy```
+- ```npm run gulp deployJarOnly```
 
 This looks to be building and deploying the Angular 2 application as well, and something in here is needed by the React UI in the area of i18n strings.  Not sure what exactly, but a runtime error occurs when invoking the front page of the ReactUI if this step isn't done.  
 
