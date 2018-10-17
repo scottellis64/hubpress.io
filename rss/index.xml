@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:02:24 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:03:40 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -2640,37 +2640,7 @@ output=json</code></pre>
 </div>
 <div class="paragraph">
 <p>"presets" is its own block that is a direct child of the root package.json object definition.</p>
-</div>]]></description><link>https://scottellis64.github.io/2017/10/08/Enable-E-S-Node-using-Babel.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/10/08/Enable-E-S-Node-using-Babel.html</guid><category><![CDATA[setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Sun, 08 Oct 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[One on one with Isaac]]></title><description><![CDATA[<div class="paragraph">
-<p>No raise this year&#8212;&#8203;I&#8217;m in the 98% of my band</p>
-</div>
-<div class="paragraph">
-<p>Research topics:</p>
-</div>
-<div class="paragraph">
-<p>AWS Lambda Functions
-Serverless Development</p>
-</div>
-<div class="paragraph">
-<p>Tutorial: <a href="https://nodered.org/docs/platforms/aws" class="bare">https://nodered.org/docs/platforms/aws</a>
-<a href="https://console.aws.amazon.com/iam/home?nc2=h_m_sc#/security_credential" class="bare">https://console.aws.amazon.com/iam/home?nc2=h_m_sc#/security_credential</a>
-<a href="https://aws.amazon.com/lambda/" class="bare">https://aws.amazon.com/lambda/</a>
-<a href="https://console.aws.amazon.com/console/home?region=us-east-1" class="bare">https://console.aws.amazon.com/console/home?region=us-east-1</a></p>
-</div>
-<div class="paragraph">
-<p>NPM Private to IBM
-How to leverage our private NPM registry</p>
-</div>
-<div class="paragraph">
-<p>Tracking process in GitHub</p>
-</div>
-<div class="paragraph">
-<p>Bluemix Functions
-Wisk/Functions</p>
-</div>
-<div class="paragraph">
-<p>App ID in Bluemix
-Authentication Scheme&#8201;&#8212;&#8201;might replace our user provisioning</p>
-</div>]]></description><link>https://scottellis64.github.io/2017/09/29/One-on-one-with-Isaac.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/09/29/One-on-one-with-Isaac.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 29 Sep 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Promises Await]]></title><description><![CDATA[<div class="paragraph">
+</div>]]></description><link>https://scottellis64.github.io/2017/10/08/Enable-E-S-Node-using-Babel.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/10/08/Enable-E-S-Node-using-Babel.html</guid><category><![CDATA[setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Sun, 08 Oct 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Promises Await]]></title><description><![CDATA[<div class="paragraph">
 <p><a href="https://www.twilio.com/blog/2015/10/asyncawait-the-hero-javascript-deserved.html" class="bare">https://www.twilio.com/blog/2015/10/asyncawait-the-hero-javascript-deserved.html</a></p>
 </div>
 <div class="paragraph">
