@@ -1,5 +1,14 @@
 = Develop New UI Setup =
 
+When updating the Docker environment to the latest snapshot build, be sure to bring down the current version with:
+
+- ```docker-compose down -v```
+
+Then to bring up the new version and to view the logs until everything is ready to go:
+
+- ```docker-compose up -d```
+- ```docker logs --follow 7devenv_opapp_1```
+
 From root of _grc_app_ui_:
 
 - ```git checkout develop```
