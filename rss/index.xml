@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:51:26 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:51:58 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -4123,60 +4123,4 @@ The problem now is that processing these requests keeps a grib on the event loop
 </div>
 <div class="paragraph">
 <p>Interesting solution to try: <a href="https://stackoverflow.com/questions/29896854/how-to-execute-abort-long-running-tasks-in-node-js" class="bare">https://stackoverflow.com/questions/29896854/how-to-execute-abort-long-running-tasks-in-node-js</a></p>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/18/Long-running-processes-in-Nodejs.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/18/Long-running-processes-in-Nodejs.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 18 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[July 18, 2017]]></title><description><![CDATA[<div class="paragraph">
-<p><strong>Yesterday</strong></p>
-</div>
-<div class="paragraph">
-<p>Created a production build for the op-installer that combines the client, server and auth-server into one zip file with these features:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>provides its own gulp file and package.json that provides all that is needed to build (npm install) and run the application (npm start) in production mode.</p>
-</li>
-<li>
-<p>temporarily creates a default deployment so that the install UI works without manual intervention (previously had to create a test deployment by hand)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Met with Filipe, Josh and Wenlong to discuss rest api end point naming and questions concerning configuration import.</p>
-</div>
-<div class="paragraph">
-<p><strong>Today</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Have to take a few days to get the Algo group on track.</p>
-</li>
-<li>
-<p>Meeting with Rajeev at 11 to determine the depth and breadth of my remaining tasks</p>
-</li>
-<li>
-<p>Then attending group status meeting at 11:30</p>
-</li>
-<li>
-<p>Creating/updating RTC tasks to reflect the work I&#8217;ve done to date on the op-installer (apologies for not keeping them up to date&#8212;&#8203;will work at dillegence)</p>
-</li>
-<li>
-<p>Putting together a presentation showing the makeup of the typescript auth-server.  Will meet with the team some time either this week or next to discuss.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Going forward</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>With the build and deployment work done, moving on to doing some op-installer UI work.  Taking on the <em>Choose Deployment</em> page that appears after login.  Currently login takes the user to a default deployment called <em>testInstall</em></p>
-</li>
-<li>
-<p>Will update READMEs to reflect current processes for running and deploying project</p>
-</li>
-<li>
-<p>Create some quick diagrams to show how the op-installer modules fit together to create one unit in both production and dev.  Investigate how this diagram can be displayed in the projects README.</p>
-</li>
-</ul>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/18/July-18-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/18/July-18-2017.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 18 Jul 2017 00:00:00 GMT</pubDate></item></channel></rss>
+</div>]]></description><link>https://scottellis64.github.io/2017/07/18/Long-running-processes-in-Nodejs.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/18/Long-running-processes-in-Nodejs.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 18 Jul 2017 00:00:00 GMT</pubDate></item></channel></rss>
