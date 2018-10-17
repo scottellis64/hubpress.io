@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:04:16 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:06:11 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -1704,83 +1704,7 @@ This example matches on any anchor tag with a rel attibute containing the value 
 </div>
 <div class="paragraph">
 <p>I&#8217;m clearly not part of anything and am being relegated onto side avenues while the core group creates and plans.</p>
-</div>]]></description><link>https://scottellis64.github.io/2017/11/21/Info.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/11/21/Info.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 21 Nov 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Building op-app.ear with using Gradle]]></title><description><![CDATA[<div class="paragraph">
-<p>My newest assignment is to figure out how to build OpenPages using Gradle for the purpose of integrating added applications to it.</p>
-</div>
-<div class="paragraph">
-<p>todo: make a graph of the applications we have today and show how the gradle build is going to work</p>
-</div>
-<div class="paragraph">
-<p><strong>Inception</strong></p>
-</div>
-<div class="paragraph">
-<p>When this suggested to me, I wasn&#8217;t thrilled about it.  But as I considered it closely, this is an opportunity to remove OpenPages from Eclipse once and for all.  The problem here is that Eclipse is the tool we use to create the build artifacts, and as such is tightly intertwined with our build and release processes.  Making any change to the project structure has implications that would create too much risk.</p>
-</div>
-<div class="paragraph">
-<p>Being in Eclipse, there is no tooling that creates a visualization of the workspace&#8217;s dependency structure, and so you are forced to investigate manually.  Using Gradle or Maven, such visualizations are available, and these are much easier to follow and understand.  And, best of all, these can be easily extended for purposes such as my current task.</p>
-</div>
-<div class="paragraph">
-<p>I started doing some of this manually.  Here to the best of my recollection are the steps I&#8217;ve followed so far:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Created an IntelliJ Gradle project in ~/projects/ibm/op-7.4-idea</p>
-</li>
-<li>
-<p>Opened Eclipse to the current OpenPages 7.4 project that was already on my system</p>
-</li>
-<li>
-<p>Now I found the rootmost project in the Eclipse workspace, which appears to be called <strong>modelobjects</strong>.</p>
-</li>
-<li>
-<p>tbd</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The idea is, look into an api that gives insight on an Eclipse workspace that can be read and translated into something else, in my case Gradle.  The process of doing it manually is cumbersome, and the process will need to be repeated for every build, as projects are updated constantly.  So the workflow will look like this:</p>
-</div>
-<div class="paragraph">
-<p>1) Gradle script uses RTC command line to pull the latest code
-2) Gradle script builds the application, perhaps with addons specified
-3) Out pops op-apps.ear</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>So, investigating an API to provide Eclipse introspection, and failing that or maybe instead of that, read the eclipse project files in code I&#8217;ve written based upon what I&#8217;m seeing in the OpenPages project in Eclipse.</p>
-</li>
-<li>
-<p>Investigating RTC command line</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>Man, this might be easy</strong></p>
-</div>
-<div class="paragraph">
-<p>So as I look at the .classpath of each project, its a simple XML structure.  Here&#8217;s an example for the project <strong>aurora</strong>:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-<?xmlversion="1.0"encoding="UTF-8"?>" data-lang="<?xmlversion="1.0"encoding="UTF-8"?>">&lt;classpath&gt;
-	&lt;classpathentry kind="src" path="com.ibm.openpages.aurora.service"/&gt;
-	&lt;classpathentry kind="src" path="com.ibm.openpages.webapp"/&gt;
-	&lt;classpathentry kind="src" path="com.openpages.aurora"/&gt;
-	&lt;classpathentry kind="src" path="com.ibm.openpages.sdk"/&gt;
-	&lt;classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.ibm.openpages.libraries"/&gt;
-	&lt;classpathentry exported="true" kind="lib" path="/com.ibm.openpages.libraries/op-apps.ear/lib/java-sdk-3.8.0-jar-with-dependencies.jar"/&gt;
-	&lt;classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.ibm.openpages.modelobjects"/&gt;
-	&lt;classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/&gt;
-	&lt;classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.ibm.openpages.aurora.tools"/&gt;
-	&lt;classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/&gt;
-	&lt;classpathentry combineaccessrules="false" exported="true" kind="src" path="/com.ibm.openpages.aurora.parsers"/&gt;
-	&lt;classpathentry combineaccessrules="false" kind="src" path="/com.ibm.openpages.reporting.webservice"/&gt;
-	&lt;classpathentry kind="output" path="bin"/&gt;
-&lt;/classpath&gt;</code></pre>
-</div>
-</div>]]></description><link>https://scottellis64.github.io/2017/11/21/Building-op-appear-with-using-Gradle.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/11/21/Building-op-appear-with-using-Gradle.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 21 Nov 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Github Research]]></title><description><![CDATA[<div class="ulist">
+</div>]]></description><link>https://scottellis64.github.io/2017/11/21/Info.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/11/21/Info.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 21 Nov 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Github Research]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>How to create images and show them in a README</p>
