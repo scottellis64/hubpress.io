@@ -1,0 +1,31 @@
+= Develop New UI Setup =
+
+From root of _grc_app_ui_:
+
+- ```git checkout develop```
+- ```git pull```
+- ```npm install```
+- ```npm run install```
+
+In _grc_app_ui/com.ibm.openpages.app_:
+
+- ```./gradlew build```
+
+The code in _com.ibm.openpages.app_ can be loaded into Eclipse so that whenever _opapps.ear_ is exported and installed over a current OpenPages deployment (in local Docker container as done in development), then a one-time step needs to executed in _grc_app_ui/com.ibm.openpages.app_:
+
+- ```./gradlew eclipse```
+
+To import _com.ibm.openpages.app_ into Eclipse as a module under the grc_opapps working set:
+
+- In Eclipse, select the menu option _File->Import..._ 
+- Choose _General->Existing Projects into Workspace_ and click _Next >_
+- Select the root directory as _<grc-app-ui root>/com.ibm.openpages.app_
+- Select the project _com.ibm.openpages.app_
+- Check the option _Copy projects into workspace_
+- Check on _Add project to working sets_ and choose _grc_opapps_
+- Click _Finish_
+
+
+
+
+
