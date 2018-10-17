@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 14:58:01 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 14:59:01 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -365,32 +365,7 @@ mv node-v8.1.4-linux-x64 nodejs</code></pre>
 <p>To view word docs, start <a href="https://windebug.mainz.de.ibm.com/">here</a></p>
 </li>
 </ul>
-</div>]]></description><link>https://scottellis64.github.io/2018/08/29/ECU.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/08/29/ECU.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 29 Aug 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Promises Presentation]]></title><description><![CDATA[<div class="paragraph">
-<p>Working on a project that demonstrates some of the following concepts:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Promises</p>
-</li>
-<li>
-<p>The NodeJS Event Loop</p>
-</li>
-<li>
-<p>Async/Await</p>
-</li>
-<li>
-<p>Demonstrating how the event loop can be blocked</p>
-</li>
-<li>
-<p>Different strategies for spawning processes/tasks to offload the work from the event loop</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The promises presentation code is <a href="https://github.ibm.com/scottell/promises-presentation">here</a>
-There are diagrams in the docs folder therein that can be opened with Draw.io&#8212;&#8203;installed a local app for Draw.io.</p>
-</div>]]></description><link>https://scottellis64.github.io/2018/08/28/Promises-Presentation.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/08/28/Promises-Presentation.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 28 Aug 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Loss Event Entry]]></title><description><![CDATA[<div id="preamble">
+</div>]]></description><link>https://scottellis64.github.io/2018/08/29/ECU.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/08/29/ECU.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 29 Aug 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Loss Event Entry]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>The source code for Loss Event Entry can be found in Isaac&#8217;s <a href="https://github.ibm.com/ipaquet/op-lossevent">private repository</a></p>
