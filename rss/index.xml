@@ -1,4 +1,108 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 14:57:42 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Installer Setup]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 14:58:01 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<p>From root of <em>grc_app_ui</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><code>git checkout develop</code></code></p>
+</li>
+<li>
+<p><code><code>git pull</code></code></p>
+</li>
+<li>
+<p><code><code>npm install</code></code></p>
+</li>
+<li>
+<p><code><code>npm run install</code></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In <em>grc_app_ui/com.ibm.openpages.app</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><code>./gradlew build</code></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The code in <em>com.ibm.openpages.app</em> can be loaded into Eclipse so that whenever <em>opapps.ear</em> is exported and installed over a current OpenPages deployment (in local Docker container as done in development), then a one-time step needs to executed in <em>grc_app_ui/com.ibm.openpages.app</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><code>./gradlew eclipse</code></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To import <em>com.ibm.openpages.app</em> into Eclipse as a module under the grc_opapps working set:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>In Eclipse, select the menu option <em>File&#8594;Import&#8230;&#8203;</em></p>
+</li>
+<li>
+<p>Choose <em>General&#8594;Existing Projects into Workspace</em> and click <em>Next &gt;</em></p>
+</li>
+<li>
+<p>Select the root directory as <em>&lt;grc-app-ui root&gt;/com.ibm.openpages.app</em></p>
+</li>
+<li>
+<p>Select the project <em>com.ibm.openpages.app</em></p>
+</li>
+<li>
+<p>Check the option <em>Copy projects into workspace</em></p>
+</li>
+<li>
+<p>Check on <em>Add project to working sets</em> and choose <em>grc_opapps</em></p>
+</li>
+<li>
+<p>Click <em>Finish</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If this is a fresh version of OpenPages, then deployment targets need to be executed to run <em>ObjectManager</em>, which in turn ensures the existence of strings and other OP artifacts needed by the new ui at runtime.  So from the root of  <em>grc_app_ui</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><code>npm run deploy</code></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This looks to be building and deploying the Angular 2 application as well, and something in here is needed by the React UI in the area of i18n strings.  Not sure what exactly, but a runtime error occurs when invoking the front page of the ReactUI if this step isn&#8217;t done.</p>
+</div>
+<div class="paragraph">
+<p>This target starts and stops the <em>opapp</em> remote node at <em>/home/opuser/OP/OpenPages/profiles/opapp-OPNode1</em> on the Docker container.</p>
+</div>
+<div class="paragraph">
+<p>To start the ReactUI in development mode, type the following in the root of <em>grc_app_ui</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><code>npm run react:start</code></code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>See the ReactUI at <code><code><a href="https://localhost:3334/grc" class="bare">https://localhost:3334/grc</a></code></code></p>
+</div>
+<div class="paragraph">
+<p>Redeploy the exported <em>opapps.ear</em> by typing:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">ssh -l opuser -p 24022 localhost
+~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh</code></pre>
+</div>
+</div>]]></description><link>https://scottellis64.github.io/2018/10/17/Develop-New-UI-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/10/17/Develop-New-UI-Setup.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Installer Setup]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>Important to switch to node version 8.9: <code><code>nvm use v8.9.4</code></code></p>
