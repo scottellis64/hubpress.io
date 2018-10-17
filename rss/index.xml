@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 03 Oct 2018 17:03:23 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Installer Setup]]></title><description><![CDATA[<div class="ulist">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 14:04:07 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Installer Setup]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>Important to switch to node version 8.9: <code><code>nvm use v8.9.4</code></code></p>
@@ -1540,15 +1540,7 @@ This example matches on any anchor tag with a rel attibute containing the value 
 </div>
 <div class="paragraph">
 <p>See <a href="https://w3.ibm.com/bluepages/profile.html?uid=4G4113897">Bluepages</a> for ITN number</p>
-</div>]]></description><link>https://scottellis64.github.io/2017/11/28/Cisco-Phone-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/11/28/Cisco-Phone-Setup.html</guid><category><![CDATA[setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 28 Nov 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Ideas that made it]]></title><description><![CDATA[<div class="paragraph">
-<p>I had an idea a long time ago about wanting a SQL-like syntax for filtering object queries that Brian liked and opened an RTC ticket for that I contributed to.  I submitted a proposed syntax&#8212;&#8203;need to find this item and record it here.</p>
-</div>
-<div class="paragraph">
-<p><strong>Edit</strong></p>
-</div>
-<div class="paragraph">
-<p>My idea pertained to efficient queries for acquiring filter counts.  Not as big as I imagined.</p>
-</div>]]></description><link>https://scottellis64.github.io/2017/11/22/Ideas-that-made-it.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/11/22/Ideas-that-made-it.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 22 Nov 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Info]]></title><description><![CDATA[<div class="ulist">
+</div>]]></description><link>https://scottellis64.github.io/2017/11/28/Cisco-Phone-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/11/28/Cisco-Phone-Setup.html</guid><category><![CDATA[setup]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 28 Nov 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Info]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
 <p>Met yesterday with IP to discuss my Goals, which I have updated.  I spent my lunch doing the updates and feel that I&#8217;ve done a decent job of it, but of course there are always going to be things I leave out.  I need to get better about writing down my accomplishments and activities.</p>
