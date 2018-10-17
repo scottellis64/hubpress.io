@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:49:33 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:50:10 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -4243,88 +4243,4 @@ NOTE: UCF will likely merge into the larger RCoC team
 * There will be one week left after vacation for sprint 2
 * In betwixt all this, I need to be ready to help out if needed with OpenPages, either to offer guidance or to jump in and make fixes</pre>
 </div>
-</div>]]></description><link>https://scottellis64.github.io/2016/12/14/Tuesday-December-14th-2016.html</link><guid isPermaLink="true">https://scottellis64.github.io/2016/12/14/Tuesday-December-14th-2016.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 14 Dec 2016 00:00:00 GMT</pubDate></item><item><title><![CDATA[Notes from 12/13/2016 One-on-one meeting with Chris]]></title><description><![CDATA[<div class="paragraph">
-<p>Updating will cause a change log—that can cause confusion</p>
-</div>
-<div class="paragraph">
-<p>Goal before kickoff
-	For testing, authentication, clarify what is success</p>
-</div>
-<div class="paragraph">
-<p>Change dates
-	RCOC is later in march for release
-	Go well into February for Development
-	Add one or two sprints</p>
-</div>
-<div class="paragraph">
-<p>Rename UCF Connector to UCF Connector / RCoC Q1</p>
-</div>
-<div class="paragraph">
-<p>Add team members, will need to add Rajeev (not right away)
-QE - add Mark</p>
-</div>
-<div class="paragraph">
-<p>Identify one or two stories to get started on</p>
-</div>
-<div class="paragraph">
-<p>If we can get Questionnaire started, that’s nice
-Basic requirements</p>
-</div>
-<div class="paragraph">
-<p>Review 52328, 52308 and 52309 and see if we can finish these off using the new REST TDI connector
-Maybe need a task to convert these two from file to api calls</p>
-</div>
-<div class="paragraph">
-<p>Update scheme task or story</p>
-</div>
-<div class="paragraph">
-<p>One week when we come back to finish sprint 2</p>
-</div>
-<div class="paragraph">
-<p>RCOC -
-Embed cognos reports
-Need visibility to GitHub RCoC from RTC</p>
-</div>
-<div class="paragraph">
-<p>Scrum:
-What stories to work on?
-Acceptance criteria needs to be locked down
-Schedule on a regular scrum time and frequency (suggest 2 times a week)</p>
-</div>
-<div class="paragraph">
-<p>Eventually UCF will merge with RCoC meeting</p>
-</div>
-<div class="sidebarblock">
-<div class="content">
-<div class="paragraph">
-<p>As team lead have to work with team members
- 	— Michelle, from quality</p>
-</div>
-<div class="paragraph">
-<p>Balance expectation and what is actually completed</p>
-</div>
-<div class="paragraph">
-<p>Need to multitask</p>
-</div>
-<div class="paragraph">
-<p>Simplest solution first, then work on the better solution</p>
-</div>
-<div class="paragraph">
-<p>Do quality work
-Communicate
-Rajeev is easy going
-they have a lot of emotion tied to their product
-provide very good input
-keep promises
-They have high expectations of me
-Gradually come in and help out
-don’t overstretch</p>
-</div>
-<hr>
-<div class="paragraph">
-<p>Might need my help with features in OP environment available
-Need to be able to jump in and fix</p>
-</div>
-<hr>
-</div>
-</div>]]></description><link>https://scottellis64.github.io/2016/12/14/Notes-from-12132016-One-on-one-meeting-with-Chris.html</link><guid isPermaLink="true">https://scottellis64.github.io/2016/12/14/Notes-from-12132016-One-on-one-meeting-with-Chris.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 14 Dec 2016 00:00:00 GMT</pubDate></item></channel></rss>
+</div>]]></description><link>https://scottellis64.github.io/2016/12/14/Tuesday-December-14th-2016.html</link><guid isPermaLink="true">https://scottellis64.github.io/2016/12/14/Tuesday-December-14th-2016.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 14 Dec 2016 00:00:00 GMT</pubDate></item></channel></rss>
