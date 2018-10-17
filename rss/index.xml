@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:09:22 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 16:10:24 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -764,7 +764,48 @@ CONTAINER ID        IMAGE                                           COMMAND     
 </div>
 </li>
 </ul>
-</div>]]></description><link>https://scottellis64.github.io/2018/07/12/Architectural-Thinking.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/07/12/Architectural-Thinking.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 12 Jul 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[AI Learning]]></title><description><![CDATA[<div id="preamble">
+</div>]]></description><link>https://scottellis64.github.io/2018/07/12/Architectural-Thinking.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/07/12/Architectural-Thinking.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 12 Jul 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Python AI]]></title><description><![CDATA[<div class="sect1">
+<h2 id="_arrays">Arrays</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">a = np.array([1, 2, 3])   # Create a rank 1 array
+print(type(a))            # Prints "&lt;class 'numpy.ndarray'&gt;"
+print(a.shape)            # Prints "(3,)"
+
+# Two-d array
+b = np.array([[1,2,3],[4,5,6]])
+print(b.shape)                     # Prints "(2, 3)"
+print(b[0, 0], b[0, 1], b[1, 0])   # Prints "1 2 4"</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_array_initialization">Array initialization</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-python" data-lang="python">a = np.zeros((2,2))   # Create an array of all zeros
+print(a)              # Prints "[[ 0.  0.]
+                      #          [ 0.  0.]]"
+
+b = np.ones((1,2))    # Create an array of all ones
+print(b)              # Prints "[[ 1.  1.]]"
+
+c = np.full((2,2), 7)  # Create a constant array
+print(c)               # Prints "[[ 7.  7.]
+                       #          [ 7.  7.]]"
+
+d = np.eye(2)         # Create a 2x2 identity matrix
+print(d)              # Prints "[[ 1.  0.]
+                      #          [ 0.  1.]]"
+
+e = np.random.random((2,2))  # Create an array filled with random values
+print(e)                     # Might print "[[ 0.91940167  0.08143941]
+                             #               [ 0.68744134  0.87236687]]"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>]]></description><link>https://scottellis64.github.io/2018/07/07/Python-AI.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/07/07/Python-AI.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Sat, 07 Jul 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[AI Learning]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="ulist">
 <ul>
