@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 17:10:58 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 18:48:40 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>When updating the Docker environment to the latest snapshot build, be sure to bring down the current version with:</p>
 </div>
 <div class="ulist">
@@ -94,18 +94,18 @@
 <div class="ulist">
 <ul>
 <li>
-<p><code><code>npm run deploy</code></code></p>
+<p><code><code>npm run jars:deploy</code></code></p>
 </li>
 <li>
-<p><code><code>npm run gulp deployJarOnly</code></code></p>
+<p><code><code>npm run react:deploy</code></code></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>This looks to be building and deploying the Angular 2 application as well, and something in here is needed by the React UI in the area of i18n strings.  Not sure what exactly, but a runtime error occurs when invoking the front page of the ReactUI if this step isn&#8217;t done.</p>
+<p>The first target pulls all of the jars generated in the Eclipse project, the built versions after all source has been pulled from RTC, and deploys them to your OpenPages instance as configured in <em>workspace</em> setting in <em>&lt;grc-app-ui root&gt;/config.js</em>.</p>
 </div>
 <div class="paragraph">
-<p>This target starts and stops the <em>opapp</em> remote node at <em>/home/opuser/OP/OpenPages/profiles/opapp-OPNode1</em> on the Docker container.</p>
+<p>The second target builds the react client application, then generates all of the i18n string definitions and deploys them to the OpenPages instance.</p>
 </div>
 <div class="paragraph">
 <p>To start the ReactUI in development mode, type the following in the root of <em>grc_app_ui</em>:</p>
@@ -119,15 +119,6 @@
 </div>
 <div class="paragraph">
 <p>See the ReactUI at <code><code><a href="https://localhost:3334/grc" class="bare">https://localhost:3334/grc</a></code></code></p>
-</div>
-<div class="paragraph">
-<p>Redeploy the exported <em>opapps.ear</em> by typing:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-bash" data-lang="bash">ssh -l opuser -p 24022 localhost
-~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh</code></pre>
-</div>
 </div>]]></description><link>https://scottellis64.github.io/2018/10/17/Develop-New-UI-Setup.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/10/17/Develop-New-UI-Setup.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 17 Oct 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Installer Setup]]></title><description><![CDATA[<div class="ulist">
 <ul>
 <li>
