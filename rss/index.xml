@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:50:10 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:50:49 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -4194,53 +4194,4 @@ Description: Implement a REST api based on typescript-rest that authenticates a 
 </div>
 <div class="paragraph">
 <p><a href="https://docs.google.com/spreadsheets/d/16GnPaRR3CDY2JiBld1Ba5ALmAA4uDwz2t-bwDzdUuVw/edit#gid=0" class="bare">https://docs.google.com/spreadsheets/d/16GnPaRR3CDY2JiBld1Ba5ALmAA4uDwz2t-bwDzdUuVw/edit#gid=0</a></p>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/18/Create-stories-and-tasks-for-OP-Installer.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/18/Create-stories-and-tasks-for-OP-Installer.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 18 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Tuesday, December 14th 2016]]></title><description><![CDATA[<div class="literalblock">
-<div class="title">Dev Ops Workshop</div>
-<div class="content">
-<pre>Its all about the docker image.
-Learned about working IBM GitHub and creating issues and resolving.
-I'm working on setting up Tomcat 7 on Centos 7 with ssl enabled and Java 8
-Had some trouble with all this since Docker is not something I know through and through
-but I have a lot of experience with Linux at this point, and my VM mechanics help with getting things to work.
-Hoping tomorrow I get a lot done.</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="title">Chris one-one</div>
-<div class="content">
-<pre>.Todos
-* Prioritize getting stories and tasks created and estimated
-  - Get acceptance criteria done and make sure QE has enough to create test plans
-* Rename UCF Connector tab to UCF Connector / RCoC Q1
-* Modify team members:
-  - Remove Ken as build engineer
-  - Add Mark as QE
-* Add one or two sprints to the project
-* Identify one or two stories to get started on before leaving for Christmas break
-* Questionnaire is a nice-to-have; prioritize UCF Connector
-* Get UCF connector story/task into implementing state
-* Review stories 52328, 52308 and 52309 to see if they can be finished off after the new REST TDI connector is implemented
-* Consider adding a task for converting existing file connector-implemented stories/tasks to using the new REST TDI connector
-* Update scheme task or story??
-
-.Kick off
-* Scrum kick off meeting is set for Thursday at 4
-* Talk about which stories to work on
-* Schedule stand up for two times a week and pick a day and time that works for everyone
-
-NOTE: UCF will likely merge into the larger RCoC team
-
-.Chris' suggestions for working with RCoC group (Rajeev and ?)
-* Do quality work--there are high expectations of me coming in
-* Communicate effectively and often--don't let problems queue up without letting folks know what is going on
-* Rajeev is easy going, but members are emotionally vested in their product (implication is, choose my words carefully, be diplomatic)
-* Provide very good input
-* Keep promises
-* Sift into the mix gradually
-* Don't overstretch
-
-.Random notes from one on one meeting
-* There will be one week left after vacation for sprint 2
-* In betwixt all this, I need to be ready to help out if needed with OpenPages, either to offer guidance or to jump in and make fixes</pre>
-</div>
-</div>]]></description><link>https://scottellis64.github.io/2016/12/14/Tuesday-December-14th-2016.html</link><guid isPermaLink="true">https://scottellis64.github.io/2016/12/14/Tuesday-December-14th-2016.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 14 Dec 2016 00:00:00 GMT</pubDate></item></channel></rss>
+</div>]]></description><link>https://scottellis64.github.io/2017/07/18/Create-stories-and-tasks-for-OP-Installer.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/18/Create-stories-and-tasks-for-OP-Installer.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Tue, 18 Jul 2017 00:00:00 GMT</pubDate></item></channel></rss>
