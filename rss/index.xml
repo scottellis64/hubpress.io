@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:58:49 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Wed, 17 Oct 2018 15:59:30 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>From root of <em>grc_app_ui</em>:</p>
 </div>
 <div class="ulist">
@@ -2961,9 +2961,7 @@ I trusted Josh and Wenlong but I should have been deeper inside their thought pr
 Wenlong doesn&#8217;t work long hours and the effort wasn&#8217;t there.
 I should have been more aggresive but I trusted too much.
 Didn&#8217;t realize until too late that nothing had really been done on their end.</p>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/28/Friday-July-28th-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/28/Friday-July-28th-2017.html</guid><category><![CDATA[status]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 28 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Javascript Save Dialog]]></title><description><![CDATA[<div class="paragraph">
-<p>Look <a href="https://eligrey.com/blog/saving-generated-files-on-the-client-side/">here</a></p>
-</div>]]></description><link>https://scottellis64.github.io/2017/07/27/Javascript-Save-Dialog.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/27/Javascript-Save-Dialog.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Thu, 27 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Openpages Docker Setup]]></title><description><![CDATA[<div id="preamble">
+</div>]]></description><link>https://scottellis64.github.io/2017/07/28/Friday-July-28th-2017.html</link><guid isPermaLink="true">https://scottellis64.github.io/2017/07/28/Friday-July-28th-2017.html</guid><category><![CDATA[status]]></category><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 28 Jul 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Openpages Docker Setup]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="http://masa-rhel11.swg.usma.ibm.com/repositories/op">OP Docker Registry</a></p>
