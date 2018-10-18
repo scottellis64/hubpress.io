@@ -1,0 +1,4 @@
+= Deck Setup =
+
+https://www.ibm.com/support/knowledgecenter/SSFUEU_8.0.0/op_grc_admin/c_adm_approval_app.html
+
