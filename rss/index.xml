@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 22 Oct 2018 15:56:58 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 22 Oct 2018 16:19:23 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>When updating the Docker environment to the latest snapshot build, be sure to bring down the current version with:</p>
 </div>
 <div class="ulist">
@@ -382,13 +382,25 @@ mv node-v8.1.4-linux-x64 nodejs</code></pre>
 <p>To view word docs, start <a href="https://windebug.mainz.de.ibm.com/">here</a></p>
 </li>
 </ul>
-</div>]]></description><link>https://scottellis64.github.io/2018/08/29/ECU.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/08/29/ECU.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 29 Aug 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Loss Event Entry]]></title><description><![CDATA[<div id="preamble">
+</div>]]></description><link>https://scottellis64.github.io/2018/08/29/ECU.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/08/29/ECU.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Wed, 29 Aug 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Loss Event Entry]]></title><description><![CDATA[<div class="sect1">
+<h2 id="_overview">Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The source code for Loss Event Entry can be found <a href="https://github.ibm.com/OpenPages/grc-app-config">here</a></p>
+<p><em>Loss Event Entry</em> (or <em>LEE</em>) is an add-on application to <em>OP</em> that provides a modernized UI (in Angular 1.5) for quickly creating loss events in OpenPages.</p>
 </div>
 <div class="paragraph">
-<p>The instructions for loading LEE configuration manually can be found <a href="https://www.ibm.com/support/knowledgecenter/SSFUEU_7.4.0/op_grc_installation/t_ig_loss_event_entry_perform_manual_load.html">here</a></p>
+<p>There are sets of object types, fields and field groups and users that need to exist in the system (see the <em>Instructions</em> section below for details on how to install all of these from scratch).
+Once installed, LEE&#8217;s configuration can be edited by first logging into OpenPages and changing the URL to be <em>&lt;OP_ROOT&gt;/app/jspview/lossevent#/editconfig</em>.  In development using the docker setup,
+this is likely to be <a href="https://localhost:10111/app/jspview/lossevent#/editconfig" class="bare">https://localhost:10111/app/jspview/lossevent#/editconfig</a>.</p>
+</div>
+<div class="paragraph">
+<p>All request to <em>LEE</em> resolve to the web artifacts that exist in <em>&lt;SOSA_WAR_HOME&gt;/toolkits/openpages/angular/app-config/public</em>.
+It is unclear to me right now if the web artifacts are already deployed in out-of-the-box installations, but in the development docker image they do not exist.
+In order to get them deployed, run the <em>deploy_op</em> gulp target in the root of the <a href="https://github.ibm.com/OpenPages/grc-app-config">grc-app-config</a> project.  This target simply runs
+a build and copies the resulting web artifacts to the aforementioned location relative to the sosa war folder.</p>
+</div>
+<div class="paragraph">
+<p>If your OP deployment does not have some or any of the needed object types, users, field groups, etc, you can follow the instructions for loading LEE configuration manually  <a href="https://www.ibm.com/support/knowledgecenter/SSFUEU_7.4.0/op_grc_installation/t_ig_loss_event_entry_perform_manual_load.html">here</a>, or refer to the instructions in this page that follow.</p>
 </div>
 </div>
 </div>
