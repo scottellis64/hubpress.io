@@ -1,6 +1,6 @@
 = Loss Event Entry
 
-The source code for Loss Event Entry can be found in Isaac's https://github.ibm.com/ipaquet/op-lossevent[private repository]
+The source code for Loss Event Entry can be found https://github.ibm.com/OpenPages/grc-app-config[here]
 
 The instructions for loading LEE configuration manually can be found https://www.ibm.com/support/knowledgecenter/SSFUEU_7.4.0/op_grc_installation/t_ig_loss_event_entry_perform_manual_load.html[here]
 
