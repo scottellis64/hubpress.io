@@ -168,3 +168,35 @@ When exporting op-apps.ear from Eclipse, be sure to modify the deployment descri
 *View OP Application logs*
 
 - Here: /home/opuser/OP/OpenPages/profiles/opapp-OPNode1/logs/opapp-OPNode1Server1
+
+*Change Debug Settings*
+
+Edit _/home/opuser/OP/OpenPages/profiles/OpenPagesDmgr/config/cells/OpenPagesCell/nodes/opapp-OPNode1/servers/opapp-OPNode1Server1_ and find the section toward the the bottom that contains the text _7777_:
+
+```
+<jvmEntries 
+	debugMode="true" 
+ 	debugArgs="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=7777" 
+	xmi:id="JavaVirtualMachine_1536354754418" 
+	verboseModeClass="false" 
+ 	verboseModeJNI="false" 
+ 	initialHeapSize="512" 
+  	maximumHeapSize="1536" 
+ 	runHProf="false" 
+ 	hprofArguments="" 
+ 	genericJvmArguments="-Xgcpolicy:gencon 
+ 		-Xmn350m -Xdisableexplicitgc 
+		-Dcom.ibm.itp.location=/home/opuser/IBM/WebSphere/AppServer/bin 
+		-Dopenpages.home=/home/opuser/OP/OpenPages 
+		-Daurora.home=/home/opuser/OP/OpenPages/aurora 
+		-Djava.security.auth.login.config=/home/opuser/OP/OpenPages/aurora/conf/aurora_auth.config 
+		-Dfile.encoding=utf-8 
+		-Dclient.encoding.override=UTF-8 
+		-Dopenpages.instance=opapp-OPNode1Server1">
+```
+
+The first attribute is _debugMode_, which must be set to _true_ in order to connect remotely to OpenPages.
+The second attribute is _debugArgs_.  Set _suspend=y_ if you would like to debug the application as it is starting up.
+The application will wait until the debugger is remotely connected before proceeding to initialize.
+
+
