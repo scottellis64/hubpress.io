@@ -1,8 +1,19 @@
 = Loss Event Entry
 
-The source code for Loss Event Entry can be found https://github.ibm.com/OpenPages/grc-app-config[here]
+== Overview
 
-The instructions for loading LEE configuration manually can be found https://www.ibm.com/support/knowledgecenter/SSFUEU_7.4.0/op_grc_installation/t_ig_loss_event_entry_perform_manual_load.html[here]
+_Loss Event Entry_ (or _LEE_) is an add-on application to _OP_ that provides a modernized UI (in Angular 1.5) for quickly creating loss events in OpenPages.
+
+There are sets of object types, fields and field groups and users that need to exist in the system (see the _Instructions_ section below for details on how to install all of these from scratch).
+Once installed, LEE's configuration can be edited by first logging into OpenPages and changing the URL to be _<OP_ROOT>/app/jspview/lossevent#/editconfig_.  In development using the docker setup,
+this is likely to be https://localhost:10111/app/jspview/lossevent#/editconfig.  
+
+All request to _LEE_ resolve to the web artifacts that exist in _<SOSA_WAR_HOME>/toolkits/openpages/angular/app-config/public_. 
+It is unclear to me right now if the web artifacts are already deployed in out-of-the-box installations, but in the development docker image they do not exist.  
+In order to get them deployed, run the _deploy_op_ gulp target in the root of the https://github.ibm.com/OpenPages/grc-app-config[grc-app-config] project.  This target simply runs
+a build and copies the resulting web artifacts to the aforementioned location relative to the sosa war folder.
+
+If your OP deployment does not have some or any of the needed object types, users, field groups, etc, you can follow the instructions for loading LEE configuration manually  https://www.ibm.com/support/knowledgecenter/SSFUEU_7.4.0/op_grc_installation/t_ig_loss_event_entry_perform_manual_load.html[here], or refer to the instructions in this page that follow.
 
 == Verifying Installation
 
