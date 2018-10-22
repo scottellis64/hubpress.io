@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1519077522588"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1519077522588"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1519077522588"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1540228837203"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1540228837203"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1540228837203"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1519077522588"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1540228837203"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2017/07/26/Openpages-Docker-Setup.html" />
     <meta name="referrer" content="origin" />
@@ -144,7 +144,7 @@ null
             <ul class="post-meta-list">
               <li class="post-meta-item">
                 <time datetime="2017-07-26" itemprop="datePublished">
-                  7 months ago
+                  a year ago
                 </time>
               </li>
                 <li class="post-meta-item">
@@ -463,6 +463,40 @@ cp ~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh .</code></pre>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p><strong>Change Debug Settings</strong></p>
+</div>
+<div class="paragraph">
+<p>Edit <em>/home/opuser/OP/OpenPages/profiles/OpenPagesDmgr/config/cells/OpenPagesCell/nodes/opapp-OPNode1/servers/opapp-OPNode1Server1</em> and find the section toward the the bottom that contains the text <em>7777</em>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;jvmEntries
+	debugMode="true"
+ 	debugArgs="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=7777"
+	xmi:id="JavaVirtualMachine_1536354754418"
+	verboseModeClass="false"
+ 	verboseModeJNI="false"
+ 	initialHeapSize="512"
+  	maximumHeapSize="1536"
+ 	runHProf="false"
+ 	hprofArguments=""
+ 	genericJvmArguments="-Xgcpolicy:gencon
+ 		-Xmn350m -Xdisableexplicitgc
+		-Dcom.ibm.itp.location=/home/opuser/IBM/WebSphere/AppServer/bin
+		-Dopenpages.home=/home/opuser/OP/OpenPages
+		-Daurora.home=/home/opuser/OP/OpenPages/aurora
+		-Djava.security.auth.login.config=/home/opuser/OP/OpenPages/aurora/conf/aurora_auth.config
+		-Dfile.encoding=utf-8
+		-Dclient.encoding.override=UTF-8
+		-Dopenpages.instance=opapp-OPNode1Server1"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first attribute is <em>debugMode</em>, which must be set to <em>true</em> in order to connect remotely to OpenPages.
+The second attribute is <em>debugArgs</em>.  Set <em>suspend=y</em> if you would like to debug the application as it is starting up.
+The application will wait until the debugger is remotely connected before proceeding to initialize.</p>
+</div>
 </div>
 </div>
           </div>
@@ -523,7 +557,7 @@ cp ~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh .</code></pre>
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1519077522588"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1540228837203"></script>
 
 
   </body>
