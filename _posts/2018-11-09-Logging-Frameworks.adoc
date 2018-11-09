@@ -5,6 +5,15 @@ There are two aspects to consider here, one being standard logging practices, an
 
 I put a question out on the cognitive architect slack channel asking what kinds of logging frameworks others are using, and I got back a reply suggesting that I take a look at Splunk[https://www.splunk.com/].  
 
+Before I dive into _Splunk_, I want to list out the other technologies that I intend to evaluate as well.
+
+== Logging Techs ==
+
+- Logstash[https://www.elastic.co/products/logstash]
+- Graylog[https://www.graylog.org/overview]
+
+== Splunk ==
+
 I've downloaded _Splunk Enterprise_ and added a Splunk Docker container to my development environment docker-compose.yml.  I renamed docker-compose.yml to docker-compose-splunk.yml and added a services section to it as detailed here[https://github.com/dennybritz/docker-splunk/blob/master/enterprise/docker-compose.yml].  Here is the added services section as per the linked page:
 
 ```
