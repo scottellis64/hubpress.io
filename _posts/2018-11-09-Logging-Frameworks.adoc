@@ -9,8 +9,12 @@ Before I dive into _Splunk_, I want to list out the other technologies that I in
 
 == Logging Techs ==
 
+These aren't all necessarily solely logging technologies, but could be part of a stack of products.  These are the names that have turned up while hunting down answers to the central question of better visibility into error logs.
+
 - Logstash[https://www.elastic.co/products/logstash]
 - Graylog[https://www.graylog.org/overview]
+- Kibana[https://www.elastic.co/products/kibana]
+- Elasticsearch[https://www.elastic.co/products/elasticsearch]
 
 == Splunk ==
 
