@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1541793172442"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1541793172442"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1541793172442"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1541797157291"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1541797157291"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1541797157291"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1541793172442"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1541797157291"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2018/11/09/Logging-Frameworks.html" />
     <meta name="referrer" content="origin" />
@@ -139,7 +139,7 @@ null
             <ul class="post-meta-list">
               <li class="post-meta-item">
                 <time datetime="2018-11-09" itemprop="datePublished">
-                  15 hours ago
+                  16 hours ago
                 </time>
               </li>
               <li class="post-meta-item">
@@ -274,6 +274,49 @@ Listening for data on TCP port 1514.</code></pre>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_splunk_logging_options">Splunk Logging Options</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If we want to add an appender to our log4j configurations, then we need to upgrade to log4j2, and that is a <a href="https://logging.apache.org/log4j/2.x/manual/migration.html">pain</a>.  The problem in our application is that we violate some of the prerequisites for smooth migration from log4j 1.x to 2.x:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>1. They must not access methods and classes internal to the Log4j 1.x implementation such as Appenders, LoggerRepository or Category's callAppenders method.
+2. They must not programmatically configure Log4j.
+3. They must not configure by calling the classes DOMConfigurator or PropertyConfigurator.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So guess what?  We do all of the above.  We do not access DOMConfigurator, but we use PropertyConfigurator in the following classes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ObjectManagerLocal</p>
+</li>
+<li>
+<p>ProfileUpdateUtility</p>
+</li>
+<li>
+<p>StringKeysSearchGenerator</p>
+</li>
+<li>
+<p>USSGenerator</p>
+</li>
+<li>
+<p>LogUtils</p>
+</li>
+<li>
+<p>TestAssetType</p>
+</li>
+<li>
+<p>Log4jEventLogger</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
           </div>
           <footer class="post-footer">
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
@@ -332,7 +375,7 @@ Listening for data on TCP port 1514.</code></pre>
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1541793172442"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1541797157291"></script>
 
 
   </body>
