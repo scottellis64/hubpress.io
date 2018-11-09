@@ -1,0 +1,6 @@
+= Logging Frameworks =
+
+I am researching logging frameworks that can help with resolving customer issues quickly.
+There are two aspects to consider here, one being standard logging practices, and the other being a logging framework that can assist with monitoring multiple logs simultaneously, and filtering out unwanted messages that constantly flood our logs.  
+
+I put a question out on the cognitive architect slack channel asking what kinds of logging frameworks others are using, and I got back a reply suggesting that I take a look at Splunk.
