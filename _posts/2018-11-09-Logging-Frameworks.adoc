@@ -118,5 +118,12 @@ We have Log4j Appenders in:
 So that's a lot of work to do for migration!
 
 
+== Graylog ==
+
+Installed docker images for Graylog as detailed http://docs.graylog.org/en/2.4/pages/installation/docker.html#here[here].  Added this to the same docker-compose-splunk.yml but should have probably done it seperately--didn't feel like making a big deal out of it.  I have both Graylog and Splunk running simultaneously now with OP.
+
+After bringing re-composing on the docker yml, Graylog is up in a web browser at http://localhost:9000, user and password are both _admin_.
+
+http://docs.graylog.org/en/2.4/pages/getting_started/web_console.html[Graylog setup instructions]
 
 
