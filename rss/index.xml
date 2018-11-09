@@ -1,4 +1,114 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Mon, 22 Oct 2018 18:14:20 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 09 Nov 2018 19:36:57 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Logging Frameworks]]></title><description><![CDATA[<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>I am researching logging frameworks that can help with resolving customer issues quickly.
+There are two aspects to consider here, one being standard logging practices, and the other being a logging framework that can assist with monitoring multiple logs simultaneously, and filtering out unwanted messages that constantly flood our logs.</p>
+</div>
+<div class="paragraph">
+<p>I put a question out on the cognitive architect slack channel asking what kinds of logging frameworks others are using, and I got back a reply suggesting that I take a look at Splunk[<a href="https://www.splunk.com/" class="bare">https://www.splunk.com/</a>].</p>
+</div>
+<div class="paragraph">
+<p>Before I dive into <em>Splunk</em>, I want to list out the other technologies that I intend to evaluate as well.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_logging_techs">Logging Techs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>These aren&#8217;t all necessarily solely logging technologies, but could be part of a stack of products.  These are the names that have turned up while hunting down answers to the central question of better visibility into error logs.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Logstash[<a href="https://www.elastic.co/products/logstash" class="bare">https://www.elastic.co/products/logstash</a>]</p>
+</li>
+<li>
+<p>Graylog[<a href="https://www.graylog.org/overview" class="bare">https://www.graylog.org/overview</a>]</p>
+</li>
+<li>
+<p>Kibana[<a href="https://www.elastic.co/products/kibana" class="bare">https://www.elastic.co/products/kibana</a>]</p>
+</li>
+<li>
+<p>Elasticsearch[<a href="https://www.elastic.co/products/elasticsearch" class="bare">https://www.elastic.co/products/elasticsearch</a>]</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_splunk">Splunk</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>I&#8217;ve downloaded <em>Splunk Enterprise</em> and added a Splunk Docker container to my development environment docker-compose.yml.  I renamed docker-compose.yml to docker-compose-splunk.yml and added a services section to it as detailed here[<a href="https://github.com/dennybritz/docker-splunk/blob/master/enterprise/docker-compose.yml" class="bare">https://github.com/dennybritz/docker-splunk/blob/master/enterprise/docker-compose.yml</a>].  Here is the added services section as per the linked page:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>volumes:
+  opt-splunk-etc:
+  opt-splunk-var:
+
+services:
+  splunkenterprise:
+    #build: .
+    hostname: splunkenterprise
+    image: splunk/splunk:7.0.3
+    environment:
+      SPLUNK_START_ARGS: --accept-license
+      SPLUNK_ENABLE_LISTEN: 9997
+      SPLUNK_ADD: tcp 1514
+    volumes:
+      - opt-splunk-etc:/opt/splunk/etc
+      - opt-splunk-var:/opt/splunk/var
+    ports:
+      - "8000:8000"
+      - "9997:9997"
+      - "8088:8088"
+      - "1514:1514"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For reference, to use the new docker-compose file I typed this command in the same folder:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>docker-compose -f docker-compose-splunk.yml up -d</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To verify that it started up correctly I typed:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>docker logs --follow 7devenv_splunkenterprise_1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The successful startup information that I see as a result of the previous command is:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Starting splunk server daemon (splunkd)...
+Done
+
+
+Waiting for web server at http://127.0.0.1:8000 to be available.... Done
+
+
+If you get stuck, we're here to help.
+Look for answers here: http://docs.splunk.com
+
+The Splunk web interface is at http://splunkenterprise:8000
+
+Listening for Splunk data on TCP port 9997.
+Listening for data on TCP port 1514.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>From the host system, <em>splunkenterprise</em> is not a valid host name (but is a valid host name between the docker containers that are composed together).  To see the Splunk UI, navigate to <a href="http://localhost:8000" class="bare">http://localhost:8000</a>.</p>
+</div>
+</div>
+</div>]]></description><link>https://scottellis64.github.io/2018/11/09/Logging-Frameworks.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/11/09/Logging-Frameworks.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 09 Nov 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
 <p>When updating the Docker environment to the latest snapshot build, be sure to bring down the current version with:</p>
 </div>
 <div class="ulist">
