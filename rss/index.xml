@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 09 Nov 2018 19:52:52 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Logging Frameworks]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 09 Nov 2018 20:59:17 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Logging Frameworks]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>I am researching logging frameworks that can help with resolving customer issues quickly.
@@ -106,6 +106,49 @@ Listening for data on TCP port 1514.</code></pre>
 </div>
 <div class="paragraph">
 <p>From the host system, <em>splunkenterprise</em> is not a valid host name (but is a valid host name between the docker containers that are composed together).  To see the Splunk UI, navigate to <a href="http://localhost:8000" class="bare">http://localhost:8000</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_splunk_logging_options">Splunk Logging Options</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If we want to add an appender to our log4j configurations, then we need to upgrade to log4j2, and that is a <a href="https://logging.apache.org/log4j/2.x/manual/migration.html">pain</a>.  The problem in our application is that we violate some of the prerequisites for smooth migration from log4j 1.x to 2.x:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>1. They must not access methods and classes internal to the Log4j 1.x implementation such as Appenders, LoggerRepository or Category's callAppenders method.
+2. They must not programmatically configure Log4j.
+3. They must not configure by calling the classes DOMConfigurator or PropertyConfigurator.</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So guess what?  We do all of the above.  We do not access DOMConfigurator, but we use PropertyConfigurator in the following classes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ObjectManagerLocal</p>
+</li>
+<li>
+<p>ProfileUpdateUtility</p>
+</li>
+<li>
+<p>StringKeysSearchGenerator</p>
+</li>
+<li>
+<p>USSGenerator</p>
+</li>
+<li>
+<p>LogUtils</p>
+</li>
+<li>
+<p>TestAssetType</p>
+</li>
+<li>
+<p>Log4jEventLogger</p>
+</li>
+</ul>
 </div>
 </div>
 </div>]]></description><link>https://scottellis64.github.io/2018/11/09/Logging-Frameworks.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/11/09/Logging-Frameworks.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 09 Nov 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
