@@ -55,3 +55,8 @@ Cleaning up the mess
     - `docker rmi <image_id>`
 10. Remove all images
     - `docker rmi $(docker images -q)`
+    
+Migration from docker-compose 2 to 3
+----------------------------
+
+Read the guide https://docs.docker.com/compose/compose-file/compose-versioning/[here]
