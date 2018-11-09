@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1541803128996"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1541803128996"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1541803128996"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1541803930709"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1541803930709"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1541803930709"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1541803128996"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1541803930709"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2018/11/09/Logging-Frameworks.html" />
     <meta name="referrer" content="origin" />
@@ -376,6 +376,36 @@ Listening for data on TCP port 1514.</code></pre>
 <div class="paragraph">
 <p><a href="http://docs.graylog.org/en/2.4/pages/getting_started/web_console.html">Graylog setup instructions</a></p>
 </div>
+<div class="paragraph">
+<p>Getting log4j v1.2 logs from our application to Graylog appears to be doable using a custom <a href="https://logging.paluch.biz/examples/log4j-1.2.x.html">logstash-gelf appender</a>.  The same site has this <a href="https://logging.paluch.biz/index.html">introduction</a>.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example appender that is configured in log4j.xml:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;appender name="gelf" class="biz.paluch.logging.gelf.log4j.GelfLogAppender"&gt;
+    &lt;param name="Threshold" value="INFO" /&gt;
+    &lt;param name="Host" value="udp:localhost" /&gt;
+    &lt;param name="Port" value="12201" /&gt;
+    &lt;param name="Facility" value="java-test" /&gt;
+    &lt;param name="ExtractStackTrace" value="true" /&gt;
+    &lt;param name="FilterStackTrace" value="true" /&gt;
+    &lt;param name="IncludeLocation" value="true" /&gt;
+    &lt;param name="MdcProfiling" value="true" /&gt;
+    &lt;param name="TimestampPattern" value="yyyy-MM-dd HH:mm:ss,SSSS" /&gt;
+    &lt;param name="MaximumMessageSize" value="8192" /&gt;
+    &lt;param name="AdditionalFields" value="fieldName1=fieldValue1,fieldName2=fieldValue2" /&gt;
+    &lt;param name="AdditionalFieldTypes" value="fieldName1=String,fieldName2=Double,fieldName3=Long" /&gt;
+    &lt;param name="MdcFields" value="mdcField1,mdcField2" /&gt;
+    &lt;param name="DynamicMdcFields" value="mdc.*,(mdc|MDC)fields" /&gt;
+    &lt;param name="IncludeFullMdc" value="true" /&gt;
+&lt;/appender&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>I&#8217;ll have to add this to OP 8.0.0.2 and see if the Graylog dashboard picks anything up.</p>
+</div>
 </div>
 </div>
           </div>
@@ -436,7 +466,7 @@ Listening for data on TCP port 1514.</code></pre>
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1541803128996"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1541803930709"></script>
 
 
   </body>
