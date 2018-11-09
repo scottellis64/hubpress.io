@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 09 Nov 2018 19:36:57 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Logging Frameworks]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 09 Nov 2018 19:52:52 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Logging Frameworks]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>I am researching logging frameworks that can help with resolving customer issues quickly.
 There are two aspects to consider here, one being standard logging practices, and the other being a logging framework that can assist with monitoring multiple logs simultaneously, and filtering out unwanted messages that constantly flood our logs.</p>
 </div>
 <div class="paragraph">
-<p>I put a question out on the cognitive architect slack channel asking what kinds of logging frameworks others are using, and I got back a reply suggesting that I take a look at Splunk[<a href="https://www.splunk.com/" class="bare">https://www.splunk.com/</a>].</p>
+<p>I put a question out on the cognitive architect slack channel asking what kinds of logging frameworks others are using, and I got back a reply suggesting that I take a look at <a href="https://www.splunk.com/">Splunk</a>.</p>
 </div>
 <div class="paragraph">
 <p>Before I dive into <em>Splunk</em>, I want to list out the other technologies that I intend to evaluate as well.</p>
@@ -21,16 +21,16 @@ There are two aspects to consider here, one being standard logging practices, an
 <div class="ulist">
 <ul>
 <li>
-<p>Logstash[<a href="https://www.elastic.co/products/logstash" class="bare">https://www.elastic.co/products/logstash</a>]</p>
+<p><a href="https://www.elastic.co/products/logstash">Logstash</a></p>
 </li>
 <li>
-<p>Graylog[<a href="https://www.graylog.org/overview" class="bare">https://www.graylog.org/overview</a>]</p>
+<p><a href="https://www.graylog.org/overview">Graylog</a></p>
 </li>
 <li>
-<p>Kibana[<a href="https://www.elastic.co/products/kibana" class="bare">https://www.elastic.co/products/kibana</a>]</p>
+<p><a href="https://www.elastic.co/products/kibana">Kibana</a></p>
 </li>
 <li>
-<p>Elasticsearch[<a href="https://www.elastic.co/products/elasticsearch" class="bare">https://www.elastic.co/products/elasticsearch</a>]</p>
+<p><a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a></p>
 </li>
 </ul>
 </div>
@@ -40,7 +40,7 @@ There are two aspects to consider here, one being standard logging practices, an
 <h2 id="_splunk">Splunk</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>I&#8217;ve downloaded <em>Splunk Enterprise</em> and added a Splunk Docker container to my development environment docker-compose.yml.  I renamed docker-compose.yml to docker-compose-splunk.yml and added a services section to it as detailed here[<a href="https://github.com/dennybritz/docker-splunk/blob/master/enterprise/docker-compose.yml" class="bare">https://github.com/dennybritz/docker-splunk/blob/master/enterprise/docker-compose.yml</a>].  Here is the added services section as per the linked page:</p>
+<p>I&#8217;ve downloaded <em>Splunk Enterprise</em> and added a Splunk Docker container to my development environment docker-compose.yml.  I renamed docker-compose.yml to docker-compose-splunk.yml and added a services section to it as detailed <a href="https://github.com/dennybritz/docker-splunk/blob/master/enterprise/docker-compose.yml">here</a>.  Here is the added services section as per the linked page:</p>
 </div>
 <div class="listingblock">
 <div class="content">
