@@ -126,4 +126,29 @@ After bringing re-composing on the docker yml, Graylog is up in a web browser at
 
 http://docs.graylog.org/en/2.4/pages/getting_started/web_console.html[Graylog setup instructions]
 
+Getting log4j v1.2 logs from our application to Graylog appears to be doable using a custom https://logging.paluch.biz/examples/log4j-1.2.x.html[logstash-gelf appender].  The same site has this https://logging.paluch.biz/index.html[introduction].
+
+Here is an example appender that is configured in log4j.xml:
+
+```
+<appender name="gelf" class="biz.paluch.logging.gelf.log4j.GelfLogAppender">
+    <param name="Threshold" value="INFO" />
+    <param name="Host" value="udp:localhost" />
+    <param name="Port" value="12201" />
+    <param name="Facility" value="java-test" />
+    <param name="ExtractStackTrace" value="true" />
+    <param name="FilterStackTrace" value="true" />
+    <param name="IncludeLocation" value="true" />
+    <param name="MdcProfiling" value="true" />
+    <param name="TimestampPattern" value="yyyy-MM-dd HH:mm:ss,SSSS" />
+    <param name="MaximumMessageSize" value="8192" />
+    <param name="AdditionalFields" value="fieldName1=fieldValue1,fieldName2=fieldValue2" />
+    <param name="AdditionalFieldTypes" value="fieldName1=String,fieldName2=Double,fieldName3=Long" />
+    <param name="MdcFields" value="mdcField1,mdcField2" />
+    <param name="DynamicMdcFields" value="mdc.*,(mdc|MDC)fields" />
+    <param name="IncludeFullMdc" value="true" />
+</appender>
+```
+
+I'll have to add this to OP 8.0.0.2 and see if the Graylog dashboard picks anything up.
 
