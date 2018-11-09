@@ -77,4 +77,23 @@ Listening for data on TCP port 1514.
 
 From the host system, _splunkenterprise_ is not a valid host name (but is a valid host name between the docker containers that are composed together).  To see the Splunk UI, navigate to http://localhost:8000.
 
+== Splunk Logging Options ==
+
+If we want to add an appender to our log4j configurations, then we need to upgrade to log4j2, and that is a https://logging.apache.org/log4j/2.x/manual/migration.html[pain].  The problem in our application is that we violate some of the prerequisites for smooth migration from log4j 1.x to 2.x:
+
+```
+1. They must not access methods and classes internal to the Log4j 1.x implementation such as Appenders, LoggerRepository or Category's callAppenders method.
+2. They must not programmatically configure Log4j.
+3. They must not configure by calling the classes DOMConfigurator or PropertyConfigurator.
+```
+
+So guess what?  We do all of the above.  We do not access DOMConfigurator, but we use PropertyConfigurator in the following classes:
+
+- ObjectManagerLocal
+- ProfileUpdateUtility
+- StringKeysSearchGenerator
+- USSGenerator
+- LogUtils
+- TestAssetType
+- Log4jEventLogger
 
