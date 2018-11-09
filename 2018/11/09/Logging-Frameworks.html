@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1541792217224"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1541792217224"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1541792217224"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1541793172442"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1541793172442"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1541793172442"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1541792217224"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1541793172442"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2018/11/09/Logging-Frameworks.html" />
     <meta name="referrer" content="origin" />
@@ -170,7 +170,7 @@ null
 There are two aspects to consider here, one being standard logging practices, and the other being a logging framework that can assist with monitoring multiple logs simultaneously, and filtering out unwanted messages that constantly flood our logs.</p>
 </div>
 <div class="paragraph">
-<p>I put a question out on the cognitive architect slack channel asking what kinds of logging frameworks others are using, and I got back a reply suggesting that I take a look at Splunk[<a href="https://www.splunk.com/" class="bare">https://www.splunk.com/</a>].</p>
+<p>I put a question out on the cognitive architect slack channel asking what kinds of logging frameworks others are using, and I got back a reply suggesting that I take a look at <a href="https://www.splunk.com/">Splunk</a>.</p>
 </div>
 <div class="paragraph">
 <p>Before I dive into <em>Splunk</em>, I want to list out the other technologies that I intend to evaluate as well.</p>
@@ -186,16 +186,16 @@ There are two aspects to consider here, one being standard logging practices, an
 <div class="ulist">
 <ul>
 <li>
-<p>Logstash[<a href="https://www.elastic.co/products/logstash" class="bare">https://www.elastic.co/products/logstash</a>]</p>
+<p><a href="https://www.elastic.co/products/logstash">Logstash</a></p>
 </li>
 <li>
-<p>Graylog[<a href="https://www.graylog.org/overview" class="bare">https://www.graylog.org/overview</a>]</p>
+<p><a href="https://www.graylog.org/overview">Graylog</a></p>
 </li>
 <li>
-<p>Kibana[<a href="https://www.elastic.co/products/kibana" class="bare">https://www.elastic.co/products/kibana</a>]</p>
+<p><a href="https://www.elastic.co/products/kibana">Kibana</a></p>
 </li>
 <li>
-<p>Elasticsearch[<a href="https://www.elastic.co/products/elasticsearch" class="bare">https://www.elastic.co/products/elasticsearch</a>]</p>
+<p><a href="https://www.elastic.co/products/elasticsearch">Elasticsearch</a></p>
 </li>
 </ul>
 </div>
@@ -205,7 +205,7 @@ There are two aspects to consider here, one being standard logging practices, an
 <h2 id="_splunk">Splunk</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>I&#8217;ve downloaded <em>Splunk Enterprise</em> and added a Splunk Docker container to my development environment docker-compose.yml.  I renamed docker-compose.yml to docker-compose-splunk.yml and added a services section to it as detailed here[<a href="https://github.com/dennybritz/docker-splunk/blob/master/enterprise/docker-compose.yml" class="bare">https://github.com/dennybritz/docker-splunk/blob/master/enterprise/docker-compose.yml</a>].  Here is the added services section as per the linked page:</p>
+<p>I&#8217;ve downloaded <em>Splunk Enterprise</em> and added a Splunk Docker container to my development environment docker-compose.yml.  I renamed docker-compose.yml to docker-compose-splunk.yml and added a services section to it as detailed <a href="https://github.com/dennybritz/docker-splunk/blob/master/enterprise/docker-compose.yml">here</a>.  Here is the added services section as per the linked page:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -332,7 +332,7 @@ Listening for data on TCP port 1514.</code></pre>
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1541792217224"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1541793172442"></script>
 
 
   </body>
