@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1541802175183"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1541802175183"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1541802175183"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1541803128996"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1541803128996"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1541803128996"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1541802175183"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1541803128996"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2018/11/09/Logging-Frameworks.html" />
     <meta name="referrer" content="origin" />
@@ -139,7 +139,7 @@ null
             <ul class="post-meta-list">
               <li class="post-meta-item">
                 <time datetime="2018-11-09" itemprop="datePublished">
-                  17 hours ago
+                  18 hours ago
                 </time>
               </li>
               <li class="post-meta-item">
@@ -364,6 +364,20 @@ Listening for data on TCP port 1514.</code></pre>
 </div>
 </div>
 </div>
+<div class="sect1">
+<h2 id="_graylog">Graylog</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Installed docker images for Graylog as detailed <a href="http://docs.graylog.org/en/2.4/pages/installation/docker.html#here">here</a>.  Added this to the same docker-compose-splunk.yml but should have probably done it seperately&#8212;&#8203;didn&#8217;t feel like making a big deal out of it.  I have both Graylog and Splunk running simultaneously now with OP.</p>
+</div>
+<div class="paragraph">
+<p>After bringing re-composing on the docker yml, Graylog is up in a web browser at <a href="http://localhost:9000" class="bare">http://localhost:9000</a>, user and password are both <em>admin</em>.</p>
+</div>
+<div class="paragraph">
+<p><a href="http://docs.graylog.org/en/2.4/pages/getting_started/web_console.html">Graylog setup instructions</a></p>
+</div>
+</div>
+</div>
           </div>
           <footer class="post-footer">
             <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
@@ -422,7 +436,7 @@ Listening for data on TCP port 1514.</code></pre>
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1541802175183"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1541803128996"></script>
 
 
   </body>
