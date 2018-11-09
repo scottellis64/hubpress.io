@@ -87,13 +87,36 @@ If we want to add an appender to our log4j configurations, then we need to upgra
 3. They must not configure by calling the classes DOMConfigurator or PropertyConfigurator.
 ```
 
-So guess what?  We do all of the above.  We do not access DOMConfigurator, but we use PropertyConfigurator in the following classes:
+So guess what?  We do all of the above.  PropertyConfigurator is used in the following classes:
 
 - ObjectManagerLocal
+- ObjectProfileGenerator
 - ProfileUpdateUtility
 - StringKeysSearchGenerator
+- StringSearchGenerator
 - USSGenerator
 - LogUtils
 - TestAssetType
 - Log4jEventLogger
+
+DOMConfigurator is used in the following:
+
+- LogUtils
+- FrameworkGenerator
+
+LoggerRepository is used in LogUtils
+
+callAppenders is isued in Log4jEventLogger
+
+We have Log4j Appenders in:
+
+- Log4jEventLogger
+- LoggerUtil
+- LoggerUtilExtended
+- ResourceUtil
+
+So that's a lot of work to do for migration!
+
+
+
 
