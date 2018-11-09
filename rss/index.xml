@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 09 Nov 2018 22:38:48 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Logging Frameworks]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 09 Nov 2018 22:52:10 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Logging Frameworks]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>I am researching logging frameworks that can help with resolving customer issues quickly.
@@ -210,6 +210,36 @@ Listening for data on TCP port 1514.</code></pre>
 </div>
 <div class="paragraph">
 <p><a href="http://docs.graylog.org/en/2.4/pages/getting_started/web_console.html">Graylog setup instructions</a></p>
+</div>
+<div class="paragraph">
+<p>Getting log4j v1.2 logs from our application to Graylog appears to be doable using a custom <a href="https://logging.paluch.biz/examples/log4j-1.2.x.html">logstash-gelf appender</a>.  The same site has this <a href="https://logging.paluch.biz/index.html">introduction</a>.</p>
+</div>
+<div class="paragraph">
+<p>Here is an example appender that is configured in log4j.xml:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>&lt;appender name="gelf" class="biz.paluch.logging.gelf.log4j.GelfLogAppender"&gt;
+    &lt;param name="Threshold" value="INFO" /&gt;
+    &lt;param name="Host" value="udp:localhost" /&gt;
+    &lt;param name="Port" value="12201" /&gt;
+    &lt;param name="Facility" value="java-test" /&gt;
+    &lt;param name="ExtractStackTrace" value="true" /&gt;
+    &lt;param name="FilterStackTrace" value="true" /&gt;
+    &lt;param name="IncludeLocation" value="true" /&gt;
+    &lt;param name="MdcProfiling" value="true" /&gt;
+    &lt;param name="TimestampPattern" value="yyyy-MM-dd HH:mm:ss,SSSS" /&gt;
+    &lt;param name="MaximumMessageSize" value="8192" /&gt;
+    &lt;param name="AdditionalFields" value="fieldName1=fieldValue1,fieldName2=fieldValue2" /&gt;
+    &lt;param name="AdditionalFieldTypes" value="fieldName1=String,fieldName2=Double,fieldName3=Long" /&gt;
+    &lt;param name="MdcFields" value="mdcField1,mdcField2" /&gt;
+    &lt;param name="DynamicMdcFields" value="mdc.*,(mdc|MDC)fields" /&gt;
+    &lt;param name="IncludeFullMdc" value="true" /&gt;
+&lt;/appender&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>I&#8217;ll have to add this to OP 8.0.0.2 and see if the Graylog dashboard picks anything up.</p>
 </div>
 </div>
 </div>]]></description><link>https://scottellis64.github.io/2018/11/09/Logging-Frameworks.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/11/09/Logging-Frameworks.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 09 Nov 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
