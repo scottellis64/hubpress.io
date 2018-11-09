@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 09 Nov 2018 20:59:17 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Logging Frameworks]]></title><description><![CDATA[<div id="preamble">
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Career Log]]></title><description><![CDATA[A log of career activities]]></description><link>https://scottellis64.github.io</link><generator>RSS for Node</generator><lastBuildDate>Fri, 09 Nov 2018 21:52:13 GMT</lastBuildDate><atom:link href="https://scottellis64.github.io/rss/" rel="self" type="application/rss+xml"/><ttl>60</ttl><item><title><![CDATA[Logging Frameworks]]></title><description><![CDATA[<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>I am researching logging frameworks that can help with resolving customer issues quickly.
@@ -123,7 +123,7 @@ Listening for data on TCP port 1514.</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>So guess what?  We do all of the above.  We do not access DOMConfigurator, but we use PropertyConfigurator in the following classes:</p>
+<p>So guess what?  We do all of the above.  PropertyConfigurator is used in the following classes:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -131,10 +131,16 @@ Listening for data on TCP port 1514.</code></pre>
 <p>ObjectManagerLocal</p>
 </li>
 <li>
+<p>ObjectProfileGenerator</p>
+</li>
+<li>
 <p>ProfileUpdateUtility</p>
 </li>
 <li>
 <p>StringKeysSearchGenerator</p>
+</li>
+<li>
+<p>StringSearchGenerator</p>
 </li>
 <li>
 <p>USSGenerator</p>
@@ -149,6 +155,47 @@ Listening for data on TCP port 1514.</code></pre>
 <p>Log4jEventLogger</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>DOMConfigurator is used in the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>LogUtils</p>
+</li>
+<li>
+<p>FrameworkGenerator</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>LoggerRepository is used in LogUtils</p>
+</div>
+<div class="paragraph">
+<p>callAppenders is isued in Log4jEventLogger</p>
+</div>
+<div class="paragraph">
+<p>We have Log4j Appenders in:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Log4jEventLogger</p>
+</li>
+<li>
+<p>LoggerUtil</p>
+</li>
+<li>
+<p>LoggerUtilExtended</p>
+</li>
+<li>
+<p>ResourceUtil</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>So that&#8217;s a lot of work to do for migration!</p>
 </div>
 </div>
 </div>]]></description><link>https://scottellis64.github.io/2018/11/09/Logging-Frameworks.html</link><guid isPermaLink="true">https://scottellis64.github.io/2018/11/09/Logging-Frameworks.html</guid><dc:creator><![CDATA[Scott Ellis]]></dc:creator><pubDate>Fri, 09 Nov 2018 00:00:00 GMT</pubDate></item><item><title><![CDATA[Develop New UI Setup]]></title><description><![CDATA[<div class="paragraph">
