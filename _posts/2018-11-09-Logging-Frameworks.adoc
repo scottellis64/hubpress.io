@@ -3,4 +3,65 @@
 I am researching logging frameworks that can help with resolving customer issues quickly.
 There are two aspects to consider here, one being standard logging practices, and the other being a logging framework that can assist with monitoring multiple logs simultaneously, and filtering out unwanted messages that constantly flood our logs.  
 
-I put a question out on the cognitive architect slack channel asking what kinds of logging frameworks others are using, and I got back a reply suggesting that I take a look at Splunk.
+I put a question out on the cognitive architect slack channel asking what kinds of logging frameworks others are using, and I got back a reply suggesting that I take a look at Splunk[https://www.splunk.com/].  
+
+I've downloaded _Splunk Enterprise_ and added a Splunk Docker container to my development environment docker-compose.yml.  I renamed docker-compose.yml to docker-compose-splunk.yml and added a services section to it as detailed here[https://github.com/dennybritz/docker-splunk/blob/master/enterprise/docker-compose.yml].  Here is the added services section as per the linked page:
+
+```
+volumes:
+  opt-splunk-etc:
+  opt-splunk-var:
+
+services:
+  splunkenterprise:
+    #build: .
+    hostname: splunkenterprise
+    image: splunk/splunk:7.0.3
+    environment:
+      SPLUNK_START_ARGS: --accept-license
+      SPLUNK_ENABLE_LISTEN: 9997
+      SPLUNK_ADD: tcp 1514
+    volumes:
+      - opt-splunk-etc:/opt/splunk/etc
+      - opt-splunk-var:/opt/splunk/var
+    ports:
+      - "8000:8000"
+      - "9997:9997"
+      - "8088:8088"
+      - "1514:1514"
+```
+
+For reference, to use the new docker-compose file I typed this command in the same folder:
+
+```
+docker-compose -f docker-compose-splunk.yml up -d
+```
+
+To verify that it started up correctly I typed:
+
+```
+docker logs --follow 7devenv_splunkenterprise_1
+```
+
+The successful startup information that I see as a result of the previous command is:
+
+```
+Starting splunk server daemon (splunkd)...  
+Done
+
+
+Waiting for web server at http://127.0.0.1:8000 to be available.... Done
+
+
+If you get stuck, we're here to help.  
+Look for answers here: http://docs.splunk.com
+
+The Splunk web interface is at http://splunkenterprise:8000
+
+Listening for Splunk data on TCP port 9997.
+Listening for data on TCP port 1514.
+```
+
+From the host system, _splunkenterprise_ is not a valid host name (but is a valid host name between the docker containers that are composed together).  To see the Splunk UI, navigate to http://localhost:8000.
+
+
