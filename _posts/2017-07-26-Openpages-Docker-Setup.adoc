@@ -199,4 +199,21 @@ The first attribute is _debugMode_, which must be set to _true_ in order to conn
 The second attribute is _debugArgs_.  Set _suspend=y_ if you would like to debug the application as it is starting up.
 The application will wait until the debugger is remotely connected before proceeding to initialize.
 
+*Manually linking sosa.war to your OpenPages development environment*
+
+If you have started a Docker version of OpenPages and have already followed the steps for enabling OpenPages for development as described above, and you do not wish to (or encounter errors when you try to) redeploy the op-apps.ear file, you can manually create a link in the docker container to point the sosa.war file to your development environment, so that when making changes to javascript you can see those changes immediately.
+
+This assumes that the docker image is Linux-based.
+
+```bash
+cd ~/OP/OpenPages/profiles/opapp-OPNode1/installedApps/OpenPagesCell/op-apps.ear/
+~/OP/OpenPages/bin/stopAllServers.sh admin openpages
+mv sosa.war sosa.war.bak
+ln -s ~/shared-workspace/com.ibm.openpages.sosa/sosa/ ./sosa.war
+~/OP/OpenPages/bin/startAllServers.sh
+```
+
+The first step takes you to the current OP deployment's ear folder, where the current sosa.war folder lives, which is being backed up in the third step.  
+After the backup step, step 4 creates the symlink that makes a new sosa.war folder, but one that points to the sosa folder in the web project from your Eclipse workspace.
+
 
