@@ -38,9 +38,9 @@
     <link href="//fonts.googleapis.com/" rel="dns-prefetch">
     <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
 
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1540231430468"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1540231430468"/>
-    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1540231430468"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1542821683860"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1542821683860"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1542821683860"/>
 
 
 
@@ -70,7 +70,7 @@
       GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
     </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1540231430468"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1542821683860"></script>
 
     <link rel="canonical" href="https://scottellis64.github.io/2017/07/26/Openpages-Docker-Setup.html" />
     <meta name="referrer" content="origin" />
@@ -497,6 +497,28 @@ cp ~/shared-devopsworkspace/docker/7.devenv/redeployEAR.sh .</code></pre>
 The second attribute is <em>debugArgs</em>.  Set <em>suspend=y</em> if you would like to debug the application as it is starting up.
 The application will wait until the debugger is remotely connected before proceeding to initialize.</p>
 </div>
+<div class="paragraph">
+<p><strong>Manually linking sosa.war to your OpenPages development environment</strong></p>
+</div>
+<div class="paragraph">
+<p>If you have started a Docker version of OpenPages and have already followed the steps for enabling OpenPages for development as described above, and you do not wish to (or encounter errors when you try to) redeploy the op-apps.ear file, you can manually create a link in the docker container to point the sosa.war file to your development environment, so that when making changes to javascript you can see those changes immediately.</p>
+</div>
+<div class="paragraph">
+<p>This assumes that the docker image is Linux-based.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-bash" data-lang="bash">cd ~/OP/OpenPages/profiles/opapp-OPNode1/installedApps/OpenPagesCell/op-apps.ear/
+~/OP/OpenPages/bin/stopAllServers.sh admin openpages
+mv sosa.war sosa.war.bak
+ln -s ~/shared-workspace/com.ibm.openpages.sosa/sosa/ ./sosa.war
+~/OP/OpenPages/bin/startAllServers.sh</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first step takes you to the current OP deployment&#8217;s ear folder, where the current sosa.war folder lives, which is being backed up in the third step.
+After the backup step, step 4 creates the symlink that makes a new sosa.war folder, but one that points to the sosa folder in the web project from your Eclipse workspace.</p>
+</div>
 </div>
 </div>
           </div>
@@ -557,7 +579,7 @@ The application will wait until the debugger is remotely connected before procee
         hljs.initHighlightingOnLoad();
       </script>
 
-    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1540231430468"></script>
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1542821683860"></script>
 
 
   </body>
