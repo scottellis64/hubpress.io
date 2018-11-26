@@ -27,11 +27,21 @@ The TDI installation files are included with the OP installation media, and can 
 - 7.1.1-TIV-TDI-FP0004.zip
 - TDI_GP_E_V7.1.1_WIN-X86_64.zip
 
+*VirtualBox* 
+
 If installing on a virtual machine, be sure to create a shared folder for transferring files between the host and the virtual appliance.  On my system I created a shared folder called _shared_, and another shared folder that points to the root of the OP workspace called _openpages_.  The names are unimportant.
 
 There are exported Windows VirtualBox VMs in _opserver.swg.usma.ibm.com/Share/Windows IE VM Images_ that can be used for the purpose of TDI development and testing.  The exported VM I use originates from the exported image _Windows Server 2012 - IE 11.ova_ from the aforementioned share folder.  Simply import that into VirtualBox as a new VM.  Be sure to configure the shared folders as described.  
 
 Also, you will need to access the internet from the VM, as you will be connecting to CCH.  You will also need to network to your OpenPages instance running on the Host OS (either directly on the Host OS or in a Docker instance).  If you are running OpenPages on a remote server via the IBM internal network, then be sure to configure a Bridged network connection.  This https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wa37f5439c5fa_480b_92fb_66b4f71bcc50/page/VirtualBox%20Network%20Settings%20for%20OpenPages%20Development[wiki post] describes the VirtualBox networking setup required for OpenPages development and is applicable here as long as the OpenPages installation is on the Host OS (including Docker).  Follow the directions for setting up a _Host Only_ and _NAT Network_.  A bridged adapter will give your VM an actual ip address that can be accessed anywhere on the local network, and will make available to the virtual machine other machines on the same network.
+
+As these instructions are being written, the following network adapters have been established:
+
+1. Adapter 1 - Bridged Adapter - attached to en4: Thunderbolt Ethernet
+2. Adapter 2 - Host-only Adapter - IPv4 Address: 192.168.59.100
+3. Adapter 3 - NAT Network, Network CIDR: 10.0.2.0/24
+
+
 
 Copy the TDI zip files to the shared folder and 
 
