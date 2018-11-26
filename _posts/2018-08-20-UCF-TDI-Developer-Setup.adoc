@@ -43,41 +43,27 @@ As these instructions are being written, the following network adapters have bee
 2. Adapter 2 - Host-only Adapter - IPv4 Address: 192.168.59.100
 3. Adapter 3 - NAT Network, Network CIDR: 10.0.2.0/24
 
-A quick sanity check after starting up Windows is to bring up the command line (PowerShell works too) and type: 
+**Bridged Adapter**
+
+Start the Windows 2012 VM and check ip configuration:
+
 ```
-ipconfig
-
-Ethernet adapter Ethernet 3:
-
-   Connection-specific DNS Suffix  . : usma.ibm.com
-   Link-local IPv6 Address . . . . . : fe80::7d62:20ab:53f9:a7b3%18
-   IPv4 Address. . . . . . . . . . . : 10.0.21.4
-   Subnet Mask . . . . . . . . . . . : 255.255.255.0
-   Default Gateway . . . . . . . . . : 10.0.2.1
-
-Ethernet adapter Ethernet 2:
-
-   Connection-specific DNS Suffix  . :
-   Link-local IPv6 Address . . . . . : fe80::7cce:e9c5:e459:ebb8%17
-   Autoconfiguration IPv4 Address. . : 169.254.235.184
-   Subnet Mask . . . . . . . . . . . : 255.255.0.0
-   Default Gateway . . . . . . . . . :
+ipconfig 
 
 Ethernet adapter Ethernet:
 
    Connection-specific DNS Suffix  . : usma.ibm.com
-   IPv6 Address. . . . . . . . . . . : 2620:1f7:807:870::1:1c7
+   IPv6 Address. . . . . . . . . . . : 2620:1f7:807:870::1:1a7
    Link-local IPv6 Address . . . . . : fe80::648e:8bcd:5977:616d%12
    IPv4 Address. . . . . . . . . . . : 9.32.70.228
    Subnet Mask . . . . . . . . . . . : 255.255.255.0
-   Default Gateway . . . . . . . . . : fe80::2%12
-                                       fe80::1%12
+   Default Gateway . . . . . . . . . : fe80::1%12
+                                       fe80::2%12
                                        9.32.70.1
 ```
 
-The first Ethernet adapter (the listing has them in reverse order) is the bridged adapther, and the ip address should be addressible from any system on the same network.  From the host OS you should be able to successfully ping it:
+On the host OS, test the network connection:
 
-```
 js-macbook-pro:~ sellis$ ping 9.32.70.228
 PING 9.32.70.228 (9.32.70.228): 56 data bytes
 64 bytes from 9.32.70.228: icmp_seq=0 ttl=128 time=0.375 ms
@@ -85,6 +71,10 @@ PING 9.32.70.228 (9.32.70.228): 56 data bytes
 64 bytes from 9.32.70.228: icmp_seq=2 ttl=128 time=0.512 ms
 64 bytes from 9.32.70.228: icmp_seq=3 ttl=128 time=0.391 ms
 ```
+
+**Host-Only Adapter**
+
+_Note that there are issues with this setup that need to be worked out if you desire a static ip address_
 
 The second Ethernet adapter is the Host-only adapter, and as you can see the ipv4 address assigned to it is not the one we specified in VirtualBox settings.  We specified that it should be _192.168.59.100_, but here it has been assigned _169.254.235.184_.  This is only important when a static ip address is necessary for consistency.  The link to network settings above explains in more detail, but the link does not show how to establish a static ip address in Windows (instead it describes the process for RedHat Linux).  
 
@@ -97,8 +87,62 @@ For establishing the required static ip address of _192.168.59.100_ on Ethernet 
   * IP Address: 192.168.59.100
   * Subnet mask: 255.255.255.0
   * Default gateway: 192.168.59.1
-  
-Restart the Windows VM and invoke ipconfig once again from the command line:
+
+**Fixing issues with Host-only and Nat-Network adapters**
+
+In Windows 2012, there are some issues with networking that need to be dealt with before moving on.  If you are only using the bridged adapter, then you might be ok at this point (without having to configure adapters 2 and 3 above) to do the work you need to do with TDI.  If you are trying to establish host-only and nat network adapters, bring up the PowerShell (in Windows 2012) and type type: 
+
+```
+ipconfig /all
+```
+
+Ethernet adapters 2 and 3 might not have the ip addresses that you expect (some output occluded):
+
+```
+Ethernet adapter Ethernet 3:
+
+   IPv4 Address. . . . . . . . . . . : 10.0.21.4(Preferred)
+   Default Gateway . . . . . . . . . : 10.0.2.1
+   DHCP Server . . . . . . . . . . . : 10.0.21.3
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+
+Ethernet adapter Ethernet 2:
+
+   Autoconfiguration IPv4 Address. . : 169.254.235.184
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+```
+
+Ethernet adapter 3 should have an ip address in the 10.0.2.* range, but _10.0.21.4_ has been set.  Adapter 2 should be assigned to exactly _192.168.59.100_ but it has _169.254.235.184_, and notice that the subnet mask is not the expected _255.255.255.0_
+
+To fix this, type:
+
+```
+netsh interface ipv4 show inter
+```
+
+Sample results:
+
+```
+Idx     Met         MTU          State                Name
+---  ----------  ----------  ------------  ---------------------------
+ 12          10        1500  connected     Ethernet
+ 17          10        1500  connected     Ethernet 2
+ 18          10        1500  connected     Ethernet 3
+```
+
+The _Idx_ values are used in the following two commands, executed on the _Ethernet 2_ and _Ethernet 3_ interfaces:
+
+```
+netsh interface ipv4 set interface 17 dadtransmits=0 store=persistent
+netsh interface ipv4 set interface 18 dadtransmits=0 store=persistent
+```
+
+After restarting the VM, _you would hope that_ the ip addresses would be configured correctly, but there are issues.
+
+The Host-only connection with the static IP address seems to be fixed, but it cannot be pinged from the host OS, so some work needs to be done to figure out what is wrong.
+
+See http://lyngtinh.blogspot.com/2011/12/how-to-disable-autoconfiguration-ipv4.html[this] link for information on getting the ethernet adapters working correctly.
+
 
 
 
