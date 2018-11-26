@@ -33,6 +33,8 @@ If installing on a virtual machine, be sure to create a shared folder for transf
 
 There are exported Windows VirtualBox VMs in _opserver.swg.usma.ibm.com/Share/Windows IE VM Images_ that can be used for the purpose of TDI development and testing.  The exported VM I use originates from the exported image _Windows Server 2012 - IE 11.ova_ from the aforementioned share folder.  Simply import that into VirtualBox as a new VM.  Be sure to configure the shared folders as described.  
 
+*VirtualBox Network Settings* 
+
 Also, you will need to access the internet from the VM, as you will be connecting to CCH.  You will also need to network to your OpenPages instance running on the Host OS (either directly on the Host OS or in a Docker instance).  If you are running OpenPages on a remote server via the IBM internal network, then be sure to configure a Bridged network connection.  This https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wa37f5439c5fa_480b_92fb_66b4f71bcc50/page/VirtualBox%20Network%20Settings%20for%20OpenPages%20Development[wiki post] describes the VirtualBox networking setup required for OpenPages development and is applicable here as long as the OpenPages installation is on the Host OS (including Docker).  Follow the directions for setting up a _Host Only_ and _NAT Network_.  A bridged adapter will give your VM an actual ip address that can be accessed anywhere on the local network, and will make available to the virtual machine other machines on the same network.
 
 As these instructions are being written, the following network adapters have been established:
@@ -40,6 +42,63 @@ As these instructions are being written, the following network adapters have bee
 1. Adapter 1 - Bridged Adapter - attached to en4: Thunderbolt Ethernet
 2. Adapter 2 - Host-only Adapter - IPv4 Address: 192.168.59.100
 3. Adapter 3 - NAT Network, Network CIDR: 10.0.2.0/24
+
+A quick sanity check after starting up Windows is to bring up the command line (PowerShell works too) and type: 
+```
+ipconfig
+
+Ethernet adapter Ethernet 3:
+
+   Connection-specific DNS Suffix  . : usma.ibm.com
+   Link-local IPv6 Address . . . . . : fe80::7d62:20ab:53f9:a7b3%18
+   IPv4 Address. . . . . . . . . . . : 10.0.21.4
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.0.2.1
+
+Ethernet adapter Ethernet 2:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::7cce:e9c5:e459:ebb8%17
+   Autoconfiguration IPv4 Address. . : 169.254.235.184
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . : usma.ibm.com
+   IPv6 Address. . . . . . . . . . . : 2620:1f7:807:870::1:1c7
+   Link-local IPv6 Address . . . . . : fe80::648e:8bcd:5977:616d%12
+   IPv4 Address. . . . . . . . . . . : 9.32.70.228
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::2%12
+                                       fe80::1%12
+                                       9.32.70.1
+```
+
+The first Ethernet adapter (the listing has them in reverse order) is the bridged adapther, and the ip address should be addressible from any system on the same network.  From the host OS you should be able to successfully ping it:
+
+```
+js-macbook-pro:~ sellis$ ping 9.32.70.228
+PING 9.32.70.228 (9.32.70.228): 56 data bytes
+64 bytes from 9.32.70.228: icmp_seq=0 ttl=128 time=0.375 ms
+64 bytes from 9.32.70.228: icmp_seq=1 ttl=128 time=0.556 ms
+64 bytes from 9.32.70.228: icmp_seq=2 ttl=128 time=0.512 ms
+64 bytes from 9.32.70.228: icmp_seq=3 ttl=128 time=0.391 ms
+```
+
+The second Ethernet adapter is the Host-only adapter, and as you can see the ipv4 address assigned to it is not the one we specified in VirtualBox settings.  We specified that it should be _192.168.59.100_, but here it has been assigned _169.254.235.184_.  This is only important when a static ip address is necessary for consistency.  The link to network settings above explains in more detail, but the link does not show how to establish a static ip address in Windows (instead it describes the process for RedHat Linux).  
+
+For establishing the required static ip address of _192.168.59.100_ on Ethernet adapter 2, do the following:
+
+- Bring up the Windows Control Panel and select Network and Internet->Network Connections
+- Right click _Ethernet 2_ and choose _Properties_
+- Select _Internet Protocol Version 4 (TCP/IPv4)_ and click on the _Properties_ button
+- In the dialog, choose the radio button _Use the following IP address:_
+  * IP Address: 192.168.59.100
+  * Subnet mask: 255.255.255.0
+  * Default gateway: 192.168.59.1
+  
+Restart the Windows VM and invoke ipconfig once again from the command line:
 
 
 
