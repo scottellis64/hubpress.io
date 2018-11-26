@@ -143,6 +143,11 @@ The Host-only connection with the static IP address seems to be fixed, but it ca
 
 See http://lyngtinh.blogspot.com/2011/12/how-to-disable-autoconfiguration-ipv4.html[this] link for information on getting the ethernet adapters working correctly.
 
+**TDI Installation**
+
+- Copy the downloaded TDI zip files to a local folder on the Windows VM and extract them. 
+- In the _TDI_GP_E_V7.1.1_WIN-X86_64_ folder (created via extraction), execute _Launchpad.exe_
+- Select _Install IBM Tivoli Directory Integrator_ then click the link to launch the product installation.
 
 
 
