@@ -105,6 +105,11 @@ To assign the static ip address, do the following:
   * ip address: _192.168.59.100_
   * subnet mask: _255.255.255.0_
   * default gateway: _192.168.59.1_
+  * Leave all DNS server addresses blank
+- Shut down and restart Windows
+
+
+
 
 **TDI Installation**
 
