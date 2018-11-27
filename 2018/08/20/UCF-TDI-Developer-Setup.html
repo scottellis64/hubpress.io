@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>UCF TDI Developer Setup</title>
+
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta name="description" content="">
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="UCF TDI Developer Setup">
+    <meta name="twitter:description" content="">
+
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="UCF TDI Developer Setup">
+    <meta property="og:description" content="">
+
+    <!-- <meta name="twitter:site" content="">
+
+<meta name="twitter:creator" content="">
+
+<meta name="google-site-verification" content="">
+
+<meta property="fb:admins" content="">
+ -->
+
+    <link href="/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="/apple-touch-icon-precomposed.png" rel="apple-touch-icon">
+
+    <link href="//fonts.googleapis.com/" rel="dns-prefetch">
+    <link href="//fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic|Open+Sans:700,400&subset=latin,latin-ext" rel="stylesheet">
+
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/main.min.css?v=1543352353574"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/custom.css?v=1543352353574"/>
+    <link rel="stylesheet" href="//scottellis64.github.io/themes/ghostium/assets/css/asciidoctor-foundation.css?v=1543352353574"/>
+
+
+
+
+    <script type="text/javascript">
+      var ga_ua = 'UA-XXXXX-X';
+      
+      var disqus_shortname = 'example';
+      
+      var enable_pjax = true;
+
+      // Pace Options
+      // ==============
+      window.paceOptions = {
+        catchupTime: 100,
+        minTime: 100,
+        elements: false,
+        restartOnRequestAfter: 500,
+        startOnPageLoad: false
+      }
+
+      // Ghostium Globals
+      // ==============
+      window.GHOSTIUM = {};
+      GHOSTIUM.haveGA = typeof ga_ua !== 'undefined' && ga_ua !== 'UA-XXXXX-X';
+      GHOSTIUM.haveDisqus = typeof disqus_shortname !== 'undefined' && disqus_shortname !== 'example';
+      GHOSTIUM.enablePjax = typeof enable_pjax !== 'undefined' ? enable_pjax : true;
+    </script>
+
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/head-scripts.min.js?v=1543352353574"></script>
+
+    <link rel="canonical" href="https://scottellis64.github.io/2018/08/20/UCF-TDI-Developer-Setup.html" />
+    <meta name="referrer" content="origin" />
+    
+    <meta property="og:site_name" content="Career Log" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="UCF TDI Developer Setup" />
+    <meta property="og:description" content="Official Docs Introduction OpenPages integrates with UCF Common Controls Hub (referred to hereafter as CCH) to import Authority Documents, Citations and Controls using assembly lines as implemented in TDI (Tivoli Directory Integrator).  UCF stands for Unified Compliance Framework. In a nutshell, CCH determines commonality amongst all controls acro" />
+    <meta property="og:url" content="https://scottellis64.github.io/2018/08/20/UCF-TDI-Developer-Setup.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="UCF TDI Developer Setup" />
+    <meta name="twitter:description" content="Official Docs Introduction OpenPages integrates with UCF Common Controls Hub (referred to hereafter as CCH) to import Authority Documents, Citations and Controls using assembly lines as implemented in TDI (Tivoli Directory Integrator).  UCF stands for Unified Compliance Framework. In a nutshell, CCH determines commonality amongst all controls acro" />
+    <meta name="twitter:url" content="https://scottellis64.github.io/2018/08/20/UCF-TDI-Developer-Setup.html" />
+    
+    <script type="application/ld+json">
+null
+    </script>
+
+    <meta name="generator" content="HubPress" />
+    <link rel="alternate" type="application/rss+xml" title="Career Log" href="https://scottellis64.github.io/rss/" />
+  </head>
+  <body class="post-template">
+
+    <button data-action="open-drawer" id="drawer-button" class="drawer-button"><i class="fa fa-bars"></i></button>
+    <nav tabindex="-1" class="drawer">
+      <div class="drawer-container">
+        <!--.drawer-search(role="search")-->
+        <ul role="navigation" class="drawer-list">
+          
+          <li class="drawer-list-item">
+            <a href="https://scottellis64.github.io" data-pjax>
+              <i class="fa fa-home"></i>Home
+            </a>
+          </li>
+          <!-- <li class="drawer-list-item">
+            <a href="https://scottellis64.github.io" title="Career Log" data-pjax>
+              <i class="fa fa-list-alt"></i>All posts
+            </a>
+          </li> -->
+          <li class="drawer-list-item">
+            <a href="https://scottellis64.github.io/rss/">
+              <i class="fa fa-rss"></i>Subscribe to Feed
+            </a>
+          </li>
+          <li class="drawer-list-divider"></li>
+          <li class="drawer-list-item drawer-list-title">
+            Follow me
+          </li>
+          
+          
+        </ul>
+      </div>
+    </nav>
+
+    <div class="drawer-overlay"></div>
+    <main id="container" role="main" class="container">
+      <div class="surface">
+        <div class="surface-container">
+          <div data-pjax-container class="content">
+            
+<section class="wrapper wrapper-post">
+  <div class="wrapper-container">
+    <article itemscope itemtype="http://schema.org/BlogPosting" role="article" class="post post">
+        <section class="post-container">
+          <header class="post-header">
+            <ul class="post-meta-list">
+              <li class="post-meta-item">
+                <time datetime="2018-08-20" itemprop="datePublished">
+                  3 months ago
+                </time>
+              </li>
+              <li class="post-meta-item">
+                <a href="#disqus_thread" data-disqus-identifier="">Comments</a>
+              </li>
+            </ul>
+            <h1 itemprop="name headline" class="post-title"><a href="https://scottellis64.github.io/2018/08/20/UCF-TDI-Developer-Setup.html" itemprop="url" data-pjax title="UCF TDI Developer Setup">UCF TDI Developer Setup</a></h1>
+            <!--h2 itemprop="about" class="post-subtitle"></h2-->
+          </header>
+          <aside class="post-side">
+            <div class="post-author">
+                <a href="" class="post-author-avatar">
+                  <img src="https://avatars3.githubusercontent.com/u/15571530?v&#x3D;4" alt="Scott Ellis">
+                </a>
+              <div class="post-author-info">
+                <a href="" class="post-author-name">
+                  Scott Ellis
+                </a>
+                <p class="post-author-bio"></p>
+              </div>
+            </div>
+          </aside>
+          <div itemprop="articleBody" class="post-body">
+            <div class="paragraph">
+<p><a href="https://www.ibm.com/support/knowledgecenter/SSFUEU_7.3.0/com.ibm.swg.ba.cognos.op_installation_guide.7.3.0.doc/c_op_ig_ucf_instl.html">Official Docs</a></p>
+</div>
+<div class="paragraph">
+<p><strong>Introduction</strong></p>
+</div>
+<div class="paragraph">
+<p>OpenPages integrates with <a href="https://cch.commoncontrolshub.com">UCF Common Controls Hub</a> (referred to hereafter as CCH) to import Authority Documents, Citations and Controls using assembly lines as implemented in TDI (Tivoli Directory Integrator).  UCF stands for Unified Compliance Framework.</p>
+</div>
+<div class="paragraph">
+<p>In a nutshell, CCH determines commonality amongst all controls across all industry authority documents and combines all of these controls into a single control, then references these common controls across all authority documents instead of duplicating them.  This greatly reduces the amount of time organizations need to spend during compliance.  Once the conditions of a control have been satisfied once, the conditions are satisfied for any and all processes that share that same control.</p>
+</div>
+<div class="paragraph">
+<p>OpenPages has different object type names for the CCH types that are being imported.  The following list shows first the CCH type name and its OpenPages equivalent:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Authority Document &#8594; Mandate</p>
+</li>
+<li>
+<p>Citation &#8594; SubMandate</p>
+</li>
+<li>
+<p>Control &#8594; Requirement</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The process of importing CCH objects into OpenPages begins with executing custom assembly lines in TDI.  To do this, you first need to install TDI on Windows.  If you are using a Mac, then this will describe how to install TDI using VirtualBox.</p>
+</div>
+<div class="paragraph">
+<p><strong>The source code</strong></p>
+</div>
+<div class="paragraph">
+<p>The TDI assembly line that integrates OP and CCH lives in RTC in <em>&lt;workspace_root&gt;/grc_sdi_integrations/ucf_integration</em>.  There you will find a README.txt that describes some of the steps that will be reproduced here.  Once TDI is installed this location will be accessed to import the assembly lines and import or update existing Mandates, SubMandates and Requirements.</p>
+</div>
+<div class="paragraph">
+<p><strong>Installation</strong></p>
+</div>
+<div class="paragraph">
+<p>The TDI installation files are included with the OP installation media, and can be found at <em>opserver.swg.usma.ibm.com/Share/TDI-7.1.1</em>.  The two files you will need are these:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>7.1.1-TIV-TDI-FP0004.zip</p>
+</li>
+<li>
+<p>TDI_GP_E_V7.1.1_WIN-X86_64.zip</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>VirtualBox</strong></p>
+</div>
+<div class="paragraph">
+<p>If installing on a virtual machine, be sure to create a shared folder for transferring files between the host and the virtual appliance.  On my system I created a shared folder called <em>shared</em>, and another shared folder that points to the root of the OP workspace called <em>openpages</em>.  The names are unimportant.</p>
+</div>
+<div class="paragraph">
+<p>There are exported Windows VirtualBox VMs in <em>opserver.swg.usma.ibm.com/Share/Windows IE VM Images</em> that can be used for the purpose of TDI development and testing.  The exported VM I use originates from the exported image <em>Windows 7 IE 9.ova</em> from the aforementioned share folder.  Simply import that into VirtualBox as a new VM.  Be sure to configure the shared folders as described.</p>
+</div>
+<div class="paragraph">
+<p><strong>VirtualBox Network Settings</strong></p>
+</div>
+<div class="paragraph">
+<p>Also, you will need to access the internet from the VM, as you will be connecting to CCH.  You will also need to network to your OpenPages instance running on the Host OS (either directly on the Host OS or in a Docker instance).  If you are running OpenPages on a remote server via the IBM internal network, then be sure to configure a Bridged network connection.  This <a href="https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wa37f5439c5fa_480b_92fb_66b4f71bcc50/page/VirtualBox%20Network%20Settings%20for%20OpenPages%20Development">wiki post</a> describes the VirtualBox networking setup required for OpenPages development and is applicable here as long as the OpenPages installation is on the Host OS (including Docker).  Follow the directions for setting up a <em>Host Only</em> and <em>NAT Network</em>.  A bridged adapter will give your VM an actual ip address that can be accessed anywhere on the local network, and will make available to the virtual machine other machines on the same network.</p>
+</div>
+<div class="paragraph">
+<p>As these instructions are being written, the following network adapters have been established:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Adapter 1 - Bridged Adapter - attached to en4: Thunderbolt Ethernet</p>
+</li>
+<li>
+<p>Adapter 2 - Host-only Adapter - IPv4 Address: 192.168.59.100</p>
+</li>
+<li>
+<p>Adapter 3 - NAT Network, Network CIDR: 10.0.3.0/24</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Start the Windows 7 VM and check ip configuration by typing <em>ipconfig</em> from the powershell.  You will see three ethernet adapters, listed in reverse order from how they match up to the adapters created in the previous step.  The names of these ethernet connections are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><em>Ethernet adapter Local Area Connection</em> - Bridged (Adapter 1)</p>
+</li>
+<li>
+<p><em>Ethernet adapter Local Area Connection 2</em> - Host-only (Adapter 2)</p>
+</li>
+<li>
+<p><em>Ethernet adapter Local Area Connection 3</em> - NAT Network (Adapter 3)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Bridged Adapter</strong></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>ipconfig
+
+Ethernet adapter Local Area Connection:
+
+   Connection-specific DNS Suffix  . : usma.ibm.com
+   IPv6 Address. . . . . . . . . . . : 2620:1f7:807:870::1:17b
+   IPv6 Address. . . . . . . . . . . : 2620:1f7:807:870::1:27b
+   Link-local IPv6 Address . . . . . : fe80::5d4b:18ab:2000:7939%11
+   IPv4 Address. . . . . . . . . . . : 9.32.70.214
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::2%11
+                                       fe80::1%11
+                                       9.32.70.1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bridged adapter is assigned a real IPv4 address that can be accessed from any system on the network.  Test this connection by pinging it from the Host OS:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>js-macbook-pro:7.devenv sellis$ ping 9.32.70.214
+PING 9.32.70.214 (9.32.70.214): 56 data bytes
+64 bytes from 9.32.70.214: icmp_seq=0 ttl=128 time=0.436 ms
+64 bytes from 9.32.70.214: icmp_seq=1 ttl=128 time=0.427 ms
+64 bytes from 9.32.70.214: icmp_seq=2 ttl=128 time=0.399 ms</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If ping does not work, then you may have a firewall issue on the Windows OS.  Try turning off the firewall, or create an exception in the firewall to allow incoming requests on that address.</p>
+</div>
+<div class="paragraph">
+<p><strong>Host-Only Adapter</strong></p>
+</div>
+<div class="paragraph">
+<p>The host-only adapter is a private connection that allows direct access to the Windows 7 VM through a static IP address that we have decided will be <em>192.168.59.100</em>.  That&#8217;s the address we assigned when we created the network adapter in VirtualBox, but the address has to also be configured directly in Windows before it will take effect.  Try <em>ipconfig</em> now and you will see that the ip address is not what we intendip:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Ethernet adapter Local Area Connection 2:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::9407:e95d:b7b8:405d%13
+   Autoconfiguration IPv4 Address. . : 169.254.64.93
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To assign the static ip address, do the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Open the control panel and navigate to <em>Network and Sharing Center</em></p>
+</li>
+<li>
+<p>Click on the link for <em>Local Area Connection 2</em></p>
+</li>
+<li>
+<p>Press the <em>Properties</em> button.</p>
+</li>
+<li>
+<p>Select <em>Internet Protocol Version 4 (TCP/IPv4)</em> and click on <em>Properties</em></p>
+</li>
+<li>
+<p>Select the radio button <em>Use the following IP address:</em></p>
+</li>
+<li>
+<p>Enter the following:</p>
+<div class="ulist">
+<ul>
+<li>
+<p>ip address: <em>192.168.59.100</em></p>
+</li>
+<li>
+<p>subnet mask: <em>255.255.255.0</em></p>
+</li>
+<li>
+<p>default gateway: <em>192.168.59.1</em></p>
+</li>
+<li>
+<p>Leave all DNS server addresses blank</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Shut down and restart Windows</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>If after reboot the ip address still is not the assigned value, then type the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>PS C:\Windows\system32&gt; netsh interface ipv4 show inter
+
+Idx     Met         MTU          State                Name
+---  ----------  ----------  ------------  ---------------------------
+  1          50  4294967295  connected     Loopback Pseudo-Interface 1
+ 11          10        1500  connected     Local Area Connection
+ 13          10        1500  connected     Local Area Connection 2
+ 16          10        1500  connected     Local Area Connection 3</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The index value of <em>Local Area Connection 2</em> is 13, and is used in the following command that turns off autoconfiguration for that network interface:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>netsh interface ipv4 set interface 13 dadtransmits=0 store=persistent</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Reboot and check again with <em>ipconfig</em>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Ethernet adapter Local Area Connection 2:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::9407:e95d:b7b8:405d%13
+   IPv4 Address. . . . . . . . . . . : 192.168.59.100
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.59.1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Who&#8217;d have dreamed it could be so simple?</p>
+</div>
+<div class="paragraph">
+<p><strong>You should be able to ping 192.168.59.100 from the Host OS, but as I recreate the steps, something is stopping this from working.</strong></p>
+</div>
+<div class="paragraph">
+<p><strong>NAT Network Adapter</strong></p>
+</div>
+<div class="paragraph">
+<p>The NAT Network Adapter is a private connection from the Guest OS (Windows 7 in this case) to the Host OS.  This is the 3rd ethernet adapter you see in <em>ipconfig</em>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>Ethernet adapter Local Area Connection 3:
+
+   Connection-specific DNS Suffix  . : usma.ibm.com
+   Link-local IPv6 Address . . . . . : fe80::4899:5a41:a115:b67c%16
+   IPv4 Address. . . . . . . . . . . : 10.0.3.4
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.0.3.1</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>I cannot explain why, but given the information above, you should be able to access web applications that are running locally on the Host OS via the ip address <em>10.0.3.2</em>.  For example, if OpenPages is running in a docker container that is accessible from a browser on the Host OS at <em><a href="https://localhost:10111" class="bare">https://localhost:10111</a></em>, then open a browser in the Windows VM and navigate to <em><a href="https://10.0.3.2:10111" class="bare">https://10.0.3.2:10111</a></em>.</p>
+</div>
+<div class="paragraph">
+<p>You should be presented with the OpenPages login screen.</p>
+</div>
+<div class="paragraph">
+<p><strong>Preparing Openpages to Receive UCF Entities</strong></p>
+</div>
+<div class="paragraph">
+<p>The following information is detailed in official <a href="https://www.ibm.com/support/knowledgecenter/SSFUEU_7.3.0/com.ibm.swg.ba.cognos.op_installation_guide.7.3.0.doc/c_op_ucf_cnfg_op.html">OpenPages documentation</a> but is reproduced here for your happy, one-stop-fun convenience.</p>
+</div>
+<div class="paragraph">
+<p>OpenPages must have a set of business entities that are the parent objects of the UCF entities being imported.  There is also an additional object relationship that needs to be created (<em>SOXBusEntity</em> as a parent to <em>Requirement</em>).  The following steps involve a fastmap and Object Manager.  The sources for both can be found in the <em>ucf_integration/Runtime-ucf_integration</em> folder in the Eclipse workspace.</p>
+</div>
+<div class="paragraph">
+<p><strong>Fastmap Import</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>From the legacy UI, navigate to <em>Reporting&#8594;Fastmap Import</em></p>
+</li>
+<li>
+<p>Click on <em>Choose File</em> and select <em>UCF Entities.xlsx</em> from the <em>ucf_integration/Runtime-ucf_integration</em> folder</p>
+</li>
+<li>
+<p>Click on <em>Import Data</em></p>
+</li>
+<li>
+<p>You should see a message on the page indicating that 34 objects will be created, and 2 will be updated if they contain changes</p>
+</li>
+<li>
+<p>Click on <em>Import Data</em> and wait for completion</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To verify that the objects have indeed been created, navigate to <em>Organization&#8594;Business Entity Overview</em>.  Expand the <em>Library</em> business entity, where you should see a new business entity called <em>UCF</em>, and beneath that <em>Authority Documents</em> and <em>Harmonized Controls</em>, which can both be expanded to see several child entities, all of which can be the parent entities of incoming UCF objects.</p>
+</div>
+<div class="paragraph">
+<p><strong>Object Manager import</strong></p>
+</div>
+<div class="paragraph">
+<p>The explicit directions for this part is explained <a href="https://www.ibm.com/support/knowledgecenter/SSFUEU_7.3.0/com.ibm.swg.ba.cognos.op_installation_guide.7.3.0.doc/t_op_ucf_load_objects.html">here</a>.</p>
+</div>
+<div class="paragraph">
+<p>You will need to transfer the file  <em>ucf_integration/Runtime-ucf_integration/req-op-config.xml</em> to the system where OpenPages is running, to a folder <em>&lt;OP_HOME&gt;/integrations/UCF</em>.  The default docker installation already has this file in that location, so there is no need to transfer the file in that scenario.  Assuming you are running OpenPages on a Docker container, then the following set of commands will get this part done:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>ssh -l opuser -p 24022 localhost
+cd ~/OP/OpenPages/bin
+./ObjectManager.sh l c &lt;admin user&gt; &lt;admin password&gt; ../integrations/UCF req</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When complete, you can verify in OpenPages that the <em>SOXBusEntity</em> is a valid parent of a <em>Requirement</em>.</p>
+</div>
+<div class="paragraph">
+<p><strong>UCF Field Groups</strong></p>
+</div>
+<div class="paragraph">
+<p>You can also verify that the UCF field groups and fields have been created, but those should have already been created in recent versions of OpenPages, and won&#8217;t be detailed here, other than to say the field groups have a prefix of <em>UCF</em>.</p>
+</div>
+<div class="paragraph">
+<p><strong>TDI Installation</strong></p>
+</div>
+<div class="paragraph">
+<p>Now that we have a Windows VM that has access to OpenPages, and OpenPages has been properly prepared to receive UCF objects, we can install TDI and run some assembly lines.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Copy the downloaded TDI zip files to a local folder on the Windows VM and extract them.</p>
+</li>
+<li>
+<p>In the <em>TDI_GP_E_V7.1.1_WIN-X86_64</em> folder (created via extraction), navigate to <em>windows_x86_64</em> and run <em>install_tdiv711_win_x86_64.exe</em> and follow all the prompts</p>
+</li>
+<li>
+<p>After a successful installation, navigate to <em>7.1.1-TIV-TDI-FP0004/7.1.1-TIV-TDI-FP0004</em> and follow the directions in the <em>7.1.1-TIV-TDI-FP0004.README</em>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Importing the OP Assembly Lines</strong></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Run the TDI launcher called <em>Start Configuration Editor</em></p>
+</li>
+<li>
+<p>Select <em>File&#8594;Import&#8230;&#8203;</em> and choose <em>IBM Tivoli Directory Integrator&#8594;Configuration</em></p>
+</li>
+<li>
+<p>With the <em>File</em> radio button selected, click <em>&#8230;&#8203;</em> next to the <em>Configuration File</em> text area and navigate to the <em>openpages</em> shared folder that was made available via the shared folders settings when we created the VM, and find <em>grc_sdi_integrations/ucf_integration/Runtime-ucf_integration/ucf_integration.xml</em>.  Click <em>Open</em>.</p>
+</li>
+<li>
+<p>Click on <em>Finish</em> and give the project a name.  Any name will do. I chose <em>ucf_integration</em>.</p>
+</li>
+<li>
+<p>Click on <em>Finish</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Authentication</strong></p>
+</div>
+<div class="paragraph">
+<p>In order to access CCH we need to get authenticated.  For testing we use a corporate account, and for those credentials you will need to get them from Christophe.  There are individual accounts as well that can be obtained via the CCH support staff, but the details are fuzzy right now on how to obtain them.  It used to be that you could go to the CCH Slack channel and get it taken care of, but now things have changed.  Regardless, this one is something you&#8217;ll have to work out by starting with Christophe.</p>
+</div>
+<div class="paragraph">
+<p>You&#8217;ll need a user (which is the email address) and the associated password.  With the login, you can get into the <a href="https://cch.commoncontrolshub.com/account-login.php">CCH website</a> and acquire an API token from <em>Settings&#8594;API Manager&#8594;API Keys</em>.  The api key will be applied to <em>password.properties</em> in TDI as described below.</p>
+</div>
+<div class="paragraph">
+<p>Then you&#8217;ll need the OpenPages user and password.  That should be much simpler to get.</p>
+</div>
+<div class="paragraph">
+<p>To get the credentials into your TDI project, quit the TDI editor and copy a set of files either from your OpenPages installation or from the Eclipse workspace via the VM share.  The OP installation location comes from the same location as the <em>ucf_integration.xml</em> file we just imported into TDI (<em>grc_sdi_integrations/ucf_integration/Runtime-ucf_integration</em>.  If you are on the VM as described here, the files can be found at <em>&lt;openpages share drive letter&gt;:\grc_sdi_integrations\ucf_integration\Runtime-ucf_integration</em>.</p>
+</div>
+<div class="paragraph">
+<p>The following files should be copied into your TDI workspace root (I accepted the default location when installing TDI, and that location is <em>C:\Users\scottell\Documents\TDI\workspace\ucf_integration\Runtime-ucf_integration</em>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>op_client.properties</p>
+</li>
+<li>
+<p>passwords.properties</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Now do the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>After copying the files to your workspace, start TDI again.</p>
+</li>
+<li>
+<p>Navigate from the project root to Resources&#8594;Properties and edit the <em>op_client</em> properties.</p>
+</li>
+<li>
+<p>Set the OpenPages user name in the <em>Local Value</em> field for <em>op_user</em></p>
+</li>
+<li>
+<p>Modify the <em>op_url</em> field to indicate the host ip address of the actual OP server.  In the case of the VM we&#8217;ve set up here, the ip address is <em>10.0.3.2</em></p>
+</li>
+<li>
+<p>Click <em>Send properties to Server</em></p>
+</li>
+<li>
+<p>Save the properties file (ctrl-s)</p>
+</li>
+<li>
+<p>Edit the <em>passwords</em> properties in the same folder</p>
+</li>
+<li>
+<p>Enter a valid value for the OpenPages password in <em>op_password</em></p>
+</li>
+<li>
+<p>Enter the UCF API token in <em>ucf_api_token</em></p>
+</li>
+<li>
+<p>Click <em>Send properties to Server</em></p>
+</li>
+<li>
+<p>Save the properties file (ctrl-s)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><strong>Running the Assembly Lines</strong></p>
+</div>
+<div class="paragraph">
+<p>Running the assembly lines is the final step, and if you&#8217;ve made it this far then you are a brave soul.  The first assembly line to run is called <em>UCF_Authority_Documents_to_OP_Mandates</em>.  Double click this assembly line in the TDI Navigator panel.</p>
+</div>
+<div class="paragraph">
+<p>The assembly line works by acquiring a list of authority documents from CCH as identified by the API Token we applied to the <em>passwords</em> properties.  The authority documents are chosen as only those that have been shared.  You can see this on the CCH website by navigating to <em>Workspace&#8594;Manage Your Saved Lists</em>.  Here you will see the lists that are included.  By editing a shared list, and toggling the radio button <em>Show Selected Documents in a Hierarchy</em>, you can see the complete listing of all authority documents that are part of the shared list.</p>
+</div>
+<div class="paragraph">
+<p>So for a quick test, choose a list with only a single, and small, authority document.  For my test I am choosing <em>ISO 13335-1</em>, authority document id: <em>0000084</em>.  I&#8217;ve ensured that no other list is shared, and I&#8217;ve created (or in this case, shared an existing) list with only this single authority document in it.</p>
+</div>
+<div class="paragraph">
+<p>Once done, actually run the assembly line.</p>
+</div>
+<div class="paragraph">
+<p>With the <em>UCF_Authority_Documents_to_OP_Mandates</em> selected, click on <em>Run in console</em> and pray for a miracle.</p>
+</div>
+<div class="paragraph">
+<p>If your OP url is secured via https, the first attempt to run will fail with an error the looks like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>15:09:19,613 ERROR - CTGDIS077I Failed with error: You must restart the SDI server in order for the imported certificate to be trusted..</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Restart TDI and try the assembly line again.</p>
+</div>
+<div class="paragraph">
+<p>Here is the output from a successful run:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>15:19:23,082 INFO - Loading Authority Document List for id 6442
+15:19:23,707 INFO  - CTGDIS087I Iterating.
+15:19:23,722 INFO - Processing Authority Document 84, 1 of 1
+15:19:35,332 INFO - OpenPages Connector version: 20160812 1050
+15:19:35,347 INFO - Object is Mandate and object id is 79
+15:19:35,347 INFO - The OpenPages Connector configuration properties used for this instance are:
+	URL (op_url):                          https://10.0.3.2:10111/grc/api
+	User Id (op_username):                 OpenPagesAdministrator
+	GRC Object (op_object):                Mandate
+	Query (op_query):                      null
+	Parent Object Type (op_parentType):    SOXBusEntity
+	Parent Object Location (op_parentLoc):
+	Debug log (op_deBug):                  false
+	URI Root (op_root):                    /grc/api
+	SMTP Host (smtpHost):
+	SMTP Port (smtpPort):                  25
+	Mail To (mailTo):
+15:19:47,441 INFO - Using the primaryParentId value '5802' derived from the feed's parentType and parentLocation values.
+15:19:48,769 INFO - Created new Mandate object named 'UCF-AD-0000084'
+15:19:48,769 INFO  - CTGDIS088I Finished iterating.
+15:19:48,769 INFO  - CTGDIS100I Printing the Connector statistics.
+15:19:48,769 INFO  -  [UcfAuthorityDocumentFeed] Get:1
+15:19:48,769 INFO  -  [Get parent business entity resource id and location] Lookup:1
+15:19:48,769 INFO  -  [OpenPagesConnector] Lookup:1, Add:1
+15:19:48,785 INFO  - CTGDIS104I Total: Get:1, Lookup:2, Add:1.
+15:19:48,785 INFO  - CTGDIS101I Finished printing the Connector statistics.
+15:19:48,785 INFO  - CTGDIS080I Terminated successfully (0 errors).</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Run the other two assembly lines in this order:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>UCF_Citations_to_OP_Submandates</p>
+</li>
+<li>
+<p>UCF_Controls_to_OP_Requirements</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><strong>Development</strong></p>
+</div>
+<div class="paragraph">
+<p>Finding learning resources for TDI is challenging</p>
+</div>
+          </div>
+          <footer class="post-footer">
+            <div itemprop="author" itemscope itemtype="http://schema.org/Person" class="post-author">
+                <a href="" class="post-author-avatar">
+                  <img itemprop="image" src="https://avatars3.githubusercontent.com/u/15571530?v&#x3D;4" alt="Scott Ellis">
+                </a>
+              <div class="post-author-info">
+                <h4 class="post-footer-heading">Written By</h4>
+                <a href="" itemprop="url" class="post-author-name">
+                  <span itemprop="name">Scott Ellis</span>
+                </a>
+                <p itemprop="description" class="post-author-bio"></p>
+                  <p class="post-author-location">Littleton, MA</p>
+                <p class="post-info">
+                  <b class="post-info-title">Published on</b>
+                  <time class="post-date">August 20, 2018</time>
+                </p>
+              </div>
+            </div>
+            <div class="post-social">
+              <h4 class="post-footer-heading">Spread the word</h4>
+              <a href="#" data-action="share-twitter"><i class="fa fa-fw fa-lg fa-twitter"></i></a>
+              <a href="#" data-action="share-facebook"><i class="fa fa-fw fa-lg fa-facebook"></i></a>
+              <a href="#" data-action="share-gplus"><i class="fa fa-fw fa-lg fa-google-plus"></i></a>
+            </div>
+          </footer>
+        </section>
+      <section itemprop="comment" class="post-comments">
+        <div id="disqus_thread"></div>
+      </section>
+    </article>
+
+    <footer role="contentinfo" class="footer">
+      <p><small>Copyright &copy; <span itemprop="copyrightHolder">Career Log</span>. 2018. All Rights Reserved.</small></p>
+      <p><small>Published with <a href="http://hubpress.io">HubPress</a></small></p>
+    </footer>
+  </div>
+</section>
+
+
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.min.js?v="></script> <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.4/highlight.min.js?v="></script> 
+      <script type="text/javascript">
+        jQuery( document ).ready(function() {
+          // change date with ago
+          jQuery('ago.ago').each(function(){
+            var element = jQuery(this).parent();
+            element.html( moment(element.text()).fromNow());
+          });
+        });
+
+        hljs.initHighlightingOnLoad();
+      </script>
+
+    <script src="//scottellis64.github.io/themes/ghostium/assets/js/foot-scripts.min.js?v=1543352353574"></script>
+
+
+  </body>
+</html>
