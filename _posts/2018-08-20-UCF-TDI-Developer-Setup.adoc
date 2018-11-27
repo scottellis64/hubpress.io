@@ -124,9 +124,22 @@ Idx     Met         MTU          State                Name
 The index value of _Local Area Connection 2_ is 13, and is used in the following command that turns off autoconfiguration for that network interface:
 
 ```
-netsh interface ipv4
+netsh interface ipv4 set interface 13 dadtransmits=0 store=persistent
 ```
 
+Reboot and check again with _ipconfig_:
+
+```
+Ethernet adapter Local Area Connection 2:
+
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::9407:e95d:b7b8:405d%13
+   IPv4 Address. . . . . . . . . . . : 192.168.59.100
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 192.168.59.1
+```
+
+Who'd have dreamed it could be so simple?
 
 **TDI Installation**
 
