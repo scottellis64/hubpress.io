@@ -244,6 +244,61 @@ Now do the following:
 
 Running the assembly lines is the final step, and if you've made it this far then you are a brave soul.  The first assembly line to run is called _UCF_Authority_Documents_to_OP_Mandates_.  Double click this assembly line in the TDI Navigator panel.
 
+The assembly line works by acquiring a list of authority documents from CCH as identified by the API Token we applied to the _passwords_ properties.  The authority documents are chosen as only those that have been shared.  You can see this on the CCH website by navigating to _Workspace->Manage Your Saved Lists_.  Here you will see the lists that are included.  By editing a shared list, and toggling the radio button _Show Selected Documents in a Hierarchy_, you can see the complete listing of all authority documents that are part of the shared list.  
+
+So for a quick test, choose a list with only a single, and small, authority document.  For my test I am choosing _ISO 13335-1_, authority document id: _0000084_.  I've ensured that no other list is shared, and I've created (or in this case, shared an existing) list with only this single authority document in it.
+
+Once done, actually run the assembly line.
+
+With the _UCF_Authority_Documents_to_OP_Mandates_ selected, click on _Run in console_ and pray for a miracle.
+
+If your OP url is secured via https, the first attempt to run will fail with an error the looks like this:
+
+```
+15:09:19,613 ERROR - CTGDIS077I Failed with error: You must restart the SDI server in order for the imported certificate to be trusted..
+```
+
+Restart TDI and try the assembly line again.
+
+Here is the output from a successful run:
+
+```
+15:19:23,082 INFO - Loading Authority Document List for id 6442
+15:19:23,707 INFO  - CTGDIS087I Iterating.
+15:19:23,722 INFO - Processing Authority Document 84, 1 of 1
+15:19:35,332 INFO - OpenPages Connector version: 20160812 1050
+15:19:35,347 INFO - Object is Mandate and object id is 79
+15:19:35,347 INFO - The OpenPages Connector configuration properties used for this instance are:
+	URL (op_url):                          https://10.0.3.2:10111/grc/api
+	User Id (op_username):                 OpenPagesAdministrator
+	GRC Object (op_object):                Mandate
+	Query (op_query):                      null
+	Parent Object Type (op_parentType):    SOXBusEntity
+	Parent Object Location (op_parentLoc): 
+	Debug log (op_deBug):                  false
+	URI Root (op_root):                    /grc/api
+	SMTP Host (smtpHost):                  
+	SMTP Port (smtpPort):                  25
+	Mail To (mailTo):
+15:19:47,441 INFO - Using the primaryParentId value '5802' derived from the feed's parentType and parentLocation values.
+15:19:48,769 INFO - Created new Mandate object named 'UCF-AD-0000084'
+15:19:48,769 INFO  - CTGDIS088I Finished iterating.
+15:19:48,769 INFO  - CTGDIS100I Printing the Connector statistics.
+15:19:48,769 INFO  -  [UcfAuthorityDocumentFeed] Get:1
+15:19:48,769 INFO  -  [Get parent business entity resource id and location] Lookup:1
+15:19:48,769 INFO  -  [OpenPagesConnector] Lookup:1, Add:1
+15:19:48,785 INFO  - CTGDIS104I Total: Get:1, Lookup:2, Add:1.
+15:19:48,785 INFO  - CTGDIS101I Finished printing the Connector statistics.
+15:19:48,785 INFO  - CTGDIS080I Terminated successfully (0 errors).
+```
+
+Run the other two assembly lines in this order:
+
+1. UCF_Citations_to_OP_Submandates
+2. UCF_Controls_to_OP_Requirements
+
+**Development**
+
 
 
 
