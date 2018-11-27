@@ -161,6 +161,40 @@ I cannot explain why, but given the information above, you should be able to acc
 
 You should be presented with the OpenPages login screen.
 
+**Preparing Openpages to Receive UCF Entities**
+
+The following information is detailed in official https://www.ibm.com/support/knowledgecenter/SSFUEU_7.3.0/com.ibm.swg.ba.cognos.op_installation_guide.7.3.0.doc/c_op_ucf_cnfg_op.html[OpenPages documentation] but is reproduced here for your happy, one-stop-fun convenience.
+
+OpenPages must have a set of business entities that are the parent objects of the UCF entities being imported.  There is also an additional object relationship that needs to be created (_SOXBusEntity_ as a parent to _Requirement_).  The following steps involve a fastmap and Object Manager.  The sources for both can be found in the _ucf_integration/Runtime-ucf_integration_ folder in the Eclipse workspace.
+
+**Fastmap Import**
+
+- From the legacy UI, navigate to _Reporting->Fastmap Import_
+- Click on _Choose File_ and select _UCF Entities.xlsx_ from the _ucf_integration/Runtime-ucf_integration_ folder
+- Click on _Import Data_
+- You should see a message on the page indicating that 34 objects will be created, and 2 will be updated if they contain changes
+- Click on _Import Data_ and wait for completion
+
+To verify that the objects have indeed been created, navigate to _Organization->Business Entity Overview_.  Expand the _Library_ business entity, where you should see a new business entity called _UCF_, and beneath that _Authority Documents_ and _Harmonized Controls_, which can both be expanded to see several child entities, all of which can be the parent entities of incoming UCF objects.
+
+**Object Manager import**
+
+The explicit directions for this part is explained https://www.ibm.com/support/knowledgecenter/SSFUEU_7.3.0/com.ibm.swg.ba.cognos.op_installation_guide.7.3.0.doc/t_op_ucf_load_objects.html[here].
+
+You will need to transfer the file  _ucf_integration/Runtime-ucf_integration/req-op-config.xml_ to the system where OpenPages is running, to a folder _<OP_HOME>/integrations/UCF_.  The default docker installation already has this file in that location, so there is no need to transfer the file in that scenario.  Assuming you are running OpenPages on a Docker container, then the following set of commands will get this part done:
+
+```
+ssh -l opuser -p 24022 localhost
+cd ~/OP/OpenPages/bin
+./ObjectManager.sh l c <admin user> <admin password> ../integrations/UCF req
+```
+
+When complete, you can verify in OpenPages that the _SOXBusEntity_ is a valid parent of a _Requirement_.
+
+**UCF Field Groups**
+
+You can also verify that the UCF field groups and fields have been created, but those should have already been created in recent versions of OpenPages, and won't be detailed here, other than to say the field groups have a prefix of _UCF_.
+
 **TDI Installation**
 
 Now that we have a Windows VM that has access to OpenPages, we can install TDI and run some assembly lines.
