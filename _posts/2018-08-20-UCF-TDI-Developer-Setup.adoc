@@ -41,7 +41,7 @@ As these instructions are being written, the following network adapters have bee
 
 1. Adapter 1 - Bridged Adapter - attached to en4: Thunderbolt Ethernet
 2. Adapter 2 - Host-only Adapter - IPv4 Address: 192.168.59.100
-3. Adapter 3 - NAT Network, Network CIDR: 10.0.2.0/24
+3. Adapter 3 - NAT Network, Network CIDR: 10.0.3.0/24
 
 Start the Windows 7 VM and check ip configuration by typing _ipconfig_ from the powershell.  You will see three ethernet adapters, listed in reverse order from how they match up to the adapters created in the previous step.  The names of these ethernet connections are:
 
@@ -141,7 +141,29 @@ Ethernet adapter Local Area Connection 2:
 
 Who'd have dreamed it could be so simple?
 
+*You should be able to ping 192.168.59.100 from the Host OS, but as I recreate the steps, something is stopping this from working.*
+
+**NAT Network Adapter**
+
+The NAT Network Adapter is a private connection from the Guest OS (Windows 7 in this case) to the Host OS.  This is the 3rd ethernet adapter you see in _ipconfig_:
+
+```
+Ethernet adapter Local Area Connection 3:
+
+   Connection-specific DNS Suffix  . : usma.ibm.com
+   Link-local IPv6 Address . . . . . : fe80::4899:5a41:a115:b67c%16
+   IPv4 Address. . . . . . . . . . . : 10.0.3.4
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : 10.0.3.1
+```
+
+I cannot explain why, but given the information above, you should be able to access web applications that are running locally on the Host OS via the ip address _10.0.3.2_.  For example, if OpenPages is running in a docker container that is accessible from a browser on the Host OS at _https://localhost:10111_, then open a browser in the Windows VM and navigate to _https://10.0.3.2:10111_.  
+
+You should be presented with the OpenPages login screen.
+
 **TDI Installation**
+
+Now that we have a Windows VM that has access to OpenPages, we can install TDI and run some assembly lines.
 
 - Copy the downloaded TDI zip files to a local folder on the Windows VM and extract them. 
 - In the _TDI_GP_E_V7.1.1_WIN-X86_64_ folder (created via extraction), execute _Launchpad.exe_
