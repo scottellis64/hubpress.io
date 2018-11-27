@@ -1,0 +1,160 @@
+= TDI Setup in Windows 2012 =
+
+Keeping this for posterity.  Installing TDI on a Windows 2012 VM has networking issues that are not easy to work out.
+
+https://www.ibm.com/support/knowledgecenter/SSFUEU_7.3.0/com.ibm.swg.ba.cognos.op_installation_guide.7.3.0.doc/c_op_ig_ucf_instl.html[Official Docs]
+
+*Introduction*
+
+OpenPages integrates with https://cch.commoncontrolshub.com[UCF Common Controls Hub] (referred to hereafter as CCH) to import Authority Documents, Citations and Controls using assembly lines as implemented in TDI (Tivoli Directory Integrator).  UCF stands for Unified Compliance Framework.
+
+In a nutshell, CCH determines commonality amongst all controls across all industry authority documents and combines all of these controls into a single control, then references these common controls across all authority documents instead of duplicating them.  This greatly reduces the amount of time organizations need to spend during compliance.  Once the conditions of a control have been satisfied once, the conditions are satisfied for any and all processes that share that same control.
+
+OpenPages has different object type names for the CCH types that are being imported.  The following list shows first the CCH type name and its OpenPages equivalent:
+
+- Authority Document -> Mandate
+- Citation -> SubMandate
+- Control -> Requirement
+
+The process of importing CCH objects into OpenPages begins with executing custom assembly lines in TDI.  To do this, you first need to install TDI on Windows.  If you are using a Mac, then this will describe how to install TDI using VirtualBox.
+
+*The source code*
+
+The TDI assembly line that integrates OP and CCH lives in RTC in _<workspace_root>/grc_sdi_integrations/ucf_integration_.  There you will find a README.txt that describes some of the steps that will be reproduced here.  Once TDI is installed this location will be accessed to import the assembly lines and import or update existing Mandates, SubMandates and Requirements.
+
+*Installation*
+
+The TDI installation files are included with the OP installation media, and can be found at _opserver.swg.usma.ibm.com/Share/TDI-7.1.1_.  The two files you will need are these:
+
+- 7.1.1-TIV-TDI-FP0004.zip
+- TDI_GP_E_V7.1.1_WIN-X86_64.zip
+
+*VirtualBox* 
+
+If installing on a virtual machine, be sure to create a shared folder for transferring files between the host and the virtual appliance.  On my system I created a shared folder called _shared_, and another shared folder that points to the root of the OP workspace called _openpages_.  The names are unimportant.
+
+There are exported Windows VirtualBox VMs in _opserver.swg.usma.ibm.com/Share/Windows IE VM Images_ that can be used for the purpose of TDI development and testing.  The exported VM I use originates from the exported image _Windows Server 2012 - IE 11.ova_ from the aforementioned share folder.  Simply import that into VirtualBox as a new VM.  Be sure to configure the shared folders as described.  
+
+*VirtualBox Network Settings* 
+
+Also, you will need to access the internet from the VM, as you will be connecting to CCH.  You will also need to network to your OpenPages instance running on the Host OS (either directly on the Host OS or in a Docker instance).  If you are running OpenPages on a remote server via the IBM internal network, then be sure to configure a Bridged network connection.  This https://w3-connections.ibm.com/wikis/home?lang=en-us#!/wiki/Wa37f5439c5fa_480b_92fb_66b4f71bcc50/page/VirtualBox%20Network%20Settings%20for%20OpenPages%20Development[wiki post] describes the VirtualBox networking setup required for OpenPages development and is applicable here as long as the OpenPages installation is on the Host OS (including Docker).  Follow the directions for setting up a _Host Only_ and _NAT Network_.  A bridged adapter will give your VM an actual ip address that can be accessed anywhere on the local network, and will make available to the virtual machine other machines on the same network.
+
+As these instructions are being written, the following network adapters have been established:
+
+1. Adapter 1 - Bridged Adapter - attached to en4: Thunderbolt Ethernet
+2. Adapter 2 - Host-only Adapter - IPv4 Address: 192.168.59.100
+3. Adapter 3 - NAT Network, Network CIDR: 10.0.2.0/24
+
+**Bridged Adapter**
+
+Start the Windows 2012 VM and check ip configuration:
+
+```
+ipconfig 
+
+Ethernet adapter Ethernet:
+
+   Connection-specific DNS Suffix  . : usma.ibm.com
+   IPv6 Address. . . . . . . . . . . : 2620:1f7:807:870::1:1a7
+   Link-local IPv6 Address . . . . . : fe80::648e:8bcd:5977:616d%12
+   IPv4 Address. . . . . . . . . . . : 9.32.70.228
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+   Default Gateway . . . . . . . . . : fe80::1%12
+                                       fe80::2%12
+                                       9.32.70.1
+```
+
+On the host OS, test the network connection:
+
+js-macbook-pro:~ sellis$ ping 9.32.70.228
+PING 9.32.70.228 (9.32.70.228): 56 data bytes
+64 bytes from 9.32.70.228: icmp_seq=0 ttl=128 time=0.375 ms
+64 bytes from 9.32.70.228: icmp_seq=1 ttl=128 time=0.556 ms
+64 bytes from 9.32.70.228: icmp_seq=2 ttl=128 time=0.512 ms
+64 bytes from 9.32.70.228: icmp_seq=3 ttl=128 time=0.391 ms
+```
+
+**Host-Only Adapter**
+
+_Note that there are issues with this setup that need to be worked out if you desire a static ip address_
+
+The second Ethernet adapter is the Host-only adapter, and as you can see the ipv4 address assigned to it is not the one we specified in VirtualBox settings.  We specified that it should be _192.168.59.100_, but here it has been assigned _169.254.235.184_.  This is only important when a static ip address is necessary for consistency.  The link to network settings above explains in more detail, but the link does not show how to establish a static ip address in Windows (instead it describes the process for RedHat Linux).  
+
+For establishing the required static ip address of _192.168.59.100_ on Ethernet adapter 2, do the following:
+
+- Bring up the Windows Control Panel and select Network and Internet->Network Connections
+- Right click _Ethernet 2_ and choose _Properties_
+- Select _Internet Protocol Version 4 (TCP/IPv4)_ and click on the _Properties_ button
+- In the dialog, choose the radio button _Use the following IP address:_
+  * IP Address: 192.168.59.100
+  * Subnet mask: 255.255.255.0
+  * Default gateway: 192.168.59.1
+
+**Fixing issues with Host-only and Nat-Network adapters**
+
+In Windows 2012, there are some issues with networking that need to be dealt with before moving on.  If you are only using the bridged adapter, then you might be ok at this point (without having to configure adapters 2 and 3 above) to do the work you need to do with TDI.  If you are trying to establish host-only and nat network adapters, bring up the PowerShell (in Windows 2012) and type type: 
+
+```
+ipconfig /all
+```
+
+Ethernet adapters 2 and 3 might not have the ip addresses that you expect (some output occluded):
+
+```
+Ethernet adapter Ethernet 3:
+
+   IPv4 Address. . . . . . . . . . . : 10.0.21.4(Preferred)
+   Default Gateway . . . . . . . . . : 10.0.2.1
+   DHCP Server . . . . . . . . . . . : 10.0.21.3
+   Subnet Mask . . . . . . . . . . . : 255.255.255.0
+
+Ethernet adapter Ethernet 2:
+
+   Autoconfiguration IPv4 Address. . : 169.254.235.184
+   Subnet Mask . . . . . . . . . . . : 255.255.0.0
+```
+
+Ethernet adapter 3 should have an ip address in the 10.0.2.* range, but _10.0.21.4_ has been set.  Adapter 2 should be assigned to exactly _192.168.59.100_ but it has _169.254.235.184_, and notice that the subnet mask is not the expected _255.255.255.0_
+
+To fix this, type:
+
+```
+netsh interface ipv4 show inter
+```
+
+Sample results:
+
+```
+Idx     Met         MTU          State                Name
+---  ----------  ----------  ------------  ---------------------------
+ 12          10        1500  connected     Ethernet
+ 17          10        1500  connected     Ethernet 2
+ 18          10        1500  connected     Ethernet 3
+```
+
+The _Idx_ values are used in the following two commands, executed on the _Ethernet 2_ and _Ethernet 3_ interfaces:
+
+```
+netsh interface ipv4 set interface 17 dadtransmits=0 store=persistent
+netsh interface ipv4 set interface 18 dadtransmits=0 store=persistent
+```
+
+After restarting the VM, _you would hope that_ the ip addresses would be configured correctly, but there are issues.
+
+The Host-only connection with the static IP address seems to be fixed, but it cannot be pinged from the host OS, so some work needs to be done to figure out what is wrong.
+
+See http://lyngtinh.blogspot.com/2011/12/how-to-disable-autoconfiguration-ipv4.html[this] link for information on getting the ethernet adapters working correctly.
+
+**TDI Installation**
+
+- Copy the downloaded TDI zip files to a local folder on the Windows VM and extract them. 
+- In the _TDI_GP_E_V7.1.1_WIN-X86_64_ folder (created via extraction), execute _Launchpad.exe_
+- Select _Install IBM Tivoli Directory Integrator_ then click the link to launch the product installation.
+
+
+
+Copy the TDI zip files to the shared folder and 
+
+- Fastmap import _UCF Entities.xlsx_ from grc_sdi_integrations/ucf_integration/support
+- Might have to run ObjectManager on req-op-config.xml
+
