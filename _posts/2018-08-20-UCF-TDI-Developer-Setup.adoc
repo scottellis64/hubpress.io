@@ -197,16 +197,22 @@ You can also verify that the UCF field groups and fields have been created, but 
 
 **TDI Installation**
 
-Now that we have a Windows VM that has access to OpenPages, we can install TDI and run some assembly lines.
+Now that we have a Windows VM that has access to OpenPages, and OpenPages has been properly prepared to receive UCF objects, we can install TDI and run some assembly lines.
 
 - Copy the downloaded TDI zip files to a local folder on the Windows VM and extract them. 
-- In the _TDI_GP_E_V7.1.1_WIN-X86_64_ folder (created via extraction), execute _Launchpad.exe_
-- Select _Install IBM Tivoli Directory Integrator_ then click the link to launch the product installation.
+- In the _TDI_GP_E_V7.1.1_WIN-X86_64_ folder (created via extraction), navigate to _windows_x86_64_ and run _install_tdiv711_win_x86_64.exe_ and follow all the prompts
+- After a successful installation, navigate to _7.1.1-TIV-TDI-FP0004/7.1.1-TIV-TDI-FP0004_ and follow the directions in the _7.1.1-TIV-TDI-FP0004.README_.  
+
+**Finally running the assembly lines**
+
+- Run the TDI launcher called _Start Configuration Editor_
+- Select _File->Import..._ and choose _IBM Tivoli Directory Integrator->Configuration_
+- With the _File_ radio button selected, click _..._ next to the _Configuration File_ text area and navigate to the _openpages_ shared folder that was made available via the shared folders settings when we created the VM, and find _grc_sdi_integrations/ucf_integration/Runtime-ucf_integration/ucf_integration.xml_.  Click _Open_.
+- Click on _Finish_ and give the project a name.  Any name will do. I chose _ucf_integration_.
+- Click on _Finish_
 
 
 
-Copy the TDI zip files to the shared folder and 
 
-- Fastmap import _UCF Entities.xlsx_ from grc_sdi_integrations/ucf_integration/support
-- Might have to run ObjectManager on req-op-config.xml
+
 
