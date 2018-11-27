@@ -108,7 +108,24 @@ To assign the static ip address, do the following:
   * Leave all DNS server addresses blank
 - Shut down and restart Windows
 
+If after reboot the ip address still is not the assigned value, then type the following:
 
+```
+PS C:\Windows\system32> netsh interface ipv4 show inter
+
+Idx     Met         MTU          State                Name
+---  ----------  ----------  ------------  ---------------------------
+  1          50  4294967295  connected     Loopback Pseudo-Interface 1
+ 11          10        1500  connected     Local Area Connection
+ 13          10        1500  connected     Local Area Connection 2
+ 16          10        1500  connected     Local Area Connection 3
+```
+
+The index value of _Local Area Connection 2_ is 13, and is used in the following command that turns off autoconfiguration for that network interface:
+
+```
+netsh interface ipv4
+```
 
 
 **TDI Installation**
