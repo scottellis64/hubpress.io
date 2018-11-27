@@ -31,7 +31,7 @@ The TDI installation files are included with the OP installation media, and can 
 
 If installing on a virtual machine, be sure to create a shared folder for transferring files between the host and the virtual appliance.  On my system I created a shared folder called _shared_, and another shared folder that points to the root of the OP workspace called _openpages_.  The names are unimportant.
 
-There are exported Windows VirtualBox VMs in _opserver.swg.usma.ibm.com/Share/Windows IE VM Images_ that can be used for the purpose of TDI development and testing.  The exported VM I use originates from the exported image _Windows Server 2012 - IE 11.ova_ from the aforementioned share folder.  Simply import that into VirtualBox as a new VM.  Be sure to configure the shared folders as described.  
+There are exported Windows VirtualBox VMs in _opserver.swg.usma.ibm.com/Share/Windows IE VM Images_ that can be used for the purpose of TDI development and testing.  The exported VM I use originates from the exported image _Windows 7 IE 9.ova_ from the aforementioned share folder.  Simply import that into VirtualBox as a new VM.  Be sure to configure the shared folders as described.  
 
 *VirtualBox Network Settings* 
 
@@ -43,105 +43,68 @@ As these instructions are being written, the following network adapters have bee
 2. Adapter 2 - Host-only Adapter - IPv4 Address: 192.168.59.100
 3. Adapter 3 - NAT Network, Network CIDR: 10.0.2.0/24
 
+Start the Windows 7 VM and check ip configuration by typing _ipconfig_ from the powershell.  You will see three ethernet adapters, listed in reverse order from how they match up to the adapters created in the previous step.  The names of these ethernet connections are:
+
+- _Ethernet adapter Local Area Connection_ - Bridged (Adapter 1)
+- _Ethernet adapter Local Area Connection 2_ - Host-only (Adapter 2)
+- _Ethernet adapter Local Area Connection 3_ - NAT Network (Adapter 3)
+
 **Bridged Adapter**
 
-Start the Windows 2012 VM and check ip configuration:
 
 ```
 ipconfig 
 
-Ethernet adapter Ethernet:
+Ethernet adapter Local Area Connection:
 
    Connection-specific DNS Suffix  . : usma.ibm.com
-   IPv6 Address. . . . . . . . . . . : 2620:1f7:807:870::1:1a7
-   Link-local IPv6 Address . . . . . : fe80::648e:8bcd:5977:616d%12
-   IPv4 Address. . . . . . . . . . . : 9.32.70.228
+   IPv6 Address. . . . . . . . . . . : 2620:1f7:807:870::1:17b
+   IPv6 Address. . . . . . . . . . . : 2620:1f7:807:870::1:27b
+   Link-local IPv6 Address . . . . . : fe80::5d4b:18ab:2000:7939%11
+   IPv4 Address. . . . . . . . . . . : 9.32.70.214
    Subnet Mask . . . . . . . . . . . : 255.255.255.0
-   Default Gateway . . . . . . . . . : fe80::1%12
-                                       fe80::2%12
+   Default Gateway . . . . . . . . . : fe80::2%11
+                                       fe80::1%11
                                        9.32.70.1
 ```
 
-On the host OS, test the network connection:
+The bridged adapter is assigned a real IPv4 address that can be accessed from any system on the network.  Test this connection by pinging it from the Host OS:
 
-js-macbook-pro:~ sellis$ ping 9.32.70.228
-PING 9.32.70.228 (9.32.70.228): 56 data bytes
-64 bytes from 9.32.70.228: icmp_seq=0 ttl=128 time=0.375 ms
-64 bytes from 9.32.70.228: icmp_seq=1 ttl=128 time=0.556 ms
-64 bytes from 9.32.70.228: icmp_seq=2 ttl=128 time=0.512 ms
-64 bytes from 9.32.70.228: icmp_seq=3 ttl=128 time=0.391 ms
 ```
+js-macbook-pro:7.devenv sellis$ ping 9.32.70.214
+PING 9.32.70.214 (9.32.70.214): 56 data bytes
+64 bytes from 9.32.70.214: icmp_seq=0 ttl=128 time=0.436 ms
+64 bytes from 9.32.70.214: icmp_seq=1 ttl=128 time=0.427 ms
+64 bytes from 9.32.70.214: icmp_seq=2 ttl=128 time=0.399 ms
+```
+
+If ping does not work, then you may have a firewall issue on the Windows OS.  Try turning off the firewall, or create an exception in the firewall to allow incoming requests on that address.
 
 **Host-Only Adapter**
 
-_Note that there are issues with this setup that need to be worked out if you desire a static ip address_
-
-The second Ethernet adapter is the Host-only adapter, and as you can see the ipv4 address assigned to it is not the one we specified in VirtualBox settings.  We specified that it should be _192.168.59.100_, but here it has been assigned _169.254.235.184_.  This is only important when a static ip address is necessary for consistency.  The link to network settings above explains in more detail, but the link does not show how to establish a static ip address in Windows (instead it describes the process for RedHat Linux).  
-
-For establishing the required static ip address of _192.168.59.100_ on Ethernet adapter 2, do the following:
-
-- Bring up the Windows Control Panel and select Network and Internet->Network Connections
-- Right click _Ethernet 2_ and choose _Properties_
-- Select _Internet Protocol Version 4 (TCP/IPv4)_ and click on the _Properties_ button
-- In the dialog, choose the radio button _Use the following IP address:_
-  * IP Address: 192.168.59.100
-  * Subnet mask: 255.255.255.0
-  * Default gateway: 192.168.59.1
-
-**Fixing issues with Host-only and Nat-Network adapters**
-
-In Windows 2012, there are some issues with networking that need to be dealt with before moving on.  If you are only using the bridged adapter, then you might be ok at this point (without having to configure adapters 2 and 3 above) to do the work you need to do with TDI.  If you are trying to establish host-only and nat network adapters, bring up the PowerShell (in Windows 2012) and type type: 
+The host-only adapter is a private connection that allows direct access to the Windows 7 VM through a static IP address that we have decided will be _192.168.59.100_.  That's the address we assigned when we created the network adapter in VirtualBox, but the address has to also be configured directly in Windows before it will take effect.  Try _ipconfig_ now and you will see that the ip address is not what we intendip:
 
 ```
-ipconfig /all
-```
+Ethernet adapter Local Area Connection 2:
 
-Ethernet adapters 2 and 3 might not have the ip addresses that you expect (some output occluded):
-
-```
-Ethernet adapter Ethernet 3:
-
-   IPv4 Address. . . . . . . . . . . : 10.0.21.4(Preferred)
-   Default Gateway . . . . . . . . . : 10.0.2.1
-   DHCP Server . . . . . . . . . . . : 10.0.21.3
-   Subnet Mask . . . . . . . . . . . : 255.255.255.0
-
-Ethernet adapter Ethernet 2:
-
-   Autoconfiguration IPv4 Address. . : 169.254.235.184
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::9407:e95d:b7b8:405d%13
+   Autoconfiguration IPv4 Address. . : 169.254.64.93
    Subnet Mask . . . . . . . . . . . : 255.255.0.0
+   Default Gateway . . . . . . . . . :
 ```
 
-Ethernet adapter 3 should have an ip address in the 10.0.2.* range, but _10.0.21.4_ has been set.  Adapter 2 should be assigned to exactly _192.168.59.100_ but it has _169.254.235.184_, and notice that the subnet mask is not the expected _255.255.255.0_
+To assign the static ip address, do the following:
 
-To fix this, type:
-
-```
-netsh interface ipv4 show inter
-```
-
-Sample results:
-
-```
-Idx     Met         MTU          State                Name
----  ----------  ----------  ------------  ---------------------------
- 12          10        1500  connected     Ethernet
- 17          10        1500  connected     Ethernet 2
- 18          10        1500  connected     Ethernet 3
-```
-
-The _Idx_ values are used in the following two commands, executed on the _Ethernet 2_ and _Ethernet 3_ interfaces:
-
-```
-netsh interface ipv4 set interface 17 dadtransmits=0 store=persistent
-netsh interface ipv4 set interface 18 dadtransmits=0 store=persistent
-```
-
-After restarting the VM, _you would hope that_ the ip addresses would be configured correctly, but there are issues.
-
-The Host-only connection with the static IP address seems to be fixed, but it cannot be pinged from the host OS, so some work needs to be done to figure out what is wrong.
-
-See http://lyngtinh.blogspot.com/2011/12/how-to-disable-autoconfiguration-ipv4.html[this] link for information on getting the ethernet adapters working correctly.
+- Open the control panel and navigate to _Network and Sharing Center_
+- Click on the link for _Local Area Connection 2_
+- Press the _Properties_ button.
+- Select _Internet Protocol Version 4 (TCP/IPv4)_ and click on _Properties_
+- Select the radio button _Use the following IP address:_
+- Enter the following:
+  * ip address: _192.168.59.100_
+  * subnet mask: _255.255.255.0_
+  * default gateway: _192.168.59.1_
 
 **TDI Installation**
 
