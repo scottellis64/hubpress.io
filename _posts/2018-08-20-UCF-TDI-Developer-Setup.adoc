@@ -203,13 +203,48 @@ Now that we have a Windows VM that has access to OpenPages, and OpenPages has be
 - In the _TDI_GP_E_V7.1.1_WIN-X86_64_ folder (created via extraction), navigate to _windows_x86_64_ and run _install_tdiv711_win_x86_64.exe_ and follow all the prompts
 - After a successful installation, navigate to _7.1.1-TIV-TDI-FP0004/7.1.1-TIV-TDI-FP0004_ and follow the directions in the _7.1.1-TIV-TDI-FP0004.README_.  
 
-**Finally running the assembly lines**
+**Importing the OP Assembly Lines**
 
 - Run the TDI launcher called _Start Configuration Editor_
 - Select _File->Import..._ and choose _IBM Tivoli Directory Integrator->Configuration_
 - With the _File_ radio button selected, click _..._ next to the _Configuration File_ text area and navigate to the _openpages_ shared folder that was made available via the shared folders settings when we created the VM, and find _grc_sdi_integrations/ucf_integration/Runtime-ucf_integration/ucf_integration.xml_.  Click _Open_.
 - Click on _Finish_ and give the project a name.  Any name will do. I chose _ucf_integration_.
 - Click on _Finish_
+
+**Authentication**
+
+In order to access CCH we need to get authenticated.  For testing we use a corporate account, and for those credentials you will need to get them from Christophe.  There are individual accounts as well that can be obtained via the CCH support staff, but the details are fuzzy right now on how to obtain them.  It used to be that you could go to the CCH Slack channel and get it taken care of, but now things have changed.  Regardless, this one is something you'll have to work out by starting with Christophe.  
+
+You'll need a user (which is the email address) and the associated password.  With the login, you can get into the https://cch.commoncontrolshub.com/account-login.php[CCH website] and acquire an API token from _Settings->API Manager->API Keys_.  The api key will be applied to _password.properties_ in TDI as described below.
+
+Then you'll need the OpenPages user and password.  That should be much simpler to get.
+
+To get the credentials into your TDI project, quit the TDI editor and copy a set of files either from your OpenPages installation or from the Eclipse workspace via the VM share.  The OP installation location comes from the same location as the _ucf_integration.xml_ file we just imported into TDI (_grc_sdi_integrations/ucf_integration/Runtime-ucf_integration_.  If you are on the VM as described here, the files can be found at _<openpages share drive letter>:\grc_sdi_integrations\ucf_integration\Runtime-ucf_integration_.
+
+The following files should be copied into your TDI workspace root (I accepted the default location when installing TDI, and that location is _C:\Users\scottell\Documents\TDI\workspace\ucf_integration\Runtime-ucf_integration_:
+
+- op_client.properties
+- passwords.properties
+
+Now do the following:
+
+- After copying the files to your workspace, start TDI again.
+- Navigate from the project root to Resources->Properties and edit the _op_client_ properties.  
+- Set the OpenPages user name in the _Local Value_ field for _op_user_
+- Modify the _op_url_ field to indicate the host ip address of the actual OP server.  In the case of the VM we've set up here, the ip address is _10.0.3.2_
+- Click _Send properties to Server_
+- Save the properties file (ctrl-s)
+- Edit the _passwords_ properties in the same folder
+- Enter a valid value for the OpenPages password in _op_password_
+- Enter the UCF API token in _ucf_api_token_
+- Click _Send properties to Server_
+- Save the properties file (ctrl-s)
+
+**Running the Assembly Lines**
+
+Running the assembly lines is the final step, and if you've made it this far then you are a brave soul.  The first assembly line to run is called _UCF_Authority_Documents_to_OP_Mandates_.  Double click this assembly line in the TDI Navigator panel.
+
+
 
 
 
